@@ -449,7 +449,7 @@
  "privacy": {
   "title": "Politique de confidentialité",
   "draft": "Brouillon : sera revu avant le lancement.",
-  "p1": "{site} est un site statique. Nous n'exigeons pas de compte et n'utilisons pas de cookies publicitaires. Vos préférences de langue et de thème sont enregistrées uniquement dans votre navigateur (localStorage).",
+  "p1": "{site} est un site statique. Nous n'exigeons pas de compte. Vos préférences de langue et de thème sont enregistrées uniquement dans votre navigateur (localStorage). Le site charge Google AdSense, et Google ainsi que ses partenaires peuvent déposer des cookies ou utiliser des identifiants similaires à des fins de publicité et de mesure.",
   "collect": "Ce que nous collectons",
   "c1": "Des statistiques agrégées, respectueuses de la vie privée et sans cookies (pages vues, référents, pays).",
   "c2": "Les informations que vous nous envoyez en proposant un outil ou en nous contactant (par exemple votre nom, votre e-mail et les détails de l'outil).",
@@ -464,6 +464,7 @@
   "c5": "Double opt-in : après votre inscription, MailerLite vous envoie un e-mail de confirmation, et vous n'êtes abonné qu'après avoir cliqué sur le lien qu'il contient. Chaque e-mail de la newsletter contient un lien de désabonnement. Pour faire supprimer vos données à la fois chez MailerLite et dans notre stockage KV, écrivez à {email}.",
   "c6": "Comptage anonyme des clics : lorsque vous cliquez sur un lien vers un autre site, nous enregistrons un comptage anonyme via Cloudflare Workers Analytics Engine. Seuls sont conservés l'outil, le programme d'affiliation (le cas échéant), le site de destination, le type de lien, la page, la langue, le domaine du site qui vous a dirigé vers nous, un indicateur de trafic automatisé (robots et nos propres tests) et la source du clic (humain, robot ou test). Aucun cookie n'est utilisé et nous ne conservons ni votre adresse IP, ni les informations de votre navigateur, ni aucune autre donnée personnelle.",
   "c7": "Commentaires du blog : les commentaires des articles sont stockés dans GitHub Discussions (dépôt tradingaihub/community) et affichés via giscus. Rien n'est chargé depuis GitHub ou giscus tant que vous n'avez pas cliqué sur « Charger les commentaires ». Pour commenter, vous vous connectez avec votre compte GitHub, et ce que vous publiez est public sur GitHub, selon la déclaration de confidentialité de GitHub. Nous ne recevons ni votre mot de passe ni votre adresse e-mail GitHub.",
+  "c8": "Publicité : chaque page charge Google AdSense. Google et ses partenaires peuvent déposer des cookies ou utiliser des identifiants similaires à des fins de publicité et de mesure. Les visiteurs de l'EEE, du Royaume-Uni et de la Suisse seront invités à donner leur consentement via le message de consentement de Google. Consultez {link} pour savoir comment Google utilise les informations provenant des sites qui recourent à ses services.",
   "cookiesP": "Ce que nous stockons dans votre navigateur est décrit sur la page {link}."
  },
  "terms": {
@@ -693,11 +694,12 @@
   "title": "Mention relative aux cookies et au stockage dans le navigateur",
   "metaDesc": "Ce que TradingAIHub stocke dans votre navigateur et quels services tiers le site utilise.",
   "updated": "Dernière mise à jour : {date}",
-  "intro": "{site} est un site statique. Nos pages ne déposent pas de cookies, et nous n'utilisons ni cookies publicitaires, ni cookies de suivi, ni pixels de réseaux sociaux. Cette page décrit ce que le site stocke réellement dans votre navigateur et quelles requêtes vers des tiers il effectue.",
+  "intro": "{site} est un site statique. Nous ne déposons pas nos propres cookies et n'utilisons pas de pixels de réseaux sociaux. Le site charge Google AdSense, et Google ainsi que ses partenaires peuvent déposer des cookies ou utiliser des identifiants similaires à des fins de publicité et de mesure. Cette page décrit ce que le site stocke réellement dans votre navigateur et quelles requêtes vers des tiers il effectue.",
   "sumH": "En bref",
   "sum": [
-   "Les pages de ce site ne déposent pas de cookies.",
+   "Ce site ne dépose pas ses propres cookies.",
    "Vos choix de thème, de langue et d'accessibilité sont enregistrés uniquement dans ce navigateur, dans localStorage (pas sous forme de cookies), et ne sont pas envoyés à nos serveurs.",
+   "Chaque page charge Google AdSense. Google et ses partenaires peuvent déposer des cookies ou utiliser des identifiants similaires à des fins de publicité et de mesure. Les visiteurs de l'Espace économique européen (EEE), du Royaume-Uni et de la Suisse seront invités à donner leur consentement via le message de consentement de Google.",
    "Chaque page charge Cloudflare Web Analytics, que Cloudflare documente comme un service sans cookies. Il enregistre les pages vues, les provenances et le pays de façon agrégée.",
    "Lorsque vous cliquez sur un lien vers un autre site, nous enregistrons un compteur anonyme. Aucun cookie n'est utilisé, et nous ne stockons ni votre adresse IP ni les données de votre navigateur.",
    "La lettre d'information et les commentaires du blog ne fonctionnent que si vous choisissez de les utiliser, comme décrit ci-dessous.",
@@ -717,6 +719,9 @@
   "untilCleared": "Jusqu'à ce que vous effaciez les données de ce site dans votre navigateur, ou que vous changiez le paramètre.",
   "analyticsH": "Cloudflare Web Analytics",
   "analyticsP": "Chaque page charge Cloudflare Web Analytics (un script provenant de static.cloudflareinsights.com). Cloudflare documente ce produit comme un service sans cookies. Comme indiqué dans notre politique de confidentialité, il enregistre les pages vues, les provenances et le pays de façon agrégée. Il est chargé sur chaque page ; nous ne le soumettons pas à une bannière de consentement.",
+  "adsH": "Google AdSense",
+  "adsP": "Chaque page charge Google AdSense (un script provenant de pagead2.googlesyndication.com). Google et ses partenaires peuvent déposer des cookies ou utiliser des identifiants similaires à des fins de publicité et de mesure. Les visiteurs de l'Espace économique européen (EEE), du Royaume-Uni et de la Suisse seront invités à donner leur consentement via le message de consentement fourni par Google. Pour en savoir plus sur la façon dont Google utilise les informations provenant des sites qui recourent à ses services, consultez {link}.",
+  "adsLink": "Comment Google utilise les informations des sites qui recourent à nos services",
   "clickH": "Comptage anonyme des clics",
   "clickP": "Lorsque vous cliquez sur un lien vers un autre site, nos pages envoient un compteur anonyme à notre propre endpoint (/api/click) avec Cloudflare Workers Analytics Engine. Le compteur ne conserve que l'outil, le programme d'affiliation (le cas échéant), le site de destination, le type de lien, la page, la langue, le domaine du site qui vous a renvoyé, un indicateur de trafic automatisé (bots et nos propres tests) et la source du clic (personne, bot ou test). Aucun cookie n'est utilisé, et nous ne stockons ni votre adresse IP, ni les données du navigateur, ni aucune autre donnée personnelle. Le lien lui-même n'est pas réécrit.",
   "newsH": "Lettre d'information",

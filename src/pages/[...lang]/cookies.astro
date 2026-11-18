@@ -4,13 +4,15 @@ import { SITE } from "../../config";
 import { langParams, useT } from "../../i18n";
 export function getStaticPaths() { return langParams().map((params) => ({ params })); }
 const lang = Astro.params.lang ?? "en"; const { t, p } = useT(lang);
-const POLICY_DATE = "2026-11-12";
+const POLICY_DATE = "2026-11-18";
 const dt = new Date(`${POLICY_DATE}T00:00:00Z`);
 const dateStr = new Intl.DateTimeFormat(lang === "ar" ? "ar-u-nu-latn" : lang, { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }).format(dt);
 const [uBefore, uAfter] = String(t("cookies.updated")).split("{date}");
 const email = SITE.contactEmail;
 const [cBefore, cAfter] = String(t("cookies.contactP")).split("{email}");
 const [pBefore, pAfter] = String(t("cookies.seePrivacy")).split("{link}");
+const [adsBefore, adsAfter] = String(t("cookies.adsP")).split("{link}");
+const GOOGLE_PARTNER_SITES = "https://policies.google.com/technologies/partner-sites";
 const rows = [
   { name: "theme", purpose: "rTheme" },
   { name: "lang", purpose: "rLang" },
@@ -51,6 +53,8 @@ const sum = t("cookies.sum") as string[];
       </tbody>
     </table>
   </div>
+  <h2>{t("cookies.adsH")}</h2>
+  <p>{adsBefore}<a href={GOOGLE_PARTNER_SITES} rel="noopener noreferrer">{t("cookies.adsLink")}</a>{adsAfter}</p>
   <h2>{t("cookies.analyticsH")}</h2>
   <p>{t("cookies.analyticsP")}</p>
   <h2>{t("cookies.clickH")}</h2>
