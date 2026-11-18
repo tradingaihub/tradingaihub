@@ -298,7 +298,12 @@
   "listedVia": "Listeleme kaynağı",
   "source": "kaynak",
   "maintain": "Bu aracın bakımını siz mi yapıyorsunuz?",
-  "badgeNote": "README dosyanıza otomatik güncellenen ücretsiz doğrulama rozeti ekleyin:",
+  "badgeBox": "Bu rozeti README veya sitenize ekleyin",
+  "badgeBoxListed": "Bu listelenme rozetini README veya sitenize ekleyin",
+  "badgeNote": "Parçacığı README veya sitenize kopyalayın. Rozet her haftalık kontrolden sonra otomatik güncellenir.",
+  "badgeHtml": "HTML",
+  "badgeMarkdown": "Markdown",
+  "badgeDark": "Koyu arka planlar için {src} kullanın.",
   "wrongInfo": "Bilgi hatalı mı?",
   "sendCorrection": "Düzeltme gönder",
   "free": "Ücretsiz",
@@ -417,12 +422,12 @@
  "badges": {
   "title": "Geliştiriciler için ücretsiz doğrulama rozetleri",
   "desc": "README dosyanıza otomatik güncellenen ücretsiz bir {site} doğrulama rozeti ekleyin.",
-  "h1": "Ücretsiz “Verified by {site}” rozetleri",
-  "p1": "Listelenen her araç, her haftalık doğrulamadan sonra otomatik güncellenen ücretsiz bir rozet alır. Kullanıcılara projenizin aktif ve çalışır durumda olduğunu gösterin.",
+  "h1": "Ücretsiz “Verified on {site}” rozetleri",
+  "p1": "Listelenen her araç, her haftalık kontrolden sonra otomatik güncellenen ücretsiz bir rozet alır. Doğrulanmış araçlar “Verified on TradingAIHub” rozeti alır; bir araç doğrulamasını kaybederse rozet “Listed on TradingAIHub” olur, böylece mevcut gömmeler bozulmaz.",
   "p2": "Araç kimliği, araç sayfanızın URL'sindedir; ya da hazır kodu araç sayfasından kopyalayın. Henüz listede değil misiniz?",
   "submitFree": "Ücretsiz ekleyin",
   "states": "Rozet durumları",
-  "statesP": "yeşil = bu hafta doğrulandı · sarı = yavaşladı / bağlantı kontrol edilmeli · kırmızı = bakımsız, arşivlendi veya erişilemiyor."
+  "statesP": "Verified = bu haftanın kontrollerinden geçti. Listed = dizinde duruyor ancak şu anda doğrulanmamış. Yüksek riskli araçlar Verified rozeti almaz."
  },
  "weekly": {
   "title": "Finans yapay zekâ araçlarının durumu — {date} haftası",

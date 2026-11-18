@@ -298,7 +298,12 @@
   "listedVia": "Listado vía",
   "source": "fuente",
   "maintain": "¿Mantienes esta herramienta?",
-  "badgeNote": "Muestra en tu README tu insignia de verificación gratuita que se actualiza sola:",
+  "badgeBox": "Añade esta insignia a tu README o sitio",
+  "badgeBoxListed": "Añade esta insignia de listado a tu README o sitio",
+  "badgeNote": "Copia el fragmento en tu README o en tu sitio. La insignia se actualiza automáticamente tras cada revisión semanal.",
+  "badgeHtml": "HTML",
+  "badgeMarkdown": "Markdown",
+  "badgeDark": "En fondos oscuros, usa {src} en su lugar.",
   "wrongInfo": "¿Información incorrecta?",
   "sendCorrection": "Envía una corrección",
   "free": "gratis",
@@ -417,12 +422,12 @@
  "badges": {
   "title": "Insignias verificadas gratuitas para creadores",
   "desc": "Inserta en tu README una insignia de verificación de {site} gratuita que se actualiza sola.",
-  "h1": "Insignias «Verified by {site}» gratuitas",
-  "p1": "Cada herramienta listada recibe una insignia gratuita que se actualiza automáticamente tras cada revisión semanal. Demuestra a tus usuarios que tu proyecto está vivo y funciona.",
+  "h1": "Insignias «Verified on {site}» gratuitas",
+  "p1": "Cada herramienta listada recibe una insignia gratuita que se actualiza automáticamente tras cada revisión semanal. Las verificadas reciben una insignia «Verified on TradingAIHub»; si una herramienta pierde la verificación, la insignia pasa a «Listed on TradingAIHub» para que las inserciones existentes no se rompan.",
   "p2": "Encontrarás el id de tu herramienta en la URL de su página, o el fragmento ya preparado en la propia página. ¿Aún no está listada?",
   "submitFree": "Envíala gratis",
   "states": "Estados de la insignia",
-  "statesP": "Verde = verificada esta semana · Ámbar = envejeciendo / revisar enlaces · Rojo = sin mantenimiento, archivada o inaccesible."
+  "statesP": "Verified = superó las comprobaciones de esta semana. Listed = sigue en el directorio, pero no está verificada actualmente. Las herramientas de alto riesgo nunca reciben una insignia Verified."
  },
  "weekly": {
   "title": "Estado de las herramientas de IA financieras — semana del {date}",

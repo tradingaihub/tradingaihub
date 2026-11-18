@@ -298,7 +298,12 @@
   "listedVia": "Gelistet über",
   "source": "Quelle",
   "maintain": "Sie pflegen dieses Tool?",
-  "badgeNote": "Zeigen Sie Ihr kostenloses, sich selbst aktualisierendes Prüf-Badge in Ihrer README:",
+  "badgeBox": "Fügen Sie dieses Badge in Ihre README oder auf Ihre Website ein",
+  "badgeBoxListed": "Fügen Sie dieses Listungs-Badge in Ihre README oder auf Ihre Website ein",
+  "badgeNote": "Kopieren Sie das Snippet in Ihre README oder auf Ihre Website. Das Badge aktualisiert sich automatisch nach jeder wöchentlichen Prüfung.",
+  "badgeHtml": "HTML",
+  "badgeMarkdown": "Markdown",
+  "badgeDark": "Für dunkle Hintergründe verwenden Sie stattdessen {src}.",
   "wrongInfo": "Falsche Angaben?",
   "sendCorrection": "Korrektur senden",
   "free": "kostenlos",
@@ -417,12 +422,12 @@
  "badges": {
   "title": "Kostenlose Prüf-Badges für Entwickler",
   "desc": "Binden Sie ein kostenloses, sich selbst aktualisierendes {site}-Prüf-Badge in Ihre README ein.",
-  "h1": "Kostenlose „Verified by {site}“-Badges",
-  "p1": "Jedes gelistete Tool erhält ein kostenloses Badge, das sich nach jeder wöchentlichen Prüfung automatisch aktualisiert. Zeigen Sie Ihren Nutzern, dass Ihr Projekt lebt und funktioniert.",
+  "h1": "Kostenlose „Verified on {site}“-Badges",
+  "p1": "Jedes gelistete Tool erhält ein kostenloses Badge, das sich nach jeder wöchentlichen Prüfung automatisch aktualisiert. Verifizierte Tools erhalten ein „Verified on TradingAIHub“-Badge; wenn ein Tool die Verifizierung verliert, wechselt das Badge zu „Listed on TradingAIHub“, damit bestehende Einbindungen nicht brechen.",
   "p2": "Die ID Ihres Tools steht in der URL seiner Seite, oder Sie kopieren das fertige Snippet direkt dort. Noch nicht gelistet?",
   "submitFree": "Kostenlos einreichen",
   "states": "Badge-Zustände",
-  "statesP": "Grün = diese Woche geprüft · Bernstein = alternd / Links prüfen · Rot = veraltet, archiviert oder nicht erreichbar."
+  "statesP": "Verified = hat die Prüfungen dieser Woche bestanden. Listed = steht weiterhin im Verzeichnis, ist derzeit aber nicht verifiziert. Hochrisiko-Tools erhalten niemals ein Verified-Badge."
  },
  "weekly": {
   "title": "State of AI Finance Tools — Woche vom {date}",

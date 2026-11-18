@@ -298,7 +298,12 @@
   "listedVia": "Listado via",
   "source": "fonte",
   "maintain": "Você mantém esta ferramenta?",
-  "badgeNote": "Mostre no seu README o selo de verificação gratuito que se atualiza sozinho:",
+  "badgeBox": "Adicione este selo ao seu README ou site",
+  "badgeBoxListed": "Adicione este selo de listagem ao seu README ou site",
+  "badgeNote": "Copie o trecho para o seu README ou site. O selo é atualizado automaticamente após cada verificação semanal.",
+  "badgeHtml": "HTML",
+  "badgeMarkdown": "Markdown",
+  "badgeDark": "Em fundos escuros, use {src} no lugar.",
   "wrongInfo": "Informação errada?",
   "sendCorrection": "Envie uma correção",
   "free": "grátis",
@@ -417,12 +422,12 @@
  "badges": {
   "title": "Selos verificados gratuitos para criadores",
   "desc": "Incorpore ao seu README um selo de verificação gratuito do {site} que se atualiza sozinho.",
-  "h1": "Selos «Verified by {site}» gratuitos",
-  "p1": "Cada ferramenta listada recebe um selo gratuito que se atualiza automaticamente após cada verificação semanal. Mostre aos usuários que seu projeto está vivo e funcionando.",
+  "h1": "Selos «Verified on {site}» gratuitos",
+  "p1": "Cada ferramenta listada recebe um selo gratuito que se atualiza automaticamente após cada verificação semanal. Ferramentas verificadas recebem um selo «Verified on TradingAIHub»; se uma ferramenta perder a verificação, o selo passa a «Listed on TradingAIHub» para que as incorporações existentes não quebrem.",
   "p2": "O id da sua ferramenta está na URL da página dela, ou pegue o trecho pronto na própria página. Ainda não está listada?",
   "submitFree": "Envie grátis",
   "states": "Estados do selo",
-  "statesP": "Verde = verificado esta semana · Âmbar = envelhecendo / verificar links · Vermelho = sem manutenção, arquivado ou inacessível."
+  "statesP": "Verified = passou nas verificações desta semana. Listed = ainda está no diretório, mas não está verificada no momento. Ferramentas de alto risco nunca recebem um selo Verified."
  },
  "weekly": {
   "title": "Estado das ferramentas de IA para finanças — semana de {date}",

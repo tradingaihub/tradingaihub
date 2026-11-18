@@ -14,7 +14,7 @@ export default defineConfig({
   // Guide and blog Markdown (src/content/) renders code blocks as plain <pre><code> styled by global.css: no inline Shiki colours.
   markdown: { syntaxHighlight: false },
   integrations: [sitemap({
-    filter: (p) => !/\/advertise\/$/.test(p) && !DRAFTS.some((d) => p.endsWith(`/blog/${d}/`)) && !(/\/blog\/tag\/([^/]+)\/$/.test(p) && !LIVE_TAGS.has(p.match(/\/blog\/tag\/([^/]+)\/$/)[1])),
+    filter: (p) => !/\/advertise\/$/.test(p) && !/\/badge\//.test(p) && !DRAFTS.some((d) => p.endsWith(`/blog/${d}/`)) && !(/\/blog\/tag\/([^/]+)\/$/.test(p) && !LIVE_TAGS.has(p.match(/\/blog\/tag\/([^/]+)\/$/)[1])),
     i18n: { defaultLocale: "en", locales: Object.fromEntries(CODES.map((c) => [c, c === "zh" ? "zh-CN" : c])) },
   })],
 });
