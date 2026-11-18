@@ -449,7 +449,7 @@
  "privacy": {
   "title": "Datenschutzerklärung",
   "draft": "Entwurf – wird vor dem Start geprüft.",
-  "p1": "{site} ist eine statische Website. Wir verlangen keine Konten. Ihre Sprach- und Theme-Einstellungen werden nur in Ihrem Browser (localStorage) gespeichert. Die Website lädt Google AdSense, und Google sowie seine Partner können Cookies setzen oder ähnliche Kennungen für Werbung und Messung verwenden.",
+  "p1": "{site} ist eine statische Website. Wir verlangen keine Konten und verwenden keine Werbe-Cookies. Ihre Sprach- und Theme-Einstellungen werden nur in Ihrem Browser (localStorage) gespeichert.",
   "collect": "Was wir erheben",
   "c1": "Aggregierte, datenschutzfreundliche Analysen ohne Cookies (Seitenaufrufe, Referrer, Land).",
   "c2": "Angaben, die Sie uns beim Einreichen eines Tools oder bei einer Kontaktaufnahme senden (zum Beispiel Name, E-Mail und Tool-Details).",
@@ -464,7 +464,7 @@
   "c5": "Double-Opt-in: Nach der Anmeldung schickt Ihnen MailerLite eine Bestätigungs-E-Mail; angemeldet sind Sie erst, wenn Sie auf den Link darin klicken. Jede Newsletter-E-Mail enthält einen Abmeldelink. Um Ihre Daten sowohl bei MailerLite als auch in unserem KV-Speicher löschen zu lassen, schreiben Sie an {email}.",
   "c6": "Anonyme Klickzählung: Wenn Sie auf einen Link zu einer anderen Website klicken, erfassen wir mit Cloudflare Workers Analytics Engine eine anonyme Zählung. Gespeichert werden nur Tool, Partnerprogramm (falls vorhanden), Zielseite, Linktyp, Seite, Sprache, die Domain der verweisenden Website, eine Markierung für automatisierten Traffic (Bots und unsere eigenen Tests) und die Klickquelle (Mensch, Bot oder Test). Es werden keine Cookies verwendet, und wir speichern weder Ihre IP-Adresse noch Browserdaten oder andere personenbezogene Daten.",
   "c7": "Blog-Kommentare: Kommentare zu Blogartikeln werden in GitHub Discussions (Repository tradingaihub/community) gespeichert und über giscus angezeigt. Von GitHub oder giscus wird nichts geladen, bevor du auf „Kommentare laden“ klickst. Zum Kommentieren meldest du dich mit deinem GitHub-Konto an; was du schreibst, ist auf GitHub öffentlich und unterliegt der Datenschutzerklärung von GitHub. Wir erhalten weder dein GitHub-Passwort noch deine E-Mail-Adresse.",
-  "c8": "Werbung: Jede Seite lädt Google AdSense. Google und seine Partner können Cookies setzen oder ähnliche Kennungen für Werbung und Messung verwenden. Besucher im EWR, im Vereinigten Königreich und in der Schweiz werden über die Einwilligungsnachricht von Google um ihre Einwilligung gebeten. Unter {link} erfahren Sie, wie Google Informationen von Websites verwendet, die seine Dienste nutzen.",
+  "c8": "Werbung: Wir haben uns für Google AdSense beworben. Heute werden keine Anzeigen und keine Werbe-Cookies geladen. Falls wir Anzeigen später aktivieren, aktualisieren wir zuerst diese Seite. Unter {link} erfahren Sie, wie Google Informationen von Websites verwendet, die seine Dienste nutzen.",
   "cookiesP": "Was wir in Ihrem Browser speichern, ist auf der Seite {link} beschrieben."
  },
  "terms": {
@@ -694,12 +694,12 @@
   "title": "Hinweis zu Cookies und Speicherung im Browser",
   "metaDesc": "Was TradingAIHub in Ihrem Browser speichert und welche Dienste Dritter die Website nutzt.",
   "updated": "Zuletzt aktualisiert: {date}",
-  "intro": "{site} ist eine statische Website. Wir setzen keine eigenen Cookies und verwenden keine Social-Media-Pixel. Die Website lädt Google AdSense, und Google sowie seine Partner können Cookies setzen oder ähnliche Kennungen für Werbung und Messung verwenden. Diese Seite beschreibt, was die Website tatsächlich in Ihrem Browser speichert und welche Anfragen an Dritte sie stellt.",
+  "intro": "{site} ist eine statische Website. Unsere Seiten setzen keine Cookies, und wir verwenden keine Werbe-Cookies, Tracking-Cookies oder Social-Media-Pixel. Diese Seite beschreibt, was die Website tatsächlich in Ihrem Browser speichert und welche Anfragen an Dritte sie stellt.",
   "sumH": "Kurz gesagt",
   "sum": [
-   "Diese Website setzt keine eigenen Cookies.",
+   "Die Seiten dieser Website setzen keine Cookies.",
    "Ihre Wahl von Design, Sprache und Barrierefreiheit wird nur in diesem Browser in localStorage gespeichert (nicht als Cookies) und nicht an unsere Server gesendet.",
-   "Jede Seite lädt Google AdSense. Google und seine Partner können Cookies setzen oder ähnliche Kennungen für Werbung und Messung verwenden. Besucher im Europäischen Wirtschaftsraum (EWR), im Vereinigten Königreich und in der Schweiz werden über die Einwilligungsnachricht von Google um ihre Einwilligung gebeten.",
+   "Wir haben uns für Google AdSense beworben. Heute werden keine Anzeigen und keine Werbe-Cookies geladen. Falls wir Anzeigen später aktivieren, aktualisieren wir zuerst diese Seite.",
    "Jede Seite lädt Cloudflare Web Analytics, das Cloudflare als cookie-los dokumentiert. Erfasst werden aggregierte Seitenaufrufe, Verweisquellen und das Land.",
    "Wenn Sie auf einen Link zu einer anderen Website klicken, erfassen wir einen anonymen Zähler. Es werden keine Cookies verwendet, und wir speichern weder Ihre IP-Adresse noch Browserdaten.",
    "Der Newsletter und die Blog-Kommentare laufen nur, wenn Sie sie nutzen, wie unten beschrieben.",
@@ -720,7 +720,7 @@
   "analyticsH": "Cloudflare Web Analytics",
   "analyticsP": "Jede Seite lädt Cloudflare Web Analytics (ein Skript von static.cloudflareinsights.com). Cloudflare dokumentiert dieses Produkt als cookie-los. Wie in unserer Datenschutzerklärung beschrieben, erfasst es aggregierte Seitenaufrufe, Verweisquellen und das Land. Es wird auf jeder Seite geladen; wir machen es nicht von einem Einwilligungs-Banner abhängig.",
   "adsH": "Google AdSense",
-  "adsP": "Jede Seite lädt Google AdSense (ein Skript von pagead2.googlesyndication.com). Google und seine Partner können Cookies setzen oder ähnliche Kennungen für Werbung und Messung verwenden. Besucher im Europäischen Wirtschaftsraum (EWR), im Vereinigten Königreich und in der Schweiz werden über die von Google bereitgestellte Einwilligungsnachricht um ihre Einwilligung gebeten. Weitere Informationen dazu, wie Google Informationen von Websites verwendet, die seine Dienste nutzen, finden Sie unter {link}.",
+  "adsP": "Wir haben uns für Google AdSense beworben. Heute werden keine Anzeigen und keine Werbe-Cookies geladen. Falls wir Anzeigen später aktivieren, aktualisieren wir zuerst diese Seite. Weitere Informationen dazu, wie Google Informationen von Websites verwendet, die seine Dienste nutzen, finden Sie unter {link}.",
   "adsLink": "Wie Google Informationen von Websites verwendet, die unsere Dienste nutzen",
   "clickH": "Anonyme Klickszählung",
   "clickP": "Wenn Sie auf einen Link zu einer anderen Website klicken, senden unsere Seiten einen anonymen Zähler an unseren eigenen Endpunkt (/api/click) mit Cloudflare Workers Analytics Engine. Der Zähler speichert nur das Tool, das Affiliate-Programm (falls vorhanden), die Ziel-Website, den Linktyp, die Seite, die Sprache, die Domain der verweisenden Website, eine Markierung für automatisierten Verkehr (Bots und unsere eigenen Tests) und die Klickquelle (Mensch, Bot oder Test). Es werden keine Cookies verwendet, und wir speichern weder Ihre IP-Adresse noch Browserdaten oder andere personenbezogene Daten. Der Link selbst wird nicht umgeschrieben.",

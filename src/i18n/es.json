@@ -449,7 +449,7 @@
  "privacy": {
   "title": "Política de privacidad",
   "draft": "Borrador: se revisará antes del lanzamiento.",
-  "p1": "{site} es un sitio web estático. No exigimos cuentas. Tus preferencias de idioma y tema se guardan solo en tu navegador (localStorage). El sitio carga Google AdSense, y Google y sus socios pueden instalar cookies o usar identificadores similares para anuncios y medición.",
+  "p1": "{site} es un sitio web estático. No exigimos cuentas ni usamos cookies publicitarias. Tus preferencias de idioma y tema se guardan solo en tu navegador (localStorage).",
   "collect": "Qué recopilamos",
   "c1": "Analítica agregada respetuosa con la privacidad y sin cookies (páginas vistas, referencias, país).",
   "c2": "La información que nos envías al proponer una herramienta o al contactarnos (por ejemplo, tu nombre, email y datos de la herramienta).",
@@ -464,7 +464,7 @@
   "c5": "Doble opt-in: tras suscribirte, MailerLite te envía un correo de confirmación y solo quedas suscrito cuando haces clic en el enlace. Cada correo del boletín incluye un enlace para darte de baja. Para borrar tus datos tanto de MailerLite como de nuestro almacén KV, escribe a {email}.",
   "c6": "Recuento anónimo de clics: cuando haces clic en un enlace a otro sitio, registramos un recuento anónimo con Cloudflare Workers Analytics Engine. Solo guarda la herramienta, el programa de afiliados (si lo hay), el sitio de destino, el tipo de enlace, la página, el idioma, el dominio del sitio que te remitió, una marca de tráfico automatizado (bots y nuestras pruebas) y el origen del clic (persona, bot o prueba). No se usan cookies y no guardamos tu dirección IP, los datos de tu navegador ni ningún otro dato personal.",
   "c7": "Comentarios del blog: los comentarios de los artículos se guardan en GitHub Discussions (repositorio tradingaihub/community) y se muestran mediante giscus. No se carga nada de GitHub ni de giscus hasta que pulsas «Cargar comentarios». Para comentar inicias sesión con tu cuenta de GitHub, y lo que publicas es público en GitHub según la declaración de privacidad de GitHub. No recibimos tu contraseña ni tu correo de GitHub.",
-  "c8": "Publicidad: cada página carga Google AdSense. Google y sus socios pueden instalar cookies o usar identificadores similares para anuncios y medición. A los visitantes del EEE, el Reino Unido y Suiza se les pedirá su consentimiento mediante el mensaje de consentimiento de Google. Consulta {link} para saber cómo usa Google la información de los sitios que usan sus servicios.",
+  "c8": "Publicidad: hemos solicitado Google AdSense. Hoy no se cargan anuncios ni cookies publicitarias. Si habilitamos anuncios más adelante, actualizaremos esta página primero. Consulta {link} para saber cómo usa Google la información de los sitios que usan sus servicios.",
   "cookiesP": "Lo que guardamos en tu navegador se describe en la página {link}."
  },
  "terms": {
@@ -694,12 +694,12 @@
   "title": "Aviso de cookies y almacenamiento en el navegador",
   "metaDesc": "Qué guarda TradingAIHub en tu navegador y qué servicios de terceros usa el sitio.",
   "updated": "Última actualización: {date}",
-  "intro": "{site} es un sitio web estático. No instalamos cookies propias ni usamos píxeles de redes sociales. El sitio carga Google AdSense, y Google y sus socios pueden instalar cookies o usar identificadores similares para anuncios y medición. Esta página describe lo que el sitio guarda realmente en tu navegador y qué peticiones a terceros realiza.",
+  "intro": "{site} es un sitio web estático. Nuestras páginas no instalan cookies y no usamos cookies publicitarias, cookies de seguimiento ni píxeles de redes sociales. Esta página describe lo que el sitio guarda realmente en tu navegador y qué peticiones a terceros realiza.",
   "sumH": "En resumen",
   "sum": [
-   "Este sitio no instala cookies propias.",
+   "Las páginas de este sitio no instalan cookies.",
    "Tus opciones de tema, idioma y accesibilidad se guardan solo en este navegador, en localStorage (no como cookies), y no se envían a nuestros servidores.",
-   "Cada página carga Google AdSense. Google y sus socios pueden instalar cookies o usar identificadores similares para anuncios y medición. A los visitantes del Espacio Económico Europeo (EEE), el Reino Unido y Suiza se les pedirá su consentimiento mediante el mensaje de consentimiento de Google.",
+   "Hemos solicitado Google AdSense. Hoy no se cargan anuncios ni cookies publicitarias. Si habilitamos anuncios más adelante, actualizaremos esta página primero.",
    "Cada página carga Cloudflare Web Analytics, que Cloudflare documenta como un servicio sin cookies. Registra visitas, orígenes de tráfico y país de forma agregada.",
    "Cuando haces clic en un enlace a otro sitio, registramos un recuento anónimo. No se usan cookies y no almacenamos tu dirección IP ni los datos de tu navegador.",
    "El boletín y los comentarios del blog funcionan solo si decides usarlos, como se describe más abajo.",
@@ -720,7 +720,7 @@
   "analyticsH": "Cloudflare Web Analytics",
   "analyticsP": "Cada página carga Cloudflare Web Analytics (un script de static.cloudflareinsights.com). Cloudflare documenta este producto como un servicio sin cookies. Como se describe en nuestra política de privacidad, registra visitas, orígenes de tráfico y país de forma agregada. Se carga en todas las páginas; no lo condicionamos a un banner de consentimiento.",
   "adsH": "Google AdSense",
-  "adsP": "Cada página carga Google AdSense (un script de pagead2.googlesyndication.com). Google y sus socios pueden instalar cookies o usar identificadores similares para anuncios y medición. A los visitantes del Espacio Económico Europeo (EEE), el Reino Unido y Suiza se les pedirá su consentimiento mediante el mensaje de consentimiento de Google, que proporciona Google. Para saber cómo usa Google la información de los sitios que usan sus servicios, consulta {link}.",
+  "adsP": "Hemos solicitado Google AdSense. Hoy no se cargan anuncios ni cookies publicitarias. Si habilitamos anuncios más adelante, actualizaremos esta página primero. Para saber cómo usa Google la información de los sitios que usan sus servicios, consulta {link}.",
   "adsLink": "Cómo utiliza Google la información de los sitios que usan nuestros servicios",
   "clickH": "Recuento anónimo de clics",
   "clickP": "Cuando haces clic en un enlace a otro sitio, nuestras páginas envían un recuento anónimo a nuestro propio endpoint (/api/click) con Cloudflare Workers Analytics Engine. El recuento guarda solo la herramienta, el programa de afiliados (si lo hay), el sitio de destino, el tipo de enlace, la página, el idioma, el dominio del sitio que te remitió, una marca de tráfico automatizado (bots y nuestras pruebas) y el origen del clic (persona, bot o prueba). No se usan cookies y no almacenamos tu dirección IP, los datos del navegador ni ningún otro dato personal. El enlace en sí no se reescribe.",
