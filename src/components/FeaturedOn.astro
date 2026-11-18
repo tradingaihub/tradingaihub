@@ -1,17 +1,20 @@
 ---
 // "Featured on" strip for the site footer: self-hosted official badges and a plain-text
 // link to Dang.ai. Static only: no third-party JS, no hotlinked images, no tracking.
-// Links are followed (no nofollow/sponsored) because the free tiers of these directories
-// require a crawlable backlink. Labels are kept here so this component stays self-contained
-// (and merges cleanly with other footer changes).
+// Labels are kept here so this component stays self-contained (and merges cleanly with
+// other footer changes).
 //
 // Fazier: official SVGs from fazier.com/api/v1/public/badges/launch_badges.svg?badge_type=featured&theme=light|dark,
-// saved to public/badges/featured/.
-// Tiny Startups: official SVG from https://www.tinystartups.com/badge (240x56, "Featured on Tiny Startups"),
-// saved to public/badges/featured/tinystartups-featured.svg. The public endpoint ships one light-theme
-// SVG only (theme/variant query params are ignored). Hotlinking is not required; their /badge response
-// also sets a ts_vid cookie, so the image is self-hosted. Displayed at 120x28 to match the Fazier
-// height while keeping the official 240:56 aspect ratio.
+// saved to public/badges/featured/. Link stays rel="noopener" only (no nofollow), unchanged.
+// Tiny Startups: official SVG from https://www.tinystartups.com/badge (240x56),
+// saved to public/badges/featured/tinystartups-featured.svg. Displayed at 120x28.
+// AI Agents Listing: official artwork from https://aiagentslisting.com/<slug>/badge.svg?theme=light|dark
+// (identical across listed slugs; there is no slug-less /badge.svg). Self-hosted light+dark
+// at public/badges/featured/aiagentslisting-featured-{light,dark}.svg. Displayed at 112x28.
+// AI Agents Directory: official SVG from https://aiagentsdirectory.com/featured-badge.svg (200x50),
+// saved to public/badges/featured/aiagentsdirectory-featured.svg. One light-theme file only.
+// Displayed at 112x28.
+// Tiny Startups, AI Agents Listing and AI Agents Directory use rel="nofollow noopener".
 interface Props { lang?: string }
 const { lang = "en" } = Astro.props;
 const LABEL: Record<string, string> = {
@@ -27,8 +30,15 @@ const label = LABEL[lang] ?? LABEL.en;
     <img class="fo-light" src="/badges/featured/fazier-featured-light.svg" width="119" height="28" alt="Featured on Fazier" loading="lazy" decoding="async" />
     <img class="fo-dark" src="/badges/featured/fazier-featured-dark.svg" width="119" height="28" alt="Featured on Fazier" loading="lazy" decoding="async" />
   </a>
-  <a class="fo-badge fo-ts" href="https://www.tinystartups.com" target="_blank" rel="noopener" dir="ltr">
+  <a class="fo-badge fo-ts" href="https://www.tinystartups.com" target="_blank" rel="nofollow noopener" dir="ltr">
     <img src="/badges/featured/tinystartups-featured.svg" width="120" height="28" alt="Featured on Tiny Startups" loading="lazy" decoding="async" />
+  </a>
+  <a class="fo-badge fo-112" href="https://aiagentslisting.com" target="_blank" rel="nofollow noopener" dir="ltr">
+    <img class="fo-light" src="/badges/featured/aiagentslisting-featured-light.svg" width="112" height="28" alt="Featured on AI Agents Listing" loading="lazy" decoding="async" />
+    <img class="fo-dark" src="/badges/featured/aiagentslisting-featured-dark.svg" width="112" height="28" alt="Featured on AI Agents Listing" loading="lazy" decoding="async" />
+  </a>
+  <a class="fo-badge fo-112" href="https://aiagentsdirectory.com" target="_blank" rel="nofollow noopener" dir="ltr">
+    <img src="/badges/featured/aiagentsdirectory-featured.svg" width="112" height="28" alt="Featured on AI Agents Directory" loading="lazy" decoding="async" />
   </a>
   <a class="fo-link" href="https://dang.ai" target="_blank" rel="noopener" dir="ltr">Dang.ai</a>
 </div>
@@ -39,6 +49,8 @@ const label = LABEL[lang] ?? LABEL.en;
   .fo-badge img{display:block;width:119px;height:28px}
   .fo-badge.fo-ts{width:120px}
   .fo-badge.fo-ts img{width:120px;height:28px}
+  .fo-badge.fo-112{width:112px}
+  .fo-badge.fo-112 img{width:112px;height:28px}
   .fo-badge .fo-dark{display:none}
   :global([data-theme=dark]) .fo-badge .fo-light{display:none}
   :global([data-theme=dark]) .fo-badge .fo-dark{display:block}
