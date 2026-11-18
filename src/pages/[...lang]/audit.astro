@@ -64,7 +64,7 @@ const link = (href: string, text: string) => `<a href="${href}">${esc(text)}</a>
     <label class="pv-search"><span class="sr-only">{pt("filter.search")}</span><input type="search" placeholder={pt("filter.search")} /></label>
     <p class="note pv-count" role="status" aria-live="polite" data-tpl={pt("filter.shown")} data-total={all.length}></p>
   </div>
-  <div class="tablewrap"><table class="pv-table"><thead><tr>
+  <div class="tablewrap" tabindex="0" role="region" aria-label={pt("tableH")}><table class="pv-table"><thead><tr>
     <th scope="col">{pt("th.tool")}</th><th scope="col">{pt("th.type")}</th><th scope="col">{pt("th.registry")}</th><th scope="col">{pt("th.package")}</th><th scope="col">{pt("th.badge")}</th><th scope="col">{pt("th.declared")}</th><th scope="col">{pt("th.observed")}</th><th scope="col">{pt("th.checked")}</th>
   </tr></thead><tbody>{rows.map(({ x, v }) => <tr id={x.id} data-state={v.state} data-q={`${x.name} ${x.id} ${v.package ?? ""}`.toLowerCase()}>
     <th scope="row"><a href={p(`/tools/${x.id}/`)} dir="auto">{x.name}</a></th>
@@ -119,6 +119,9 @@ const link = (href: string, text: string) => `<a href="${href}">${esc(text)}</a>
 .pv-search input{min-height:32px;padding:4px 10px;border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--text);font:inherit}
 .pv-table tr:target{outline:2px solid var(--brand2);outline-offset:-2px}
 .pv-table th[scope=row]{font-weight:600;text-align:start}
+.prov-page{min-width:0;width:100%;box-sizing:border-box}
+.prov-page h1{overflow-wrap:anywhere;text-wrap:balance}
+.prov-page .tablewrap{max-width:100%;min-width:0;overflow-x:auto;contain:layout}
 @media(max-width:700px){.pv-stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style>
 </Base>
