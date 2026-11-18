@@ -26,6 +26,7 @@
   "submitFree": "Araç ekle (ücretsiz)",
   "getBadge": "Doğrulama rozeti al",
   "awesome": "Awesome listesi",
+  "starList": "<bdi dir=\"ltr\">GitHub</bdi>’da listeye yıldız verin",
   "legal": "Yasal",
   "nia": "Yatırım tavsiyesi değildir",
   "privacy": "Gizlilik",
@@ -376,7 +377,8 @@
  "ver": {
   "title": "Son doğrulama çalıştırması",
   "desc": "Listelenen her finans ve trading yapay zekâ aracının haftalık otomatik doğrulama sonuçları.",
-  "h1": "Doğrulama — {date}"
+  "h1": "Doğrulama — {date}",
+  "awesomeList": "Aynı araçlar <a href=\"{url}\"><bdi dir=\"ltr\">GitHub</bdi> Awesome listemizde</a> de yer alır."
  },
  "submit": {
   "title": "Araç ekle",

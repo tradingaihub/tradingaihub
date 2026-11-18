@@ -26,6 +26,7 @@
   "submitFree": "ツールを登録（無料）",
   "getBadge": "検証済みバッジを入手",
   "awesome": "Awesomeリスト",
+  "starList": "<bdi dir=\"ltr\">GitHub</bdi>でリストにスターを付ける",
   "legal": "法的情報",
   "nia": "投資助言ではありません",
   "privacy": "プライバシー",
@@ -376,7 +377,8 @@
  "ver": {
   "title": "最新の検証結果",
   "desc": "掲載中のすべての金融・トレーディング向けAIツールに対する毎週の自動検証の結果。",
-  "h1": "検証 — {date}"
+  "h1": "検証 — {date}",
+  "awesomeList": "同じツールは<a href=\"{url}\"><bdi dir=\"ltr\">GitHub</bdi>のAwesomeリスト</a>にも掲載しています。"
  },
  "submit": {
   "title": "ツールを登録",

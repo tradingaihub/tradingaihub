@@ -26,6 +26,7 @@
   "submitFree": "도구 등록 (무료)",
   "getBadge": "검증 배지 받기",
   "awesome": "Awesome 목록",
+  "starList": "<bdi dir=\"ltr\">GitHub</bdi>에서 목록에 스타 남기기",
   "legal": "법적 고지",
   "nia": "투자 조언이 아닙니다",
   "privacy": "개인정보처리방침",
@@ -376,7 +377,8 @@
  "ver": {
   "title": "최근 검증 결과",
   "desc": "등재된 모든 금융·트레이딩 AI 도구에 대한 주간 자동 검증 결과.",
-  "h1": "검증 — {date}"
+  "h1": "검증 — {date}",
+  "awesomeList": "같은 도구는 <a href=\"{url}\"><bdi dir=\"ltr\">GitHub</bdi> Awesome 목록</a>에도 있습니다."
  },
  "submit": {
   "title": "도구 등록",

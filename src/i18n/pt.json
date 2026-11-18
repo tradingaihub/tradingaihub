@@ -26,6 +26,7 @@
   "submitFree": "Enviar uma ferramenta (grátis)",
   "getBadge": "Obtenha seu selo verificado",
   "awesome": "Lista Awesome",
+  "starList": "Dê uma estrela à lista no <bdi dir=\"ltr\">GitHub</bdi>",
   "legal": "Jurídico",
   "nia": "Não é recomendação de investimento",
   "privacy": "Privacidade",
@@ -376,7 +377,8 @@
  "ver": {
   "title": "Última verificação",
   "desc": "Resultados da verificação automática semanal de cada ferramenta de IA para finanças e trading listada.",
-  "h1": "Verificação — {date}"
+  "h1": "Verificação — {date}",
+  "awesomeList": "As mesmas ferramentas também estão na nossa <a href=\"{url}\">lista Awesome no <bdi dir=\"ltr\">GitHub</bdi></a>."
  },
  "submit": {
   "title": "Enviar uma ferramenta",
