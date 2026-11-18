@@ -26,6 +26,7 @@
   "submitFree": "Proposer un outil (gratuit)",
   "getBadge": "Obtenez votre badge vérifié",
   "awesome": "Liste Awesome",
+  "starList": "Donnez une étoile à la liste sur <bdi dir=\"ltr\">GitHub</bdi>",
   "legal": "Mentions légales",
   "nia": "Pas un conseil en investissement",
   "privacy": "Confidentialité",
@@ -381,7 +382,8 @@
  "ver": {
   "title": "Dernière vérification",
   "desc": "Résultats de la vérification automatique hebdomadaire de chaque outil d'IA pour la finance et le trading référencé.",
-  "h1": "Vérification — {date}"
+  "h1": "Vérification — {date}",
+  "awesomeList": "Les mêmes outils figurent aussi dans notre <a href=\"{url}\">liste Awesome sur <bdi dir=\"ltr\">GitHub</bdi></a>."
  },
  "submit": {
   "title": "Proposer un outil",

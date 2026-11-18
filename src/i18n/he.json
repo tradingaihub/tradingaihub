@@ -26,6 +26,7 @@
   "submitFree": "הוספת כלי (בחינם)",
   "getBadge": "קבלו תג אימות",
   "awesome": "רשימת Awesome",
+  "starList": "תנו כוכב לרשימה ב-<bdi dir=\"ltr\">GitHub</bdi>",
   "legal": "משפטי",
   "nia": "אינו ייעוץ השקעות",
   "privacy": "פרטיות",
@@ -381,7 +382,8 @@
  "ver": {
   "title": "סבב האימות האחרון",
   "desc": "תוצאות האימות האוטומטי השבועי של כל כלי AI לפיננסים ומסחר שבמדריך.",
-  "h1": "סבב אימות — {date}"
+  "h1": "סבב אימות — {date}",
+  "awesomeList": "אותם כלים מופיעים גם ב-<a href=\"{url}\">רשימת Awesome ב-<bdi dir=\"ltr\">GitHub</bdi></a>."
  },
  "submit": {
   "title": "הוספת כלי",
