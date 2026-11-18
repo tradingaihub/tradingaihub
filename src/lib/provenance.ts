@@ -16,3 +16,21 @@ export const provCounts = () => {
   return c;
 };
 export const shortRepo = (u: string | null | undefined) => (u || "").replace(/^https:\/\/github\.com\//, "").replace(/\/tree\/.*$/, "");
+
+// Weekly tools.json still records the older "name exists but does not link" issue and a failed
+// "package published" / "no package at repo root" check even when the newer provenance pass
+// verified the same package (e.g. after following a GitHub rename redirect). Prefer provenance.
+const STALE_LINK_ISSUE = /exists on the registry but does not link to this repo/;
+const STALE_ROOT_NOTE = /no package at repo root/i;
+
+export function visibleIssues(v: { provenance?: { state?: string }; issues?: string[] } | null | undefined): string[] {
+  const issues = Array.isArray(v?.issues) ? v!.issues! : [];
+  if (v?.provenance?.state !== "verified") return issues;
+  return issues.filter((i) => !STALE_LINK_ISSUE.test(i));
+}
+
+export function visibleChecks(v: { provenance?: { state?: string }; checks?: any[] } | null | undefined): any[] {
+  const checks = Array.isArray(v?.checks) ? v!.checks! : [];
+  if (v?.provenance?.state !== "verified") return checks;
+  return checks.filter((c) => !(c?.check === "package published" && !c?.ok && STALE_ROOT_NOTE.test(String(c?.note || ""))));
+}

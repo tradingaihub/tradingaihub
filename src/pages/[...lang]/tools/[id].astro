@@ -8,6 +8,7 @@ import Status from "../../../components/Status.astro";
 import SecurityBadge from "../../../components/SecurityBadge.astro";
 import Provenance from "../../../components/Provenance.astro";
 import { useProvT } from "../../../i18n/prov";
+import { visibleChecks, visibleIssues } from "../../../lib/provenance";
 import SecurityNote from "../../../components/SecurityNote.astro";
 import XpTip from "../../../components/XpTip.astro";
 import { explain } from "../../../lib/explain";
@@ -22,6 +23,7 @@ import { langParams, useT } from "../../../i18n";
 export function getStaticPaths() { return langParams().flatMap((lp) => tools.map((t) => ({ params: { ...lp, id: t.id }, props: { tool: t } }))); }
 const lang = Astro.params.lang ?? "en"; const { t, p, desc: dsc } = useT(lang);
 const { tool } = Astro.props; const v = tool.verification; const cat = catBySlug[tool.category];
+const checks = visibleChecks(v); const issues = visibleIssues(v);
 const [cname, cshort] = t(`cat.${cat.slug}`);
 const pkg = pkgOf(tool); const sn = snippets(tool, t); const stHelp = t(`status.${v.status}`)[1];
 const desc = dsc(tool); const pt = useProvT(lang);
@@ -78,8 +80,8 @@ const metaDesc = `${tool.name}: ${desc} ${t("tool.descSuffix")}`;
       <h2>{t("tool.verification")}</h2>
       <div class="panel">
         <p><Status status={v.status} lang={lang} /> <span class="note">{stHelp}</span></p>
-        <table><tbody>{v.checks.map((c: any) => <tr><td style="width:36px">{c.ok ? "✅" : "⚠️"}</td><td>{t(`checks.${c.check}`) === `checks.${c.check}` ? c.check : t(`checks.${c.check}`)}{c.note && <span class="note"> — <bdi>{c.note}</bdi></span>}</td></tr>)}{tool.repo && <tr><td style="width:36px" aria-hidden="true">{v.provenance?.state === "verified" ? "✅" : v.provenance?.state === "none" ? "➖" : "⚠️"}</td><td>{pt("row")}: <Provenance id={tool.id} lang={lang} link={false} /> <a href={`${p("/audit/")}#${tool.id}`}>{pt("learn")}</a></td></tr>}</tbody></table>
-        {v.issues.length > 0 && <ul>{v.issues.map((i: string) => <li class="note"><bdi>{i}</bdi></li>)}</ul>}
+        <table><tbody>{checks.map((c: any) => <tr><td style="width:36px">{c.ok ? "✅" : "⚠️"}</td><td>{t(`checks.${c.check}`) === `checks.${c.check}` ? c.check : t(`checks.${c.check}`)}{c.note && <span class="note"> — <bdi>{c.note}</bdi></span>}</td></tr>)}{tool.repo && <tr><td style="width:36px" aria-hidden="true">{v.provenance?.state === "verified" ? "✅" : v.provenance?.state === "none" ? "➖" : "⚠️"}</td><td>{pt("row")}: <Provenance id={tool.id} lang={lang} link={false} /> <a href={`${p("/audit/")}#${tool.id}`}>{pt("learn")}</a></td></tr>}</tbody></table>
+        {issues.length > 0 && <ul>{issues.map((i: string) => <li class="note"><bdi>{i}</bdi></li>)}</ul>}
         <p class="note"><DateInText text={t(v.manual_override ? "tool.manualCheck" : "tool.autoCheck", { date: v.manual_override ? v.manual_check.date : v.checked_at })} date={v.manual_override ? v.manual_check.date : v.checked_at} /> <a href={`${p("/about/")}#how-we-verify`}>{t("nav.verify")}</a>.</p>
       </div>
     </div>
