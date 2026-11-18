@@ -449,7 +449,7 @@
  "privacy": {
   "title": "Política de privacidade",
   "draft": "Rascunho: será revisado antes do lançamento.",
-  "p1": "{site} é um site estático. Não exigimos contas nem usamos cookies de publicidade. Suas preferências de idioma e tema ficam salvas apenas no seu navegador (localStorage).",
+  "p1": "{site} é um site estático. Não exigimos contas. Suas preferências de idioma e tema ficam salvas apenas no seu navegador (localStorage). O site carrega o Google AdSense, e o Google e seus parceiros podem definir cookies ou usar identificadores semelhantes para anúncios e medição.",
   "collect": "O que coletamos",
   "c1": "Análises agregadas, sem cookies e respeitosas com a privacidade (visualizações, origens, país).",
   "c2": "As informações que você nos envia ao propor uma ferramenta ou ao nos contatar (por exemplo, seu nome, e-mail e dados da ferramenta).",
@@ -464,6 +464,7 @@
   "c5": "Confirmação dupla (double opt-in): depois da inscrição, o MailerLite envia um e-mail de confirmação, e você só passa a ser assinante depois de clicar no link. Todo e-mail da newsletter tem um link para cancelar a inscrição. Para excluir seus dados do MailerLite e do nosso armazenamento KV, escreva para {email}.",
   "c6": "Contagem anônima de cliques: quando você clica em um link para outro site, registramos uma contagem anônima com o Cloudflare Workers Analytics Engine. Ela guarda apenas a ferramenta, o programa de afiliados (se houver), o site de destino, o tipo de link, a página, o idioma, o domínio do site que o indicou, uma marcação de tráfego automatizado (bots e nossos testes) e a origem do clique (pessoa, bot ou teste). Não usamos cookies e não armazenamos seu endereço IP, dados do navegador nem qualquer outro dado pessoal.",
   "c7": "Comentários do blog: os comentários dos artigos ficam armazenados no GitHub Discussions (repositório tradingaihub/community) e são exibidos via giscus. Nada é carregado do GitHub ou do giscus até você clicar em “Carregar comentários”. Para comentar, você entra com sua conta do GitHub, e o que publicar fica público no GitHub, sob a declaração de privacidade do GitHub. Não recebemos sua senha nem seu e-mail do GitHub.",
+  "c8": "Publicidade: cada página carrega o Google AdSense. O Google e seus parceiros podem definir cookies ou usar identificadores semelhantes para anúncios e medição. Os visitantes do EEE, do Reino Unido e da Suíça serão solicitados a dar consentimento por meio da mensagem de consentimento do Google. Consulte {link} para saber como o Google usa informações de sites que usam os serviços dele.",
   "cookiesP": "O que armazenamos no seu navegador está descrito na página {link}."
  },
  "terms": {
@@ -693,11 +694,12 @@
   "title": "Aviso de cookies e armazenamento no navegador",
   "metaDesc": "O que o TradingAIHub armazena no seu navegador e quais serviços de terceiros o site usa.",
   "updated": "Última atualização: {date}",
-  "intro": "{site} é um site estático. Nossas páginas não definem cookies, e não usamos cookies de publicidade, cookies de rastreamento nem pixels de redes sociais. Esta página descreve o que o site realmente armazena no seu navegador e quais pedidos a terceiros ele faz.",
+  "intro": "{site} é um site estático. Não definimos cookies próprios e não usamos pixels de redes sociais. O site carrega o Google AdSense, e o Google e seus parceiros podem definir cookies ou usar identificadores semelhantes para anúncios e medição. Esta página descreve o que o site realmente armazena no seu navegador e quais pedidos a terceiros ele faz.",
   "sumH": "Em resumo",
   "sum": [
-   "As páginas deste site não definem cookies.",
+   "Este site não define cookies próprios.",
    "Suas escolhas de tema, idioma e acessibilidade ficam salvas apenas neste navegador, no localStorage (não como cookies), e não são enviadas aos nossos servidores.",
+   "Cada página carrega o Google AdSense. O Google e seus parceiros podem definir cookies ou usar identificadores semelhantes para anúncios e medição. Os visitantes do Espaço Econômico Europeu (EEE), do Reino Unido e da Suíça serão solicitados a dar consentimento por meio da mensagem de consentimento do Google.",
    "Cada página carrega o Cloudflare Web Analytics, que a Cloudflare documenta como um serviço sem cookies. Ele registra visualizações, origens de tráfego e país de forma agregada.",
    "Quando você clica em um link para outro site, registramos uma contagem anônima. Não usamos cookies e não armazenamos seu endereço IP nem os dados do navegador.",
    "A newsletter e os comentários do blog funcionam só se você escolher usá-los, como descrito abaixo.",
@@ -717,6 +719,9 @@
   "untilCleared": "Até você limpar os dados deste site no navegador ou alterar o ajuste.",
   "analyticsH": "Cloudflare Web Analytics",
   "analyticsP": "Cada página carrega o Cloudflare Web Analytics (um script de static.cloudflareinsights.com). A Cloudflare documenta este produto como um serviço sem cookies. Como descrito na nossa política de privacidade, ele registra visualizações, origens de tráfego e país de forma agregada. É carregado em todas as páginas; não o condicionamos a um banner de consentimento.",
+  "adsH": "Google AdSense",
+  "adsP": "Cada página carrega o Google AdSense (um script de pagead2.googlesyndication.com). O Google e seus parceiros podem definir cookies ou usar identificadores semelhantes para anúncios e medição. Os visitantes do Espaço Econômico Europeu (EEE), do Reino Unido e da Suíça serão solicitados a dar consentimento por meio da mensagem de consentimento fornecida pelo Google. Para saber como o Google usa informações de sites que usam os serviços dele, consulte {link}.",
+  "adsLink": "Como o Google usa informações de sites que usam nossos serviços",
   "clickH": "Contagem anônima de cliques",
   "clickP": "Quando você clica em um link para outro site, nossas páginas enviam uma contagem anônima ao nosso próprio endpoint (/api/click) com o Cloudflare Workers Analytics Engine. A contagem guarda apenas a ferramenta, o programa de afiliados (se houver), o site de destino, o tipo de link, a página, o idioma, o domínio do site que o indicou, uma marcação de tráfego automatizado (bots e nossos testes) e a origem do clique (pessoa, bot ou teste). Não usamos cookies e não armazenamos seu endereço IP, os dados do navegador nem qualquer outro dado pessoal. O próprio link não é reescrito.",
   "newsH": "Newsletter",
