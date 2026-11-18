@@ -2,7 +2,7 @@
 // so both files always match the live directory. English URLs; other locales live under /<code>/.
 import { SITE } from "../config";
 import { LOCALES, useT } from "../i18n";
-import { tools, CATEGORIES, COMPARISONS, STATUS, TYPE_LABEL, byStars, verificationReport } from "./data";
+import { tools, CATEGORIES, COMPARISONS, STATUS, TYPE_LABEL, byStars, verificationReport, isVerified, isHighRisk } from "./data";
 import { EDITORIAL_COMPARES } from "./bestPages";
 // Outbound vendor URLs (repo, homepage, pricing source, remote MCP) come from RAW data/tools.json: data.ts runs them through
 // affUrl(), and affiliate IDs must never reach LLM context files. Internal URLs come from the ids.
@@ -24,7 +24,7 @@ const checked = () => String(verificationReport.checked_at || "").slice(0, 10);
 const langs = () => LOCALES.map((l) => `${l.name} (${l.code === "en" ? "/" : `/${l.code}/`})`).join(", ");
 
 function header(): string[] {
-  const verified = tools.filter((x) => x.verification.status === "verified").length;
+  const verified = tools.filter((x) => isVerified(x)).length;
   return [
     `# ${SITE.name}`,
     "",
@@ -111,6 +111,7 @@ export function llmsFullTxt(): string {
       const st = STATUS[x.verification.status]?.label ?? x.verification.status;
       const r = rawById[x.id] ?? {}; const pr = r.pricing ?? {};
       L.push(`- [${md(x.name)}](${u(`/tools/${x.id}/`)}): ${md(x.description)}`);
+      if (isHighRisk(x)) L.push(`  - Not recommended by TradingAIHub — high risk: memecoins / own token / copy-trading. Not eligible for the Verified badge.`);
       L.push(`  - ${TYPE_LABEL[x.type] ?? x.type} · ${x.official ? "Official (by the vendor)" : "Community"} · Status: ${st} (checked ${x.verification.checked_at}) · License: ${known(r.license) ? md(r.license) : "unknown"}`);
       const price = [known(pr.model) && md(pr.model), known(pr.free_tier) && `free tier: ${md(pr.free_tier)}`, known(pr.paid_from) && `paid from ${md(pr.paid_from)}`].filter(Boolean).join("; ");
       if (price) L.push(`  - Pricing: ${price}${plainUrl(pr.source) ? ` (source: ${pr.source}${pr.checked ? `, checked ${pr.checked}` : ""})` : ""}`);

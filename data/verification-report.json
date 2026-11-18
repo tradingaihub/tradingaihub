@@ -1,13 +1,13 @@
 {
-  "checked_at": "2026-11-11T12:51:48.507634+00:00",
-  "total": 106,
+  "checked_at": "2026-11-18T15:28:03.589989+00:00",
+  "total": 124,
   "by_status": {
-    "verified": 87,
+    "verified": 105,
     "stale": 12,
     "aging": 4,
     "archived": 3
   },
-  "with_package": 28,
+  "with_package": 29,
   "manual_checks": [
     {
       "id": "openbb",

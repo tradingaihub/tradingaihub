@@ -35,8 +35,13 @@ export const CATEGORIES = [
   { slug: "research-filings", name: "Research & SEC filings", short: "Research", icon: "🔎", blurb: "SEC EDGAR, 13F, insider trades, deep research and equity reports." },
   { slug: "quant-backtesting", name: "Quant & backtesting", short: "Quant", icon: "🧪", blurb: "Strategy research, backtests, chart patterns and trading skills." },
   { slug: "macro", name: "Macro & economics", short: "Macro", icon: "🌍", blurb: "FRED series, economic calendars, FX and macro indicators." },
+  { slug: "high-risk-crypto", name: "High-risk crypto", short: "High-risk crypto", icon: "⚠️", blurb: "Memecoins, own-token and copy-trading tools. Listed for transparency; not recommended by TradingAIHub." },
 ];
 export const catBySlug = Object.fromEntries(CATEGORIES.map((c) => [c.slug, c]));
+/** Memecoin / own-token / copy-trading listings. Never eligible for the Verified badge or rankings. */
+export const isHighRisk = (t: any) => t?.risk_tier === "high" || t?.category === "high-risk-crypto";
+/** Verified for badges, counts, rankings and best-of pages. High-risk tools are never verified. */
+export const isVerified = (t: any) => !isHighRisk(t) && t?.verification?.status === "verified";
 export const TYPE_LABEL: Record<string, string> = { mcp: "MCP server", skill: "Agent skill", api: "API" };
 
 export const STATUS: Record<string, { label: string; tone: string; help: string }> = {
@@ -106,13 +111,13 @@ export function snippets(t: any, tr: (k: string, v?: any) => string = useT("en")
 }
 
 export const COMPARISONS = [
-  { slug: "market-data-api-pricing", title: "Market data APIs for AI agents: free tiers & pricing compared", intro: "Published free-tier limits and entry prices of the major market-data APIs, each linked to the vendor's pricing page.", filter: (t: any) => t.type === "api" && ["market-data", "crypto"].includes(t.category) , cols: "pricing" },
-  { slug: "best-stock-market-mcp-servers", title: "Stock market MCP servers compared", intro: "MCP servers that bring stock and fundamentals data into Claude, Cursor and other AI clients — by maintenance status, stars, license and install method.", filter: (t: any) => t.type === "mcp" && t.category === "market-data", cols: "repo" },
-  { slug: "broker-trading-mcp-servers", title: "Broker & trading MCP servers compared", intro: "MCP servers that can read positions or place orders. Always start in paper-trading mode.", filter: (t: any) => t.category === "trading-brokers", cols: "repo" },
-  { slug: "crypto-mcp-servers", title: "Crypto MCP servers compared", intro: "Crypto market data, DEX analytics, exchanges and onchain tools.", filter: (t: any) => t.category === "crypto" && t.type !== "api", cols: "repo" },
-  { slug: "accounting-mcp-servers", title: "Accounting, payments & banking MCPs compared", intro: "Official and community servers for QuickBooks, Xero, Stripe, Ramp, Qonto and more.", filter: (t: any) => ["accounting", "payments-banking"].includes(t.category), cols: "repo" },
-  { slug: "sec-filings-research-tools", title: "SEC filings & research tools for AI agents", intro: "EDGAR, 13F, insider trades and research agents compared.", filter: (t: any) => t.category === "research-filings", cols: "repo" },
-  { slug: "trading-skills-for-claude", title: "Finance & trading agent skills compared", intro: "SKILL.md-based skills and Claude Code plugins for finance and trading work.", filter: (t: any) => t.type === "skill", cols: "repo" },
+  { slug: "market-data-api-pricing", title: "Market data APIs for AI agents: free tiers & pricing compared", intro: "Published free-tier limits and entry prices of the major market-data APIs, each linked to the vendor's pricing page.", filter: (t: any) => !isHighRisk(t) && t.type === "api" && ["market-data", "crypto"].includes(t.category) , cols: "pricing" },
+  { slug: "best-stock-market-mcp-servers", title: "Stock market MCP servers compared", intro: "MCP servers that bring stock and fundamentals data into Claude, Cursor and other AI clients — by maintenance status, stars, license and install method.", filter: (t: any) => !isHighRisk(t) && t.type === "mcp" && t.category === "market-data", cols: "repo" },
+  { slug: "broker-trading-mcp-servers", title: "Broker & trading MCP servers compared", intro: "MCP servers that can read positions or place orders. Always start in paper-trading mode.", filter: (t: any) => !isHighRisk(t) && t.category === "trading-brokers", cols: "repo" },
+  { slug: "crypto-mcp-servers", title: "Crypto MCP servers compared", intro: "Crypto market data, DEX analytics, exchanges and onchain tools.", filter: (t: any) => !isHighRisk(t) && t.category === "crypto" && t.type !== "api", cols: "repo" },
+  { slug: "accounting-mcp-servers", title: "Accounting, payments & banking MCPs compared", intro: "Official and community servers for QuickBooks, Xero, Stripe, Ramp, Qonto and more.", filter: (t: any) => !isHighRisk(t) && ["accounting", "payments-banking"].includes(t.category), cols: "repo" },
+  { slug: "sec-filings-research-tools", title: "SEC filings & research tools for AI agents", intro: "EDGAR, 13F, insider trades and research agents compared.", filter: (t: any) => !isHighRisk(t) && t.category === "research-filings", cols: "repo" },
+  { slug: "trading-skills-for-claude", title: "Finance & trading agent skills compared", intro: "SKILL.md-based skills and Claude Code plugins for finance and trading work.", filter: (t: any) => !isHighRisk(t) && t.type === "skill", cols: "repo" },
 ];
 import changelogRaw from "../../data/changelog.json";
 export const changelog: any[] = changelogRaw as any[];
