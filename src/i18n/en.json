@@ -26,6 +26,7 @@
   "submitFree": "Submit a tool (free)",
   "getBadge": "Get your verified badge",
   "awesome": "Awesome list",
+  "starList": "Star the list on <bdi dir=\"ltr\">GitHub</bdi>",
   "legal": "Legal",
   "nia": "Not investment advice",
   "privacy": "Privacy",
@@ -382,7 +383,8 @@
  "ver": {
   "title": "Latest verification run",
   "desc": "Results of the weekly automated verification of every listed finance and trading AI tool.",
-  "h1": "Verification run — {date}"
+  "h1": "Verification run — {date}",
+  "awesomeList": "The same tools are also listed in our <a href=\"{url}\">Awesome list on <bdi dir=\"ltr\">GitHub</bdi></a>."
  },
  "submit": {
   "title": "Submit a tool",

@@ -26,6 +26,7 @@
   "submitFree": "Tool einreichen (kostenlos)",
   "getBadge": "Holen Sie sich Ihr Prüf-Badge",
   "awesome": "Awesome-Liste",
+  "starList": "Geben Sie der Liste auf <bdi dir=\"ltr\">GitHub</bdi> einen Stern",
   "legal": "Rechtliches",
   "nia": "Keine Anlageberatung",
   "privacy": "Datenschutz",
@@ -381,7 +382,8 @@
  "ver": {
   "title": "Letzte Prüfung",
   "desc": "Ergebnisse der wöchentlichen automatischen Prüfung jedes gelisteten KI-Tools für Finanzen und Trading.",
-  "h1": "Prüfung — {date}"
+  "h1": "Prüfung — {date}",
+  "awesomeList": "Dieselben Tools stehen auch in unserer <a href=\"{url}\">Awesome-Liste auf <bdi dir=\"ltr\">GitHub</bdi></a>."
  },
  "submit": {
   "title": "Tool einreichen",
