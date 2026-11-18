@@ -72,7 +72,7 @@ export function datasetLd(page: { url: string; lang: string }) {
     name: `TradingAIHub weekly verification run, ${date}`,
     description: `Results of the weekly automated verification of every listed finance and trading AI tool: repository reachability, recent commits, package provenance, and whether homepage, docs and hosted MCP endpoints respond. Pricing is copied from each vendor's own pricing page. This run covers ${total} tools, ${verified} verified.`,
     url: page.url, inLanguage: page.lang,
-    creator: { "@id": ORG_ID }, publisher: { "@id": ORG_ID }, isPartOf: { "@id": WEBSITE_ID },
+    creator: { "@id": ORG_ID }, publisher: { "@id": ORG_ID }, isPartOf: { "@type": "WebSite", "@id": WEBSITE_ID, url: `${SITE.url}/` },
     license: "https://creativecommons.org/licenses/by/4.0/",
     copyrightNotice: "TradingAIHub, https://tradingaihub.com",
     datePublished: date, dateModified: date, temporalCoverage: date,

@@ -1,5 +1,6 @@
 // Shared data for English-only editorial comparison pages under /compare/best-ai-tools-for-*/.
-// Tool rows are resolved from data/tools.json at build time; unknown or unverified ids fail the build.
+// Tool rows are resolved from data/tools.json at build time. Unknown ids fail the build.
+// Unverified ids are dropped with a warning; the build fails only if too few verified tools remain.
 import { tools, verificationReport } from "./data";
 import type { QA } from "./faq";
 
@@ -9,8 +10,15 @@ export function requireTools(ids: string[]): any[] {
   const missing = ids.filter((id) => !byId[id]);
   if (missing.length) throw new Error(`best page: unknown tool ids: ${missing.join(", ")}`);
   const notVerified = ids.filter((id) => byId[id].verification?.status !== "verified");
-  if (notVerified.length) throw new Error(`best page: not verified in the latest run: ${notVerified.join(", ")}`);
-  return ids.map((id) => byId[id]);
+  const verified = ids.filter((id) => byId[id].verification?.status === "verified");
+  if (notVerified.length) {
+    console.warn(`best page: dropping unverified tools: ${notVerified.join(", ")}`);
+  }
+  const min = Math.ceil(ids.length / 2);
+  if (verified.length < min) {
+    throw new Error(`best page: too few verified tools (${verified.length}/${ids.length}, need ${min}): not verified in the latest run: ${notVerified.join(", ")}`);
+  }
+  return verified.map((id) => byId[id]);
 }
 
 export function paidFrom(t: any): string {
