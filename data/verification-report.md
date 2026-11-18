@@ -1,8 +1,8 @@
-# Verification report — 2026-11-11 12:51 UTC
+# Verification report — 2026-11-18 15:28 UTC
 
-Total entries: 106
+Total entries: 124
 
-- verified: 87
+- verified: 105
 - stale: 12
 - aging: 4
 - archived: 3
@@ -10,7 +10,7 @@ Total entries: 106
 Manual checks:
 - openbb: Manually checked on 2026-11-11
 
-Entries with a published npm/PyPI package: 28
+Entries with a published npm/PyPI package: 29
 
 | id | status | stars | last commit | license | package | issues |
 |---|---|---|---|---|---|---|
@@ -120,3 +120,21 @@ Entries with a published npm/PyPI package: 28
 | longbridge-skills | verified | 71 | 2026-11-08 | MIT |  |  |
 | coinbase-agentic-wallet-skills | verified | 128 | 2026-08-04 | MIT |  |  |
 | options-trading-skills | verified | 406 | 2026-11-08 | MIT |  | pypi name 'trading-skills' exists on the registry but does not link to this repo (not counted) |
+| fair-value-calculator-mcp | verified | 0 | 2026-11-13 | Other (see repo) |  |  |
+| lava-mcp | verified | 101 | 2026-11-07 | MIT |  |  |
+| dchub-mcp | verified | 3 | 2026-11-18 | MIT | dchub-mcp-server@2.12.59 |  |
+| siebly-agent-skills | verified | 2 | 2026-11-02 | MIT |  |  |
+| stock-bloc | verified |  |  | Proprietary / ToS |  |  |
+| quantral-mcp | verified |  |  | Proprietary / ToS |  |  |
+| tickerlayer-mcp | verified |  |  | Proprietary / ToS |  |  |
+| waveleta-mcp | verified |  |  | Proprietary / ToS |  |  |
+| liquidmap-mcp | verified |  |  | Proprietary / ToS |  |  |
+| tradytics-mcp | verified |  |  | Proprietary / ToS |  |  |
+| financemcp-unbidden | verified |  |  | Proprietary / ToS |  |  |
+| bharatstock-mcp | verified |  |  | Proprietary / ToS |  |  |
+| china-a-share-stock-mcp | verified | 0 | 2026-09-06 | MIT |  |  |
+| bullion-trading-mcp | verified |  |  | Proprietary / ToS |  |  |
+| trading-checkup-aikit | verified |  |  | Proprietary / ToS |  |  |
+| aperiodic-mcp | verified |  |  | Proprietary / ToS |  |  |
+| ocarrat-mcp | verified |  |  | Proprietary / ToS |  |  |
+| copy-top | verified | 0 | 2026-11-14 | unknown |  |  |

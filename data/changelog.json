@@ -1,5 +1,106 @@
 [
   {
+    "date": "2026-11-18",
+    "counts": {
+      "verified": 105,
+      "stale": 12,
+      "aging": 4,
+      "archived": 3
+    },
+    "changes": [
+      {
+        "kind": "new",
+        "id": "fair-value-calculator-mcp",
+        "text": "New: Fair Value Calculator MCP added."
+      },
+      {
+        "kind": "new",
+        "id": "lava-mcp",
+        "text": "New: Lava MCP added."
+      },
+      {
+        "kind": "new",
+        "id": "dchub-mcp",
+        "text": "New: DC Hub MCP added."
+      },
+      {
+        "kind": "new",
+        "id": "siebly-agent-skills",
+        "text": "New: Siebly Agent Skills added."
+      },
+      {
+        "kind": "new",
+        "id": "stock-bloc",
+        "text": "New: Stock Bloc added."
+      },
+      {
+        "kind": "new",
+        "id": "quantral-mcp",
+        "text": "New: Quantral MCP added."
+      },
+      {
+        "kind": "new",
+        "id": "tickerlayer-mcp",
+        "text": "New: TickerLayer MCP added."
+      },
+      {
+        "kind": "new",
+        "id": "waveleta-mcp",
+        "text": "New: Waveleta MCP added."
+      },
+      {
+        "kind": "new",
+        "id": "liquidmap-mcp",
+        "text": "New: LiquidMap MCP added."
+      },
+      {
+        "kind": "new",
+        "id": "tradytics-mcp",
+        "text": "New: Tradytics MCP added."
+      },
+      {
+        "kind": "new",
+        "id": "financemcp-unbidden",
+        "text": "New: FinanceMCP Unbidden added."
+      },
+      {
+        "kind": "new",
+        "id": "bharatstock-mcp",
+        "text": "New: BharatStock MCP added."
+      },
+      {
+        "kind": "new",
+        "id": "china-a-share-stock-mcp",
+        "text": "New: China A-Share Stock MCP added."
+      },
+      {
+        "kind": "new",
+        "id": "bullion-trading-mcp",
+        "text": "New: Bullion Trading MCP added."
+      },
+      {
+        "kind": "new",
+        "id": "trading-checkup-aikit",
+        "text": "New: Trading Checkup AIKIT added."
+      },
+      {
+        "kind": "new",
+        "id": "aperiodic-mcp",
+        "text": "New: Aperiodic MCP added."
+      },
+      {
+        "kind": "new",
+        "id": "ocarrat-mcp",
+        "text": "New: Ocarrat Trading Statistics MCP added."
+      },
+      {
+        "kind": "new",
+        "id": "copy-top",
+        "text": "New: copy.top added."
+      }
+    ]
+  },
+  {
     "date": "2026-11-11",
     "counts": {
       "verified": 87,

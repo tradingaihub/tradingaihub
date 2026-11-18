@@ -99,6 +99,9 @@ pre,code{direction:ltr;text-align:left;unicode-bidi:isolate}
 button.badge.secnote{padding:0 10px;line-height:24px;margin:0}
 .badge.secnote:focus-visible{outline:2px solid var(--text);outline-offset:2px}
 .secnote-wrap{margin:0 0 12px}.secnote-row{display:flex;flex-wrap:nowrap;align-items:center;gap:8px;margin:0;overflow-x:auto;min-width:0}
+.risk-banner{margin:0 0 12px;padding:10px 12px;border-radius:10px;background:#b91c1c;color:#fff;border:1px solid #b91c1c;font-size:14px;font-weight:700;line-height:1.45;text-align:start;overflow-wrap:anywhere}
+.risk-banner-card{margin:8px 0 0;padding:8px 10px;font-size:12.5px}
+
 .secnote-line{margin-top:6px}
 /* Badge explanations (XpTip.astro + the [data-xp-toggle] script in Base.astro). Closed = .sr-only pattern (never display:none);
    open = an absolutely positioned overlay at the tip's own place (no layout shift; a11y.css forces .sr-only absolute), open on tap (.open), keyboard focus, and hover only on real hover devices. Esc adds .xp-x until pointer/focus leaves. */

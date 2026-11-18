@@ -2322,5 +2322,387 @@
     "capabilities": [
       "live_trading"
     ]
+  },
+  {
+    "id": "fair-value-calculator-mcp",
+    "name": "Fair Value Calculator MCP",
+    "type": "mcp",
+    "category": "research-filings",
+    "description": "Official hosted MCP for Fair Value Calculator: model fair value, valuation status and quality score for 40,000+ listed stocks. Verdict, screening and portfolio-check tools are read-only research; watchlist tools can change a signed-in account's watchlist. A free account (OAuth) is enough; Pro adds exact fair values and higher limits.",
+    "repo": "https://github.com/petz00711/fair-value-calculator-mcp",
+    "homepage": "https://www.fairvalue-calculator.com/",
+    "docs": "https://www.fairvalue-calculator.com/mcp",
+    "source_url": "https://www.fairvalue-calculator.com/mcp",
+    "official": true,
+    "pricing": {
+      "model": "freemium",
+      "free_tier": "Free account (OAuth); monthly verdict limits",
+      "paid_from": "$9.90/mo",
+      "details": "Pro is $1 for the first month, then $9.90/mo or $99/year. Free accounts get verdict tools with monthly limits; exact fair values, comparisons of up to five stocks, alerts and watchlist suggestions are part of Pro.",
+      "source": "https://www.fairvalue-calculator.com/pro",
+      "checked": "2026-11-18"
+    },
+    "remote_mcp_url": "https://www.fairvalue-calculator.com/mcp"
+  },
+  {
+    "id": "lava-mcp",
+    "name": "Lava MCP",
+    "type": "mcp",
+    "category": "market-data",
+    "description": "Official hosted MCP and REST API for Lava (熔岩): read-only A-share stock and concept-board news-heat data and structured summaries, with anonymized institutional IDs. Does not place trades.",
+    "repo": "https://github.com/dustinliang666-blip/lava-mcp",
+    "homepage": "https://lava.ai-dolphin.com",
+    "docs": "https://lava.ai-dolphin.com/subscribe/docs",
+    "source_url": "https://lava.ai-dolphin.com/subscribe",
+    "official": true,
+    "pricing": {
+      "model": "usage-based",
+      "free_tier": "¥100 opening voucher",
+      "paid_from": "about ¥5 / 1,000 calls",
+      "details": "Hosted endpoint requires a Lava API key or OAuth. Opening a data account includes a ¥100 voucher; about 1,000 calls cost ¥5, as stated on the vendor subscribe page.",
+      "source": "https://lava.ai-dolphin.com/subscribe",
+      "checked": "2026-11-18"
+    },
+    "remote_mcp_url": "https://lava.ai-dolphin.com/subscribe/v1/mcp"
+  },
+  {
+    "id": "dchub-mcp",
+    "name": "DC Hub MCP",
+    "type": "mcp",
+    "category": "macro",
+    "description": "Official hosted MCP for DC Hub: data-center and energy intelligence, including daily Data Center Power Index scores for 300+ markets, grid, interconnection queues, fiber and capacity. Read-mostly research and siting data; it does not operate infrastructure.",
+    "repo": "https://github.com/azmartone67/dchub-mcp-server",
+    "homepage": "https://dchub.cloud/",
+    "docs": "https://dchub.cloud/mcp",
+    "source_url": "https://dchub.cloud/pricing",
+    "official": true,
+    "pricing": {
+      "model": "freemium",
+      "free_tier": "Free-tier depth without credentials",
+      "paid_from": "$49/mo",
+      "details": "Vendor pricing lists Developer at $49 and Pro at $99/month (7-day Pro trial, then $99; annual Pro $1,188). One-time 1,000-credit packs are $10. Keyless access works at free-tier depth; an optional sign-in is available.",
+      "source": "https://dchub.cloud/pricing",
+      "checked": "2026-11-18"
+    },
+    "remote_mcp_url": "https://dchub.cloud/mcp"
+  },
+  {
+    "id": "siebly-agent-skills",
+    "name": "Siebly Agent Skills",
+    "type": "skill",
+    "category": "trading-brokers",
+    "description": "Official agent skills for Siebly's open-source JavaScript and TypeScript SDKs for cryptocurrency exchange APIs (Binance, Bybit, OKX, Gate, Bitget, KuCoin, Coinbase, Kraken, HTX and Hyperliquid). Can place live exchange orders if the user supplies API keys; defaults to dry-run until live mode is explicitly selected.",
+    "repo": "https://github.com/sieblyio/agent-skills",
+    "homepage": "https://siebly.io/ai",
+    "docs": "https://siebly.io/ai",
+    "source_url": "https://github.com/sieblyio/agent-skills",
+    "official": true,
+    "pricing": {
+      "model": "open-source",
+      "free_tier": "Free",
+      "paid_from": null,
+      "details": "MIT-licensed skill and open-source SDKs. Exchange accounts and any brokerage fees are separate and billed by each venue.",
+      "source": "https://github.com/sieblyio/agent-skills",
+      "checked": "2026-11-18"
+    },
+    "remote_mcp_url": null,
+    "capabilities": [
+      "live_trading"
+    ]
+  },
+  {
+    "id": "stock-bloc",
+    "name": "Stock Bloc",
+    "type": "mcp",
+    "category": "research-filings",
+    "description": "Official MCP and HTTP API for Stock Bloc: SEC filing diffs (10-K/10-Q), 13F holdings, scores and market research for AI agents. tools/list is described as free; data calls are paid per request in USDC on Base (x402).",
+    "repo": null,
+    "homepage": "https://stockbloc.ai.studio",
+    "docs": "https://stockbloc.ai.studio/llms.txt",
+    "source_url": "https://stockbloc.ai.studio",
+    "official": true,
+    "pricing": {
+      "model": "usage",
+      "free_tier": "tools/list described as free; public web terminal unmetered",
+      "paid_from": "$0.01 / call",
+      "details": "Pay-per-call in USDC on Base (x402): $0.01 for quotes, $0.05–$0.10 for 13F, filing diffs and scores, $0.35 for an earnings pack, as stated in the vendor's machine-readable docs.",
+      "source": "https://stockbloc.ai.studio/llms.txt",
+      "checked": "2026-11-18"
+    },
+    "remote_mcp_url": "https://stockbloc.ai.studio/api/mcp/rpc"
+  },
+  {
+    "id": "quantral-mcp",
+    "name": "Quantral MCP",
+    "type": "mcp",
+    "category": "market-data",
+    "description": "Official hosted MCP for Quantral: read-only stock sentiment and signal scores, plus Congress and insider-trade data, for Claude, ChatGPT and other MCP clients. Does not place trades or move funds.",
+    "repo": null,
+    "homepage": "https://quantral.com/",
+    "docs": "https://quantral.com/mcp",
+    "source_url": "https://quantral.com/pricing",
+    "official": true,
+    "pricing": {
+      "model": "paid",
+      "free_tier": "7-day trial on the yearly plan",
+      "paid_from": "$5.99/week",
+      "details": "Weekly $5.99 or monthly $14.99, billed from the start. Yearly $119.99 (about $9.99/month) includes a 7-day free trial, then the annual charge. An agent pass is also offered in USDC on Base (x402). Cancel anytime.",
+      "source": "https://quantral.com/pricing",
+      "checked": "2026-11-18"
+    },
+    "remote_mcp_url": "https://app.quantral.com/api/mcp"
+  },
+  {
+    "id": "tickerlayer-mcp",
+    "name": "TickerLayer MCP",
+    "type": "mcp",
+    "category": "market-data",
+    "description": "Official hosted MCP, REST and WebSocket market-data API for stocks, forex, crypto, indices, ETFs and commodities. Indicative, non-exchange-sourced data for AI agents. The same plans apply in MCP clients, with no extra MCP fee.",
+    "repo": null,
+    "homepage": "https://tickerlayer.com/",
+    "docs": "https://tickerlayer.com/docs/mcp",
+    "source_url": "https://tickerlayer.com/pricing",
+    "official": true,
+    "pricing": {
+      "model": "freemium",
+      "free_tier": "3,000 REST calls / 30 days (crypto, forex and US stocks); no card",
+      "paid_from": "$49/mo",
+      "details": "Free: 3,000 calls every 30 days, 10 requests/second, no WebSocket. Individual starts at $49/month for crypto, commodities and indices (forex and ETFs $59; US stocks $99), with yearly billing 20% lower. Business and per-request USDC (x402) options are also listed. No extra MCP fee.",
+      "source": "https://tickerlayer.com/pricing",
+      "checked": "2026-11-18"
+    },
+    "remote_mcp_url": "https://mcp.tickerlayer.com/mcp"
+  },
+  {
+    "id": "waveleta-mcp",
+    "name": "Waveleta MCP",
+    "type": "mcp",
+    "category": "crypto",
+    "description": "Official read-only MCP and prepaid Developer API for Waveleta market data (crypto tickers across 600+ markets, plus FX, commodities and US equities history). The MCP has no trading tools and cannot place, change or cancel orders.",
+    "repo": null,
+    "homepage": "https://waveleta.com/developer/mcp",
+    "docs": "https://waveleta.com/developer/mcp",
+    "source_url": "https://waveleta.com/developer/mcp",
+    "official": true,
+    "pricing": {
+      "model": "usage-based",
+      "free_tier": "€2 free starter credit (about 1,000 calls)",
+      "paid_from": "€0.002 / call",
+      "details": "Billed like the Developer API: €2 free credit, then €0.002 per successful call from a prepaid balance; top-ups from €20. Connecting and listing tools is free. This listing covers only the MCP/API, not the Waveleta app or its optional Trading add-on.",
+      "source": "https://waveleta.com/developer/mcp",
+      "checked": "2026-11-18"
+    },
+    "remote_mcp_url": "https://api.waveleta.com/mcp"
+  },
+  {
+    "id": "liquidmap-mcp",
+    "name": "LiquidMap MCP",
+    "type": "mcp",
+    "category": "crypto",
+    "description": "Official hosted MCP for LiquidMap: read-only crypto order-flow tools (heatmap, footprint, CVD, funding and open interest) from multiple exchanges. Does not connect to a user exchange account or place trades.",
+    "repo": null,
+    "homepage": "https://liquidmap.io/",
+    "docs": "https://liquidmap.io/en/crypto-mcp-server",
+    "source_url": "https://liquidmap.io/en/crypto-mcp-server",
+    "official": true,
+    "pricing": {
+      "model": "paid",
+      "free_tier": "€1 for 3 days",
+      "paid_from": "€10/mo",
+      "details": "A 3-day trial for €1, then €10/month (VAT included), cancel anytime, as stated by the vendor. OAuth; six read-only tools.",
+      "source": "https://liquidmap.io/en/crypto-mcp-server",
+      "checked": "2026-11-18"
+    },
+    "remote_mcp_url": "https://liquidmap.io/mcp"
+  },
+  {
+    "id": "tradytics-mcp",
+    "name": "Tradytics MCP",
+    "type": "mcp",
+    "category": "market-data",
+    "description": "Official hosted MCP and REST API for Tradytics: stock quotes and bars, options flow, dark-pool prints, company research, filings, screeners and prediction markets. Account tools read the signed-in user's own portfolio, watchlists and backtests.",
+    "repo": null,
+    "homepage": "https://tradytics.com/",
+    "docs": "https://tradytics.com/docs/mcp",
+    "source_url": "https://tradytics.com/docs",
+    "official": true,
+    "pricing": {
+      "model": "freemium",
+      "free_tier": "5 calls/min and 50/day",
+      "paid_from": null,
+      "details": "Start for free. Every dataset is available on every plan. Free: 5 calls/min and 50/day. Plus: 50/min and 5,000/day. Pro: 300/min and 50,000/day. All API keys and MCP connections share one account allowance. Any endpoint can also be called without a key at $0.004/call in USDC on Base (x402). Plus and Pro list prices were not stated on the docs pages checked.",
+      "source": "https://tradytics.com/docs/rate-limits",
+      "checked": "2026-11-18"
+    },
+    "remote_mcp_url": "https://tradytics.com/mcp"
+  },
+  {
+    "id": "financemcp-unbidden",
+    "name": "FinanceMCP Unbidden",
+    "type": "mcp",
+    "category": "research-filings",
+    "description": "Official hosted MCP for official-source finance data from SEC EDGAR XBRL, the U.S. Bureau of Labor Statistics and U.S. Treasury Fiscal Data.",
+    "repo": null,
+    "homepage": "https://financemcp.unbidden.ai/",
+    "docs": "https://financemcp.unbidden.ai/",
+    "source_url": "https://financemcp.unbidden.ai/",
+    "official": true,
+    "pricing": {
+      "model": "freemium",
+      "free_tier": "50 tool calls/day",
+      "paid_from": "$19/mo",
+      "details": "Free plan: 50 tool calls/day. Pro: $19/month for 5,000 tool calls/month, as stated on the service landing page. Auth is a Bearer or X-API-Key token.",
+      "source": "https://financemcp.unbidden.ai/",
+      "checked": "2026-11-18"
+    },
+    "remote_mcp_url": "https://financemcp.unbidden.ai/mcp"
+  },
+  {
+    "id": "bharatstock-mcp",
+    "name": "BharatStock MCP",
+    "type": "mcp",
+    "category": "market-data",
+    "description": "Official MCP and REST API for Indian stock-market data (NSE and BSE): quotes, financials, fundamentals, corporate actions, mutual-fund holdings and more. About 31 read-only tools. The MCP server is a Developer and Pro feature.",
+    "repo": null,
+    "homepage": "https://bharatstockapi.com/",
+    "docs": "https://bharatstockapi.com/mcp",
+    "source_url": "https://bharatstockapi.com/#pricing",
+    "official": true,
+    "pricing": {
+      "model": "freemium",
+      "free_tier": "₹0/mo, 60 requests/day, about one year of history",
+      "paid_from": "₹500/mo",
+      "details": "Every plan can call every REST endpoint. Free: ₹0, 60 requests/day. Starter: ₹500/mo, 1,000/day. Growth: ₹700/mo, 5,000/day. Developer: ₹1,000/mo, 10,000/day. Pro: ₹5,000/mo, 40,000/day. Paid plans unlock the full archive (11+ years). MCP requires a Developer or Pro key. Prices are before applicable tax (GST).",
+      "source": "https://bharatstockapi.com/#pricing",
+      "checked": "2026-11-18"
+    },
+    "remote_mcp_url": "https://bharatstockapi.com/v1/mcp"
+  },
+  {
+    "id": "china-a-share-stock-mcp",
+    "name": "China A-Share Stock MCP",
+    "type": "mcp",
+    "category": "market-data",
+    "description": "Community MCP server for real-time China A-share quotes and major index levels, using free public Tencent and Sina sources. A hosted Streamable HTTP endpoint is available, or you can self-host. No API key. MIT.",
+    "repo": "https://github.com/boy-373/stock-mcp",
+    "homepage": null,
+    "docs": "https://github.com/boy-373/stock-mcp",
+    "source_url": "https://github.com/boy-373/stock-mcp",
+    "official": false,
+    "pricing": {
+      "model": "open-source",
+      "free_tier": "Free (hosted or self-hosted); no API key",
+      "paid_from": null,
+      "details": "MIT. Uses free public quote endpoints (Tencent Finance primary, Sina Finance fallback). Data is indicative and may be delayed, per the data providers.",
+      "source": "https://github.com/boy-373/stock-mcp",
+      "checked": "2026-11-18"
+    },
+    "remote_mcp_url": "https://mcp.pianam.cn/stock-mcp/mcp"
+  },
+  {
+    "id": "bullion-trading-mcp",
+    "name": "Bullion Trading MCP",
+    "type": "mcp",
+    "category": "market-data",
+    "description": "Official public MCP of Bullion Trading LLC, a New York bullion dealer: spot prices, catalog prices, premiums, buy-back rates and store policies. Tools are read-only; it can hand the customer a website cart link but cannot place an order.",
+    "repo": null,
+    "homepage": "https://bulliontradingllc.com/",
+    "docs": "https://mcp.bulliontradingllc.com/",
+    "source_url": "https://mcp.bulliontradingllc.com/",
+    "official": true,
+    "pricing": {
+      "model": "free",
+      "free_tier": "Public MCP, no API key or sign-in",
+      "paid_from": null,
+      "details": "The MCP itself is public and free to call. Product and buy-back prices are the dealer's live catalog prices; any purchase is completed on the website.",
+      "source": "https://mcp.bulliontradingllc.com/",
+      "checked": "2026-11-18"
+    },
+    "remote_mcp_url": "https://mcp.bulliontradingllc.com/mcp"
+  },
+  {
+    "id": "trading-checkup-aikit",
+    "name": "Trading Checkup AIKIT",
+    "type": "mcp",
+    "category": "quant-backtesting",
+    "description": "Official AIKIT MCP from Trading Checkup: sourced, dated exchange and broker facts (symbol rules, fees, rate limits) and a checker for common mistakes in trading-bot code. Information only; it does not give signals or place orders. Beta; purchasing is not open yet.",
+    "repo": null,
+    "homepage": "https://tradingcheckup.com/aikit/",
+    "docs": "https://tradingcheckup.com/aikit/",
+    "source_url": "https://tradingcheckup.com/aikit/",
+    "official": true,
+    "pricing": {
+      "model": "free",
+      "free_tier": "Beta; purchasing is not open yet",
+      "paid_from": null,
+      "details": "The vendor states that AIKIT is in beta and that buying is not open yet. Tools are metered in credits on the docs page; no paid plan is for sale at the time of this check.",
+      "source": "https://tradingcheckup.com/aikit/",
+      "checked": "2026-11-18"
+    },
+    "remote_mcp_url": "https://api.tradingcheckup.com/aikit/mcp"
+  },
+  {
+    "id": "aperiodic-mcp",
+    "name": "Aperiodic MCP",
+    "type": "mcp",
+    "category": "market-data",
+    "description": "Official API and MCP for Aperiodic: point-in-time order-flow, liquidity and funding metrics for crypto and RWA perpetuals (stocks, gold, oil, FX) on Binance, OKX and Hyperliquid, built for AI agents.",
+    "repo": null,
+    "homepage": "https://aperiodic.io/",
+    "docs": "https://aperiodic.io/pricing",
+    "source_url": "https://aperiodic.io/pricing",
+    "official": true,
+    "pricing": {
+      "model": "freemium",
+      "free_tier": "Every 2025 metric on BTC, ETH, SOL and 10 RWA perps; 1,000 requests/day; no card",
+      "paid_from": "$199/mo",
+      "details": "Free: personal licence, 2025 history on BTC, ETH, SOL and 10 RWA perps, 1,000 requests/day, no card. Pro: $199/month plus VAT, for independent researchers backtesting order flow (more history and markets). Yearly billing is also offered.",
+      "source": "https://aperiodic.io/pricing",
+      "checked": "2026-11-18"
+    },
+    "remote_mcp_url": "https://aperiodic.io/mcp"
+  },
+  {
+    "id": "ocarrat-mcp",
+    "name": "Ocarrat Trading Statistics MCP",
+    "type": "mcp",
+    "category": "quant-backtesting",
+    "description": "Official MCP for Ocarrat Trading Statistics: OAuth access to a trader's own journal — strategies, weekly reports and performance analytics. A free read-only tier is available. Does not place trades.",
+    "repo": null,
+    "homepage": "https://trading-statistic-reporting.ocarrat.com/",
+    "docs": "https://trading-statistic-reporting.ocarrat.com/agents",
+    "source_url": "https://trading-statistic-reporting.ocarrat.com/pricing",
+    "official": true,
+    "pricing": {
+      "model": "freemium",
+      "free_tier": "Free plan ($0/mo): one strategy, last four weeks, limited read-only agent access",
+      "paid_from": "$5/mo",
+      "details": "Free includes three read-only MCP tools (list strategies, list weekly reports, performance summary), with monthly caps. Pro is $5/month and adds full history, unlimited strategies and broader agent access. A separate full-access MCP URL exists for Pro journal and coach tools. Cancel anytime.",
+      "source": "https://trading-statistic-reporting.ocarrat.com/pricing",
+      "checked": "2026-11-18"
+    },
+    "remote_mcp_url": "https://jenhcscubhbklxxpattl.supabase.co/functions/v1/mcp-readonly"
+  },
+  {
+    "id": "copy-top",
+    "name": "copy.top",
+    "type": "mcp",
+    "category": "high-risk-crypto",
+    "description": "Official hosted MCP from copy.top (Polycool LLC), also covered by the copytop-signals agent skill: 11 read-only tools, no API key, for live trades, signals and alerts from traders on fomo, pump.fun and Hyperliquid. The product terms also describe a $COPY token with fees, buybacks, burns and invite rewards. The public GitHub repos are documentation stubs and do not include a license.",
+    "repo": "https://github.com/copydottop/mcp",
+    "homepage": "https://copy.top/",
+    "docs": "https://github.com/copydottop/mcp",
+    "source_url": "https://copy.top/",
+    "official": true,
+    "pricing": {
+      "model": "free",
+      "free_tier": "MCP: no API key",
+      "paid_from": null,
+      "details": "The hosted MCP is documented as free to call with no key. The consumer product terms also cover copy trading, fees, invites and a $COPY token (fees, buybacks, burns and invite rewards). This listing does not treat those token terms as a price for the MCP itself.",
+      "source": "https://copy.top/terms",
+      "checked": "2026-11-18"
+    },
+    "remote_mcp_url": "https://copy.top/mcp",
+    "risk_tier": "high"
   }
 ]
