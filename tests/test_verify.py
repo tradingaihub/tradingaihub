@@ -744,6 +744,31 @@ class BrowserHeaders(unittest.TestCase):
             self.assertEqual(V.alive("https://x/")["result"], "gated")
 
 
+class SecUserAgent(unittest.TestCase):
+    def test_sec_hosts_get_declared_ua(self):
+        for url in (
+            "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+            "https://data.sec.gov/submissions/CIK0000320193.json",
+            "https://SEC.GOV/",
+        ):
+            h = V.request_headers(url)
+            self.assertEqual(h["User-Agent"], V.SEC_UA, url)
+            self.assertIn("text/html", h["Accept"])
+
+    def test_non_sec_keeps_browser_ua(self):
+        h = V.request_headers("https://example.com/")
+        self.assertTrue(h["User-Agent"].startswith("Mozilla/5.0 "))
+        self.assertIn("Chrome/", h["User-Agent"])
+
+    def test_sec_ua_wins_over_browser_headers(self):
+        h = V.request_headers("https://www.sec.gov/x", V.BROWSER)
+        self.assertEqual(h["User-Agent"], V.SEC_UA)
+
+    def test_lookalike_host_is_not_sec(self):
+        h = V.request_headers("https://sec.gov.evil.example/")
+        self.assertIn("Chrome/", h["User-Agent"])
+
+
 class ManualCheck(unittest.TestCase):
     def test_overrides_unconfirmed_only(self):
         t = {"id": "x", "manual_check": {"method": "manual", "date": V.NOW.date().isoformat(), "note": "checked in a browser"}}

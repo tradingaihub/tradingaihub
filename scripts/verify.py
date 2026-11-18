@@ -23,11 +23,26 @@ BROWSER = {
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
     "Accept-Language": "en-US,en;q=0.9",
 }
+# SEC fair-access: automated requests must declare a User-Agent with a name
+# and contact email. A generic browser UA is treated as undeclared and is often
+# answered with 403 "Request Rate Threshold Exceeded".
+SEC_UA = "TradingAIHub hello@tradingaihub.com"
+
 TOKEN = os.environ.get("GITHUB_TOKEN")
 NOW = dt.datetime.now(dt.timezone.utc)
 S = requests.Session(); S.headers.update(BROWSER)
 
 GET_DEADLINE = 25.0  # seconds, hard total for one homepage/docs/GitHub GET (DNS, connect, TLS, headers, body)
+
+def request_headers(url, extra=None):
+    """Headers for one URL. sec.gov always gets a declared UA with contact info."""
+    h = dict(BROWSER)
+    if extra:
+        h.update(extra)
+    host = (urlsplit(url).hostname or "").lower().rstrip(".")
+    if host == "sec.gov" or host.endswith(".sec.gov"):
+        h["User-Agent"] = SEC_UA
+    return h
 
 def _bounded(fn, deadline):
     """Run fn() in a daemon worker and wait at most `deadline` seconds of wall-clock time.
@@ -41,7 +56,8 @@ def _bounded(fn, deadline):
     return ("v" in box), box.get("v")
 
 def get(url, **kw):
-    done, r = _bounded(lambda: S.get(url, timeout=20, allow_redirects=True, **kw), GET_DEADLINE)
+    headers = request_headers(url, kw.pop("headers", None))
+    done, r = _bounded(lambda: S.get(url, timeout=20, allow_redirects=True, headers=headers, **kw), GET_DEADLINE)
     if not done: return Timeout(f"no complete answer within {GET_DEADLINE:g}s")
     if isinstance(r, requests.RequestException): return r
     if isinstance(r, Exception): return requests.RequestException(f"{type(r).__name__}: {r}")
