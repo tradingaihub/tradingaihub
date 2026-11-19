@@ -20,20 +20,27 @@ status_over_time,9 Nov 2026,stale,12,2026-11-09,git history data/tools.json
 status_over_time,9 Nov 2026,archived,3,2026-11-09,git history data/tools.json
 status_over_time,9 Nov 2026,link_check_pending,3,2026-11-09,git history data/tools.json
 status_over_time,9 Nov 2026,check_links,0,2026-11-09,git history data/tools.json
-status_over_time,11 Nov 2026 (latest published),listings,106,2026-11-11,data/tools.json
-status_over_time,11 Nov 2026 (latest published),verified,87,2026-11-11,data/tools.json
-status_over_time,11 Nov 2026 (latest published),aging,4,2026-11-11,data/tools.json
-status_over_time,11 Nov 2026 (latest published),stale,12,2026-11-11,data/tools.json
-status_over_time,11 Nov 2026 (latest published),archived,3,2026-11-11,data/tools.json
-status_over_time,11 Nov 2026 (latest published),link_check_pending,0,2026-11-11,data/tools.json
-status_over_time,11 Nov 2026 (latest published),check_links,0,2026-11-11,data/tools.json
-status_over_time,16 Nov 2026 (run log; not published),listings,106,2026-11-16,verification run log
-status_over_time,16 Nov 2026 (run log; not published),verified,82,2026-11-16,verification run log
-status_over_time,16 Nov 2026 (run log; not published),aging,5,2026-11-16,verification run log
-status_over_time,16 Nov 2026 (run log; not published),stale,12,2026-11-16,verification run log
-status_over_time,16 Nov 2026 (run log; not published),archived,3,2026-11-16,verification run log
-status_over_time,16 Nov 2026 (run log; not published),link_check_pending,3,2026-11-16,verification run log
-status_over_time,16 Nov 2026 (run log; not published),check_links,1,2026-11-16,verification run log
+status_over_time,11 Nov 2026,listings,106,2026-11-11,data/history/2026-11-11.json
+status_over_time,11 Nov 2026,verified,87,2026-11-11,data/history/2026-11-11.json
+status_over_time,11 Nov 2026,aging,4,2026-11-11,data/history/2026-11-11.json
+status_over_time,11 Nov 2026,stale,12,2026-11-11,data/history/2026-11-11.json
+status_over_time,11 Nov 2026,archived,3,2026-11-11,data/history/2026-11-11.json
+status_over_time,11 Nov 2026,link_check_pending,0,2026-11-11,data/history/2026-11-11.json
+status_over_time,11 Nov 2026,check_links,0,2026-11-11,data/history/2026-11-11.json
+status_over_time,16 Nov 2026 (run log; not published; not in the repository),listings,106,2026-11-16,unpublished run log (not in the repository)
+status_over_time,16 Nov 2026 (run log; not published; not in the repository),verified,82,2026-11-16,unpublished run log (not in the repository)
+status_over_time,16 Nov 2026 (run log; not published; not in the repository),aging,5,2026-11-16,unpublished run log (not in the repository)
+status_over_time,16 Nov 2026 (run log; not published; not in the repository),stale,12,2026-11-16,unpublished run log (not in the repository)
+status_over_time,16 Nov 2026 (run log; not published; not in the repository),archived,3,2026-11-16,unpublished run log (not in the repository)
+status_over_time,16 Nov 2026 (run log; not published; not in the repository),link_check_pending,3,2026-11-16,unpublished run log (not in the repository)
+status_over_time,16 Nov 2026 (run log; not published; not in the repository),check_links,1,2026-11-16,unpublished run log (not in the repository)
+status_over_time,18 Nov 2026 (latest published),listings,106,2026-11-18,data/tools.json and data/verification-report.json
+status_over_time,18 Nov 2026 (latest published),verified,81,2026-11-18,data/tools.json and data/verification-report.json
+status_over_time,18 Nov 2026 (latest published),aging,5,2026-11-18,data/tools.json and data/verification-report.json
+status_over_time,18 Nov 2026 (latest published),stale,12,2026-11-18,data/tools.json and data/verification-report.json
+status_over_time,18 Nov 2026 (latest published),archived,3,2026-11-18,data/tools.json and data/verification-report.json
+status_over_time,18 Nov 2026 (latest published),link_check_pending,3,2026-11-18,data/tools.json and data/verification-report.json
+status_over_time,18 Nov 2026 (latest published),check_links,2,2026-11-18,data/tools.json and data/verification-report.json
 by_type,MCP servers,listings,74,2026-11-11,data/tools.json
 by_type,MCP servers,verified,58,2026-11-11,data/tools.json
 by_type,MCP servers,scan_note_2026_11_10,52,2026-11-11,data/tools.json
