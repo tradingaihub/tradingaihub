@@ -3,7 +3,7 @@ title: "State of AI Trading Tools 2026: Security & Verification"
 description: "Our data on 106 finance AI tools: 87 verified, 14 repos idle for a year, 25 that can trade or move funds, and 9 packages that don't link to their repo."
 date: 2026-11-19
 tags: [verification, security, mcp, supply-chain, data-report]
-draft: true
+draft: false
 ---
 *Not financial advice. This report describes the maintenance and security-check status of software tools. It is not a recommendation to use, buy, sell or trade anything, and it does not rate any tool as safe or unsafe to invest with.*
 
