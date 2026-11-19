@@ -1,5 +1,118 @@
 [
   {
+    "date": "2026-11-18",
+    "counts": {
+      "verified": 81,
+      "warning": 2,
+      "stale": 12,
+      "aging": 5,
+      "archived": 3,
+      "unconfirmed": 3
+    },
+    "changes": [
+      {
+        "kind": "status",
+        "id": "fred-api",
+        "text": "FRED API (St. Louis Fed): verified \u2192 warning"
+      },
+      {
+        "kind": "stars",
+        "id": "alpaca-mcp",
+        "text": "Alpaca MCP Server gained 25 stars"
+      },
+      {
+        "kind": "release",
+        "id": "dexpaprika-mcp",
+        "text": "DexPaprika MCP released 2.9.5 (was 2.9.3)"
+      },
+      {
+        "kind": "stars",
+        "id": "tradingview-mcp",
+        "text": "TradingView MCP (community, unofficial) gained 64 stars"
+      },
+      {
+        "kind": "status",
+        "id": "solana-agent-kit",
+        "text": "Solana Agent Kit: verified \u2192 aging"
+      },
+      {
+        "kind": "stars",
+        "id": "solana-agent-kit",
+        "text": "Solana Agent Kit gained 27 stars"
+      },
+      {
+        "kind": "stars",
+        "id": "x402",
+        "text": "x402 (x402 Foundation) gained 25 stars"
+      },
+      {
+        "kind": "release",
+        "id": "xero-mcp",
+        "text": "Xero MCP Server released 0.0.18 (was 0.0.17)"
+      },
+      {
+        "kind": "stars",
+        "id": "anthropic-financial-services",
+        "text": "Anthropic Financial Services Plugins gained 222 stars"
+      },
+      {
+        "kind": "stars",
+        "id": "openbb",
+        "text": "OpenBB Platform (MCP) gained 198 stars"
+      },
+      {
+        "kind": "stars",
+        "id": "claude-trading-skills",
+        "text": "Claude Trading Skills gained 3317 stars"
+      },
+      {
+        "kind": "status",
+        "id": "razorpay-mcp",
+        "text": "Razorpay MCP Server: verified \u2192 warning"
+      },
+      {
+        "kind": "release",
+        "id": "ynab-mcp",
+        "text": "YNAB MCP Server (community) released 0.9.0 (was 0.8.0)"
+      },
+      {
+        "kind": "status",
+        "id": "firefly-iii-api",
+        "text": "Firefly III API: verified \u2192 unconfirmed"
+      },
+      {
+        "kind": "stars",
+        "id": "firefly-iii-api",
+        "text": "Firefly III API gained 70 stars"
+      },
+      {
+        "kind": "stars",
+        "id": "sure",
+        "text": "Sure gained 3956 stars"
+      },
+      {
+        "kind": "status",
+        "id": "bls-api",
+        "text": "BLS Public Data API: verified \u2192 unconfirmed"
+      },
+      {
+        "kind": "stars",
+        "id": "frankfurter",
+        "text": "Frankfurter (FX rates API + MCP) gained 42 stars"
+      },
+      {
+        "kind": "release",
+        "id": "webull-openapi-mcp",
+        "text": "Webull OpenAPI MCP released 1.2.7 (was 1.2.6)"
+      },
+      {
+        "kind": "status",
+        "id": "longbridge-skills",
+        "text": "Longbridge Skills: verified \u2192 unconfirmed"
+      }
+    ]
+  },
+  {
     "date": "2026-11-11",
     "counts": {
       "verified": 87,
