@@ -1,0 +1,30 @@
+---
+import { useT } from "../i18n";
+import { BADGE_H, BADGE_W, badgeKindOf, badgeLabel, badgeSnippets } from "../lib/badge";
+interface Props { tool: any; lang?: string }
+const { tool, lang = "en" } = Astro.props;
+const { t, p } = useT(lang);
+const kind = badgeKindOf(tool);
+const label = badgeLabel(kind);
+const { html, md, darkSrc } = badgeSnippets(tool.id, kind);
+const heading = kind === "verified" ? t("tool.badgeBox") : t("tool.badgeBoxListed");
+---
+<div class="panel" style="margin-top:14px">
+  <b>{heading}</b>
+  <p class="note">{t("tool.badgeNote")}</p>
+  <p dir="ltr"><img src={`/badge/${tool.id}.svg`} alt={label} width={BADGE_W} height={BADGE_H} /></p>
+  <details class="badge-embed" open>
+    <summary>{t("tool.badgeHtml")} / {t("tool.badgeMarkdown")}</summary>
+    <p class="note">{t("tool.badgeHtml")}</p>
+    <pre class="ltr" dir="ltr"><code dir="ltr">{html}</code></pre>
+    <p class="note">{t("tool.badgeMarkdown")}</p>
+    <pre class="ltr" dir="ltr"><code dir="ltr">{md}</code></pre>
+    <p class="note ltr" dir="ltr">{t("tool.badgeDark", { src: darkSrc })}</p>
+  </details>
+  <p class="note">{t("tool.wrongInfo")} <a href={p("/submit/")}>{t("tool.sendCorrection")}</a> — {t("tool.free")}.</p>
+</div>
+<style>
+  details.badge-embed{margin:8px 0}
+  details.badge-embed summary{cursor:pointer;font-size:13px;color:var(--text);user-select:none}
+  details.badge-embed[open] summary{margin-bottom:6px}
+</style>

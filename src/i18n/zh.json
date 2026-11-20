@@ -299,7 +299,12 @@
   "listedVia": "收录来源",
   "source": "来源",
   "maintain": "您是该工具的维护者？",
-  "badgeNote": "在 README 中展示自动更新的免费验证徽章：",
+  "badgeBox": "将此徽章添加到你的 README 或网站",
+  "badgeBoxListed": "将此收录徽章添加到你的 README 或网站",
+  "badgeNote": "将这段代码复制到你的 README 或网站。徽章会在每次每周检查后自动更新。",
+  "badgeHtml": "HTML",
+  "badgeMarkdown": "Markdown",
+  "badgeDark": "深色背景请改用 {src}。",
   "wrongInfo": "信息有误？",
   "sendCorrection": "提交更正",
   "free": "免费",
@@ -419,12 +424,12 @@
  "badges": {
   "title": "面向开发者的免费验证徽章",
   "desc": "在您的 README 中嵌入自动更新的 {site} 免费验证徽章。",
-  "h1": "免费的“Verified by {site}”徽章",
-  "p1": "每个收录工具都会获得一个免费徽章，在每周验证后自动更新。向用户展示您的项目仍在活跃且可用。",
+  "h1": "免费的“Verified on {site}”徽章",
+  "p1": "每款已收录的工具都会获得一枚免费徽章，并在每次每周检查后自动更新。已验证的工具显示“Verified on TradingAIHub”；如果工具失去验证，徽章会改为“Listed on TradingAIHub”，以免已嵌入的链接失效。",
   "p2": "工具 ID 位于工具页面的 URL 中，也可以直接在工具页面复制现成代码。还没被收录？",
   "submitFree": "免费提交",
   "states": "徽章状态",
-  "statesP": "绿色 = 本周已验证 · 琥珀色 = 更新放缓 / 链接待检查 · 红色 = 已停止维护、已归档或无法访问。"
+  "statesP": "Verified = 已通过本周检查。Listed = 仍在目录中，但目前未通过验证。高风险工具不会获得 Verified 徽章。"
  },
  "weekly": {
   "title": "金融 AI 工具现状 — {date} 当周",

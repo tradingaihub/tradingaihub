@@ -300,7 +300,12 @@
   "listedVia": "Listed via",
   "source": "source",
   "maintain": "Maintain this tool?",
-  "badgeNote": "Show your free, auto-updating verification badge in your README:",
+  "badgeBox": "Add this badge to your README/site",
+  "badgeBoxListed": "Add this listing badge to your README/site",
+  "badgeNote": "Copy the snippet into your README or onto your site. The badge updates automatically after each weekly check.",
+  "badgeHtml": "HTML",
+  "badgeMarkdown": "Markdown",
+  "badgeDark": "For dark backgrounds, use {src} instead.",
   "wrongInfo": "Wrong info?",
   "sendCorrection": "Send a correction",
   "free": "free",
@@ -420,12 +425,12 @@
  "badges": {
   "title": "Free verified badges for tool makers",
   "desc": "Embed a free, auto-updating {site} verification badge in your README.",
-  "h1": "Free “Verified by {site}” badges",
-  "p1": "Every listed tool gets a free badge that updates automatically after each weekly check. Show users your project is alive and working.",
+  "h1": "Free “Verified on {site}” badges",
+  "p1": "Every listed tool gets a free badge that updates automatically after each weekly check. Verified tools get a “Verified on TradingAIHub” badge; if a tool loses verification, its badge switches to “Listed on TradingAIHub” so existing embeds don’t break.",
   "p2": "Find your tool's id in its page URL, or the ready-made snippet on its page. Not listed yet?",
   "submitFree": "Submit it free",
   "states": "Badge states",
-  "statesP": "Green = verified this week · Amber = aging / check links · Red = stale, archived or unreachable."
+  "statesP": "Verified = passed this week’s checks. Listed = still in the directory, but not currently verified. High-risk tools never receive a Verified badge."
  },
  "weekly": {
   "title": "State of finance AI tools — week of {date}",

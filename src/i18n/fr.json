@@ -299,7 +299,12 @@
   "listedVia": "Référencé via",
   "source": "source",
   "maintain": "Vous maintenez cet outil ?",
-  "badgeNote": "Affichez dans votre README votre badge de vérification gratuit, mis à jour automatiquement :",
+  "badgeBox": "Ajoutez ce badge à votre README ou à votre site",
+  "badgeBoxListed": "Ajoutez ce badge de référencement à votre README ou à votre site",
+  "badgeNote": "Copiez l’extrait dans votre README ou sur votre site. Le badge se met à jour automatiquement après chaque vérification hebdomadaire.",
+  "badgeHtml": "HTML",
+  "badgeMarkdown": "Markdown",
+  "badgeDark": "Pour les fonds sombres, utilisez {src} à la place.",
   "wrongInfo": "Information erronée ?",
   "sendCorrection": "Envoyer une correction",
   "free": "gratuit",
@@ -419,12 +424,12 @@
  "badges": {
   "title": "Badges vérifiés gratuits pour les créateurs",
   "desc": "Intégrez à votre README un badge de vérification {site} gratuit, mis à jour automatiquement.",
-  "h1": "Badges « Verified by {site} » gratuits",
-  "p1": "Chaque outil référencé reçoit un badge gratuit qui se met à jour automatiquement après chaque vérification hebdomadaire. Montrez à vos utilisateurs que votre projet est vivant et fonctionne.",
+  "h1": "Badges « Verified on {site} » gratuits",
+  "p1": "Chaque outil listé reçoit un badge gratuit qui se met à jour automatiquement après chaque vérification hebdomadaire. Les outils vérifiés reçoivent un badge « Verified on TradingAIHub » ; si un outil perd sa vérification, le badge bascule vers « Listed on TradingAIHub » afin que les intégrations existantes ne se cassent pas.",
   "p2": "L'id de votre outil figure dans l'URL de sa page, ou récupérez l'extrait prêt à l'emploi sur la page elle-même. Pas encore référencé ?",
   "submitFree": "Proposez-le gratuitement",
   "states": "États du badge",
-  "statesP": "Vert = vérifié cette semaine · Ambre = vieillissant / liens à vérifier · Rouge = non maintenu, archivé ou inaccessible."
+  "statesP": "Verified = a passé les contrôles de cette semaine. Listed = figure toujours dans l’annuaire, mais n’est pas actuellement vérifié. Les outils à haut risque ne reçoivent jamais de badge Verified."
  },
  "weekly": {
   "title": "État des outils d'IA pour la finance — semaine du {date}",
