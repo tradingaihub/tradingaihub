@@ -2704,5 +2704,48 @@
     },
     "remote_mcp_url": "https://copy.top/mcp",
     "risk_tier": "high"
+  },
+  {
+    "id": "stalkchain-data-mcp",
+    "name": "StalkChain Data MCP",
+    "type": "mcp",
+    "category": "crypto",
+    "description": "Official hosted MCP from StalkChain for Solana wallet activity, token holders, tracked-trader flows and Hyperliquid market data. Read-only research data plus settings for your StalkChain email alerts. OAuth sign-in; no exchange credentials and no order placement.",
+    "repo": "https://github.com/StalkChain/fomo-mcp-api",
+    "homepage": "https://data.stalkchain.com/",
+    "docs": "https://stalkchain.com/docs",
+    "source_url": "https://data.stalkchain.com/",
+    "official": true,
+    "pricing": {
+      "model": "paid",
+      "free_tier": "7-day introductory credit; account setup, connecting, browsing tools and status tools need no card",
+      "paid_from": "$29/mo",
+      "details": "Starter $29/month (1,500 calls), Growth $55/month and Pro $139/month for metered research, with annual billing about 30% lower. The free introductory credit expires 7 days after signup; there is no ongoing free allowance for metered research. Credits roll over.",
+      "source": "https://data.stalkchain.com/#plans",
+      "checked": "2026-11-20"
+    },
+    "remote_mcp_url": "https://data.stalkchain.com/mcp/directory",
+    "remote_mcp_url_note": "Scoped connector for partner directories (research data plus email-alert settings), as requested by StalkChain; the MCP Registry record com.stalkchain/data points to the general /mcp surface."
+  },
+  {
+    "id": "ptdata-mcp",
+    "name": "PtData MCP",
+    "type": "mcp",
+    "category": "research-filings",
+    "description": "Official remote MCP and REST API from PtData: point-in-time US company fundamentals from SEC filings, as known on any past date, each value tied to its filing accession number. Also survivorship-free index members, filing metadata and earnings events. Four read-only tools; the free tier needs no key.",
+    "repo": "https://github.com/ptdata-io/ptdata-mcp",
+    "homepage": "https://ptdata.io/",
+    "docs": "https://api.ptdata.io/docs",
+    "source_url": "https://ptdata.io/pricing/",
+    "official": true,
+    "pricing": {
+      "model": "freemium",
+      "free_tier": "No key or account: 120 requests/min, 200/day per IP (evaluation, non-commercial)",
+      "paid_from": "$49/mo",
+      "details": "Free needs no account or key and is for evaluation under the terms. Pro $49/month ($490/year) adds commercial use, an API key and 15,000 requests/day; Scale $199/month ($1,990/year) allows 100,000/day. Same data on every tier; billing via Paddle.",
+      "source": "https://ptdata.io/pricing/",
+      "checked": "2026-11-20"
+    },
+    "remote_mcp_url": "https://api.ptdata.io/mcp"
   }
 ]

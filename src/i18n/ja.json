@@ -620,7 +620,9 @@
   "trading-checkup-aikit": "Trading Checkupの公式AIKIT MCP。取引所・ブローカーの出典付き・日付付きの事実（シンボル規則、手数料、レート制限）と、売買ボットコードのよくある誤りを検査する。情報提供のみで、シグナルや発注はしない。ベータ版で、購入はまだ開始されていない。",
   "aperiodic-mcp": "Aperiodicの公式APIおよびMCP。Binance、OKX、Hyperliquid上の暗号資産およびRWA永久契約（株式、金、原油、為替）の時点付きオーダーフロー、流動性、資金調達率指標。AIエージェント向け。",
   "ocarrat-mcp": "Ocarrat Trading Statisticsの公式MCP。トレーダー自身のジャーナル（戦略、週次レポート、パフォーマンス分析）へOAuthでアクセス。無料の読み取り専用枠あり。発注は行わない。",
-  "copy-top": "copy.top（Polycool LLC）の公式ホスト型MCP。エージェントスキルcopytop-signalsも対象。APIキー不要の読み取り専用ツール11個で、fomo、pump.fun、Hyperliquidのトレーダーのライブ取引、シグナル、アラートを扱う。利用規約には手数料、買い戻し、バーン、招待報酬のある$COPYトークンも記載。公開GitHubリポジトリはライセンスのないドキュメント草案。"
+  "copy-top": "copy.top（Polycool LLC）の公式ホスト型MCP。エージェントスキルcopytop-signalsも対象。APIキー不要の読み取り専用ツール11個で、fomo、pump.fun、Hyperliquidのトレーダーのライブ取引、シグナル、アラートを扱う。利用規約には手数料、買い戻し、バーン、招待報酬のある$COPYトークンも記載。公開GitHubリポジトリはライセンスのないドキュメント草案。",
+  "stalkchain-data-mcp": "StalkChain公式のホスト型MCP。Solanaウォレットの動き、トークン保有者、追跡トレーダーのフロー、Hyperliquidの市場データを提供。読み取り専用のリサーチデータに加え、StalkChainのメールアラート設定も扱えます。OAuthでサインイン。取引所の認証情報は不要で、注文は出しません。",
+  "ptdata-mcp": "PtData公式のリモートMCPとREST API。SEC提出書類に基づく米国企業のポイントインタイム財務データを、過去の任意の日付時点で知られていた値のまま提供し、各値に提出書類のaccession番号が付きます。生存者バイアスのない指数構成銘柄、提出書類メタデータ、決算イベントも。読み取り専用ツール4つ。無料枠はキー不要。"
  },
  "faq": {
   "title": "よくある質問",

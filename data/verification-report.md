@@ -1,8 +1,8 @@
 # Verification report — 2026-11-18 15:35 UTC
 
-Total entries: 124
+Total entries: 126
 
-- verified: 99
+- verified: 101
 - stale: 12
 - aging: 5
 - archived: 3
@@ -140,3 +140,5 @@ Entries with a published npm/PyPI package: 29
 | aperiodic-mcp | verified |  |  | Proprietary / ToS |  |  |
 | ocarrat-mcp | verified |  |  | Proprietary / ToS |  |  |
 | copy-top | verified | 0 | 2026-11-14 | unknown |  |  |
+| stalkchain-data-mcp | verified | 2 | 2026-11-20 | MIT |  |  |
+| ptdata-mcp | verified | 0 | 2026-11-16 | MIT |  |  |
