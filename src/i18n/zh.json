@@ -606,7 +606,7 @@
   "fair-value-calculator-mcp": "Fair Value Calculator 的官方托管 MCP：为 4 万多只上市股票提供模型公允价值、估值状态和质量评分。裁决、筛选和组合检查工具为只读研究；观察清单工具可更改已登录账户的清单。免费账户（OAuth）即可使用；Pro 提供精确公允价值和更高额度。",
   "lava-mcp": "Lava（熔岩）的官方托管 MCP 与 REST API：只读的 A 股与概念板块消息热度数据、结构化摘要，以及匿名化的机构 ID。不下达交易。",
   "dchub-mcp": "DC Hub 的官方托管 MCP：数据中心与能源情报，包括 300 多个市场的每日数据中心电力指数、电网、并网队列、光纤和容量。主要为研究和选址数据；不运营基础设施。",
-  "siebly-agent-skills": "Siebly 开源 JavaScript/TypeScript 交易所 SDK 的官方代理技能，覆盖 Binance、Bybit、OKX、Gate、Bitget、KuCoin、Coinbase、Kraken、HTX 和 Hyperliquid。若用户提供 API 密钥，可以下实时订单；在明确选择实时模式之前，默认是演练（dry-run）。",
+  "siebly-agent-skills": "Siebly 开源 JavaScript/TypeScript 交易所 SDK 的代理技能，覆盖 Binance、Bybit、OKX、Gate、Bitget、KuCoin、Coinbase、Kraken、HTX 和 Hyperliquid。若用户提供 API 密钥，可以下实时订单；在明确选择实时模式之前，默认是演练（dry-run）。",
   "stock-bloc": "Stock Bloc 的官方 MCP 与 HTTP API：面向 AI 代理的 SEC 文件比对（10-K/10-Q）、13F 持仓、评分与市场研究。tools/list 被说明为免费；数据调用按次以 Base 上的 USDC（x402）付费。",
   "quantral-mcp": "Quantral 的官方托管 MCP：只读的股票情绪与信号评分，以及国会和内部人交易数据，适用于 Claude、ChatGPT 和其他 MCP 客户端。不下单，也不划转资金。",
   "tickerlayer-mcp": "TickerLayer 的官方托管 MCP、REST 与 WebSocket 市场数据 API，覆盖股票、外汇、加密、指数、ETF 和大宗商品。面向 AI 代理的指示性、非交易所源数据。相同套餐适用于 MCP 客户端，无额外 MCP 费用。",

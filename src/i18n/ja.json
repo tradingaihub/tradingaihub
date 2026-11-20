@@ -606,7 +606,7 @@
   "fair-value-calculator-mcp": "Fair Value Calculatorの公式ホスト型MCP。4万銘柄超のモデル公正価値、バリュエーション状況、品質スコアを提供。判定・スクリーニング・ポートフォリオ確認ツールは読み取り専用の調査用途。ウォッチリストツールはサインイン中の口座のリストを変更できる。無料アカウント（OAuth）で利用可能。Proでは正確な公正価値と高い上限が加わる。",
   "lava-mcp": "Lava（熔岩）の公式ホスト型MCPおよびREST API。A株とコンセプト板のニュース熱度データを読み取り専用で提供し、構造化要約と匿名化された機関IDを含む。発注は行わない。",
   "dchub-mcp": "DC Hubの公式ホスト型MCP。300以上の市場の日次Data Center Power Index、電力網、連系待ち行列、光ファイバー、容量など、データセンターとエネルギーの情報を提供。主に調査・立地選定用で、インフラは運用しない。",
-  "siebly-agent-skills": "SieblyのオープンソースJavaScript/TypeScript SDK向け公式エージェントスキル。Binance、Bybit、OKX、Gate、Bitget、KuCoin、Coinbase、Kraken、HTX、Hyperliquidの取引所APIに対応。ユーザーがAPIキーを渡すとライブ注文を出せる。ライブモードを明示するまではドライランが既定。",
+  "siebly-agent-skills": "SieblyのオープンソースJavaScript/TypeScript SDK向けエージェントスキル。Binance、Bybit、OKX、Gate、Bitget、KuCoin、Coinbase、Kraken、HTX、Hyperliquidの取引所APIに対応。ユーザーがAPIキーを渡すとライブ注文を出せる。ライブモードを明示するまではドライランが既定。",
   "stock-bloc": "Stock Blocの公式MCPおよびHTTP API。SEC提出書類の差分（10-K/10-Q）、13F保有、スコア、市場調査をAIエージェント向けに提供。tools/listは無料と説明され、データ呼び出しはBase上のUSDC（x402）で従量課金。",
   "quantral-mcp": "Quantralの公式ホスト型MCP。株式のセンチメントとシグナルスコア、議会・インサイダー取引データを読み取り専用でClaude、ChatGPT、その他のMCPクライアントに提供。発注や資金移動は行わない。",
   "tickerlayer-mcp": "TickerLayerの公式ホスト型MCP、REST、WebSocket市場データAPI。株式、為替、暗号資産、指数、ETF、商品に対応。取引所一次情報ではない参考データで、AIエージェント向け。MCPクライアントでも同じ料金プランが適用され、MCPの追加料金はない。",
