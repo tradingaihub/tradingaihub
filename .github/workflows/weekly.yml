@@ -1,27 +1,89 @@
-# Weekly verification + rebuild + deploy to Cloudflare Pages (functions/ included). Needs repo secrets CLOUDFLARE_API_TOKEN + CLOUDFLARE_ACCOUNT_ID.
+# Daily verification + rebuild. Deploys to Cloudflare Pages only when the
+# published dataset actually changed (or on the Monday weekly snapshot).
+# Needs repo secrets CLOUDFLARE_API_TOKEN + CLOUDFLARE_ACCOUNT_ID.
+#
+# The workflow name stays weekly-verify so existing callers
+# (`gh workflow run "weekly-verify"`) keep working.
 name: weekly-verify
 on:
-  schedule: [{ cron: "0 5 * * 1" }]   # Mondays 05:00 UTC
+  schedule: [{ cron: "0 3 * * *" }]   # Daily 03:00 UTC
   workflow_dispatch: {}
+concurrency:
+  group: weekly-verify
+  cancel-in-progress: false
 jobs:
   run:
     runs-on: ubuntu-latest
     permissions: { contents: write }
     steps:
       - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }   # full history so `git pull --rebase` has a merge-base
       - uses: actions/setup-node@v4
         with: { node-version: 22 }
       - uses: actions/setup-python@v5
         with: { python-version: "3.13" }
       - run: pip install requests && npm ci
-      - run: python3 scripts/verify.py && python3 scripts/awesome.py
-        env: { GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}" }
-      - run: npm run build   # runs scripts/og.mjs first (OG cards from live data)
+      - name: Verify tools
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Monday UTC: write data/history/YYYY-MM-DD.json and changelog.json
+          # for /weekly/ and the Tuesday blog report. Other days skip those
+          # weekly artifacts so a daily run cannot replace the weekly scoreboard.
+          if [ "$(date -u +%u)" = 1 ]; then
+            export VERIFY_SNAPSHOT=1
+          else
+            export VERIFY_SNAPSHOT=0
+          fi
+          python3 scripts/verify.py && python3 scripts/awesome.py
+      - name: Build
+        run: npm run build   # runs scripts/og.mjs first (OG cards from live data)
         env: { CHROME_PATH: /usr/bin/google-chrome }  # preinstalled on ubuntu-latest
       # Commit verified data BEFORE deploying, so a deploy failure never loses a run.
-      - run: git config user.name bot && git config user.email bot@users.noreply.github.com && git add data awesome public/og && git commit -m "weekly verification" || true && git push
-      - run: npx wrangler pages deploy dist --project-name=tradingaihub --branch=main --commit-hash="$(git rev-parse HEAD)"
+      # Mid-week we only commit when status, notes, link failures, versions or the
+      # tool set actually changed. checked_at (and star / last-commit churn) alone
+      # does not publish, so the site date is the last published snapshot,
+      # refreshed at least every Monday.
+      - name: Commit and push if the dataset should be published
+        run: |
+          set -euo pipefail
+          monday=0
+          if [ "$(date -u +%u)" = 1 ]; then monday=1; fi
+          publish=0
+          if [ "$monday" = 1 ]; then
+            echo "Monday UTC: publish weekly snapshot (including checked_at)."
+            publish=1
+          elif python3 scripts/verification_changed.py; then
+            echo "Substantive verification change: publish."
+            publish=1
+          else
+            echo "No substantive change: skip commit, deploy and IndexNow."
+            git checkout -- data awesome public/og
+          fi
+          if [ "$publish" != 1 ]; then
+            echo "SHOULD_DEPLOY=false" >> "$GITHUB_ENV"
+            exit 0
+          fi
+          git config user.name bot
+          git config user.email bot@users.noreply.github.com
+          git add data awesome public/og
+          msg="weekly verification"
+          if [ "$monday" != 1 ]; then msg="verification"; fi
+          if git diff --cached --quiet; then
+            echo "Publish requested but the index is clean; skip deploy."
+            echo "SHOULD_DEPLOY=false" >> "$GITHUB_ENV"
+            exit 0
+          fi
+          git commit -m "$msg"
+          git pull --rebase origin main
+          git push
+          echo "SHOULD_DEPLOY=true" >> "$GITHUB_ENV"
+      - name: Deploy to Cloudflare Pages
+        if: env.SHOULD_DEPLOY == 'true'
+        run: npx wrangler pages deploy dist --project-name=tradingaihub --branch=main --commit-hash="$(git rev-parse HEAD)"
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-      - run: node scripts/indexnow.mjs   # ping Bing/Yandex/Seznam/Naver via api.indexnow.org (no account needed)
+      - name: IndexNow
+        if: env.SHOULD_DEPLOY == 'true'
+        run: node scripts/indexnow.mjs   # ping Bing/Yandex/Seznam/Naver via api.indexnow.org (no account needed)
