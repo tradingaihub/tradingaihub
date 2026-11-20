@@ -1,0 +1,12 @@
+---
+// Prominent red warning for high-risk crypto listings. Reuses the secnote red tokens.
+// Layout-locked and RTL-safe: start-aligned, wrapping text, no fixed widths.
+import { isHighRisk } from "../lib/data";
+import { useT } from "../i18n";
+const { tool, lang = "en", variant = "page" } = Astro.props;
+const show = tool && isHighRisk(tool);
+const { t } = useT(lang);
+---
+{show && (
+  <p class:list={["risk-banner", variant === "card" && "risk-banner-card"]} role="status">{t("risk.banner")}</p>
+)}

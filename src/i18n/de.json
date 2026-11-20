@@ -141,6 +141,11 @@
    "Makro und Wirtschaft",
    "Makro",
    "FRED-Zeitreihen, Wirtschaftskalender, Devisen und Makroindikatoren."
+  ],
+  "high-risk-crypto": [
+   "Hochrisiko-Krypto",
+   "Hochrisiko-Krypto",
+   "Memecoins, eigene Token und Copy-Trading-Tools. Zur Transparenz gelistet; von TradingAIHub nicht empfohlen."
   ]
  },
  "cmp": {
@@ -598,7 +603,25 @@
   "coinbase-agentic-wallet-skills": "Offizielle Coinbase-Skills für Agenten-Wallets: Salden, USDC senden, Token tauschen, Guthaben aufladen und x402-APIs bezahlen auf Base, Polygon und Solana.",
   "options-trading-skills": "Community-Claude-Skills für Optionshändler: Scanner, Griechen, Spreads, PMCC-Screens, Korrelationen und IBKR-Portfolioberichte.",
   "sure": "Selbst gehostete Finanz-App (von der Community gepflegter Fork von Maybe Finance durch we-promise): Konten, Transaktionen, Budgets und Vermögen, mit eigenem MCP-Server und REST-API.",
-  "coinboss-api": "Offizielle REST-API für aggregierte Krypto-Derivate- und Marktdaten: Liquidationen, Open Interest, Funding-Sätze, Long/Short-Verhältnisse und ETF-Zuflüsse. Nur Marktdaten; derzeit kostenlos."
+  "coinboss-api": "Offizielle REST-API für aggregierte Krypto-Derivate- und Marktdaten: Liquidationen, Open Interest, Funding-Sätze, Long/Short-Verhältnisse und ETF-Zuflüsse. Nur Marktdaten; derzeit kostenlos.",
+  "fair-value-calculator-mcp": "Offizieller gehosteter MCP-Server von Fair Value Calculator: modellierter Fair Value, Bewertungsstatus und Qualitätsscore für mehr als 40.000 Aktien. Urteil-, Screening- und Portfolio-Prüftools sind schreibgeschützte Recherche; Watchlist-Tools können die Watchlist eines angemeldeten Kontos ändern. Ein kostenloses Konto (OAuth) reicht; Pro ergänzt genaue Fair Values und höhere Limits.",
+  "lava-mcp": "Offizielles gehostetes MCP und REST-API von Lava (熔岩): schreibgeschützte News-Heat-Daten zu A-Aktien und Themenboards, mit strukturierten Zusammenfassungen und anonymisierten Instituts-IDs. Platziert keine Trades.",
+  "dchub-mcp": "Offizieller gehosteter MCP-Server von DC Hub: Intelligence zu Rechenzentren und Energie, einschließlich täglicher DCPI-Werte für über 300 Märkte sowie Netz, Anschlusswarteschlangen, Glasfaser und Kapazität. Überwiegend Recherche- und StandortDaten; betreibt keine Infrastruktur.",
+  "siebly-agent-skills": "Agent-Skills für Sieblys Open-Source-SDKs in JavaScript und TypeScript für Krypto-Börsen-APIs (Binance, Bybit, OKX, Gate, Bitget, KuCoin, Coinbase, Kraken, HTX und Hyperliquid). Können Live-Orders platzieren, wenn der Nutzer API-Schlüssel bereitstellt; standardmäßig Dry-Run, bis der Live-Modus ausdrücklich gewählt wird.",
+  "stock-bloc": "Offizielles MCP und HTTP-API von Stock Bloc: SEC-Filing-Diffs (10-K/10-Q), 13F-Bestände, Scores und Marktanalyse für KI-Agenten. tools/list ist als kostenlos beschrieben; Datenaufrufe werden pro Anfrage in USDC auf Base (x402) bezahlt.",
+  "quantral-mcp": "Offizieller gehosteter MCP-Server von Quantral: schreibgeschützte Sentiment- und Signalscores zu Aktien sowie Daten zu Kongress- und Insider-Trades für Claude, ChatGPT und andere MCP-Clients. Platziert keine Trades und bewegt keine Gelder.",
+  "tickerlayer-mcp": "Offizielles gehostetes MCP sowie REST- und WebSocket-Marktdaten-API von TickerLayer für Aktien, Devisen, Krypto, Indizes, ETFs und Rohstoffe. Indikative, nicht börsenquellenbasierte Daten für KI-Agenten. Dieselben Tarife gelten in MCP-Clients ohne zusätzliche MCP-Gebühr.",
+  "waveleta-mcp": "Offizielles schreibgeschütztes MCP und Prepaid-Developer-API von Waveleta für Marktdaten (Krypto-Ticker in über 600 Märkten sowie Historie zu Devisen, Rohstoffen und US-Aktien). Das MCP hat keine Trading-Tools und kann keine Orders platzieren, ändern oder stornieren.",
+  "liquidmap-mcp": "Offizieller gehosteter MCP-Server von LiquidMap: schreibgeschützte Krypto-Orderflow-Tools (Heatmap, Footprint, CVD, Funding und Open Interest) von mehreren Börsen. Verbindet sich nicht mit einem Nutzer-Börsenkonto und platziert keine Trades.",
+  "tradytics-mcp": "Offizielles gehostetes MCP und REST-API von Tradytics: Aktienkurse und Kerzen, Optionsflow, Dark-Pool-Prints, Unternehmensresearch, Filings, Screener und Prediction Markets. Konto-Tools lesen nur Portfolio, Watchlists und Backtests des angemeldeten Nutzers.",
+  "financemcp-unbidden": "Offizieller gehosteter MCP-Server für Finanzdaten aus amtlichen Quellen: SEC EDGAR XBRL, das U.S. Bureau of Labor Statistics und U.S. Treasury Fiscal Data.",
+  "bharatstock-mcp": "Offizielles MCP und REST-API für indische Marktdaten (NSE und BSE): Kurse, Abschlüsse, Fundamentaldaten, Kapitalmaßnahmen, Fondsbestände und mehr. Etwa 31 schreibgeschützte Tools. Der MCP-Server ist eine Funktion der Pläne Developer und Pro.",
+  "china-a-share-stock-mcp": "Community-MCP-Server für Echtzeitkurse chinesischer A-Aktien und wichtiger Indizes, mit kostenlosen öffentlichen Quellen von Tencent und Sina. Es gibt einen gehosteten Streamable-HTTP-Endpunkt, oder Sie hosten selbst. Kein API-Schlüssel. MIT.",
+  "bullion-trading-mcp": "Offizieller öffentlicher MCP-Server von Bullion Trading LLC, einem New Yorker Edelmetallhändler: Spotpreise, Katalogpreise, Aufschläge, Ankaufskurse und Ladenrichtlinien. Die Tools sind schreibgeschützt; sie können dem Kunden einen Warenkorb-Link zur Website geben, aber keine Bestellung aufgeben.",
+  "trading-checkup-aikit": "Offizieller AIKIT-MCP von Trading Checkup: quellenbelegte, datierte Fakten zu Börsen und Brokern (Symbolregeln, Gebühren, Rate Limits) sowie ein Prüfer für häufige Fehler in Trading-Bot-Code. Nur Information; keine Signale und keine Orders. Beta; der Kauf ist noch nicht geöffnet.",
+  "aperiodic-mcp": "Offizielles API und MCP von Aperiodic: stichtagsbezogene Kennzahlen zu Orderflow, Liquidität und Funding für Krypto- und RWA-Perpetuals (Aktien, Gold, Öl, Devisen) auf Binance, OKX und Hyperliquid, für KI-Agenten gebaut.",
+  "ocarrat-mcp": "Offizieller MCP-Server von Ocarrat Trading Statistics: OAuth-Zugriff auf das eigene Trading-Journal — Strategien, Wochenberichte und Performance-Analysen. Es gibt eine kostenlose, schreibgeschützte Stufe. Platziert keine Trades.",
+  "copy-top": "Offizieller gehosteter MCP-Server von copy.top (Polycool LLC), auch abgedeckt durch den Agent-Skill copytop-signals: 11 schreibgeschützte Tools ohne API-Schlüssel für Live-Trades, Signale und Alerts von Händlern auf fomo, pump.fun und Hyperliquid. Die Produktbedingungen beschreiben außerdem einen $COPY-Token mit Gebühren, Rückkäufen, Burns und Einladungsprämien. Die öffentlichen GitHub-Repos sind Dokumentationsentwürfe ohne Lizenz."
  },
  "faq": {
   "title": "Häufige Fragen",
@@ -745,5 +768,9 @@
   "submitBtn": "Tool einreichen (kostenlos)",
   "contactH": "Kontakt",
   "contactP": "Fragen, oder kein GitHub-Konto? Schreiben Sie an {email}."
+ },
+ "risk": {
+  "banner": "Von TradingAIHub nicht empfohlen — hohes Risiko: Memecoins / eigener Token / Copy-Trading",
+  "noBadge": "Hochrisiko-Einträge erhalten das Verified-Abzeichen nicht."
  }
 }

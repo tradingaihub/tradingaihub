@@ -9,7 +9,7 @@ draft: false
 
 > **Key findings**
 >
-> - As of the 18 Nov 2026 published check, 81 of the 106 finance AI tools in the TradingAIHub directory (76%) were Verified. All 106 rows carry that check date. The findings below, unless dated otherwise, are the 11 Nov 2026 snapshot.
+> - As of the 18 Nov 2026 published check, 81 of the 106 finance AI tools in the TradingAIHub directory (76%) were Verified. All 106 rows in the 18 Nov dataset carry that check date. The findings below, unless dated otherwise, are the 11 Nov 2026 snapshot.
 > - As of the 11 Nov 2026 published check, 87 of the 106 finance AI tools (82%) were Verified: reachable, with working links and, for repositories, a commit in the last 180 days.
 > - As of 11 Nov 2026, 58 of 62 official, vendor-maintained listings (94%) were Verified, compared with 29 of 44 community-maintained listings (66%).
 > - As of 11 Nov 2026, 14 of the 80 listings with a readable GitHub repository had gone more than a year without a commit, while 40 had a commit in the previous 30 days.
@@ -41,7 +41,7 @@ Every number below comes from our own published data and is dated. The public da
 
 **Limits.**
 
-- **Snapshot date.** The latest *published* data is from 18 November 2026, finished at 17:35 Asia/Jerusalem (15:35 UTC). All 106 rows carry that check date: 81 Verified, 5 Aging, 12 Stale, 3 Archived, 3 Link check pending and 2 Check links. The detailed tables below remain the 11 November 2026 snapshot (87 Verified; most rows in that snapshot still carried a 9 November check date), unless a later date is given. The 16 November re-check finished, but its results were not published because of a build failure. We report only its status totals, taken from a run log that is not in the repository (there is no `data/history/2026-11-16.json`). Our [November 9 report](/blog/weekly-verification-report-2026-11-09/) covers the run before the 11 November snapshot.
+- **Snapshot date.** The latest *published* data is from 18 November 2026, finished at 17:35 Asia/Jerusalem (15:35 UTC). All 106 rows in the 18 November dataset (`data/history/2026-11-18.json`) carry that check date: 81 Verified, 5 Aging, 12 Stale, 3 Archived, 3 Link check pending and 2 Check links. The detailed tables below remain the 11 November 2026 snapshot (87 Verified; most rows in that snapshot still carried a 9 November check date), unless a later date is given. The 16 November re-check finished, but its results were not published because of a build failure. We report only its status totals, taken from a run log that is not in the repository (there is no `data/history/2026-11-16.json`). Our [November 9 report](/blog/weekly-verification-report-2026-11-09/) covers the run before the 11 November snapshot.
 - **Maintenance is not safety.** A recent commit means a project is maintained. It does not mean the code is safe, and an old commit does not mean it is unsafe.
 - **The scan's reach.** A "no issues found" note covers only the checks listed above, on the scan date. We do not publish labels for tools that were not clean or not scanned, so the 27 listings without a note are not a group of flagged tools. Some have no public code, some were not scanned, and some had incomplete scans.
 - **Approval defaults are not recorded.** Our dataset records *whether* a tool can trade or move money. It does not record whether orders need human confirmation by default, so we make no claim about that.

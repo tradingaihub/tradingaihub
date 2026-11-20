@@ -141,6 +141,11 @@
    "Macro e economia",
    "Macro",
    "Séries do FRED, calendários econômicos, câmbio e indicadores macro."
+  ],
+  "high-risk-crypto": [
+   "Cripto de alto risco",
+   "Cripto de alto risco",
+   "Memecoins, tokens próprios e ferramentas de copy trading. Listados por transparência; não recomendados pela TradingAIHub."
   ]
  },
  "cmp": {
@@ -598,7 +603,25 @@
   "coinbase-agentic-wallet-skills": "Skills oficiais da Coinbase para carteiras de agentes: saldos, envio de USDC, troca de tokens, depósitos e pagamento de APIs x402 em Base, Polygon e Solana.",
   "options-trading-skills": "Skills comunitárias do Claude para traders de opções: scanners, gregas, spreads, filtros PMCC, correlações e relatórios de carteira da IBKR.",
   "sure": "Aplicativo de finanças pessoais auto-hospedado (fork comunitário do Maybe Finance mantido por we-promise): contas, transações, orçamentos e patrimônio líquido, com servidor MCP próprio e API REST.",
-  "coinboss-api": "API REST oficial de dados agregados de derivativos cripto e de mercado: liquidações, open interest, taxas de funding, índices long/short e fluxos de ETF. Apenas dados de mercado; atualmente gratuita."
+  "coinboss-api": "API REST oficial de dados agregados de derivativos cripto e de mercado: liquidações, open interest, taxas de funding, índices long/short e fluxos de ETF. Apenas dados de mercado; atualmente gratuita.",
+  "fair-value-calculator-mcp": "MCP hospedado oficial do Fair Value Calculator: valor justo modelado, estado de avaliação e pontuação de qualidade para mais de 40.000 ações. As ferramentas de veredito, triagem e checagem de carteira são só de leitura; as da watchlist podem alterar a lista de uma conta autenticada. Basta uma conta gratuita (OAuth); o Pro acrescenta valores justos exatos e limites mais altos.",
+  "lava-mcp": "MCP e API REST oficiais hospedados da Lava (熔岩): dados somente leitura de calor de notícias de ações A-share e painéis de conceitos, com resumos estruturados e IDs institucionais anonimizados. Não envia ordens.",
+  "dchub-mcp": "MCP hospedado oficial da DC Hub: inteligência de data centers e energia, com pontuações diárias do Data Center Power Index em mais de 300 mercados, rede, filas de interconexão, fibra e capacidade. Dados principalmente de pesquisa e siting; não opera infraestrutura.",
+  "siebly-agent-skills": "Skills de agente para os SDKs de código aberto em JavaScript e TypeScript da Siebly para APIs de corretoras de cripto (Binance, Bybit, OKX, Gate, Bitget, KuCoin, Coinbase, Kraken, HTX e Hyperliquid). Podem enviar ordens ao vivo se o usuário fornecer chaves de API; o padrão é dry-run até o modo ao vivo ser escolhido explicitamente.",
+  "stock-bloc": "MCP e API HTTP oficiais da Stock Bloc: diffs de filings da SEC (10-K/10-Q), holdings 13F, pontuações e pesquisa de mercado para agentes de IA. tools/list é descrita como gratuita; chamadas de dados são cobradas por requisição em USDC na Base (x402).",
+  "quantral-mcp": "MCP hospedado oficial da Quantral: pontuações de sentimento e sinais de ações somente leitura, além de dados de operações do Congresso e de insiders, para Claude, ChatGPT e outros clientes MCP. Não envia ordens nem move fundos.",
+  "tickerlayer-mcp": "MCP, REST e WebSocket oficiais hospedados da TickerLayer para dados de mercado de ações, câmbio, cripto, índices, ETFs e commodities. Dados indicativos, não provenientes de uma bolsa, para agentes de IA. Os mesmos planos valem em clientes MCP, sem taxa extra de MCP.",
+  "waveleta-mcp": "MCP oficial somente leitura e API pré-paga para desenvolvedores da Waveleta para dados de mercado (tickers de cripto em mais de 600 mercados, além de histórico de câmbio, commodities e ações dos EUA). O MCP não tem ferramentas de negociação e não pode enviar, alterar ou cancelar ordens.",
+  "liquidmap-mcp": "MCP hospedado oficial da LiquidMap: ferramentas somente leitura de order flow de cripto (heatmap, footprint, CVD, funding e open interest) de várias exchanges. Não se conecta à conta de exchange do usuário nem envia ordens.",
+  "tradytics-mcp": "MCP e API REST oficiais hospedados da Tradytics: cotações e barras de ações, fluxo de opções, prints de dark pool, pesquisa de empresas, filings, screeners e mercados de previsão. As ferramentas da conta leem apenas a carteira, listas e backtests do usuário autenticado.",
+  "financemcp-unbidden": "MCP hospedado oficial para dados financeiros de fontes oficiais: SEC EDGAR XBRL, o Bureau of Labor Statistics dos EUA e os Treasury Fiscal Data.",
+  "bharatstock-mcp": "MCP e API REST oficiais para dados do mercado indiano (NSE e BSE): cotações, demonstrações, fundamentos, eventos corporativos, carteiras de fundos e mais. Cerca de 31 ferramentas somente leitura. O servidor MCP é um recurso dos planos Developer e Pro.",
+  "china-a-share-stock-mcp": "Servidor MCP da comunidade para cotações em tempo real de ações A chinesas e dos principais índices, usando fontes públicas gratuitas da Tencent e da Sina. Há um endpoint hospedado em Streamable HTTP, ou você pode auto-hospedar. Sem chave de API. MIT.",
+  "bullion-trading-mcp": "MCP público oficial da Bullion Trading LLC, revendedor de metais preciosos em Nova York: preços à vista, catálogo, prêmios, taxas de recompra e políticas da loja. As ferramentas são somente leitura; podem entregar ao cliente um link do carrinho no site, mas não fazem um pedido.",
+  "trading-checkup-aikit": "MCP oficial AIKIT da Trading Checkup: fatos datados e com fonte sobre corretoras e exchanges (regras de símbolos, taxas, limites de ritmo) e um verificador de erros comuns em código de bots de negociação. Apenas informação; não dá sinais nem envia ordens. Beta; a compra ainda não está aberta.",
+  "aperiodic-mcp": "API e MCP oficiais da Aperiodic: métricas pontuais de order flow, liquidez e funding para perpétuos de cripto e RWA (ações, ouro, petróleo, câmbio) na Binance, OKX e Hyperliquid, feitos para agentes de IA.",
+  "ocarrat-mcp": "MCP oficial da Ocarrat Trading Statistics: acesso OAuth ao diário de trading do próprio operador — estratégias, relatórios semanais e análises de desempenho. Há um nível gratuito somente leitura. Não envia ordens.",
+  "copy-top": "MCP hospedado oficial da copy.top (Polycool LLC), também coberto pela skill de agente copytop-signals: 11 ferramentas somente leitura, sem chave de API, para negociações ao vivo, sinais e alertas de traders no fomo, pump.fun e Hyperliquid. Os termos do produto também descrevem um token $COPY com taxas, recompras, queimas e recompensas de convite. Os repositórios públicos no GitHub são rascunhos de documentação e não incluem licença."
  },
  "faq": {
   "title": "Perguntas frequentes",
@@ -745,5 +768,9 @@
   "submitBtn": "Enviar uma ferramenta (grátis)",
   "contactH": "Contato",
   "contactP": "Dúvidas, ou não tem conta no GitHub? Escreva para {email}."
+ },
+ "risk": {
+  "banner": "Não recomendado pela TradingAIHub — alto risco: memecoins / token próprio / copy trading",
+  "noBadge": "Listagens de alto risco não são elegíveis para o selo Verified."
  }
 }

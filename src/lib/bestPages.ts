@@ -1,7 +1,7 @@
 // Shared data for English-only editorial comparison pages under /compare/best-ai-tools-for-*/.
 // Tool rows are resolved from data/tools.json at build time. Unknown ids fail the build.
 // Unverified ids are dropped with a warning; the build fails only if too few verified tools remain.
-import { tools, verificationReport } from "./data";
+import { tools, verificationReport, isHighRisk } from "./data";
 import type { QA } from "./faq";
 
 const byId: Record<string, any> = Object.fromEntries(tools.map((t) => [t.id, t]));
@@ -9,14 +9,17 @@ const byId: Record<string, any> = Object.fromEntries(tools.map((t) => [t.id, t])
 export function requireTools(ids: string[]): any[] {
   const missing = ids.filter((id) => !byId[id]);
   if (missing.length) throw new Error(`best page: unknown tool ids: ${missing.join(", ")}`);
-  const notVerified = ids.filter((id) => byId[id].verification?.status !== "verified");
-  const verified = ids.filter((id) => byId[id].verification?.status === "verified");
+  const highRisk = ids.filter((id) => isHighRisk(byId[id]));
+  if (highRisk.length) console.warn(`best page: dropping high-risk tools: ${highRisk.join(", ")}`);
+  const rest = ids.filter((id) => !isHighRisk(byId[id]));
+  const notVerified = rest.filter((id) => byId[id].verification?.status !== "verified");
+  const verified = rest.filter((id) => byId[id].verification?.status === "verified");
   if (notVerified.length) {
     console.warn(`best page: dropping unverified tools: ${notVerified.join(", ")}`);
   }
-  const min = Math.ceil(ids.length / 2);
+  const min = Math.ceil(rest.length / 2);
   if (verified.length < min) {
-    throw new Error(`best page: too few verified tools (${verified.length}/${ids.length}, need ${min}): not verified in the latest run: ${notVerified.join(", ")}`);
+    throw new Error(`best page: too few verified tools (${verified.length}/${rest.length}, need ${min}): not verified in the latest run: ${notVerified.join(", ")}`);
   }
   return verified.map((id) => byId[id]);
 }
@@ -147,3 +150,8 @@ export const OPTIONS_PAPER: Record<string, string> = {
 };
 
 export const EDITORIAL_COMPARES = [STOCK, OPTIONS];
+for (const page of EDITORIAL_COMPARES) {
+  const risky = (page.toolIds || []).filter((id) => byId[id] && isHighRisk(byId[id]));
+  if (risky.length) throw new Error(`best page: high-risk tools cannot appear: ${risky.join(", ")}`);
+}
+
