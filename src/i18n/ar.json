@@ -358,7 +358,8 @@
   "fullReport": "عرض التقرير الكامل",
   "money": "كيف نحقق الدخل",
   "moneyP": "الإدراج مجاني. نحقق الدخل حاليًا فقط من روابط الإحالة (الشراكة) المُفصَح عنها المؤدية إلى TradingView وEODHD. لا نقدّم مواضع مموَّلة. لا تؤثر روابط الإحالة على حالة التحقق.",
-  "contact": "تواصل"
+  "contact": "تواصل",
+  "discussions": "هل لديك سؤال أو فكرة؟ انضم إلينا في <a href=\"https://github.com/tradingaihub/community/discussions\" dir=\"ltr\">GitHub Discussions</a>."
  },
  "disc": {
   "title": "إخلاء المسؤولية: ليست نصيحة استثمارية",

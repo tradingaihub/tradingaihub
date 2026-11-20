@@ -359,7 +359,8 @@
   "fullReport": "see the full report",
   "money": "How we make money",
   "moneyP": "Listings are free. We currently earn only from disclosed affiliate (partner) links to TradingView and EODHD. Sponsored placements are not offered. Affiliate links never affect verification status.",
-  "contact": "Contact"
+  "contact": "Contact",
+  "discussions": "Have a question or an idea? Join us on <a href=\"https://github.com/tradingaihub/community/discussions\" dir=\"ltr\">GitHub Discussions</a>."
  },
  "disc": {
   "title": "Disclaimer — not investment advice",

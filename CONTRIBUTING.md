@@ -4,7 +4,7 @@ Thank you for wanting to help. This repository is the source of [tradingaihub.co
 
 **To suggest a tool for the directory**, do not open a tool-submission issue here. Use the [submit form](https://tradingaihub.com/submit/) or an issue / PR on [awesome-finance-ai-tools](https://github.com/tradingaihub/awesome-finance-ai-tools). Listing is free. Every submission is vetted before it is published.
 
-Questions and ideas that are not a bug or a tool submission belong in [Discussions](https://github.com/tradingaihub/tradingaihub/discussions). No GitHub account? Email hello@tradingaihub.com.
+Questions and ideas that are not a bug or a tool submission belong in [Discussions](https://github.com/tradingaihub/community/discussions). No GitHub account? Email hello@tradingaihub.com.
 
 ## How we review inbound work
 
