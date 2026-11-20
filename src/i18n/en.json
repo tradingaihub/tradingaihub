@@ -467,6 +467,7 @@
   "c5": "Double opt-in: after you sign up, MailerLite sends you a confirmation email, and you are subscribed only after you click the link in it. Every newsletter email contains an unsubscribe link. To have your data deleted from both MailerLite and our KV store, email {email}.",
   "c6": "Anonymous click counts: when you click a link to another site, we record one anonymous count with Cloudflare Workers Analytics Engine. It stores only the tool, the affiliate program (if any), the destination site, the link type, the page, the language, the domain of the site that referred you, a flag for automated traffic (bots and our own tests) and the click source (human, bot or test). No cookies are used, and we do not store your IP address, browser details or any other personal data.",
   "c7": "Blog comments: comments on blog articles are stored in GitHub Discussions (repository tradingaihub/community) and shown through giscus. Nothing is loaded from GitHub or giscus until you click “Load comments”. To comment you sign in with your GitHub account, and what you post is public on GitHub under GitHub's privacy statement. We don't receive your GitHub password or email address.",
+  "c8": "Advertising: we have applied for Google AdSense. No ads or advertising cookies are loaded today. If we enable ads later, we'll update this page first. See {link} for how Google uses information from sites that use its services.",
   "cookiesP": "What we store in your browser is described on the {link} page."
  },
  "terms": {
@@ -701,6 +702,7 @@
   "sum": [
    "This site's pages do not set cookies.",
    "Your theme, language and accessibility choices are stored only in this browser, in localStorage (not as cookies), and are not sent to our servers.",
+   "We have applied for Google AdSense. No ads or advertising cookies are loaded today. If we enable ads later, we'll update this page first.",
    "Every page loads Cloudflare Web Analytics, which Cloudflare documents as cookie-less. It records aggregate page views, referrers and country.",
    "When you click a link to another site, we record one anonymous count. No cookies are used, and we do not store your IP address or browser details.",
    "The newsletter and blog comments run only if you choose to use them, as described below.",
@@ -720,6 +722,9 @@
   "untilCleared": "Until you clear this site's data in your browser, or change the setting.",
   "analyticsH": "Cloudflare Web Analytics",
   "analyticsP": "Every page loads Cloudflare Web Analytics (a script from static.cloudflareinsights.com). Cloudflare documents this product as cookie-less. As described in our privacy policy, it records aggregate page views, referrers and country. It is loaded on every page; we do not gate it behind a consent banner.",
+  "adsH": "Google AdSense",
+  "adsP": "We have applied for Google AdSense. No ads or advertising cookies are loaded today. If we enable ads later, we'll update this page first. For more about how Google uses information from sites that use its services, see {link}.",
+  "adsLink": "How Google uses information from sites that use our services",
   "clickH": "Anonymous click counts",
   "clickP": "When you click a link to another site, our pages send one anonymous count to our own endpoint (/api/click) with Cloudflare Workers Analytics Engine. The count stores only the tool, the affiliate program (if any), the destination site, the link type, the page, the language, the domain of the site that referred you, a flag for automated traffic (bots and our own tests) and the click source (human, bot or test). No cookies are used, and we do not store your IP address, browser details or any other personal data. The link itself is not rewritten.",
   "newsH": "Newsletter",

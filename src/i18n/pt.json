@@ -466,6 +466,7 @@
   "c5": "Confirmação dupla (double opt-in): depois da inscrição, o MailerLite envia um e-mail de confirmação, e você só passa a ser assinante depois de clicar no link. Todo e-mail da newsletter tem um link para cancelar a inscrição. Para excluir seus dados do MailerLite e do nosso armazenamento KV, escreva para {email}.",
   "c6": "Contagem anônima de cliques: quando você clica em um link para outro site, registramos uma contagem anônima com o Cloudflare Workers Analytics Engine. Ela guarda apenas a ferramenta, o programa de afiliados (se houver), o site de destino, o tipo de link, a página, o idioma, o domínio do site que o indicou, uma marcação de tráfego automatizado (bots e nossos testes) e a origem do clique (pessoa, bot ou teste). Não usamos cookies e não armazenamos seu endereço IP, dados do navegador nem qualquer outro dado pessoal.",
   "c7": "Comentários do blog: os comentários dos artigos ficam armazenados no GitHub Discussions (repositório tradingaihub/community) e são exibidos via giscus. Nada é carregado do GitHub ou do giscus até você clicar em “Carregar comentários”. Para comentar, você entra com sua conta do GitHub, e o que publicar fica público no GitHub, sob a declaração de privacidade do GitHub. Não recebemos sua senha nem seu e-mail do GitHub.",
+  "c8": "Publicidade: solicitamos o Google AdSense. Hoje não são carregados anúncios nem cookies de publicidade. Se habilitarmos anúncios mais tarde, atualizaremos esta página primeiro. Consulte {link} para saber como o Google usa informações de sites que usam os serviços dele.",
   "cookiesP": "O que armazenamos no seu navegador está descrito na página {link}."
  },
  "terms": {
@@ -700,6 +701,7 @@
   "sum": [
    "As páginas deste site não definem cookies.",
    "Suas escolhas de tema, idioma e acessibilidade ficam salvas apenas neste navegador, no localStorage (não como cookies), e não são enviadas aos nossos servidores.",
+   "Solicitamos o Google AdSense. Hoje não são carregados anúncios nem cookies de publicidade. Se habilitarmos anúncios mais tarde, atualizaremos esta página primeiro.",
    "Cada página carrega o Cloudflare Web Analytics, que a Cloudflare documenta como um serviço sem cookies. Ele registra visualizações, origens de tráfego e país de forma agregada.",
    "Quando você clica em um link para outro site, registramos uma contagem anônima. Não usamos cookies e não armazenamos seu endereço IP nem os dados do navegador.",
    "A newsletter e os comentários do blog funcionam só se você escolher usá-los, como descrito abaixo.",
@@ -719,6 +721,9 @@
   "untilCleared": "Até você limpar os dados deste site no navegador ou alterar o ajuste.",
   "analyticsH": "Cloudflare Web Analytics",
   "analyticsP": "Cada página carrega o Cloudflare Web Analytics (um script de static.cloudflareinsights.com). A Cloudflare documenta este produto como um serviço sem cookies. Como descrito na nossa política de privacidade, ele registra visualizações, origens de tráfego e país de forma agregada. É carregado em todas as páginas; não o condicionamos a um banner de consentimento.",
+  "adsH": "Google AdSense",
+  "adsP": "Solicitamos o Google AdSense. Hoje não são carregados anúncios nem cookies de publicidade. Se habilitarmos anúncios mais tarde, atualizaremos esta página primeiro. Para saber como o Google usa informações de sites que usam os serviços dele, consulte {link}.",
+  "adsLink": "Como o Google usa informações de sites que usam nossos serviços",
   "clickH": "Contagem anônima de cliques",
   "clickP": "Quando você clica em um link para outro site, nossas páginas enviam uma contagem anônima ao nosso próprio endpoint (/api/click) com o Cloudflare Workers Analytics Engine. A contagem guarda apenas a ferramenta, o programa de afiliados (se houver), o site de destino, o tipo de link, a página, o idioma, o domínio do site que o indicou, uma marcação de tráfego automatizado (bots e nossos testes) e a origem do clique (pessoa, bot ou teste). Não usamos cookies e não armazenamos seu endereço IP, os dados do navegador nem qualquer outro dado pessoal. O próprio link não é reescrito.",
   "newsH": "Newsletter",

@@ -466,6 +466,7 @@
   "c5": "Çift onay (double opt-in): Kaydolduktan sonra MailerLite size bir onay e-postası gönderir ve aboneliğiniz ancak içindeki bağlantıya tıkladığınızda başlar. Her bülten e-postasında abonelikten çıkma bağlantısı bulunur. Verilerinizi hem MailerLite'tan hem de KV depomuzdan sildirmek için {email} adresine yazın.",
   "c6": "Anonim tıklama sayımı: Başka bir siteye giden bir bağlantıya tıkladığınızda, Cloudflare Workers Analytics Engine ile tek bir anonim sayım kaydederiz. Yalnızca araç, ortaklık programı (varsa), hedef site, bağlantı türü, sayfa, dil, sizi yönlendiren sitenin alan adı, otomatik trafik işareti (botlar ve kendi testlerimiz) ve tıklama kaynağı (insan, bot veya test) saklanır. Çerez kullanılmaz; IP adresinizi, tarayıcı bilgilerinizi veya başka herhangi bir kişisel veriyi saklamayız.",
   "c7": "Blog yorumları: Yazılara yapılan yorumlar GitHub Discussions'ta (tradingaihub/community deposu) saklanır ve giscus ile gösterilir. “Yorumları yükle”ye tıklayana kadar GitHub'dan veya giscus'tan hiçbir şey yüklenmez. Yorum yapmak için GitHub hesabınızla oturum açarsınız; paylaştıklarınız GitHub gizlilik bildirimi kapsamında GitHub'da herkese açıktır. GitHub parolanızı veya e-posta adresinizi almayız.",
+  "c8": "Reklam: Google AdSense'e başvurduk. Bugün reklam veya reklam çerezleri yüklenmez. Daha sonra reklamları etkinleştirirsek, önce bu sayfayı güncelleyeceğiz. Google'ın, hizmetlerini kullanan sitelerden gelen bilgileri nasıl kullandığını öğrenmek için {link} sayfasına bakın.",
   "cookiesP": "Tarayıcınızda sakladıklarımız {link} sayfasında açıklanır."
  },
  "terms": {
@@ -700,6 +701,7 @@
   "sum": [
    "Bu sitenin sayfaları çerez ayarlamaz.",
    "Tema, dil ve erişilebilirlik tercihleriniz yalnızca bu tarayıcıda, localStorage içinde (çerez olarak değil) saklanır ve sunucularımıza gönderilmez.",
+   "Google AdSense'e başvurduk. Bugün reklam veya reklam çerezleri yüklenmez. Daha sonra reklamları etkinleştirirsek, önce bu sayfayı güncelleyeceğiz.",
    "Her sayfa, Cloudflare'in çerezsiz olarak belgelediği Cloudflare Web Analytics'i yükler. Toplu sayfa görüntülemelerini, yönlendirenleri ve ülkeyi kaydeder.",
    "Başka bir siteye giden bir bağlantıya tıkladığınızda bir anonim sayım kaydederiz. Çerez kullanılmaz; IP adresiniz veya tarayıcı ayrıntılarınız saklanmaz.",
    "Bülten ve blog yorumları, aşağıda açıklandığı gibi, bunları kullanmayı seçtiğinizde çalışır.",
@@ -719,6 +721,9 @@
   "untilCleared": "Tarayıcınızda bu sitenin verilerini temizleyene veya ayarı değiştirene kadar.",
   "analyticsH": "Cloudflare Web Analytics",
   "analyticsP": "Her sayfa Cloudflare Web Analytics'i (static.cloudflareinsights.com adresinden bir betik) yükler. Cloudflare bu ürünü çerezsiz olarak belgeler. Gizlilik politikamızda açıklandığı gibi toplu sayfa görüntülemelerini, yönlendirenleri ve ülkeyi kaydeder. Her sayfada yüklenir; bunu bir onay pankartının arkasına koymayız.",
+  "adsH": "Google AdSense",
+  "adsP": "Google AdSense'e başvurduk. Bugün reklam veya reklam çerezleri yüklenmez. Daha sonra reklamları etkinleştirirsek, önce bu sayfayı güncelleyeceğiz. Google'ın, hizmetlerini kullanan sitelerden gelen bilgileri nasıl kullandığı hakkında daha fazla bilgi için {link} sayfasına bakın.",
+  "adsLink": "Google, hizmetlerimizi kullanan sitelerden gelen bilgileri nasıl kullanır",
   "clickH": "Anonim tıklama sayımı",
   "clickP": "Başka bir siteye giden bir bağlantıya tıkladığınızda sayfalarımız Cloudflare Workers Analytics Engine ile kendi uç noktamıza (/api/click) bir anonim sayım gönderir. Sayımda yalnızca araç, ortaklık programı (varsa), hedef site, bağlantı türü, sayfa, dil, sizi yönlendiren sitenin etki alanı, otomatik trafik (botlar ve kendi testlerimiz) işareti ve tıklama kaynağı (insan, bot veya test) saklanır. Çerez kullanılmaz; IP adresiniz, tarayıcı ayrıntılarınız veya başka kişisel veri saklanmaz. Bağlantının kendisi değiştirilmez.",
   "newsH": "Bülten",
