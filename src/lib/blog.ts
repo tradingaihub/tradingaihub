@@ -94,6 +94,7 @@ const PAGES = new Set([
   ...[...guideSlugs].map((g) => `/guides/${g}/`), ...(guideSlugs.size ? ["/guides/"] : []), ...PUBLISHED.map((p) => `/blog/${p.slug}/`),
   // Generated files (src/pages/*.ts endpoints), linkable from posts like pages.
   "/tools.json", "/llms.txt", "/llms-full.txt", "/rss.xml", "/blog/rss.xml",
+  "/data/state-2026-summary.csv",
 ]);
 
 const esc = (s: string) => s.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
