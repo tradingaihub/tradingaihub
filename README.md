@@ -10,7 +10,7 @@ Questions, tool suggestions or security concerns? Join the discussion: [tradinga
 
 **Live site: https://tradingaihub.com** — a free directory of 133 MCP servers, agent skills and APIs for market data, trading, crypto, accounting and financial research, available in 13 languages.
 
-Every tool is re-checked weekly by a script: the repo is reachable, recent commits, stars, whether its npm/PyPI package links back to the repo, and whether hosted endpoints respond. Broken or archived tools are marked, not quietly kept. How it works: [verification methodology](https://tradingaihub.com/verification/).
+Every tool is re-checked daily by a script: the repo is reachable, recent commits, stars, whether its npm/PyPI package links back to the repo, and whether hosted endpoints respond. Broken or archived tools are marked, not quietly kept. How it works: [verification methodology](https://tradingaihub.com/verification/).
 
 - ⭐ The open list: [tradingaihub/awesome-finance-ai-tools](https://github.com/tradingaihub/awesome-finance-ai-tools)
 - Full data dump: [tradingaihub.com/tools.json](https://tradingaihub.com/tools.json) · [/api/v1/tools.json](https://tradingaihub.com/api/v1/tools.json) · [llms.txt](https://tradingaihub.com/llms.txt)
@@ -18,7 +18,7 @@ Every tool is re-checked weekly by a script: the repo is reachable, recent commi
 
 ## Use it from your AI agent
 
-The same weekly-checked directory is available as a remote MCP server (Streamable HTTP, no sign-in) and as a read-only JSON API. Data is CC BY 4.0 (credit "TradingAIHub, https://tradingaihub.com"); the API and MCP server code is MIT, see [LICENSE-CODE](LICENSE-CODE).
+The same daily-checked directory is available as a remote MCP server (Streamable HTTP, no sign-in) and as a read-only JSON API. Data is CC BY 4.0 (credit "TradingAIHub, https://tradingaihub.com"); the API and MCP server code is MIT, see [LICENSE-CODE](LICENSE-CODE).
 
 **Cursor** — add to `.cursor/mcp.json` or `~/.cursor/mcp.json`:
 
@@ -66,9 +66,9 @@ The MCP tools are `search_tools`, `get_tool` and `list_categories` (all read-onl
 Use the [submit form](https://tradingaihub.com/submit/) or open an issue / PR on the [awesome list](https://github.com/tradingaihub/awesome-finance-ai-tools). Tools must be finance-relevant, have a public repo or official docs, and be actively maintained. Listing is free; paid placements, if any, are clearly labelled as sponsored and never affect verification.
 
 ## Development
-Static [Astro](https://astro.build) site + weekly verifier. Brand settings live in `src/config.ts`.
+Static [Astro](https://astro.build) site + daily verifier. Brand settings live in `src/config.ts`.
 
-- `npm run verify` – verify all tools (data/seed.json → data/tools.json, reports, history, changelog)
+- `npm run verify` – verify all tools (data/seed.json → data/tools.json and reports; history and changelog on the Monday snapshot)
 - `npm run weekly` – verify → awesome list → OG images → build
 - `npm run build` – build `dist/` with affiliate-link and OG checks
 - `npm run test:functions` / `npm run test:aff` / `npm run test:verify` – tests

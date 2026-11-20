@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Weekly verifier for the directory.
+"""Verifier for the directory.
 Reads data/seed.json (curated entries) and writes the public data/tools.json and data/verification-report.json
 (public statuses and data fields only), plus the full internal record in $VERIFY_INTERNAL_DIR (default .internal/,
 gitignored): tools-detail.json and verification-report.md.
@@ -7,9 +7,12 @@ Checks per entry: repo reachable (+renames/archived), last commit date, stars, l
 package published on npm/PyPI (+latest version), homepage and docs links alive.
 Uses the GitHub REST API when GITHUB_TOKEN is set; otherwise scrapes public HTML/Atom
 (no auth, avoids the 60 req/h anonymous API limit).
-Run:  python3 scripts/verify.py        (weekly via cron / GitHub Actions)
+Run:  python3 scripts/verify.py        (daily via cron / GitHub Actions)
       python3 scripts/verify.py --dry-run [--only=id1,id2]   (verify, write nothing, print status changes;
-      set VERIFY_DRY_JSON=/path.json to save the would-be tools.json for review)"""
+      set VERIFY_DRY_JSON=/path.json to save the would-be tools.json for review)
+data/history and changelog.json are weekly artifacts. CI sets VERIFY_SNAPSHOT=1 on
+Monday UTC and 0 on other days. When the variable is unset (local runs), a snapshot
+is still written, matching the previous default."""
 from urllib.parse import urlsplit
 import json, os, re, sys, shutil, subprocess, threading, time, datetime as dt, tomllib
 from concurrent.futures import ThreadPoolExecutor
@@ -903,9 +906,24 @@ def public_counts(snap):
     c = Counter(to_public(s.get("status")) for s in snap.values())
     return {k: c[k] for k in PUBLIC_ORDER if c.get(k)}
 
+def should_write_snapshot(env=None):
+    """Whether to write data/history/YYYY-MM-DD.json and changelog.json.
+    VERIFY_SNAPSHOT=1/true/yes/on writes; 0/false/no/off skips. Unset keeps the
+    historical default of writing, so a local `python3 scripts/verify.py` still
+    produces a snapshot."""
+    if env is None:
+        env = os.environ
+    raw = env.get("VERIFY_SNAPSHOT")
+    if raw is None or str(raw).strip() == "":
+        return True
+    return str(raw).strip().lower() in ("1", "true", "yes", "on")
+
 def write_history(tools):
     """Snapshot this run (public statuses only) and diff it against the previous snapshot -> data/changelog.json
-    (feeds /weekly and /rss.xml)."""
+    (feeds /weekly and /rss.xml). Skipped when should_write_snapshot() is false (daily CI runs except Monday)."""
+    if not should_write_snapshot():
+        print("skipping history/changelog (VERIFY_SNAPSHOT=0)")
+        return
     hd = os.path.join(ROOT, "data/history"); os.makedirs(hd, exist_ok=True)
     today = NOW.strftime("%Y-%m-%d")
     snap = {t["id"]: {"name": t["name"], "status": public_status(t), "stars": None if t.get("repo_is_collection") else (t["verification"].get("github") or {}).get("stars"),

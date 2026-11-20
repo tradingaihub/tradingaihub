@@ -8,8 +8,8 @@ npx wrangler pages deploy dist --project-name=tradingaihub --branch=main
 Production: https://tradingaihub.com (Cloudflare Pages + Pages Functions in `functions/`). Brand settings live in `src/config.ts` and `wrangler.toml`.
 Cloudflare Pages free plan: static requests/bandwidth are free; 500 builds/month; 20k files per deploy.
 
-## Weekly automation
-`.github/workflows/weekly.yml` (Mondays 05:00 UTC) runs verify → awesome → og → build → deploy and commits `data/` + `awesome/`. It needs Cloudflare deploy credentials configured as repository secrets.
+## Daily automation
+`.github/workflows/weekly.yml` (workflow name `weekly-verify`, daily at 03:00 UTC) runs verify → awesome → og → build. It commits `data/`, `awesome/` and `public/og` and deploys only when the published dataset actually changed, or on the Monday weekly snapshot (history + changelog for `/weekly/` and the Tuesday blog report). Timestamp-only churn such as `checked_at` does not trigger a mid-week deploy. It needs Cloudflare deploy credentials configured as repository secrets.
 
 ## Services
 | Purpose | Service |
