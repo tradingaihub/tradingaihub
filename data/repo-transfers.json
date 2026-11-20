@@ -1,0 +1,12 @@
+{
+  "description": "Reviewed GitHub repository transfers. A redirect from `from` to `to` is a confirmed move, not a typo-squat, so the listing can stay Verified. Owner and repo names are compared case-insensitively. The verifier never rewrites stored repo links from these redirects.",
+  "transfers": [
+    {
+      "from": "OpenBB-finance/OpenBB",
+      "to": "openbq-org/OpenBB",
+      "confirmed": "2026-11-20",
+      "source": "https://openbb.co/blog/openbb-belongs-to-everyone/",
+      "note": "OpenBB wound down; OpenBQ foundation (BrightQuery-funded) stewards the code, per founder's post."
+    }
+  ]
+}
