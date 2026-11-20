@@ -2,101 +2,113 @@
   {
     "date": "2026-11-18",
     "counts": {
-      "verified": 105,
+      "verified": 81,
+      "warning": 2,
       "stale": 12,
-      "aging": 4,
-      "archived": 3
+      "aging": 5,
+      "archived": 3,
+      "unconfirmed": 3
     },
     "changes": [
       {
-        "kind": "new",
-        "id": "fair-value-calculator-mcp",
-        "text": "New: Fair Value Calculator MCP added."
+        "kind": "status",
+        "id": "fred-api",
+        "text": "FRED API (St. Louis Fed): verified \u2192 warning"
       },
       {
-        "kind": "new",
-        "id": "lava-mcp",
-        "text": "New: Lava MCP added."
+        "kind": "stars",
+        "id": "alpaca-mcp",
+        "text": "Alpaca MCP Server gained 25 stars"
       },
       {
-        "kind": "new",
-        "id": "dchub-mcp",
-        "text": "New: DC Hub MCP added."
+        "kind": "release",
+        "id": "dexpaprika-mcp",
+        "text": "DexPaprika MCP released 2.9.5 (was 2.9.3)"
       },
       {
-        "kind": "new",
-        "id": "siebly-agent-skills",
-        "text": "New: Siebly Agent Skills added."
+        "kind": "stars",
+        "id": "tradingview-mcp",
+        "text": "TradingView MCP (community, unofficial) gained 64 stars"
       },
       {
-        "kind": "new",
-        "id": "stock-bloc",
-        "text": "New: Stock Bloc added."
+        "kind": "status",
+        "id": "solana-agent-kit",
+        "text": "Solana Agent Kit: verified \u2192 aging"
       },
       {
-        "kind": "new",
-        "id": "quantral-mcp",
-        "text": "New: Quantral MCP added."
+        "kind": "stars",
+        "id": "solana-agent-kit",
+        "text": "Solana Agent Kit gained 27 stars"
       },
       {
-        "kind": "new",
-        "id": "tickerlayer-mcp",
-        "text": "New: TickerLayer MCP added."
+        "kind": "stars",
+        "id": "x402",
+        "text": "x402 (x402 Foundation) gained 25 stars"
       },
       {
-        "kind": "new",
-        "id": "waveleta-mcp",
-        "text": "New: Waveleta MCP added."
+        "kind": "release",
+        "id": "xero-mcp",
+        "text": "Xero MCP Server released 0.0.18 (was 0.0.17)"
       },
       {
-        "kind": "new",
-        "id": "liquidmap-mcp",
-        "text": "New: LiquidMap MCP added."
+        "kind": "stars",
+        "id": "anthropic-financial-services",
+        "text": "Anthropic Financial Services Plugins gained 222 stars"
       },
       {
-        "kind": "new",
-        "id": "tradytics-mcp",
-        "text": "New: Tradytics MCP added."
+        "kind": "stars",
+        "id": "openbb",
+        "text": "OpenBB Platform (MCP) gained 198 stars"
       },
       {
-        "kind": "new",
-        "id": "financemcp-unbidden",
-        "text": "New: FinanceMCP Unbidden added."
+        "kind": "stars",
+        "id": "claude-trading-skills",
+        "text": "Claude Trading Skills gained 3317 stars"
       },
       {
-        "kind": "new",
-        "id": "bharatstock-mcp",
-        "text": "New: BharatStock MCP added."
+        "kind": "status",
+        "id": "razorpay-mcp",
+        "text": "Razorpay MCP Server: verified \u2192 warning"
       },
       {
-        "kind": "new",
-        "id": "china-a-share-stock-mcp",
-        "text": "New: China A-Share Stock MCP added."
+        "kind": "release",
+        "id": "ynab-mcp",
+        "text": "YNAB MCP Server (community) released 0.9.0 (was 0.8.0)"
       },
       {
-        "kind": "new",
-        "id": "bullion-trading-mcp",
-        "text": "New: Bullion Trading MCP added."
+        "kind": "status",
+        "id": "firefly-iii-api",
+        "text": "Firefly III API: verified \u2192 unconfirmed"
       },
       {
-        "kind": "new",
-        "id": "trading-checkup-aikit",
-        "text": "New: Trading Checkup AIKIT added."
+        "kind": "stars",
+        "id": "firefly-iii-api",
+        "text": "Firefly III API gained 70 stars"
       },
       {
-        "kind": "new",
-        "id": "aperiodic-mcp",
-        "text": "New: Aperiodic MCP added."
+        "kind": "stars",
+        "id": "sure",
+        "text": "Sure gained 3956 stars"
       },
       {
-        "kind": "new",
-        "id": "ocarrat-mcp",
-        "text": "New: Ocarrat Trading Statistics MCP added."
+        "kind": "status",
+        "id": "bls-api",
+        "text": "BLS Public Data API: verified \u2192 unconfirmed"
       },
       {
-        "kind": "new",
-        "id": "copy-top",
-        "text": "New: copy.top added."
+        "kind": "stars",
+        "id": "frankfurter",
+        "text": "Frankfurter (FX rates API + MCP) gained 42 stars"
+      },
+      {
+        "kind": "release",
+        "id": "webull-openapi-mcp",
+        "text": "Webull OpenAPI MCP released 1.2.7 (was 1.2.6)"
+      },
+      {
+        "kind": "status",
+        "id": "longbridge-skills",
+        "text": "Longbridge Skills: verified \u2192 unconfirmed"
       }
     ]
   },

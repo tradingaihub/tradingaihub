@@ -1,0 +1,183 @@
+table,group,metric,value,as_of,source
+status_over_time,29 Oct 2026 (after batch 1),listings,104,2026-10-29,git history data/tools.json
+status_over_time,29 Oct 2026 (after batch 1),verified,82,2026-10-29,git history data/tools.json
+status_over_time,29 Oct 2026 (after batch 1),aging,4,2026-10-29,git history data/tools.json
+status_over_time,29 Oct 2026 (after batch 1),stale,13,2026-10-29,git history data/tools.json
+status_over_time,29 Oct 2026 (after batch 1),archived,3,2026-10-29,git history data/tools.json
+status_over_time,29 Oct 2026 (after batch 1),link_check_pending,2,2026-10-29,git history data/tools.json
+status_over_time,29 Oct 2026 (after batch 1),check_links,0,2026-10-29,git history data/tools.json
+status_over_time,2 Nov 2026,listings,104,2026-11-02,git history data/tools.json
+status_over_time,2 Nov 2026,verified,81,2026-11-02,git history data/tools.json
+status_over_time,2 Nov 2026,aging,4,2026-11-02,git history data/tools.json
+status_over_time,2 Nov 2026,stale,13,2026-11-02,git history data/tools.json
+status_over_time,2 Nov 2026,archived,3,2026-11-02,git history data/tools.json
+status_over_time,2 Nov 2026,link_check_pending,3,2026-11-02,git history data/tools.json
+status_over_time,2 Nov 2026,check_links,0,2026-11-02,git history data/tools.json
+status_over_time,9 Nov 2026,listings,104,2026-11-09,git history data/tools.json
+status_over_time,9 Nov 2026,verified,81,2026-11-09,git history data/tools.json
+status_over_time,9 Nov 2026,aging,5,2026-11-09,git history data/tools.json
+status_over_time,9 Nov 2026,stale,12,2026-11-09,git history data/tools.json
+status_over_time,9 Nov 2026,archived,3,2026-11-09,git history data/tools.json
+status_over_time,9 Nov 2026,link_check_pending,3,2026-11-09,git history data/tools.json
+status_over_time,9 Nov 2026,check_links,0,2026-11-09,git history data/tools.json
+status_over_time,11 Nov 2026,listings,106,2026-11-11,data/history/2026-11-11.json
+status_over_time,11 Nov 2026,verified,87,2026-11-11,data/history/2026-11-11.json
+status_over_time,11 Nov 2026,aging,4,2026-11-11,data/history/2026-11-11.json
+status_over_time,11 Nov 2026,stale,12,2026-11-11,data/history/2026-11-11.json
+status_over_time,11 Nov 2026,archived,3,2026-11-11,data/history/2026-11-11.json
+status_over_time,11 Nov 2026,link_check_pending,0,2026-11-11,data/history/2026-11-11.json
+status_over_time,11 Nov 2026,check_links,0,2026-11-11,data/history/2026-11-11.json
+status_over_time,16 Nov 2026 (run log; not published; not in the repository),listings,106,2026-11-16,unpublished run log (not in the repository)
+status_over_time,16 Nov 2026 (run log; not published; not in the repository),verified,82,2026-11-16,unpublished run log (not in the repository)
+status_over_time,16 Nov 2026 (run log; not published; not in the repository),aging,5,2026-11-16,unpublished run log (not in the repository)
+status_over_time,16 Nov 2026 (run log; not published; not in the repository),stale,12,2026-11-16,unpublished run log (not in the repository)
+status_over_time,16 Nov 2026 (run log; not published; not in the repository),archived,3,2026-11-16,unpublished run log (not in the repository)
+status_over_time,16 Nov 2026 (run log; not published; not in the repository),link_check_pending,3,2026-11-16,unpublished run log (not in the repository)
+status_over_time,16 Nov 2026 (run log; not published; not in the repository),check_links,1,2026-11-16,unpublished run log (not in the repository)
+status_over_time,18 Nov 2026 (latest published),listings,106,2026-11-18,data/tools.json and data/verification-report.json
+status_over_time,18 Nov 2026 (latest published),verified,81,2026-11-18,data/tools.json and data/verification-report.json
+status_over_time,18 Nov 2026 (latest published),aging,5,2026-11-18,data/tools.json and data/verification-report.json
+status_over_time,18 Nov 2026 (latest published),stale,12,2026-11-18,data/tools.json and data/verification-report.json
+status_over_time,18 Nov 2026 (latest published),archived,3,2026-11-18,data/tools.json and data/verification-report.json
+status_over_time,18 Nov 2026 (latest published),link_check_pending,3,2026-11-18,data/tools.json and data/verification-report.json
+status_over_time,18 Nov 2026 (latest published),check_links,2,2026-11-18,data/tools.json and data/verification-report.json
+by_type,MCP servers,listings,74,2026-11-11,data/tools.json
+by_type,MCP servers,verified,58,2026-11-11,data/tools.json
+by_type,MCP servers,scan_note_2026_11_10,52,2026-11-11,data/tools.json
+by_type,MCP servers,live_trading_or_moves_funds,21,2026-11-11,data/tools.json
+by_type,MCP servers,official,39,2026-11-11,data/tools.json
+by_type,APIs,listings,17,2026-11-11,data/tools.json
+by_type,APIs,verified,17,2026-11-11,data/tools.json
+by_type,APIs,scan_note_2026_11_10,16,2026-11-11,data/tools.json
+by_type,APIs,live_trading_or_moves_funds,0,2026-11-11,data/tools.json
+by_type,APIs,official,17,2026-11-11,data/tools.json
+by_type,Agent skills,listings,15,2026-11-11,data/tools.json
+by_type,Agent skills,verified,12,2026-11-11,data/tools.json
+by_type,Agent skills,scan_note_2026_11_10,11,2026-11-11,data/tools.json
+by_type,Agent skills,live_trading_or_moves_funds,4,2026-11-11,data/tools.json
+by_type,Agent skills,official,6,2026-11-11,data/tools.json
+by_ownership,Official,listings,62,2026-11-11,data/tools.json
+by_ownership,Official,verified,58,2026-11-11,data/tools.json
+by_ownership,Official,aging,1,2026-11-11,data/tools.json
+by_ownership,Official,stale,1,2026-11-11,data/tools.json
+by_ownership,Official,archived,2,2026-11-11,data/tools.json
+by_ownership,Official,link_check_pending,0,2026-11-11,data/tools.json
+by_ownership,Official,check_links,0,2026-11-11,data/tools.json
+by_ownership,Official,scan_note_2026_11_10,49,2026-11-11,data/tools.json
+by_ownership,Official,live_trading_or_moves_funds,18,2026-11-11,data/tools.json
+by_ownership,Official,official,62,2026-11-11,data/tools.json
+by_ownership,Community,listings,44,2026-11-11,data/tools.json
+by_ownership,Community,verified,29,2026-11-11,data/tools.json
+by_ownership,Community,aging,3,2026-11-11,data/tools.json
+by_ownership,Community,stale,11,2026-11-11,data/tools.json
+by_ownership,Community,archived,1,2026-11-11,data/tools.json
+by_ownership,Community,link_check_pending,0,2026-11-11,data/tools.json
+by_ownership,Community,check_links,0,2026-11-11,data/tools.json
+by_ownership,Community,scan_note_2026_11_10,30,2026-11-11,data/tools.json
+by_ownership,Community,live_trading_or_moves_funds,7,2026-11-11,data/tools.json
+by_ownership,Community,official,0,2026-11-11,data/tools.json
+by_category,Market data,listings,22,2026-11-11,data/tools.json
+by_category,Market data,verified,20,2026-11-11,data/tools.json
+by_category,Market data,scan_note_2026_11_10,19,2026-11-11,data/tools.json
+by_category,Market data,live_trading_or_moves_funds,0,2026-11-11,data/tools.json
+by_category,Market data,official,15,2026-11-11,data/tools.json
+by_category,Crypto,listings,17,2026-11-11,data/tools.json
+by_category,Crypto,verified,8,2026-11-11,data/tools.json
+by_category,Crypto,scan_note_2026_11_10,8,2026-11-11,data/tools.json
+by_category,Crypto,live_trading_or_moves_funds,6,2026-11-11,data/tools.json
+by_category,Crypto,official,9,2026-11-11,data/tools.json
+by_category,Trading & brokers,listings,11,2026-11-11,data/tools.json
+by_category,Trading & brokers,verified,9,2026-11-11,data/tools.json
+by_category,Trading & brokers,scan_note_2026_11_10,8,2026-11-11,data/tools.json
+by_category,Trading & brokers,live_trading_or_moves_funds,9,2026-11-11,data/tools.json
+by_category,Trading & brokers,official,7,2026-11-11,data/tools.json
+by_category,Quant & backtesting,listings,11,2026-11-11,data/tools.json
+by_category,Quant & backtesting,verified,9,2026-11-11,data/tools.json
+by_category,Quant & backtesting,scan_note_2026_11_10,9,2026-11-11,data/tools.json
+by_category,Quant & backtesting,live_trading_or_moves_funds,2,2026-11-11,data/tools.json
+by_category,Quant & backtesting,official,3,2026-11-11,data/tools.json
+by_category,Research & filings,listings,10,2026-11-11,data/tools.json
+by_category,Research & filings,verified,9,2026-11-11,data/tools.json
+by_category,Research & filings,scan_note_2026_11_10,8,2026-11-11,data/tools.json
+by_category,Research & filings,live_trading_or_moves_funds,0,2026-11-11,data/tools.json
+by_category,Research & filings,official,3,2026-11-11,data/tools.json
+by_category,Payments & banking,listings,10,2026-11-11,data/tools.json
+by_category,Payments & banking,verified,9,2026-11-11,data/tools.json
+by_category,Payments & banking,scan_note_2026_11_10,6,2026-11-11,data/tools.json
+by_category,Payments & banking,live_trading_or_moves_funds,8,2026-11-11,data/tools.json
+by_category,Payments & banking,official,10,2026-11-11,data/tools.json
+by_category,Accounting,listings,9,2026-11-11,data/tools.json
+by_category,Accounting,verified,8,2026-11-11,data/tools.json
+by_category,Accounting,scan_note_2026_11_10,7,2026-11-11,data/tools.json
+by_category,Accounting,live_trading_or_moves_funds,0,2026-11-11,data/tools.json
+by_category,Accounting,official,7,2026-11-11,data/tools.json
+by_category,Macro,listings,8,2026-11-11,data/tools.json
+by_category,Macro,verified,8,2026-11-11,data/tools.json
+by_category,Macro,scan_note_2026_11_10,8,2026-11-11,data/tools.json
+by_category,Macro,live_trading_or_moves_funds,0,2026-11-11,data/tools.json
+by_category,Macro,official,6,2026-11-11,data/tools.json
+by_category,Personal finance,listings,8,2026-11-11,data/tools.json
+by_category,Personal finance,verified,7,2026-11-11,data/tools.json
+by_category,Personal finance,scan_note_2026_11_10,6,2026-11-11,data/tools.json
+by_category,Personal finance,live_trading_or_moves_funds,0,2026-11-11,data/tools.json
+by_category,Personal finance,official,2,2026-11-11,data/tools.json
+all,All listings,listings,106,2026-11-11,data/tools.json
+all,All listings,verified,87,2026-11-11,data/tools.json
+all,All listings,aging,4,2026-11-11,data/tools.json
+all,All listings,stale,12,2026-11-11,data/tools.json
+all,All listings,archived,3,2026-11-11,data/tools.json
+all,All listings,link_check_pending,0,2026-11-11,data/tools.json
+all,All listings,check_links,0,2026-11-11,data/tools.json
+all,All listings,scan_note_2026_11_10,79,2026-11-11,data/tools.json
+all,All listings,live_trading_or_moves_funds,25,2026-11-11,data/tools.json
+all,All listings,official,62,2026-11-11,data/tools.json
+last_commit_age,0-30 days,mcp,30,2026-11-11,data/tools.json
+last_commit_age,0-30 days,skill,9,2026-11-11,data/tools.json
+last_commit_age,0-30 days,api,1,2026-11-11,data/tools.json
+last_commit_age,0-30 days,all,40,2026-11-11,data/tools.json
+last_commit_age,31-90 days,mcp,14,2026-11-11,data/tools.json
+last_commit_age,31-90 days,skill,1,2026-11-11,data/tools.json
+last_commit_age,31-90 days,api,0,2026-11-11,data/tools.json
+last_commit_age,31-90 days,all,15,2026-11-11,data/tools.json
+last_commit_age,91-180 days,mcp,3,2026-11-11,data/tools.json
+last_commit_age,91-180 days,skill,2,2026-11-11,data/tools.json
+last_commit_age,91-180 days,api,0,2026-11-11,data/tools.json
+last_commit_age,91-180 days,all,5,2026-11-11,data/tools.json
+last_commit_age,181-365 days,mcp,6,2026-11-11,data/tools.json
+last_commit_age,181-365 days,skill,0,2026-11-11,data/tools.json
+last_commit_age,181-365 days,api,0,2026-11-11,data/tools.json
+last_commit_age,181-365 days,all,6,2026-11-11,data/tools.json
+last_commit_age,>365 days,mcp,11,2026-11-11,data/tools.json
+last_commit_age,>365 days,skill,3,2026-11-11,data/tools.json
+last_commit_age,>365 days,api,0,2026-11-11,data/tools.json
+last_commit_age,>365 days,all,14,2026-11-11,data/tools.json
+last_commit_age,no readable GitHub repo,mcp,10,2026-11-11,data/tools.json
+last_commit_age,no readable GitHub repo,skill,0,2026-11-11,data/tools.json
+last_commit_age,no readable GitHub repo,api,16,2026-11-11,data/tools.json
+last_commit_age,no readable GitHub repo,all,26,2026-11-11,data/tools.json
+license,MIT,mcp,45,2026-11-11,data/tools.json
+license,MIT,skill,9,2026-11-11,data/tools.json
+license,MIT,api,0,2026-11-11,data/tools.json
+license,MIT,all,54,2026-11-11,data/tools.json
+license,Proprietary / ToS,mcp,10,2026-11-11,data/tools.json
+license,Proprietary / ToS,skill,0,2026-11-11,data/tools.json
+license,Proprietary / ToS,api,16,2026-11-11,data/tools.json
+license,Proprietary / ToS,all,26,2026-11-11,data/tools.json
+license,Apache-2.0,mcp,11,2026-11-11,data/tools.json
+license,Apache-2.0,skill,2,2026-11-11,data/tools.json
+license,Apache-2.0,api,0,2026-11-11,data/tools.json
+license,Apache-2.0,all,13,2026-11-11,data/tools.json
+license,unknown,mcp,5,2026-11-11,data/tools.json
+license,unknown,skill,3,2026-11-11,data/tools.json
+license,unknown,api,0,2026-11-11,data/tools.json
+license,unknown,all,8,2026-11-11,data/tools.json
+license,AGPL-3.0,mcp,3,2026-11-11,data/tools.json
+license,AGPL-3.0,skill,0,2026-11-11,data/tools.json
+license,AGPL-3.0,api,1,2026-11-11,data/tools.json
+license,AGPL-3.0,all,4,2026-11-11,data/tools.json
+license,MIT-0,mcp,0,2026-11-11,data/tools.json
+license,MIT-0,skill,1,2026-11-11,data/tools.json
+license,MIT-0,api,0,2026-11-11,data/tools.json
+license,MIT-0,all,1,2026-11-11,data/tools.json
+packages,November 11 2026 after manual review,links_back,29,2026-11-11,data/tools.json plus manual review of base-mcp
+packages,November 11 2026 after manual review,could_not_link,9,2026-11-11,data/tools.json plus manual review of base-mcp

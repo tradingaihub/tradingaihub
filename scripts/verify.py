@@ -486,6 +486,72 @@ def age_days(ts):
     if not ts: return None
     return (NOW - dt.datetime.fromisoformat(ts.replace("Z", "+00:00"))).days
 
+
+def _owner_repo(ref):
+    """'https://github.com/Owner/Repo' or 'Owner/Repo' -> ('owner', 'repo') lowercased, else None."""
+    if not ref or not isinstance(ref, str):
+        return None
+    m = re.match(r"(?:https://github\.com/)?([^/]+)/([^/#?]+?)/?$", ref.strip())
+    return (m.group(1).lower(), m.group(2).lower()) if m else None
+
+def load_repo_transfers(path=None):
+    """Reviewed owner-to-owner transfers at data/repo-transfers.json. Missing or invalid file -> []."""
+    path = path or os.path.join(ROOT, "data/repo-transfers.json")
+    try:
+        with open(path) as f:
+            data = json.load(f)
+    except (OSError, json.JSONDecodeError):
+        return []
+    rows = data.get("transfers") if isinstance(data, dict) else data
+    if not isinstance(rows, list):
+        return []
+    return [e for e in rows if isinstance(e, dict) and _owner_repo(e.get("from")) and _owner_repo(e.get("to"))]
+
+def find_repo_transfer(from_ref, to_ref, transfers=None):
+    """Case-insensitive Owner/Repo match against the allowlist. None if the pair is not listed."""
+    a, b = _owner_repo(from_ref), _owner_repo(to_ref)
+    if not a or not b:
+        return None
+    for e in (transfers if transfers is not None else load_repo_transfers()):
+        if _owner_repo(e.get("from")) == a and _owner_repo(e.get("to")) == b:
+            return e
+    return None
+
+def transfer_issue(entry):
+    """Public issue text for an allowlisted transfer: confirmed, with source, not alarming."""
+    src = entry.get("source") or ""
+    conf = entry.get("confirmed") or ""
+    when = f" ({conf})" if conf else ""
+    src_bit = f" Source: {src}." if src else ""
+    return f"Repository transfer confirmed{when}: {entry.get('from')} → {entry.get('to')}.{src_bit} Stored link not updated."
+
+def apply_allowed_transfer(t, v, transfers=None):
+    """If github.cross_org_redirect is a reviewed transfer, replace the alarming redirect
+    issue with a confirmed-transfer note and lift 'unconfirmed' that was caused only by
+    that redirect back to verified. Aging/stale/warning/archived and gated unconfirmed
+    stay as they are. Never rewrites t['repo']."""
+    g = v.get("github") or {}
+    dest = g.get("cross_org_redirect")
+    if not dest:
+        return None
+    entry = find_repo_transfer(t.get("repo"), dest, transfers)
+    if not entry:
+        return None
+    note = transfer_issue(entry)
+    issues = list(v.get("issues") or [])
+    replaced = False
+    for i, s in enumerate(issues):
+        if "redirects to another owner" in s:
+            issues[i] = note
+            replaced = True
+    if not replaced:
+        issues.append(note)
+    v["issues"] = issues
+    if v.get("status") == "unconfirmed" and not any(s.startswith("Could not confirm:") for s in issues):
+        v["status"] = "verified"
+        v["transfer_confirmed"] = True
+    return entry
+
 def verify(t):
     v = {"checked_at": NOW.strftime("%Y-%m-%d"), "checks": [], "issues": []}
     if t.get("repo"):
@@ -540,7 +606,9 @@ def _manual_age_days(date_str):
 
 def apply_manual_check(t, v):
     """A recorded manual check can keep a tool verified when the automated checker only
-    reached 'unconfirmed' (gated link or a known cross-org redirect). Real failures
+    reached 'unconfirmed' (a gated link). A redirect to a different owner stays
+    'unconfirmed' (Needs review) unless that transfer is on the allowlist
+    (data/repo-transfers.json); apply_allowed_transfer handles those. Real failures
     (dead/warning/stale/archived/unreachable) are never overridden. The record expires
     after MANUAL_CHECK_MAX_AGE_DAYS (the tool then stays unconfirmed)."""
     mc = t.get("manual_check")
@@ -558,6 +626,9 @@ def apply_manual_check(t, v):
         return
     v["manual_check"] = rec
     if v["status"] == "unconfirmed":
+        g = v.get("github") or {}
+        if g.get("cross_org_redirect") and not find_repo_transfer(t.get("repo"), g["cross_org_redirect"]):
+            return
         v["status"] = "verified"
         v["manual_override"] = True
 
@@ -585,7 +656,9 @@ def safe_verify(t):
     """verify() that can never abort or hang the run: an unexpected error, or a verify() still running after
     TOOL_DEADLINE seconds, makes only this tool Needs review."""
     done, v = _bounded(lambda: verify(t), TOOL_DEADLINE)
-    if done and not isinstance(v, BaseException): return v
+    if done and not isinstance(v, BaseException):
+        apply_allowed_transfer(t, v)
+        return v
     why = f"checker error ({type(v).__name__})" if done else f"checker timed out after {TOOL_DEADLINE:g}s"
     return {"checked_at": NOW.strftime("%Y-%m-%d"), "checks": [], "status": "unconfirmed", "issues": [f"Could not confirm: {why}"]}
 
