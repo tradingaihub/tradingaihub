@@ -625,7 +625,9 @@
   "trading-checkup-aikit": "Trading Checkup의 공식 AIKIT MCP. 거래소와 브로커의 출처 있고 날짜가 적힌 사실(심볼 규칙, 수수료, 속도 제한)과 매매 봇 코드의 흔한 실수를 검사합니다. 정보만 제공하며 시그널이나 주문을 넣지 않습니다. 베타이며 구매는 아직 열려 있지 않습니다.",
   "aperiodic-mcp": "Aperiodic의 공식 API 및 MCP. Binance, OKX, Hyperliquid의 암호화폐 및 RWA 퍼페추얼(주식, 금, 원유, FX)에 대한 시점별 주문흐름, 유동성, 펀딩 지표를 AI 에이전트용으로 제공합니다.",
   "ocarrat-mcp": "Ocarrat Trading Statistics의 공식 MCP. 트레이더 본인의 저널(전략, 주간 보고서, 성과 분석)에 OAuth로 접근합니다. 무료 읽기 전용 등급이 있습니다. 주문을 넣지 않습니다.",
-  "copy-top": "copy.top(Polycool LLC)의 공식 호스티드 MCP이며 copytop-signals 에이전트 스킬도 이 항목에 포함됩니다. API 키 없이 쓰는 읽기 전용 도구로, fomo, pump.fun, Hyperliquid 트레이더의 실시간 거래, 시그널, 알림을 다룹니다. 제품 약관에는 수수료, 바이백, 소각, 초대 보상이 있는 $COPY 토큰도 설명되어 있습니다. 공개 GitHub 저장소는 라이선스가 없는 문서 초안입니다."
+  "copy-top": "copy.top(Polycool LLC)의 공식 호스티드 MCP이며 copytop-signals 에이전트 스킬도 이 항목에 포함됩니다. API 키 없이 쓰는 읽기 전용 도구로, fomo, pump.fun, Hyperliquid 트레이더의 실시간 거래, 시그널, 알림을 다룹니다. 제품 약관에는 수수료, 바이백, 소각, 초대 보상이 있는 $COPY 토큰도 설명되어 있습니다. 공개 GitHub 저장소는 라이선스가 없는 문서 초안입니다.",
+  "stalkchain-data-mcp": "StalkChain의 공식 호스팅 MCP. Solana 지갑 활동, 토큰 보유자, 추적 트레이더 흐름, Hyperliquid 시장 데이터를 제공합니다. 읽기 전용 리서치 데이터와 StalkChain 이메일 알림 설정을 다룹니다. OAuth 로그인; 거래소 자격 증명이 필요 없고 주문을 내지 않습니다.",
+  "ptdata-mcp": "PtData의 공식 원격 MCP 및 REST API. SEC 공시 기반 미국 기업 펀더멘털을 과거 임의 날짜에 알려졌던 그대로(point-in-time) 제공하며, 각 값은 공시의 accession 번호와 연결됩니다. 생존 편향 없는 지수 구성 종목, 공시 메타데이터, 실적 이벤트도 포함. 읽기 전용 도구 4개; 무료 등급은 키가 필요 없습니다."
  },
  "faq": {
   "title": "자주 묻는 질문",
