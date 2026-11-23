@@ -1,13 +1,13 @@
 {
-  "checked_at": "2026-11-18T15:35:02.088008+00:00",
+  "checked_at": "2026-11-23T05:52:54.305218+00:00",
   "total": 106,
   "by_status": {
-    "verified": 81,
-    "warning": 2,
+    "verified": 83,
+    "warning": 1,
     "stale": 12,
     "aging": 5,
     "archived": 3,
-    "unconfirmed": 3
+    "unconfirmed": 2
   },
   "with_package": 28,
   "manual_checks": [
@@ -29,7 +29,7 @@
       "id": "finnhub-mcp-community",
       "status": "stale",
       "issues": [
-        "No commits for 566 days"
+        "No commits for 570 days"
       ]
     },
     {
@@ -37,21 +37,21 @@
       "status": "stale",
       "issues": [
         "pypi name 'mcp-server' exists on the registry but does not link to this repo (not counted)",
-        "No commits for 530 days"
+        "No commits for 535 days"
       ]
     },
     {
       "id": "metatrader-mcp",
       "status": "aging",
       "issues": [
-        "No commits for 234 days"
+        "No commits for 239 days"
       ]
     },
     {
       "id": "paper-mcp",
       "status": "stale",
       "issues": [
-        "No commits for 425 days"
+        "No commits for 430 days"
       ]
     },
     {
@@ -59,14 +59,14 @@
       "status": "stale",
       "issues": [
         "pypi name 'mcp-server-ccxt' exists on the registry but does not link to this repo (not counted)",
-        "No commits for 638 days"
+        "No commits for 643 days"
       ]
     },
     {
       "id": "crypto-indicators-mcp",
       "status": "aging",
       "issues": [
-        "No commits for 347 days"
+        "No commits for 352 days"
       ]
     },
     {
@@ -74,35 +74,35 @@
       "status": "stale",
       "issues": [
         "npm name 'binance-mcp' exists on the registry but does not link to this repo (not counted)",
-        "No commits for 581 days"
+        "No commits for 585 days"
       ]
     },
     {
       "id": "bankless-onchain-mcp",
       "status": "aging",
       "issues": [
-        "No commits for 197 days"
+        "No commits for 201 days"
       ]
     },
     {
       "id": "crypto-liquidations-mcp",
       "status": "stale",
       "issues": [
-        "No commits for 561 days"
+        "No commits for 565 days"
       ]
     },
     {
       "id": "coincap-mcp",
       "status": "stale",
       "issues": [
-        "No commits for 656 days"
+        "No commits for 661 days"
       ]
     },
     {
       "id": "dexscreener-trending-mcp",
       "status": "aging",
       "issues": [
-        "No commits for 310 days"
+        "No commits for 314 days"
       ]
     },
     {
@@ -117,7 +117,7 @@
       "id": "solana-agent-kit",
       "status": "aging",
       "issues": [
-        "No commits for 187 days"
+        "No commits for 192 days"
       ]
     },
     {
@@ -125,14 +125,14 @@
       "status": "stale",
       "issues": [
         "Package currently unmaintained on npm; install from source",
-        "No commits for 474 days"
+        "No commits for 478 days"
       ]
     },
     {
       "id": "invoice-organizer-skill",
       "status": "stale",
       "issues": [
-        "No commits for 397 days"
+        "No commits for 401 days"
       ]
     },
     {
@@ -147,14 +147,14 @@
       "id": "monarch-mcp",
       "status": "stale",
       "issues": [
-        "No commits for 528 days"
+        "No commits for 533 days"
       ]
     },
     {
       "id": "openbb",
       "status": "verified",
       "issues": [
-        "Repository redirects to another owner (https://github.com/openbq-org/OpenBB); stored link not updated"
+        "Repository transfer confirmed (2026-11-20): OpenBB-finance/OpenBB \u2192 openbq-org/OpenBB. Source: https://openbb.co/blog/openbb-belongs-to-everyone/. Stored link not updated."
       ],
       "manual": "Manually checked on 2026-11-11"
     },
@@ -169,7 +169,7 @@
       "id": "claude-investor",
       "status": "stale",
       "issues": [
-        "No commits for 965 days"
+        "No commits for 970 days"
       ]
     },
     {
@@ -183,7 +183,7 @@
       "id": "claude-code-trading-terminal",
       "status": "stale",
       "issues": [
-        "No commits for 445 days"
+        "No commits for 450 days"
       ]
     },
     {
@@ -191,20 +191,6 @@
       "status": "verified",
       "issues": [
         "npm name 'square-mcp-server' exists on the registry but does not link to this repo (not counted)"
-      ]
-    },
-    {
-      "id": "razorpay-mcp",
-      "status": "warning",
-      "issues": [
-        "A homepage/docs/endpoint link failed: MCP endpoint ConnectionError: server/connection error"
-      ]
-    },
-    {
-      "id": "firefly-iii-api",
-      "status": "unconfirmed",
-      "issues": [
-        "Could not confirm: homepage 403: answered but refused our checker (sign-in required, bot block or rate limit); docs 403: answered but refused our checker (sign-in required, bot block or rate limit)"
       ]
     },
     {

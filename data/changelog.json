@@ -1,5 +1,58 @@
 [
   {
+    "date": "2026-11-23",
+    "counts": {
+      "verified": 83,
+      "warning": 1,
+      "stale": 12,
+      "aging": 5,
+      "archived": 3,
+      "unconfirmed": 2
+    },
+    "changes": [
+      {
+        "kind": "stars",
+        "id": "anthropic-financial-services",
+        "text": "Anthropic Financial Services Plugins gained 83 stars"
+      },
+      {
+        "kind": "stars",
+        "id": "openbb",
+        "text": "OpenBB Platform (MCP) gained 127 stars"
+      },
+      {
+        "kind": "stars",
+        "id": "claude-trading-skills",
+        "text": "Claude Trading Skills gained 812 stars"
+      },
+      {
+        "kind": "status",
+        "id": "razorpay-mcp",
+        "text": "Razorpay MCP Server: warning \u2192 verified"
+      },
+      {
+        "kind": "release",
+        "id": "ynab-mcp",
+        "text": "YNAB MCP Server (community) released 0.10.0 (was 0.9.0)"
+      },
+      {
+        "kind": "status",
+        "id": "firefly-iii-api",
+        "text": "Firefly III API: unconfirmed \u2192 verified"
+      },
+      {
+        "kind": "stars",
+        "id": "firefly-iii-api",
+        "text": "Firefly III API gained 40 stars"
+      },
+      {
+        "kind": "stars",
+        "id": "sure",
+        "text": "Sure gained 975 stars"
+      }
+    ]
+  },
+  {
     "date": "2026-11-18",
     "counts": {
       "verified": 81,
