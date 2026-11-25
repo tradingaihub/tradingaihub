@@ -2,12 +2,13 @@
 
 Total entries: 133
 
-- verified: 110
+- verified: 109
 - stale: 12
 - aging: 5
 - archived: 3
 - unconfirmed: 2
 - warning: 1
+- high_risk: 1
 
 Manual checks:
 - openbb: Manually checked on 2026-11-11
@@ -139,7 +140,7 @@ Entries with a published npm/PyPI package: 30
 | trading-checkup-aikit | verified |  |  | Proprietary / ToS |  |  |
 | aperiodic-mcp | verified |  |  | Proprietary / ToS |  |  |
 | ocarrat-mcp | verified |  |  | Proprietary / ToS |  |  |
-| copy-top | verified | 0 | 2026-11-14 | unknown |  |  |
+| copy-top | high_risk | 0 | 2026-11-14 | unknown |  |  |
 | stalkchain-data-mcp | verified | 2 | 2026-11-20 | MIT |  |  |
 | ptdata-mcp | verified | 0 | 2026-11-16 | MIT |  |  |
 | lianxiaozhi-mcp | verified |  |  | Proprietary / ToS |  |  |
