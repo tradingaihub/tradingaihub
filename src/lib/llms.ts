@@ -10,7 +10,7 @@ import raw from "../../data/tools.json";
 // Blog: published posts only (never drafts). Post links are internal URLs, so no affiliate params can reach this file.
 import { PUBLISHED as BLOG_POSTS } from "./blog";
 const rawById: Record<string, any> = Object.fromEntries((raw as any[]).map((t) => [t.id, t]));
-const plainUrl = (x: any) => (typeof x === "string" && /^https?:\/\//.test(x) && !/aff_id=/i.test(x) ? x : null);
+const plainUrl = (x: any) => (typeof x === "string" && /^https?:\/\//.test(x) && !/aff_id=|[?&](?:via|_go)=/i.test(x) ? x : null);
 const known = (x: any) => typeof x === "string" && x.trim() !== "" && !/^(unknown|none|n\/a)$/i.test(x.trim());
 
 // Published guides only: add an entry when a guide page is live, so /llms.txt never links to a 404.
