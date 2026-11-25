@@ -148,21 +148,18 @@ class SecurityBadgeDist(unittest.TestCase):
         self.assertRegex(page, r'title="[^"]*2026-11-10[^"]*bce7a11[^"]*\b6\b')
         self.assertIn("2026-11-10", page)
 
-        # Display-only: unconfirmed chips are muted, have no "!", and do not use the warning tone.
-        # API status_label is "Link check pending" (checked in the public-api dump test).
+        # Only the three public statuses are shown. "Under review" is a calm muted chip with no "!".
         status_src = (ROOT / "src" / "components" / "Status.astro").read_text()
-        self.assertIn('status === "unconfirmed" ? "muted"', status_src)
-        unconfirmed = [t["id"] for t in _load(TOOLS) if (t.get("verification") or {}).get("status") == "unconfirmed"]
-        for tid in unconfirmed:
+        self.assertIn("const tone = s.tone;", status_src)
+        under_review = [t["id"] for t in _load(TOOLS) if (t.get("verification") or {}).get("status") == "under_review"]
+        self.assertEqual(len(under_review), 3)
+        for tid in under_review:
             html = (self.dist / "tools" / tid / "index.html").read_text()
-            self.assertRegex(html, r'class="badge muted"', f"{tid} missing muted chip")
-            self.assertNotRegex(html, r'class="badge warn"[^>]*>!\s', f"{tid} still has a warning bang chip")
-            self.assertIn("Link check pending", html)
-            self.assertNotRegex(html, r">!\s*Link check pending")
-        # These three were the last unconfirmed listings; they are now verified.
+            self.assertRegex(html, r'class="badge muted"[^>]*>Under review')
+            self.assertNotRegex(html, r">!\s*Under review")
+            self.assertNotIn("Link check pending", html)
         for tid in ("firefly-iii-api", "openbb", "mercury-mcp"):
             html = (self.dist / "tools" / tid / "index.html").read_text()
-            self.assertNotIn("Link check pending", html, tid)
             self.assertIn("✓ Verified", html, f"{tid} missing Verified chip")
 
         # Directory cards: a concerns tool must not carry a shield on listing pages

@@ -66,8 +66,6 @@ export function publicTool(t: any) {
     risk_tier: t.risk_tier === "high" ? "high" : "standard",
     deprecated: !!t.deprecated,
     status: publicStatus(t),
-    // High-risk tools use publicStatus ("high_risk" / "High risk"). For every other tool this is
-    // status_label: STATUS[v.status]?.label ?? v.status
     status_label: STATUS[publicStatus(t)]?.label ?? publicStatus(t),
     verified: isVerified(t),
     checked_at: v.checked_at ?? null,
