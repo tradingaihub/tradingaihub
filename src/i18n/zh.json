@@ -693,7 +693,7 @@
   "verifiedNoRepo": "已验证：在 {checked} 的检查中可访问且链接正常。",
   "underReview": "审核中：截至 {checked} 的检查，不计入已验证。",
   "notVerified": "当前未验证：在 {checked} 的检查中未达到验证标准。",
-  "checked": "最近检查：对该工具的仓库和链接进行最近一次检查的日期。所有条目每周重新检查。",
+  "checked": "最近检查：对该工具的仓库和链接进行最近一次检查的日期。所有条目定期重新检查。",
   "scan": "安全扫描：{date} 未发现问题（代码与依赖的静态检查，扫描器 {commit}，规则 {rules}）。这不是保证。",
   "pricing": "按供应商页面所列价格：免费档 {free}；付费起价 {paid}。检查日期 {date}。",
   "pricingNoDate": "按供应商所列价格：免费档 {free}；付费起价 {paid}。",

@@ -693,7 +693,7 @@
   "verifiedNoRepo": "Verificado: accesible y con enlaces funcionando en la comprobación del {checked}.",
   "underReview": "En revisión: no cuenta como verificada en la comprobación del {checked}.",
   "notVerified": "No verificado actualmente: no cumplió los criterios de verificación en la comprobación del {checked}.",
-  "checked": "Última comprobación: fecha de la última comprobación del repositorio y los enlaces de la herramienta. Todo el directorio se vuelve a comprobar cada semana.",
+  "checked": "Última comprobación: fecha de la última comprobación del repositorio y los enlaces de la herramienta. Todo el directorio se vuelve a comprobar regularmente.",
   "scan": "Análisis de seguridad: sin problemas el {date} (revisión estática de código y dependencias, escáner {commit}, reglas {rules}). No es una garantía.",
   "pricing": "Precio según la página del proveedor: plan gratuito {free}; de pago desde {paid}. Comprobado el {date}.",
   "pricingNoDate": "Precio según el proveedor: plan gratuito {free}; de pago desde {paid}.",

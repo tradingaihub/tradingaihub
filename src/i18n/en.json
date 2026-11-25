@@ -694,7 +694,7 @@
   "verifiedNoRepo": "Verified: reachable and links working in the check on {checked}.",
   "underReview": "Under review: not counted as verified as of the check on {checked}.",
   "notVerified": "Not currently verified: did not meet the verification criteria in the check on {checked}.",
-  "checked": "Last checked: the date of the latest check of this tool's repository and links. Every listing is re-checked weekly.",
+  "checked": "Last checked: the date of the latest check of this tool's repository and links. Every listing is re-checked regularly.",
   "scan": "Security scan: no issues found on {date} (static code and dependency check, scanner {commit}, rules {rules}). Not a guarantee.",
   "pricing": "Pricing as listed on the vendor's page: free tier {free}; paid from {paid}. Checked {date}.",
   "pricingNoDate": "Pricing as listed by the vendor: free tier {free}; paid from {paid}.",

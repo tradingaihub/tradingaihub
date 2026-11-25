@@ -693,7 +693,7 @@
   "verifiedNoRepo": "Vérifié : accessible et liens fonctionnels lors de la vérification du {checked}.",
   "underReview": "En cours d’examen : non comptée comme vérifiée lors du contrôle du {checked}.",
   "notVerified": "Non vérifié actuellement : critères de vérification non remplis lors du contrôle du {checked}.",
-  "checked": "Dernière vérification : date de la dernière vérification du dépôt et des liens de l'outil. Tout l'annuaire est revérifié chaque semaine.",
+  "checked": "Dernière vérification : date de la dernière vérification du dépôt et des liens de l'outil. Tout l'annuaire est revérifié régulièrement.",
   "scan": "Analyse de sécurité : aucun problème le {date} (analyse statique du code et des dépendances, scanner {commit}, règles {rules}). Ce n'est pas une garantie.",
   "pricing": "Tarifs selon la page de l'éditeur : offre gratuite {free} ; payant à partir de {paid}. Vérifié le {date}.",
   "pricingNoDate": "Tarifs selon l'éditeur : offre gratuite {free} ; payant à partir de {paid}.",

@@ -693,7 +693,7 @@
   "verifiedNoRepo": "Doğrulandı: {checked} kontrolünde erişilebilir ve bağlantılar çalışıyordu.",
   "underReview": "İncelemede: {checked} kontrolü itibarıyla doğrulanmış sayılmaz.",
   "notVerified": "Şu anda doğrulanmadı: {checked} kontrolünde doğrulama ölçütlerini karşılamadı.",
-  "checked": "Son kontrol: aracın deposunun ve bağlantılarının en son kontrol tarihi. Tüm kayıtlar her hafta yeniden kontrol edilir.",
+  "checked": "Son kontrol: aracın deposunun ve bağlantılarının en son kontrol tarihi. Tüm kayıtlar düzenli olarak yeniden kontrol edilir.",
   "scan": "Güvenlik taraması: {date} tarihinde sorun bulunmadı (kod ve bağımlılıkların statik kontrolü, tarayıcı {commit}, kurallar {rules}). Bu bir garanti değildir.",
   "pricing": "Sağlayıcı sayfasındaki fiyat: ücretsiz katman {free}; ücretli {paid} başlangıçlı. Kontrol {date}.",
   "pricingNoDate": "Sağlayıcının belirttiği fiyat: ücretsiz katman {free}; ücretli {paid} başlangıçlı.",

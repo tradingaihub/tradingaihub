@@ -693,7 +693,7 @@
   "verifiedNoRepo": "Verifiziert: erreichbar und Links funktionieren in der Prüfung vom {checked}.",
   "underReview": "In Prüfung: zählt bei der Prüfung vom {checked} nicht als geprüft.",
   "notVerified": "Derzeit nicht geprüft: hat bei der Prüfung vom {checked} die Kriterien nicht erfüllt.",
-  "checked": "Zuletzt geprüft: Datum der letzten Prüfung von Repository und Links dieses Tools. Jeder Eintrag wird wöchentlich neu geprüft.",
+  "checked": "Zuletzt geprüft: Datum der letzten Prüfung von Repository und Links dieses Tools. Jeder Eintrag wird regelmäßig neu geprüft.",
   "scan": "Sicherheitsscan: keine Probleme am {date} (statische Code- und Abhängigkeitsprüfung, Scanner {commit}, Regeln {rules}). Keine Garantie.",
   "pricing": "Preise laut Anbieterseite: kostenlose Stufe {free}; kostenpflichtig ab {paid}. Geprüft am {date}.",
   "pricingNoDate": "Preise laut Anbieter: kostenlose Stufe {free}; kostenpflichtig ab {paid}.",
