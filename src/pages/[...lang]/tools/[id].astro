@@ -7,6 +7,7 @@ import Base from "../../../layouts/Base.astro";
 import Status from "../../../components/Status.astro";
 import SecurityBadge from "../../../components/SecurityBadge.astro";
 import SecurityNote from "../../../components/SecurityNote.astro";
+import RiskBanner from "../../../components/RiskBanner.astro";
 import XpTip from "../../../components/XpTip.astro";
 import { explain } from "../../../lib/explain";
 import ToolCard from "../../../components/ToolCard.astro";
@@ -14,7 +15,7 @@ import Share from "../../../components/Share.astro";
 import DateInText from "../../../components/DateInText.astro";
 import TitleText from "../../../components/TitleText.astro";
 import { SITE } from "../../../config";
-import { tools, catBySlug, snippets, pkgOf, starsOf, lastCommit, fmtStars } from "../../../lib/data";
+import { tools, catBySlug, snippets, pkgOf, starsOf, lastCommit, fmtStars, isHighRisk, isVerified } from "../../../lib/data";
 import { softwareLd } from "../../../lib/jsonld";
 import { langParams, useT } from "../../../i18n";
 export function getStaticPaths() { return langParams().flatMap((lp) => tools.map((t) => ({ params: { ...lp, id: t.id }, props: { tool: t } }))); }
@@ -24,11 +25,12 @@ const [cname, cshort] = t(`cat.${cat.slug}`);
 const pkg = pkgOf(tool); const sn = snippets(tool, t); const stHelp = t(`status.${v.status}`)[1];
 const desc = dsc(tool);
 const hasAff = [tool.homepage, tool.docs, tool.source_url, tool.pricing.source].some((u) => isAff(u));
-const related = tools.filter((x) => x.category === tool.category && x.id !== tool.id).slice(0, 3);
+const highRisk = isHighRisk(tool);
+const related = highRisk ? [] : tools.filter((x) => x.category === tool.category && x.id !== tool.id && !isHighRisk(x)).slice(0, 3);
 // Partner CTA on tool pages related to charting, stocks, market data, crypto, quant/backtesting.
 const PARTNER_CATS: Record<string, string> = { "market-data": "/chart/", "trading-brokers": "/chart/", "crypto": "/markets/cryptocurrencies/", "quant-backtesting": "/pine-script-docs/", "research-filings": "/screener/", "macro": "/markets/currencies/" };
 const mentionsTV = /tradingview/i.test(JSON.stringify(tool));
-const partnerPath = PARTNER_CATS[tool.category] ?? (mentionsTV || /chart|stock|backtest|crypto|trading/i.test(tool.description) ? "/chart/" : null);
+const partnerPath = highRisk ? null : (PARTNER_CATS[tool.category] ?? (mentionsTV || /chart|stock|backtest|crypto|trading/i.test(tool.description) ? "/chart/" : null));
 const pageUrl = `${SITE.url}${p(`/tools/${tool.id}/`)}`;
 const ld = [
   softwareLd(tool.id, { name: tool.name, description: desc, url: pageUrl, lang }),
@@ -44,10 +46,11 @@ const metaDesc = `${tool.name}: ${desc} ${t("tool.descSuffix")}`;
 <Base title={`${tool.name} — ${t("tool.titleFor", { type: t(`type.${tool.type}`), cat: lang === "en" ? cshort.toLowerCase() : cshort })}`} description={metaDesc.slice(0, 300)} jsonld={ld} og={`tool-${tool.id}`} lang={lang}>
 <div class="wrap page">
   <div class="crumbs"><a href={p("/")}>{t("common.home")}</a> / <a href={p(`/category/${cat.slug}/`)}>{cname}</a> / <bdi>{tool.name}</bdi></div>
-  <div class="xp-scope"><div class="tool-head-meta"><div class="meta"><button type="button" class="badge type" data-xp-toggle data-xp="type" aria-expanded="false" aria-controls="xp-type" aria-describedby="xp-type">{t(`type.${tool.type}`)}</button>{tool.official && <button type="button" class="badge off" data-xp-toggle data-xp="official" aria-expanded="false" aria-controls="xp-official" aria-describedby="xp-official">{t("common.officialVendor")}</button>}<Status status={v.status} lang={lang} xp="page" /></div><button type="button" class="pill tool-checked" data-xp-toggle data-xp="checked" aria-expanded="false" aria-controls="xp-checked" aria-describedby="xp-checked"><DateInText text={t("tool.lastChecked", { date: v.checked_at })} date={v.checked_at} /></button></div><span class="xp-tips">{(["type", "official", "status", "checked"] as const).map((k) => <XpTip k={k} id={`xp-${k}`} html={explain(tool, k, lang)} />)}</span></div>
+  <div class="xp-scope"><div class="tool-head-meta"><div class="meta"><button type="button" class="badge type" data-xp-toggle data-xp="type" aria-expanded="false" aria-controls="xp-type" aria-describedby="xp-type">{t(`type.${tool.type}`)}</button>{tool.official && <button type="button" class="badge off" data-xp-toggle data-xp="official" aria-expanded="false" aria-controls="xp-official" aria-describedby="xp-official">{t("common.officialVendor")}</button>}{!highRisk && <Status status={v.status} lang={lang} xp="page" />}</div><button type="button" class="pill tool-checked" data-xp-toggle data-xp="checked" aria-expanded="false" aria-controls="xp-checked" aria-describedby="xp-checked"><DateInText text={t("tool.lastChecked", { date: v.checked_at })} date={v.checked_at} /></button></div><span class="xp-tips">{(highRisk ? (["type", "official", "checked"] as const) : (["type", "official", "status", "checked"] as const)).map((k) => <XpTip k={k} id={`xp-${k}`} html={explain(tool, k, lang)} />)}</span></div>
   <h1 class="tool-title" style="margin:6px 0 6px" title={tool.name}><TitleText text={tool.name} bdi /></h1>
+  <RiskBanner tool={tool} lang={lang} variant="page" />
   <p style="color:var(--muted);font-size:1.125rem;margin-top:0">{desc}</p>
-  <SecurityBadge tool={tool} lang={lang} variant="page" />
+  {!highRisk && <SecurityBadge tool={tool} lang={lang} variant="page" />}
   <SecurityNote tool={tool} lang={lang} variant="page" />
   {capNote && (
     <p class="note" dir="auto">{t(capNote)}</p>
@@ -57,7 +60,7 @@ const metaDesc = `${tool.name}: ${desc} ${t("tool.descSuffix")}`;
   )}
   {partnerPath && <PartnerCTA variant="tool" lang={lang} path={partnerPath} />}
   {mentionsTV && <TradingView context="integration" lang={lang} />}
-  <Share path={p(`/tools/${tool.id}/`)} text={`${tool.name} — ${v.status === "verified" ? t("tool.shareVerified") : t("tool.shareStatus")} ${t("tool.on")} ${SITE.name}`} lang={lang} />
+  <Share path={p(`/tools/${tool.id}/`)} text={`${tool.name} — ${isVerified(tool) ? t("tool.shareVerified") : t("tool.shareStatus")} ${t("tool.on")} ${SITE.name}`} lang={lang} />
   <div class="two">
     <div>
       <h2>{t("tool.install")}</h2>
@@ -75,7 +78,7 @@ const metaDesc = `${tool.name}: ${desc} ${t("tool.descSuffix")}`;
       </dl><p class="note">{t("tool.pricesChange")}{lang !== "en" && ` ${t("tool.pricingDataNote")}`}</p></div>
       <h2>{t("tool.verification")}</h2>
       <div class="panel">
-        <p><Status status={v.status} lang={lang} /> <span class="note">{stHelp}</span></p>
+        {highRisk ? <p class="note">{t("risk.noBadge")}</p> : <p><Status status={v.status} lang={lang} /> <span class="note">{stHelp}</span></p>}
         <table><tbody>{v.checks.map((c: any) => <tr><td style="width:36px">{c.ok ? "✅" : "⚠️"}</td><td>{t(`checks.${c.check}`) === `checks.${c.check}` ? c.check : t(`checks.${c.check}`)}{c.note && <span class="note"> — <bdi>{c.note}</bdi></span>}</td></tr>)}</tbody></table>
         {v.issues.length > 0 && <ul>{v.issues.map((i: string) => <li class="note"><bdi>{i}</bdi></li>)}</ul>}
         <p class="note"><DateInText text={t(v.manual_override ? "tool.manualCheck" : "tool.autoCheck", { date: v.manual_override ? v.manual_check.date : v.checked_at })} date={v.manual_override ? v.manual_check.date : v.checked_at} /> <a href={`${p("/about/")}#how-we-verify`}>{t("nav.verify")}</a>.</p>
@@ -94,10 +97,9 @@ const metaDesc = `${tool.name}: ${desc} ${t("tool.descSuffix")}`;
         <dt>{t("th.category")}</dt><dd><a href={p(`/category/${cat.slug}/`)}>{cshort}</a></dd>
         <dt>{t("tool.listedVia")}</dt><dd><a href={tool.source_url} rel={relFor(tool.source_url)} target="_blank" aria-describedby={isAff(tool.source_url) ? "aff-note" : undefined}>{t("tool.source")}</a><AffTag url={tool.source_url} lang={lang} /></dd>
       </dl>{hasAff && <span id="aff-note" hidden>{t("common.affTitle")}</span>}</div>
-      <div class="panel" style="margin-top:14px"><b>{t("tool.maintain")}</b><p class="note">{t("tool.badgeNote")}</p>
+      <div class="panel" style="margin-top:14px"><b>{t("tool.maintain")}</b>{highRisk ? <p class="note">{t("risk.noBadge")}</p> : <><p class="note">{t("tool.badgeNote")}</p>
         <p><img src={`/badge/${tool.id}.svg`} alt={`${SITE.name} status`} /></p>
-        <pre class="ltr" dir="ltr"><code dir="ltr">{`[![${SITE.name}](${SITE.url}/badge/${tool.id}.svg)](${SITE.url}/tools/${tool.id}/)`}</code></pre>
-        <p class="note">{t("tool.wrongInfo")} <a href={p("/submit/")}>{t("tool.sendCorrection")}</a> — {t("tool.free")}.</p></div>
+        <pre class="ltr" dir="ltr"><code dir="ltr">{`[![${SITE.name}](${SITE.url}/badge/${tool.id}.svg)](${SITE.url}/tools/${tool.id}/)`}</code></pre></>}<p class="note">{t("tool.wrongInfo")} <a href={p("/submit/")}>{t("tool.sendCorrection")}</a> — {t("tool.free")}.</p></div>
       <p class="note" style="margin-top:14px">{t("tool.notEndorse")}</p>
     </aside>
   </div>

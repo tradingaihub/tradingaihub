@@ -4,7 +4,7 @@
 // them as <bdi>, and the JSON-LD strips them, so the visible text and the structured data stay identical.
 import { SITE } from "../config";
 import { LOCALES, useT } from "../i18n";
-import { tools, CATEGORIES, starsOf, verificationReport } from "./data";
+import { tools, CATEGORIES, starsOf, verificationReport, isVerified } from "./data";
 
 export type QA = { q: string; a: string };
 const iso = (s: string) => `\u2068${s}\u2069`;
@@ -29,7 +29,7 @@ export function categoryFaq(lang: string, slug: string): QA[] {
   const { t } = useT(lang);
   const name = t(`cat.${slug}`)[0];
   const list = tools.filter((x) => x.category === slug);
-  const verified = list.filter((x) => x.verification.status === "verified");
+  const verified = list.filter((x) => isVerified(x));
   const top = verified.filter((x) => starsOf(x) != null).sort((a, b) => (starsOf(b) ?? 0) - (starsOf(a) ?? 0)).slice(0, 3);
   const official = list.filter((x) => x.official).length;
   const out: QA[] = [

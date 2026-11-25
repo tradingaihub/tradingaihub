@@ -11,7 +11,7 @@ The scheduled Monday re-check on **November 16, 2026** did complete, but those r
 
 This report uses only records we can point to. It compares the weekly run on **November 9, 2026** (finished at 05:50 UTC) with the **November 11, 2026** published snapshot (12:51 UTC), and it reports the **status totals** from the November 16 re-check log. Those Nov 16 totals are not in the site repository (there is no `data/history/2026-11-16.json`), so they cannot be reproduced from the public repo. We are not naming which tools changed in that unpublished run, other than SEC EDGAR APIs, because a per-tool diff was not saved to the repository.
 
-The latest published dataset is now the weekly run of **November 18, 2026**, finished at 17:35 Asia/Jerusalem (15:35 UTC). All 106 rows in the public dataset ([tools.json](/tools.json)) carry that check date: 81 Verified, 5 Aging, 12 Stale, 3 Archived, 3 Link check pending and 2 Check links, as recorded in `data/verification-report.json` and on the [latest verification](/verification/) page.
+The latest published dataset is now the weekly run of **November 18, 2026**, finished at 17:35 Asia/Jerusalem (15:35 UTC). All 106 rows in the 18 November dataset carry that check date: 81 Verified, 5 Aging, 12 Stale, 3 Archived, 3 Link check pending and 2 Check links, as recorded in that run's snapshot, `data/history/2026-11-18.json`. The [latest verification](/verification/) page shows the current data.
 
 The status we previously called **Needs review** is now shown on the site as **Link check pending**. The underlying value is unchanged. A separate badge, **Check links**, means a homepage, docs or endpoint link failed in the check.
 
