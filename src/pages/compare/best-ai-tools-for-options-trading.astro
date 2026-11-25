@@ -5,9 +5,11 @@ import {
   requireTools, paidFrom, capNoteKey, prettyDate, RUN_DATE, RUN_TOTAL, RUN_VERIFIED, PRICING_CHECKED,
 } from "../../lib/bestPages";
 import { useT } from "../../i18n";
-import { affUrl } from "../../lib/aff";
+import { affUrl, tvUrl } from "../../lib/aff";
 const { t } = useT("en");
 const eodhdDocs = affUrl("https://eodhd.com/financial-apis/mcp-server-for-financial-data-by-eodhd")!;
+const tvCharts = tvUrl("/chart/");
+const trendspiderHome = affUrl("https://trendspider.com/")!;
 const list = requireTools(OPTIONS.toolIds);
 const byId = Object.fromEntries(list.map((x) => [x.id, x]));
 const dataRows = OPTIONS_DATA_IDS.map((id) => byId[id]).filter(Boolean);
@@ -17,12 +19,13 @@ const run = prettyDate(RUN_DATE);
 const priced = prettyDate(PRICING_CHECKED);
 const typeLabel: Record<string, string> = { mcp: "MCP", api: "API", skill: "Skill" };
 ---
-<BestCompare page={OPTIONS} list={list} affiliateDisclosure affiliateVendors="EODHD">
+<BestCompare page={OPTIONS} list={list} affiliateDisclosure affiliateVendors="TradingView, EODHD and TrendSpider">
   <p>Options are where a general-purpose assistant is weakest. A chain, an implied-volatility figure, or a set of Greeks is not something the model already knows; a tool has to fetch it. Placing an order is a separate, higher-risk step. This page splits <b>data-only tools</b> from <b>broker-connected tools</b>, and it puts the broker tools second, with a stronger warning.</p>
   <p>We used only tools marked <b>Verified</b> in our {run} check from the directory of {RUN_TOTAL} listings ({RUN_VERIFIED} verified), and only those whose listings actually cover listed options — chains, options market data, Greeks, or options order placement. Full results are on the <a href="/verification/">verification page</a>. This is not a ranking of “best options strategy,” and it is not a broker recommendation.</p>
   <blockquote>
     <p><b>Not financial advice.</b> Options can lose value quickly, including the entire premium you pay. These tools fetch data you ask for, or — in the broker section — can place orders you approve or configure. None of them predicts markets, and nothing here is a recommendation to buy, sell, or open any options position. An assistant can mis-build a leg or misread a chain. Data can be delayed or wrong. Review every order, check figures against the source, and paper trade first.</p>
   </blockquote>
+  <p>To inspect a setup on a chart, charting platforms such as <a href={tvCharts} target="_blank" rel="sponsored noopener">TradingView</a> <span class="partner-tag">{t("partner.label")}</span> and <a href={trendspiderHome} target="_blank" rel="sponsored noopener">TrendSpider</a> <span class="partner-tag">{t("partner.label")}</span> can help.</p>
 
   <h2 class="sec" id="quick-picks">Quick picks</h2>
   <ul>
