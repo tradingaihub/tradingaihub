@@ -4,6 +4,8 @@
 
 Legend: ✅ verified · 🟡 aging (6–12 months without commits) · 🔴 stale (12+ months) · 🗄️ archived. 🟡 also marks entries whose link failed or could not be confirmed. ⭐ = GitHub stars. Not investment advice.
 
+Questions, tool suggestions or security concerns? Join the discussion: [tradingaihub/community/discussions](https://github.com/tradingaihub/community/discussions)
+
 ## Use it from your AI agent
 
 This list is the markdown mirror of [TradingAIHub](https://tradingaihub.com). The same data is available to agents with no API key:

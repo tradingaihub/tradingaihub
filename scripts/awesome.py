@@ -23,6 +23,7 @@ badges = (
 L = [f"# Awesome Finance & Trading AI Tools {badges}", "",
      f"> A curated, **automatically re-verified** list of MCP servers, agent skills and APIs for finance and trading. Mirror of [{brand}]({url}) — status checked weekly (last: {date}).", "",
      "Legend: ✅ verified · 🟡 aging (6–12 months without commits) · 🔴 stale (12+ months) · 🗄️ archived. 🟡 also marks entries whose link failed or could not be confirmed. ⭐ = GitHub stars. Not investment advice.", "",
+     "Questions, tool suggestions or security concerns? Join the discussion: [tradingaihub/community/discussions](https://github.com/tradingaihub/community/discussions)", "",
      "## Use it from your AI agent", "",
      f"This list is the markdown mirror of [{brand}]({url}). The same data is available to agents with no API key:", "",
      f"- Remote MCP server: `{url}/mcp` (Streamable HTTP; tools `search_tools`, `get_tool`, `list_categories`). Official MCP Registry: `com.tradingaihub/directory`.",
