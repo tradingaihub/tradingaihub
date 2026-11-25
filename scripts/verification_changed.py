@@ -1,10 +1,15 @@
 #!/usr/bin/env python3
 """Compare the post-verify dataset to git HEAD and decide whether to publish.
 
-Exit 0 if there is a substantive change (status, notes, link failures, package
-version, license, tool set, …). Exit 1 if the only differences are volatile
-churn: checked_at timestamps, star counts, last-commit dates, or the daily
-tick of "No commits for N days" issue text.
+Exit codes:
+  0  substantive change (status, link results, package version, license, tool
+     set, …): publish.
+  1  only volatile churn (checked_at timestamps, star counts, last-commit dates,
+     rechecked/retry/first_status flags, the daily tick of "No commits for N
+     days" text): skip commit and deploy.
+  2  the comparison itself failed (crash, malformed JSON): do not publish. The
+     workflow fails the run, commits nothing and deploys nothing, so the last
+     published state stays live.
 
 Derived files (awesome/, public/og, verification-report.md) are not compared;
 they would also move when only checked_at changes. History and changelog are
@@ -22,8 +27,12 @@ VOLATILE_KEYS = frozenset({
     "collection_stars",
     "last_commit",
     "last_commit_days",
+    "rechecked",
+    "retry",
+    "first_status",
 })
 AGE_ISSUE = re.compile(r"No commits for \d+ days")
+EXIT_PUBLISH, EXIT_SKIP, EXIT_ERROR = 0, 1, 2
 PATHS = ("data/tools.json", "data/verification-report.json")
 
 
@@ -61,16 +70,20 @@ def _load_head(path, ref="HEAD"):
 
 
 def main(argv=None):
-    old_tools, old_report = (_load_head(p) for p in PATHS)
-    if old_tools is None or old_report is None:
-        print("substantive verification change: no HEAD baseline for data files")
-        return 0
-    new_tools, new_report = (_load_work(p) for p in PATHS)
-    if substantive_change(old_tools, old_report, new_tools, new_report):
-        print("substantive verification change")
-        return 0
-    print("no substantive change (checked_at / stars / last_commit only, or identical)")
-    return 1
+    try:
+        old_tools, old_report = (_load_head(p) for p in PATHS)
+        if old_tools is None or old_report is None:
+            print("substantive verification change: no HEAD baseline for data files")
+            return 0
+        new_tools, new_report = (_load_work(p) for p in PATHS)
+        if substantive_change(old_tools, old_report, new_tools, new_report):
+            print("substantive verification change")
+            return 0
+        print("no substantive change (checked_at / stars / last_commit only, or identical)")
+        return 1
+    except Exception as e:           # fail closed: when unsure, keep the last published state
+        print(f"verification_changed: cannot compare ({type(e).__name__}: {e}); not publishing")
+        return EXIT_ERROR
 
 
 if __name__ == "__main__":
