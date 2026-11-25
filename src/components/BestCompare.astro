@@ -8,8 +8,8 @@ import { articleLd } from "../lib/jsonld";
 import { faqLd } from "../lib/faq";
 import type { BestPageMeta } from "../lib/bestPages";
 
-interface Props { page: BestPageMeta; list: { id: string; name: string }[]; affiliateDisclosure?: boolean }
-const { page: p, list, affiliateDisclosure = false } = Astro.props;
+interface Props { page: BestPageMeta; list: { id: string; name: string }[]; affiliateDisclosure?: boolean; affiliateVendors?: string }
+const { page: p, list, affiliateDisclosure = false, affiliateVendors = "TradingView" } = Astro.props;
 const pageUrl = `${SITE.url}/compare/${p.slug}/`;
 const ld = [
   articleLd({ url: pageUrl, headline: p.h1, description: p.description, lang: "en", datePublished: p.datePublished, dateModified: p.dateModified, toolIds: list.map((x) => x.id), image: `${SITE.url}/og/compare-${p.slug}.png` }),
@@ -32,7 +32,7 @@ const ld = [
     <slot />
   </div>
   <Faq items={p.faq} lang="en" />
-  {affiliateDisclosure && <p class="note" id="partner-disclosure">The TradingView link marked <b>Partner</b> is an affiliate link. TradingAIHub may earn a commission at no extra cost to you, and it does not affect rankings, verification status or which tools appear on this page. See <a href="/about/#how-we-verify">how we verify</a> and the <a href="/disclaimer/">disclaimer</a>.</p>}
+  {affiliateDisclosure && <p class="note" id="partner-disclosure">The {affiliateVendors} links marked <b>Partner</b> are affiliate links. TradingAIHub may earn a commission at no extra cost to you, and it does not affect rankings, verification status or which tools appear on this page. See <a href="/about/#how-we-verify">how we verify</a> and the <a href="/disclaimer/">disclaimer</a>.</p>}
   <p class="note"><b>Not financial advice.</b> Paper trade first. See the <a href="/disclaimer/">disclaimer</a>.</p>
   <Newsletter lang="en" level={2} />
 </div>
