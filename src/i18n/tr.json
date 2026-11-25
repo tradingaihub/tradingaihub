@@ -94,6 +94,10 @@
   "unreachable": [
    "Erişilemiyor",
    "Depoya veya web sitesine ulaşılamadı."
+  ],
+  "high_risk": [
+   "Yüksek risk",
+   "Şeffaflık için listelenir ve önerilmez. Yüksek riskli kayıtlar (memecoin / kendi token'ı / kopya işlem) Verified rozetine uygun değildir."
   ]
  },
  "cat": {
@@ -141,6 +145,11 @@
    "Makro ve ekonomi",
    "Makro",
    "FRED serileri, ekonomik takvimler, döviz kurları ve makro göstergeler."
+  ],
+  "high-risk-crypto": [
+   "Yüksek riskli kripto",
+   "Yüksek riskli kripto",
+   "Memecoin'ler, kendi token'ı ve kopya alım satım araçları. Şeffaflık için listelenir; TradingAIHub bunları önermez."
   ]
  },
  "cmp": {
@@ -598,7 +607,25 @@
   "coinbase-agentic-wallet-skills": "Ajan cüzdanları için resmi Coinbase becerileri: bakiyeler, USDC gönderme, token takası, para yatırma ve Base, Polygon ve Solana'da x402 API ödemeleri.",
   "options-trading-skills": "Opsiyon yatırımcıları için topluluk Claude becerileri: tarayıcılar, Yunanlar, spreadler, PMCC taramaları, korelasyonlar ve IBKR portföy raporları.",
   "sure": "Kendi sunucunuzda barındırılan kişisel finans uygulaması (we-promise tarafından yürütülen, Maybe Finance'in topluluk çatalı): hesaplar, işlemler, bütçeler ve net değer; birinci taraf MCP sunucusu ve REST API ile.",
-  "coinboss-api": "Toplu kripto türev ve piyasa verileri için resmi REST API: likidasyonlar, açık pozisyon, fonlama oranları, long/short oranları ve ETF akışları. Yalnızca piyasa verisi; şu anda ücretsiz."
+  "coinboss-api": "Toplu kripto türev ve piyasa verileri için resmi REST API: likidasyonlar, açık pozisyon, fonlama oranları, long/short oranları ve ETF akışları. Yalnızca piyasa verisi; şu anda ücretsiz.",
+  "fair-value-calculator-mcp": "Fair Value Calculator'ın resmi barındırılan MCP'si: 40.000'den fazla hisse için model adil değeri, değerleme durumu ve kalite puanı. Karar, tarama ve portföy kontrol araçları salt okunur araştırmadır; izleme listesi araçları oturum açık bir hesabın listesini değiştirebilir. Ücretsiz bir hesap (OAuth) yeterlidir; Pro tam adil değerler ve daha yüksek limitler ekler.",
+  "lava-mcp": "Lava'nın (熔岩) resmi barındırılan MCP ve REST API'si: A-share hisse ve kavram panolarına ilişkin salt okunur haber-ısı verisi, yapılandırılmış özetler ve anonimleştirilmiş kurum kimlikleri. Emir göndermez.",
+  "dchub-mcp": "DC Hub'ın resmi barındırılan MCP'si: 300'den fazla pazar için günlük Data Center Power Index skorları, şebeke, bağlantı kuyrukları, fiber ve kapasite dahil veri merkezi ve enerji istihbaratı. Ağırlıklı olarak araştırma ve yer seçimi verisi; altyapı işletmez.",
+  "siebly-agent-skills": "Siebly'nin kripto borsası API'leri (Binance, Bybit, OKX, Gate, Bitget, KuCoin, Coinbase, Kraken, HTX ve Hyperliquid) için açık kaynak JavaScript ve TypeScript SDK'lerine yönelik ajan becerileri. Kullanıcı API anahtarı sağlarsa canlı emir gönderebilir; canlı mod açıkça seçilene kadar varsayılan dry-run'dır.",
+  "stock-bloc": "Stock Bloc'un resmi MCP ve HTTP API'si: SEC bildirim farkları (10-K/10-Q), 13F varlıkları, skorlar ve yapay zekâ ajanları için piyasa araştırması. tools/list ücretsiz olarak tanımlanır; veri çağrıları Base üzerinde USDC (x402) ile istek başına ödenir. İşletmeci tanımlanmamıştır (hizmet stockbloc.ai.studio adresinde barındırılır).",
+  "quantral-mcp": "Quantral'ın resmi barındırılan MCP'si: Claude, ChatGPT ve diğer MCP istemcileri için salt okunur hisse duyarlılığı ve sinyal skorları ile Kongre ve içeriden öğrenen işlem verileri. Emir göndermez ve fon taşımaz.",
+  "tickerlayer-mcp": "TickerLayer'ın hisse, döviz, kripto, endeks, ETF ve emtia piyasa verileri için resmi barındırılan MCP, REST ve WebSocket API'si. Borsa kaynağı olmayan, gösterge niteliğinde veriler; yapay zekâ ajanları için. Aynı planlar MCP istemcilerinde ek MCP ücreti olmadan geçerlidir.",
+  "waveleta-mcp": "Waveleta'nın resmi salt okunur MCP'si ve ön ödemeli Geliştirici API'si: 600'den fazla piyasada kripto ticker'ları ile döviz, emtia ve ABD hisse geçmişi. MCP'nin alım satım aracı yoktur; emir gönderemez, değiştiremez veya iptal edemez.",
+  "liquidmap-mcp": "LiquidMap'in resmi barındırılan MCP'si: birden fazla borsadan salt okunur kripto emir akışı araçları (ısı haritası, footprint, CVD, funding ve açık pozisyon). Kullanıcının borsa hesabına bağlanmaz ve emir göndermez.",
+  "tradytics-mcp": "Tradytics'in resmi barındırılan MCP ve REST API'si: hisse fiyatları ve barlar, opsiyon akışı, karanlık havuz işlemleri, şirket araştırması, bildiriler, tarayıcılar ve tahmin piyasaları. Hesap araçları yalnızca oturum açmış kullanıcının portföyünü, izleme listelerini ve backtest'lerini okur.",
+  "financemcp-unbidden": "Resmi kaynaklı finans verileri için resmi barındırılan MCP: SEC EDGAR XBRL, ABD Çalışma İstatistikleri Bürosu ve ABD Hazine Mali Verileri.",
+  "bharatstock-mcp": "Hindistan hisse senedi piyasası verileri (NSE ve BSE) için resmi MCP ve REST API: fiyatlar, finansal tablolar, temeller, kurumsal işlemler, yatırım fonu varlıkları ve daha fazlası. Yaklaşık 31 salt okunur araç. MCP sunucusu Developer, Business ve Pro planlarının bir özelliğidir.",
+  "china-a-share-stock-mcp": "Ücretsiz kamuya açık Tencent ve Sina kaynaklarını kullanan, Çin A-hisseleri ve ana endeksler için gerçek zamanlı fiyat veren topluluk MCP sunucusu. Barındırılan bir Streamable HTTP uç noktası vardır veya kendiniz barındırabilirsiniz. API anahtarı yok. MIT.",
+  "bullion-trading-mcp": "New York'lu kıymetli maden satıcısı Bullion Trading LLC'nin resmi genel MCP'si: spot fiyatlar, katalog fiyatları, primler, geri alım oranları ve mağaza politikaları. Araçlar salt okunurdur; müşteriye sitedeki sepet bağlantısı verebilir ancak sipariş veremez.",
+  "trading-checkup-aikit": "Trading Checkup'ın resmi AIKIT MCP'si: borsalar ve aracılar için kaynaklı, tarihli bilgiler (sembol kuralları, ücretler, hız sınırları) ve işlem botu kodundaki yaygın hatalar için bir denetleyici. Yalnızca bilgi; sinyal vermez ve emir göndermez. Beta; satın alma henüz açık değil.",
+  "aperiodic-mcp": "Aperiodic'in resmi API ve MCP'si: Binance, OKX ve Hyperliquid'deki kripto ve RWA sürekli sözleşmeler (hisse, altın, petrol, döviz) için anlık emir akışı, likidite ve funding ölçütleri; yapay zekâ ajanları için tasarlandı.",
+  "ocarrat-mcp": "Ocarrat Trading Statistics'in resmi MCP'si: yatırımcının kendi işlem günlüğüne OAuth erişimi — stratejiler, haftalık raporlar ve performans analitiği. Ücretsiz salt okunur bir katman vardır. Emir göndermez.",
+  "copy-top": "copy.top'un (Polycool LLC) resmi barındırılan MCP'si; copytop-signals ajan becerisiyle de kapsanır: fomo, pump.fun ve Hyperliquid'deki yatırımcıların canlı işlemleri, sinyalleri ve uyarıları için API anahtarı gerektirmeyen salt okunur araçlar. Ürün koşulları ayrıca ücretler, geri alımlar, yakımlar ve davet ödülleri olan bir $COPY token'ını açıklar. Genel GitHub depoları lisans içermeyen belgeleme taslaklarıdır."
  },
  "faq": {
   "title": "Sıkça sorulan sorular",
@@ -745,5 +772,9 @@
   "submitBtn": "Araç gönder (ücretsiz)",
   "contactH": "İletişim",
   "contactP": "Sorularınız mı var veya GitHub hesabınız yok mu? {email} adresine yazın."
+ },
+ "risk": {
+  "banner": "TradingAIHub tarafından önerilmez — yüksek risk: memecoin'ler / kendi token'ı / kopya alım satım",
+  "noBadge": "Yüksek riskli kayıtlar Verified rozetine hak kazanmaz."
  }
 }

@@ -757,7 +757,11 @@ def main():
     if dry:
         dry_report(tools, current); return
     json.dump(tools, open(tp, "w"), indent=2)
-    c = Counter(t["verification"]["status"] for t in tools)
+    def public_status(t):
+        if t.get("risk_tier") == "high" or t.get("category") == "high-risk-crypto":
+            return "high_risk"
+        return t["verification"]["status"]
+    c = Counter(public_status(t) for t in tools)
     def issue_row(t):
         v = t["verification"]
         row = {"id": t["id"], "status": v["status"], "issues": v["issues"]}
@@ -781,7 +785,7 @@ def main():
         issues = list(v["issues"])
         label = manual_check_label(v)
         if label: issues.append(label)
-        lines.append(f"| {t['id']} | {v['status']} | {g.get('stars','')} | {(g.get('last_commit') or '')[:10]} | {t['license']} | {(p['name']+'@'+p['version']) if p else ''} | {'; '.join(issues)} |")
+        lines.append(f"| {t['id']} | {public_status(t)} | {g.get('stars','')} | {(g.get('last_commit') or '')[:10]} | {t['license']} | {(p['name']+'@'+p['version']) if p else ''} | {'; '.join(issues)} |")
     open(os.path.join(ROOT, "data/verification-report.md"), "w").write("\n".join(lines) + "\n")
     write_history(tools)
     print(json.dumps({k: rep[k] for k in ("total", "by_status", "with_package")}))

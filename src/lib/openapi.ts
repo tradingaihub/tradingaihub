@@ -100,6 +100,7 @@ export const openapi = {
         packages: { type: "object", properties: { npm: pkg, pypi: pkg } },
         install: { type: ["object", "null"], description: "Set when the published package should not be used; clone the repo and run it from source.", properties: { from_source: { type: "boolean" }, note: { type: "string" } } },
         capabilities: { type: "array", items: { type: "string", enum: ["live_trading", "moves_funds"] }, description: "Live trading or fund-movement capabilities. Empty when none are recorded." },
+        risk_tier: { type: "string", enum: ["standard", "high"], description: "High for high-risk crypto listings (memecoins, own token, or copy-trading), which are not eligible for the Verified badge. Standard for every other tool." },
         deprecated: { type: "boolean", description: "true when the vendor has deprecated this listing or its package." },
         status: { type: "string", enum: FILTERS.status }, status_label: str, verified: { type: "boolean" }, checked_at: nstr,
         github: { type: ["object", "null"], properties: { stars: { type: ["integer", "null"], description: "null for shared collection repos" }, last_commit: nstr, archived: { type: "boolean" }, collection: { type: "boolean" } } },

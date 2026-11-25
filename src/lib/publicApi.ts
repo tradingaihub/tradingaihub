@@ -10,7 +10,7 @@
 import raw from "../../data/tools.json";
 import { AFFILIATES, SITE } from "../config";
 import { affUrl, isAff, untagUrl } from "./aff";
-import { tools as siteTools, CATEGORIES, STATUS, TYPE_LABEL, starsOf, lastCommit, isCollection, pkgOf, securityOf } from "./data";
+import { tools as siteTools, CATEGORIES, STATUS, TYPE_LABEL, starsOf, lastCommit, isCollection, pkgOf, securityOf, isVerified, publicStatus } from "./data";
 
 export const API_VERSION = "1.0.0";
 export const MCP_URL = `${SITE.url}/mcp`;
@@ -63,10 +63,13 @@ export function publicTool(t: any) {
     packages: { npm: pkgOf(t) ? pkg(v.npm) : null, pypi: pkgOf(t) ? pkg(v.pypi) : null },
     install: t.install_from_source ? { from_source: true, note: "The published package is currently unmaintained, so don't install it from the registry. Clone the repository, follow its README to run it locally, then register the start command as a stdio MCP server in your client." } : null,
     capabilities: Array.isArray(t.capabilities) ? t.capabilities : [],
+    risk_tier: t.risk_tier === "high" ? "high" : "standard",
     deprecated: !!t.deprecated,
-    status: v.status,
-    status_label: STATUS[v.status]?.label ?? v.status,
-    verified: v.status === "verified",
+    status: publicStatus(t),
+    // High-risk tools use publicStatus ("high_risk" / "High risk"). For every other tool this is
+    // status_label: STATUS[v.status]?.label ?? v.status
+    status_label: STATUS[publicStatus(t)]?.label ?? publicStatus(t),
+    verified: isVerified(t),
     checked_at: v.checked_at ?? null,
     github: v.github ? { stars: starsOf(t), last_commit: lastCommit(t), archived: !!v.github.archived, collection: isCollection(t) } : null,
     // Public only for clean tools: { status, date }. Other scan outcomes are omitted (null), matching the site.

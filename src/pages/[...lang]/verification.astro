@@ -1,13 +1,17 @@
 ---
 import Base from "../../layouts/Base.astro";
 import Status from "../../components/Status.astro";
-import { tools, verificationReport as r, lastCommit, fmtStars, starsOf } from "../../lib/data";
+import { tools, verificationReport as r, lastCommit, fmtStars, starsOf, publicStatus, STATUS } from "../../lib/data";
+import TitleText from "../../components/TitleText.astro";
 import { datasetLd, breadcrumbLd } from "../../lib/jsonld";
 import { SITE } from "../../config";
 import { langParams, useT } from "../../i18n";
 import DateInText from "../../components/DateInText.astro";
 export function getStaticPaths() { return langParams().map((params) => ({ params })); }
 const lang = Astro.params.lang ?? "en"; const { t, p, desc } = useT(lang);
+const byStatus: Record<string, number> = {};
+for (const x of tools) { const k = publicStatus(x); byStatus[k] = (byStatus[k] || 0) + 1; }
+const statusSummary = Object.keys(STATUS).filter((k) => byStatus[k]).map((k) => [k, byStatus[k]] as const);
 const pageUrl = `${SITE.url}${p("/verification/")}`;
 const date = r.checked_at.slice(0, 10);
 const h1 = t("ver.h1", { date });
@@ -20,9 +24,9 @@ const ld = [datasetLd({ url: pageUrl, lang }), breadcrumbLd([
 <div class="wrap page">
   <div class="crumbs"><a href={p("/")}>{t("common.home")}</a> / <DateInText text={h1} date={date} /></div>
   <h1><DateInText text={h1} date={date} /></h1>
-  <p class="meta">{Object.entries(r.by_status).map(([k, n]) => <span><Status status={k} lang={lang} /> {n as number}</span>)}</p>
+  <p class="meta">{statusSummary.map(([k, n]) => <span><Status status={k} lang={lang} /> {n}</span>)}</p>
   <p class="meta" set:html={t("ver.awesomeList", { url: SITE.githubAwesomeRepo })} />
   <div class="tablewrap"><table><thead><tr><th>{t("th.tool")}</th><th>{t("th.status")}</th><th>{t("th.stars")}</th><th>{t("th.lastCommit")}</th><th>{t("th.issues")}</th></tr></thead>
-  <tbody>{tools.map((x) => <tr><td><a href={p(`/tools/${x.id}/`)}>{x.name}</a></td><td><Status status={x.verification.status} lang={lang} /></td><td>{fmtStars(starsOf(x))}</td><td class="ltr" dir="ltr">{lastCommit(x) ?? "—"}</td><td class="note ltr" dir="ltr">{x.verification.issues.join("; ")}</td></tr>)}</tbody></table></div>
+  <tbody>{tools.map((x) => <tr><td><a href={p(`/tools/${x.id}/`)}><TitleText text={x.name} bdi /></a></td><td><Status status={publicStatus(x)} lang={lang} /></td><td>{fmtStars(starsOf(x))}</td><td class="ltr" dir="ltr">{lastCommit(x) ?? "—"}</td><td class="note ltr" dir="ltr">{x.verification.issues.join("; ")}</td></tr>)}</tbody></table></div>
 </div>
 </Base>

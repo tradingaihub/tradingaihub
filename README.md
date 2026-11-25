@@ -8,7 +8,7 @@
 
 Questions, tool suggestions or security concerns? Join the discussion: [tradingaihub/community/discussions](https://github.com/tradingaihub/community/discussions)
 
-**Live site: https://tradingaihub.com** — a free directory of 104 MCP servers, agent skills and APIs for market data, trading, crypto, accounting and financial research, available in 13 languages.
+**Live site: https://tradingaihub.com** — a free directory of 124 MCP servers, agent skills and APIs for market data, trading, crypto, accounting and financial research, available in 13 languages.
 
 Every tool is re-checked weekly by a script: the repo is reachable, recent commits, stars, whether its npm/PyPI package links back to the repo, and whether hosted endpoints respond. Broken or archived tools are marked, not quietly kept. How it works: [verification methodology](https://tradingaihub.com/verification/).
 

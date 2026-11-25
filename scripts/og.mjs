@@ -22,7 +22,8 @@ const blogPosts = fs.existsSync("src/content/blog") ? fs.readdirSync("src/conten
 // Friendly status names ("Link check pending", not "unconfirmed"), taken from the site's STATUS map in src/lib/data.ts.
 const STATUS_LABEL = Object.fromEntries([...lib.matchAll(/^\s+(\w+): \{ label: "([^"]+)"/gm)].map((m) => [m[1], m[2]]));
 const statusLabel = (s) => (s === "unconfirmed" ? "Link check pending" : STATUS_LABEL[s] || s);
-const verified = tools.filter((t) => t.verification.status === "verified").length;
+const isHighRisk = (t) => t.risk_tier === "high" || t.category === "high-risk-crypto";
+const verified = tools.filter((t) => t.verification.status === "verified" && !isHighRisk(t)).length;
 // "This week" = the check is less than 7 days old (age < 7 days, i.e. checked_at > build date − 7 days), using UTC dates.
 // It is only claimed when the latest verification run is that fresh; otherwise the cards name the date of the last check,
 // drop the "verified weekly" claims, and never show an invented or stale "this week" number.
@@ -36,7 +37,7 @@ const checkedAt = (t) => isoDay(t.verification?.checked_at);
 const thisWeek = (d) => !!d && ageDays(d) < 7;
 const latestCheck = tools.map(checkedAt).filter(Boolean).sort().at(-1) || "";
 const fresh = thisWeek(latestCheck);
-const verifiedThisWeek = tools.filter((t) => t.verification.status === "verified" && thisWeek(checkedAt(t))).length;
+const verifiedThisWeek = tools.filter((t) => t.verification.status === "verified" && !isHighRisk(t) && thisWeek(checkedAt(t))).length;
 const homeSub = fresh ? `${tools.length} MCP servers, skills & APIs · ${verifiedThisWeek} verified this week`
   : latestCheck ? `${tools.length} MCP servers, skills & APIs · ${verified} verified (checked ${latestCheck})` : `${tools.length} MCP servers, skills & APIs`;
 const weeklySub = fresh ? `${verifiedThisWeek}/${tools.length} pass this week's check`
@@ -59,7 +60,7 @@ const BADGE = {
   unconfirmed: (d) => ({ text: `Link check pending${lc(d)}`, color: "#4b5a70" }),
   unreachable: (d) => ({ text: `⚠ Unreachable${lc(d)}`, color: "#b91c1c" }),
 };
-const toolBadge = (t) => (BADGE[t.verification.status] || ((d) => ({ text: d ? `Last checked ${d}` : "Not checked yet", color: "#475569" })))(checkedAt(t));
+const toolBadge = (t) => isHighRisk(t) ? { text: "Not recommended — high risk", color: "#b91c1c" } : (BADGE[t.verification.status] || ((d) => ({ text: d ? `Last checked ${d}` : "Not checked yet", color: "#475569" })))(checkedAt(t));
 const card = (kicker, title, sub, badge = SITE_BADGE) => `<html><head>${FONTS}</head><body style="margin:0;width:1200px;height:630px;background:radial-gradient(circle at 85% 0%,#dbeafe 0,#ffffff 55%);border-top:12px solid #2563eb;font-family:Inter,'Noto Color Emoji',DejaVu Sans,sans-serif;font-optical-sizing:none;color:#0f172a;display:flex;flex-direction:column;justify-content:space-between;padding:64px;box-sizing:border-box">
 <div style="font-size:30px;font-weight:800;display:flex;align-items:center">${LOGO} ${badge.text ? `<span style="color:${badge.color};font-size:24px;font-weight:600;margin-left:12px">${esc(badge.text)}</span>` : ""}</div>
 <div><div style="color:#2563eb;font-size:28px;margin-bottom:14px">${esc(kicker)}</div><div style="font-size:${title.length > 60 ? 54 : 66}px;font-weight:800;line-height:1.08;letter-spacing:-1px">${esc(title)}</div></div>
@@ -72,7 +73,7 @@ const jobs = [["home", card("Free directory", "AI tools for finance & trading", 
   ...blogPosts.map((b) => [`blog-${b.slug}`, card("Blog", b.title, "TradingAIHub Editorial")]),
   ["compare-best-ai-tools-for-stock-analysis", card("Comparison", "Best AI tools for stock analysis and research (2026)", "Verified MCP servers, skills and APIs — official vendors first")],
   ["compare-best-ai-tools-for-options-trading", card("Comparison", "Best AI tools for options data and options trading (2026)", "Options data first, then broker-connected tools")],
-  ...tools.map((t) => [`tool-${t.id}`, card(t.type === "mcp" ? "MCP server" : t.type === "skill" ? "Agent skill" : "API", t.name, `Status: ${statusLabel(t.verification.status)}${checkedAt(t) ? ` · checked ${checkedAt(t)}` : ""}`, toolBadge(t))])];
+  ...tools.map((t) => [`tool-${t.id}`, card(t.type === "mcp" ? "MCP server" : t.type === "skill" ? "Agent skill" : "API", t.name, `Status: ${isHighRisk(t) ? "High risk" : statusLabel(t.verification.status)}${checkedAt(t) ? ` · checked ${checkedAt(t)}` : ""}`, toolBadge(t))])];
 fs.mkdirSync("public/og", { recursive: true });
 // Render-side inputs. Bump RENDER_VERSION for any render change the key below can't see.
 const RENDER_VERSION = 2;
