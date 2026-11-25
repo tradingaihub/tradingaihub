@@ -1,8 +1,8 @@
 # Verification report — 2026-11-23 05:52 UTC
 
-Total entries: 128
+Total entries: 133
 
-- verified: 104
+- verified: 109
 - stale: 12
 - aging: 5
 - archived: 3
@@ -13,7 +13,7 @@ Total entries: 128
 Manual checks:
 - openbb: Manually checked on 2026-11-11
 
-Entries with a published npm/PyPI package: 29
+Entries with a published npm/PyPI package: 30
 
 | id | status | stars | last commit | license | package | issues |
 |---|---|---|---|---|---|---|
@@ -145,3 +145,8 @@ Entries with a published npm/PyPI package: 29
 | ptdata-mcp | verified | 0 | 2026-11-16 | MIT |  |  |
 | lianxiaozhi-mcp | verified |  |  | Proprietary / ToS |  |  |
 | alphai-mcp | verified | 3 | 2026-11-18 | MIT |  |  |
+| hpsilab-mcp | verified | 2 | 2026-11-22 | MIT | hpsilab-quant-finance-mcp@0.11.1 |  |
+| valuedge-mcp | verified | 1 | 2026-11-18 | unknown |  |  |
+| vesper-mcp | verified |  |  | Proprietary / ToS |  |  |
+| clometrix-api | verified |  |  | Proprietary / ToS |  |  |
+| bitpont-api | verified |  |  | Proprietary / ToS |  |  |
