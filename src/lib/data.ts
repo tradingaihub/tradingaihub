@@ -42,6 +42,8 @@ export const catBySlug = Object.fromEntries(CATEGORIES.map((c) => [c.slug, c]));
 export const isHighRisk = (t: any) => t?.risk_tier === "high" || t?.category === "high-risk-crypto";
 /** Verified for badges, counts, rankings and best-of pages. High-risk tools are never verified. */
 export const isVerified = (t: any) => !isHighRisk(t) && t?.verification?.status === "verified";
+/** Public status shown on /verification/, /tools.json, the API, MCP brief, llms-full and the awesome list. High-risk tools are always "high_risk" ("High risk"), never "verified". */
+export const publicStatus = (t: any) => (isHighRisk(t) ? "high_risk" : (t?.verification?.status ?? "unconfirmed"));
 export const TYPE_LABEL: Record<string, string> = { mcp: "MCP server", skill: "Agent skill", api: "API" };
 
 export const STATUS: Record<string, { label: string; tone: string; help: string }> = {
@@ -52,6 +54,7 @@ export const STATUS: Record<string, { label: string; tone: string; help: string 
   warning: { label: "Check links", tone: "warn", help: "A homepage, docs or endpoint link failed in the last check." },
   unconfirmed: { label: "Link check pending", tone: "warn", help: "Reachable, but a homepage, docs or endpoint link refused our checker (sign-in required, bot block or rate limit), so it could not be fully confirmed. Not counted as verified." },
   unreachable: { label: "Unreachable", tone: "bad", help: "The repository or homepage could not be reached." },
+  high_risk: { label: "High risk", tone: "bad", help: "Listed for transparency and not recommended. High-risk listings (memecoins / own token / copy-trading) are not eligible for the Verified badge." },
 };
 export const pkgOf = (t: any) => t.install_from_source ? null : (t.verification?.npm || t.verification?.pypi || null);
 // Stars of a shared list / monorepo (repo_is_collection) belong to the whole collection, not to one entry,

@@ -2,12 +2,13 @@
 
 Total entries: 124
 
-- verified: 101
+- verified: 100
 - stale: 12
 - aging: 5
 - archived: 3
 - unconfirmed: 2
 - warning: 1
+- high_risk: 1
 
 Manual checks:
 - openbb: Manually checked on 2026-11-11
@@ -123,7 +124,7 @@ Entries with a published npm/PyPI package: 29
 | coinbase-agentic-wallet-skills | verified | 128 | 2026-11-20 | MIT |  |  |
 | options-trading-skills | verified | 417 | 2026-11-17 | MIT |  | pypi name 'trading-skills' exists on the registry but does not link to this repo (not counted) |
 | fair-value-calculator-mcp | verified | 0 | 2026-11-13 | Other (see repo) |  |  |
-| lava-mcp | verified | 101 | 2026-11-07 | MIT |  |  |
+| lava-mcp | verified | 62 | 2026-11-07 | MIT |  |  |
 | dchub-mcp | verified | 3 | 2026-11-18 | MIT | dchub-mcp-server@2.12.59 |  |
 | siebly-agent-skills | verified | 2 | 2026-11-02 | MIT |  |  |
 | stock-bloc | verified |  |  | Proprietary / ToS |  |  |
@@ -139,4 +140,4 @@ Entries with a published npm/PyPI package: 29
 | trading-checkup-aikit | verified |  |  | Proprietary / ToS |  |  |
 | aperiodic-mcp | verified |  |  | Proprietary / ToS |  |  |
 | ocarrat-mcp | verified |  |  | Proprietary / ToS |  |  |
-| copy-top | verified | 0 | 2026-11-14 | unknown |  |  |
+| copy-top | high_risk | 0 | 2026-11-14 | unknown |  |  |

@@ -2,7 +2,7 @@
 // so both files always match the live directory. English URLs; other locales live under /<code>/.
 import { SITE } from "../config";
 import { LOCALES, useT } from "../i18n";
-import { tools, CATEGORIES, COMPARISONS, STATUS, TYPE_LABEL, byStars, verificationReport, isVerified, isHighRisk } from "./data";
+import { tools, CATEGORIES, COMPARISONS, STATUS, TYPE_LABEL, byStars, verificationReport, isVerified, isHighRisk, publicStatus } from "./data";
 import { EDITORIAL_COMPARES } from "./bestPages";
 // Outbound vendor URLs (repo, homepage, pricing source, remote MCP) come from RAW data/tools.json: data.ts runs them through
 // affUrl(), and affiliate IDs must never reach LLM context files. Internal URLs come from the ids.
@@ -18,8 +18,8 @@ export const GUIDES: { slug: string; title: string; summary: string }[] = [];
 
 const u = (path: string) => `${SITE.url}${path}`;
 const md = (s: string) => String(s ?? "").replace(/\s+/g, " ").replace(/([\[\]])/g, "\\$1").trim();
-const order: Record<string, number> = { verified: 0, aging: 1, warning: 2, stale: 3, archived: 4, unreachable: 5 };
-export const toolsIn = (slug: string) => tools.filter((x) => x.category === slug).sort((a, b) => (order[a.verification.status] ?? 9) - (order[b.verification.status] ?? 9) || byStars(a, b));
+const order: Record<string, number> = { verified: 0, aging: 1, warning: 2, high_risk: 2, stale: 3, archived: 4, unreachable: 5 };
+export const toolsIn = (slug: string) => tools.filter((x) => x.category === slug).sort((a, b) => (order[publicStatus(a)] ?? 9) - (order[publicStatus(b)] ?? 9) || byStars(a, b));
 const checked = () => String(verificationReport.checked_at || "").slice(0, 10);
 const langs = () => LOCALES.map((l) => `${l.name} (${l.code === "en" ? "/" : `/${l.code}/`})`).join(", ");
 
@@ -108,7 +108,7 @@ export function llmsFullTxt(): string {
     const list = toolsIn(c.slug);
     L.push("", `### ${c.name} (${list.length} tools)`, "", `${md(c.blurb)} Category page: ${u(`/category/${c.slug}/`)}`, "");
     for (const x of list) {
-      const st = STATUS[x.verification.status]?.label ?? x.verification.status;
+      const st = STATUS[publicStatus(x)]?.label ?? publicStatus(x);
       const r = rawById[x.id] ?? {}; const pr = r.pricing ?? {};
       L.push(`- [${md(x.name)}](${u(`/tools/${x.id}/`)}): ${md(x.description)}`);
       if (isHighRisk(x)) L.push(`  - Not recommended by TradingAIHub — high risk: memecoins / own token / copy-trading. Not eligible for the Verified badge.`);

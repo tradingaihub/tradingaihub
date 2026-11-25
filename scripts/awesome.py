@@ -11,7 +11,11 @@ tools = json.load(open(os.path.join(ROOT, "data/tools.json")))
 def stars_of(t):  # None for shared lists/monorepos: their stars belong to the collection, not one entry
     g = t["verification"].get("github") or {}
     return None if (t.get("repo_is_collection") or g.get("collection")) else g.get("stars")
-ok = {"verified": "✅", "aging": "🟡", "warning": "🟡", "unconfirmed": "🟡", "stale": "🔴", "archived": "🗄️", "unreachable": "❌"}
+ok = {"verified": "✅", "aging": "🟡", "warning": "🟡", "unconfirmed": "🟡", "stale": "🔴", "archived": "🗄️", "unreachable": "❌", "high_risk": "⚠️"}
+def is_high_risk(t):
+    return t.get("risk_tier") == "high" or t.get("category") == "high-risk-crypto"
+def public_status(t):
+    return "high_risk" if is_high_risk(t) else t["verification"]["status"]
 date = tools[0]["verification"]["checked_at"]
 badges = (
     "[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) "
@@ -22,7 +26,7 @@ badges = (
 )
 L = [f"# Awesome Finance & Trading AI Tools {badges}", "",
      f"> A curated, **automatically re-verified** list of MCP servers, agent skills and APIs for finance and trading. Mirror of [{brand}]({url}) — status checked weekly (last: {date}).", "",
-     "Legend: ✅ verified · 🟡 aging (6–12 months without commits) · 🔴 stale (12+ months) · 🗄️ archived. 🟡 also marks entries whose link failed or could not be confirmed. ⭐ = GitHub stars. Not investment advice.", "",
+     "Legend: ✅ verified · 🟡 aging (6–12 months without commits) · 🔴 stale (12+ months) · 🗄️ archived · ⚠️ high risk (not recommended; not eligible for verified). 🟡 also marks entries whose link failed or could not be confirmed. ⭐ = GitHub stars. Not investment advice.", "",
      "Questions, tool suggestions or security concerns? Join the discussion: [tradingaihub/community/discussions](https://github.com/tradingaihub/community/discussions)", "",
      "## Use it from your AI agent", "",
      f"This list is the markdown mirror of [{brand}]({url}). The same data is available to agents with no API key:", "",
@@ -52,7 +56,7 @@ for s, n, i in cats:
         g = t["verification"].get("github") or {}; link = t.get("repo") or t.get("homepage")
         stars = f" ⭐ {stars_of(t):,}" if stars_of(t) is not None else ""
         off = " *(official)*" if t.get("official") else ""
-        L.append(f"- {ok.get(t['verification']['status'], '')} [{t['name']}]({link}){off} — {t['description']}{stars} · [details]({url}/tools/{t['id']}/)")
+        L.append(f"- {ok.get(public_status(t), '')} [{t['name']}]({link}){off} — {t['description']}{stars} · [details]({url}/tools/{t['id']}/)")
 L += ["", "## Contributing", "", f"Submit a tool for free at {url}/submit/ or open a PR. Entries are re-checked weekly; stale ones are flagged, not silently kept.", "",
       "## License", "", "[![CC BY 4.0](https://licensebuttons.net/l/by/4.0/88x31.png)](https://creativecommons.org/licenses/by/4.0/) — list text is CC BY 4.0; attribution: \"TradingAIHub, https://tradingaihub.com\". Tool names and trademarks belong to their owners.", ""]
 os.makedirs(os.path.join(ROOT, "awesome"), exist_ok=True)

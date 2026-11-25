@@ -35,7 +35,7 @@ export const TOOLS = [
 
 // Compact tool object for search results (full object comes from get_tool).
 // Links lead with the tradingaihub.com tool page; the vendor link follows, labelled when it is an affiliate link.
-const brief = (t) => ({ slug: t.slug, name: t.name, url: t.url, ...vendorLinks(t), type: t.type, category: t.category, description: t.description, status: t.status, official: t.official,
+const brief = (t) => ({ slug: t.slug, name: t.name, url: t.url, ...vendorLinks(t), type: t.type, category: t.category, description: t.description, status: t.status, status_label: t.status_label, risk_tier: t.risk_tier, official: t.official,
   homepage: t.homepage, remote_mcp_url: t.remote_mcp_url, pricing_model: t.pricing?.model ?? null, free_tier: t.pricing?.free_tier ?? null, stars: t.github?.stars ?? null });
 
 export const vendorLinks = (t) => ({ website_url: t.website_url ?? null, ...(t.affiliate ? { website_url_label: "affiliate link", disclosure: t.disclosure } : {}), vendor_url: t.vendor_url ?? null, affiliate: !!t.affiliate });
