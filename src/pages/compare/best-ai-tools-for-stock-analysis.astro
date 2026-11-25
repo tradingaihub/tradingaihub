@@ -3,15 +3,17 @@ import BestCompare from "../../components/BestCompare.astro";
 import TradingView from "../../components/TradingView.astro";
 import { STOCK, STOCK_FETCH, requireTools, paidFrom, capNoteKey, prettyDate, RUN_DATE, RUN_TOTAL, RUN_VERIFIED, PRICING_CHECKED } from "../../lib/bestPages";
 import { useT } from "../../i18n";
-import { affUrl } from "../../lib/aff";
+import { affUrl, tvUrl } from "../../lib/aff";
 const { t } = useT("en");
 const eodhdDocs = affUrl("https://eodhd.com/financial-apis/mcp-server-for-financial-data-by-eodhd")!;
+const tvCharts = tvUrl("/chart/");
+const trendspiderHome = affUrl("https://trendspider.com/")!;
 const list = requireTools(STOCK.toolIds);
 const run = prettyDate(RUN_DATE);
 const priced = prettyDate(PRICING_CHECKED);
 const typeLabel: Record<string, string> = { mcp: "MCP", api: "API", skill: "Skill" };
 ---
-<BestCompare page={STOCK} list={list} affiliateDisclosure affiliateVendors="TradingView and EODHD">
+<BestCompare page={STOCK} list={list} affiliateDisclosure affiliateVendors="TradingView, EODHD and TrendSpider">
   <p>A general-purpose assistant does not know today’s price or yesterday’s filing unless a tool fetches it. This page compares <b>verified market-data and research tools</b> from our {run} check — official vendors first, then community options. It is not a ranking of “best stock picker.”</p>
   <p>We used only tools marked <b>Verified</b> in that run from our directory of {RUN_TOTAL} listings ({RUN_VERIFIED} verified). Full results are on the <a href="/verification/">verification page</a>.</p>
   <blockquote>
@@ -63,7 +65,7 @@ const typeLabel: Record<string, string> = { mcp: "MCP", api: "API", skill: "Skil
   <p><b><a href="/tools/eodhd-mcp/">EODHD MCP Server (official)</a></b> offers 70+ read-only tools with an API key or OAuth (<code>https://mcp.eodhd.com/v2/mcp</code>). Paid plans start at $19.99/mo. Also official: <a href="/tools/eodhd-api/">EODHD APIs</a> and <a href="/tools/eodhd-claude-skills/">EODHD Claude Skills</a>. Vendor page: <a href={eodhdDocs} target="_blank" rel="sponsored noopener">EODHD APIs</a> <span class="partner-tag">{t("partner.label")}</span>.</p>
   <p><b><a href="/tools/massive-mcp/">Massive MCP</a></b> is official (formerly Polygon.io). The free Basic plan is end-of-day only. Paid plans start at $29/mo for individual, non-professional use. The <a href="/tools/massive-api/">Massive API</a> adds REST, WebSockets and flat files.</p>
   <p><b><a href="/tools/tradingview-official-mcp/">TradingView MCP (official)</a></b> is a public beta. It uses OAuth 2.1 with your TradingView login, is not in free or trial plans, and is listed at about 100 requests/min per user. Data is delayed in the beta. The server does not place orders or run Pine Script.</p>
-  <p>Want to look at the chart behind a number your assistant pulled?</p>
+  <p>Want to see the chart behind a number your assistant pulled? Charting platforms such as <a href={tvCharts} target="_blank" rel="sponsored noopener">TradingView</a> <span class="partner-tag">{t("partner.label")}</span> and <a href={trendspiderHome} target="_blank" rel="sponsored noopener">TrendSpider</a> <span class="partner-tag">{t("partner.label")}</span> can help.</p>
   <TradingView context="charts" lang="en" />
   <p><b><a href="/tools/twelve-data-api/">Twelve Data API</a></b> and <b><a href="/tools/alpaca-market-data-api/">Alpaca Market Data API</a></b> are official APIs with no separate official MCP on this page. Free tiers and paid-from prices are in the table.</p>
 

@@ -35,7 +35,7 @@
   "advertise": "Anuncie",
   "api": "API e MCP",
   "apiDocs": "API e servidor MCP grátis (em inglês)",
-  "disclaimer": "<b>Não é recomendação de investimento.</b> {site} é um diretório informativo de ferramentas de software. Nada neste site constitui consultoria de investimento, trading, tributária ou jurídica, nem recomendação de compra ou venda de qualquer valor mobiliário ou ativo, e não somos consultores de investimento nem gestores de carteira autorizados. Operar envolve risco de perda. <b>Divulgação de afiliados:</b> alguns links (atualmente TradingView) são links de afiliado. Se você se cadastrar por meio deles, podemos receber uma comissão sem custo extra para você. Eles são identificados e nunca afetam listagens, rankings ou status de verificação.",
+  "disclaimer": "<b>Não é recomendação de investimento.</b> {site} é um diretório informativo de ferramentas de software. Nada neste site constitui consultoria de investimento, trading, tributária ou jurídica, nem recomendação de compra ou venda de qualquer valor mobiliário ou ativo, e não somos consultores de investimento nem gestores de carteira autorizados. Operar envolve risco de perda. <b>Divulgação de afiliados:</b> alguns links (atualmente TradingView, EODHD e TrendSpider) são links de afiliado. Se você se cadastrar por meio deles, podemos receber uma comissão sem custo extra para você. Eles são identificados e nunca afetam listagens, rankings ou status de verificação.",
   "fullDisclaimer": "Aviso legal completo",
   "short": "Não é aconselhamento de investimento. Alguns links são de parceiros e podemos receber comissão.",
   "cookies": "Cookies",
@@ -344,7 +344,7 @@
   "latest": "Última verificação: {date} UTC —",
   "fullReport": "ver o relatório completo",
   "money": "Como ganhamos dinheiro",
-  "moneyP": "As listagens são gratuitas. Atualmente ganhamos apenas com links de afiliado (de parceiros) divulgados para o TradingView e a EODHD. Não oferecemos espaços patrocinados. Os links de afiliado nunca afetam o status de verificação.",
+  "moneyP": "As listagens são gratuitas. Atualmente ganhamos apenas com links de afiliado (de parceiros) divulgados para o TradingView, a EODHD e o TrendSpider. Qualquer espaço patrocinado seria sempre claramente identificado. Os links de afiliado nunca afetam o status de verificação.",
   "contact": "Contato",
   "discussions": "Tem alguma pergunta ou ideia? Participe da nossa comunidade em <a href=\"https://github.com/tradingaihub/community/discussions\" dir=\"ltr\">GitHub Discussions</a>."
  },
@@ -353,7 +353,7 @@
   "h1": "Aviso legal: não é recomendação de investimento",
   "intro": "{site} é um diretório de ferramentas de software. Todo o conteúdo é informação geral sobre software, suas funcionalidades e seus preços publicados.",
   "items": [
-   "<b>Divulgação de afiliados.</b> Alguns links externos, atualmente para o TradingView e a EODHD, são links de afiliado (de parceiros): se você comprar por eles, podemos receber uma comissão sem custo extra para você. Cada um é identificado como “Parceiro” ao lado do link ou no seu quadro de parceiro, e a compilação do site falha se faltar uma identificação. Nenhum pagamento afeta quais ferramentas listamos, seu ranking ou seu status de verificação, e um link não é endosso nem recomendação para operar.",
+   "<b>Divulgação de afiliados.</b> Alguns links externos, atualmente para o TradingView, a EODHD e o TrendSpider, são links de afiliado (de parceiros): se você comprar por eles, podemos receber uma comissão sem custo extra para você. Cada um é identificado como “Parceiro” ao lado do link ou no seu quadro de parceiro. Nenhum pagamento afeta quais ferramentas listamos, seu ranking ou seu status de verificação, e um link não é endosso nem recomendação para operar.",
    "<b>Sem consultoria.</b> Nada neste site é consultoria de investimento, distribuição de investimentos, gestão de carteiras, sinais de trading ou consultoria tributária, contábil ou jurídica, e nada leva em conta suas circunstâncias pessoais. Não somos consultores de investimento, distribuidores de investimentos ou gestores de carteira autorizados em nenhuma jurisdição (incluindo a Lei de Regulação de Consultoria de Investimentos, Distribuição de Investimentos e Gestão de Carteiras de Israel, 5755-1995).",
    "<b>Sem recomendação.</b> Uma listagem, um ranking, um selo «Verificado» ou um espaço patrocinado não são recomendação para usar qualquer ferramenta, corretora, exchange ou ativo.",
    "<b>Risco.</b> Operar e investir — especialmente com agentes automatizados ou de IA, alavancagem, opções ou cripto — pode fazer você perder parte ou todo o seu dinheiro. Teste qualquer ferramenta de trading primeiro em modo de simulação e nunca dê a um agente mais permissões do que você pode perder.",
