@@ -200,7 +200,15 @@ test("built dump: no internals, affiliate contract", { skip: !existsSync(DIST) &
       if (tagged) nAff++;
     }
     for (const l of t.languages) assert.ok(["javascript", "python"].includes(l));
-    if (t.status === "unconfirmed") assert.equal(t.status_label, "Link check pending", t.slug);
+    const LABELS = { verified: "Verified", under_review: "Under review", not_verified: "Not currently verified" };
+    assert.ok(t.status in LABELS, `${t.slug}: unexpected status ${t.status}`);
+    assert.equal(t.status_label, LABELS[t.status], t.slug);
+    assert.equal(t.verified, t.status === "verified", t.slug);
+    if (t.risk_tier === "high") {
+      assert.equal(t.status, "not_verified", t.slug);
+      assert.equal(t.verified, false, t.slug);
+      assert.notEqual(t.status_label, "Verified", t.slug);
+    }
     if (t.security === null) {
       /* not clean / not scanned: no public security object */
     } else {

@@ -710,10 +710,11 @@ class Args(unittest.TestCase):
 
 
 class SiteKnowsEveryStatus(unittest.TestCase):
-    """Every status verify.py can emit must exist in the site's STATUS map, every locale, the OG badges and awesome.py."""
-    STATUSES = {"verified", "unconfirmed", "aging", "stale", "archived", "warning", "unreachable"}
+    """The site, every locale, the OG badges and awesome.py know only the three public statuses."""
+    STATUSES = {"verified", "under_review", "not_verified"}
+    OLD = {"unconfirmed", "aging", "stale", "archived", "warning", "unreachable", "high_risk"}
     def test_registered(self):
-        import json, glob, re
+        import json, glob
         data_ts = _read(os.path.join(ROOT, "src/lib/data.ts"))
         og = _read(os.path.join(ROOT, "scripts/og.mjs"))
         aw = _read(os.path.join(ROOT, "scripts/awesome.py"))
@@ -722,9 +723,15 @@ class SiteKnowsEveryStatus(unittest.TestCase):
             with self.subTest(status=s):
                 self.assertRegex(data_ts, rf"\b{s}: \{{ label"); self.assertRegex(og, rf"\b{s}: \(")
                 self.assertIn(f'"{s}":', aw); self.assertRegex(cat, rf"\b{s}: \d")
+        for s in self.OLD:
+            with self.subTest(absent=s):
+                self.assertNotRegex(data_ts, rf"\b{s}: \{{ label")
+                self.assertNotRegex(og, rf"\b{s}: \(")
+                self.assertNotRegex(cat, rf"\b{s}: \d")
         for f in glob.glob(os.path.join(ROOT, "src/i18n/*.json")):
             with open(f) as fh: st = json.load(fh)["status"]
-            with self.subTest(locale=os.path.basename(f)): self.assertTrue(self.STATUSES <= set(st))
+            with self.subTest(locale=os.path.basename(f)):
+                self.assertEqual(set(st), self.STATUSES)
 
 
 class BrowserHeaders(unittest.TestCase):
@@ -824,50 +831,39 @@ class ManualCheck(unittest.TestCase):
 
 
 class ManualCheckDisplay(unittest.TestCase):
-    """B1: public copy says 'Manually checked on {date}', not 'Automated check'."""
-    def test_label_helper(self):
-        self.assertEqual(V.manual_check_label({"manual_override": True, "manual_check": {"date": "2026-11-11"}}),
-                         "Manually checked on 2026-11-11")
-        self.assertIsNone(V.manual_check_label({"status": "verified"}))
-        self.assertIsNone(V.manual_check_label({"manual_check": {"date": "2026-11-11", "expired": True}}))
-
-    def test_i18n_and_tool_page_use_manual_key(self):
+    """Public tool pages show a single Last checked line, never manual/automated check wording."""
+    def test_i18n_and_tool_page_use_last_checked(self):
         import glob, json
         src = _read(os.path.join(ROOT, "src/pages/[...lang]/tools/[id].astro"))
-        self.assertIn('v.manual_override ? "tool.manualCheck" : "tool.autoCheck"', src)
-        self.assertIn("v.manual_override ? v.manual_check.date : v.checked_at", src)
+        self.assertIn('t("tool.lastChecked"', src)
+        self.assertNotIn("tool.manualCheck", src)
+        self.assertNotIn("tool.autoCheck", src)
+        self.assertNotIn("manual_override", src)
         locales = {}
         for f in glob.glob(os.path.join(ROOT, "src/i18n/*.json")):
             with open(f) as fh: locales[os.path.basename(f)] = json.load(fh)
         self.assertEqual(len(locales), 13)
-        self.assertEqual(locales["en.json"]["tool"]["manualCheck"], "Manually checked on {date}.")
+        self.assertEqual(locales["en.json"]["tool"]["lastChecked"], "Last checked {date}")
         for name, data in locales.items():
             with self.subTest(locale=name):
-                self.assertIn("{date}", data["tool"]["manualCheck"])
-                self.assertNotEqual(data["tool"]["manualCheck"], data["tool"]["autoCheck"])
+                self.assertIn("{date}", data["tool"]["lastChecked"])
+                self.assertNotIn("manualCheck", data["tool"])
+                self.assertNotIn("autoCheck", data["tool"])
 
-    def test_openbb_page_and_report_say_manually_checked(self):
+    def test_openbb_page_shows_last_checked_not_manual_or_automated(self):
         import json
         dist = os.path.join(ROOT, "dist/tools/openbb/index.html")
         if os.path.isfile(dist):
             html = _read(dist)
-            if "Manually checked on 2026-11-11" not in html:
-                self.skipTest("dist not rebuilt yet")
-            self.assertIn("Manually checked on 2026-11-11", html)
-            self.assertNotIn("Automated check on 2026-11-11", html)
-        rep_json = os.path.join(ROOT, "data/verification-report.json")
-        if os.path.isfile(rep_json):
-            with open(rep_json) as fh: rep = json.load(fh)
-            if not any((x.get("manual") or x.get("label") or "") == "Manually checked on 2026-11-11"
-                       for x in (rep.get("issues") or []) + (rep.get("manual_checks") or [])):
-                self.skipTest("verification report not rewritten yet")
-            row = next(x for x in rep["issues"] if x["id"] == "openbb")
-            self.assertEqual(row["manual"], "Manually checked on 2026-11-11")
-            self.assertTrue(any(x["id"] == "openbb" and x["label"] == "Manually checked on 2026-11-11"
-                                for x in rep["manual_checks"]))
-            md = _read(os.path.join(ROOT, "data/verification-report.md"))
-            self.assertIn("Manually checked on 2026-11-11", md)
-            self.assertIn("- openbb: Manually checked on 2026-11-11", md)
+            self.assertIn("Last checked", html)
+            self.assertNotIn("Manually checked", html)
+            self.assertNotIn("Automated check", html)
+        self.assertFalse(os.path.isfile(os.path.join(ROOT, "data/verification-report.md")))
+        with open(os.path.join(ROOT, "data/verification-report.json")) as fh:
+            rep = json.load(fh)
+        self.assertNotIn("manual_checks", rep)
+        self.assertNotIn("issues", rep)
+
 
 
 if __name__ == "__main__": unittest.main()

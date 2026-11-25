@@ -77,11 +77,15 @@ class SecurityBadgeData(unittest.TestCase):
         self.assertEqual(str(self.public.get("rules_version")), "6")
 
     def test_api_status_values_unchanged(self):
-        # Display copy changed; the API still exposes status=unconfirmed; status_label is now "Link check pending".
+        # Public API exposes only the three public statuses and their labels.
         src = (ROOT / "src" / "lib" / "data.ts").read_text()
-        self.assertIn('unconfirmed: { label: "Link check pending", tone: "warn"', src)
+        self.assertIn('verified: { label: "Verified", tone: "good"', src)
+        self.assertIn('under_review: { label: "Under review", tone: "muted"', src)
+        self.assertIn('not_verified: { label: "Not currently verified", tone: "warn"', src)
+        for old in ("unconfirmed", "aging", "stale", "archived", "warning", "unreachable", "high_risk"):
+            self.assertNotIn(f"{old}: {{ label:", src)
         api = (ROOT / "src" / "lib" / "publicApi.ts").read_text()
-        self.assertIn("status_label: STATUS[v.status]?.label ?? v.status", api)
+        self.assertIn("status_label: STATUS[publicStatus(t)]?.label ?? publicStatus(t)", api)
 
 
 class SecurityBadgeDist(unittest.TestCase):
