@@ -1,8 +1,8 @@
 {
   "checked_at": "2026-11-23T05:52:54.305218+00:00",
-  "total": 124,
+  "total": 128,
   "by_status": {
-    "verified": 100,
+    "verified": 104,
     "warning": 1,
     "stale": 12,
     "aging": 5,

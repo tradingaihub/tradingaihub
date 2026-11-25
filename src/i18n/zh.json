@@ -625,7 +625,11 @@
   "trading-checkup-aikit": "Trading Checkup 的官方 AIKIT MCP：带来源和日期的交易所与经纪商事实（合约规则、费用、速率限制），以及交易机器人代码常见错误检查。仅提供信息，不给信号、不下单。目前为测试版，尚未开放购买。",
   "aperiodic-mcp": "Aperiodic 的官方 API 与 MCP：面向 AI 代理，提供 Binance、OKX 和 Hyperliquid 上加密与 RWA 永续合约（股票、黄金、原油、外汇）的时点订单流、流动性和资金费率指标。",
   "ocarrat-mcp": "Ocarrat Trading Statistics 的官方 MCP：通过 OAuth 访问交易者自己的日志（策略、周报和业绩分析）。提供免费只读档。不下单。",
-  "copy-top": "copy.top（Polycool LLC）的官方托管 MCP，亦涵盖 copytop-signals 代理技能：只读工具，无需 API 密钥，用于 fomo、pump.fun 和 Hyperliquid 上交易者的实时成交、信号和提醒。产品条款还描述了带有费用、回购、销毁和邀请奖励的 $COPY 代币。公开的 GitHub 仓库是文档草稿，未附带许可证。"
+  "copy-top": "copy.top（Polycool LLC）的官方托管 MCP，亦涵盖 copytop-signals 代理技能：只读工具，无需 API 密钥，用于 fomo、pump.fun 和 Hyperliquid 上交易者的实时成交、信号和提醒。产品条款还描述了带有费用、回购、销毁和邀请奖励的 $COPY 代币。公开的 GitHub 仓库是文档草稿，未附带许可证。",
+  "stalkchain-data-mcp": "StalkChain 官方托管 MCP，提供 Solana 钱包活动、代币持有人、跟踪交易者资金流和 Hyperliquid 市场数据。只读研究数据，另可管理 StalkChain 邮件提醒设置。通过 OAuth 登录；无需交易所凭证，且据供应商说明，此端点不会下单。供应商的通用 /mcp 端点还提供代理钱包的买入/卖出/下单工具；本条目按 StalkChain 的要求链接到范围受限的 /mcp/directory 端点（研究数据与邮件提醒设置）。MCP Registry 记录 com.stalkchain/data 指向通用 /mcp 接口。",
+  "ptdata-mcp": "PtData S.A. 官方远程 MCP 与 REST API：基于 SEC 文件的美国公司时点（point-in-time）基本面数据，呈现任一历史日期当时已知的数值，每个值都关联其文件的 accession 编号。另含无幸存者偏差的指数成分股、文件元数据和财报事件。4 个只读工具；免费档无需密钥。",
+  "lianxiaozhi-mcp": "链小知（Lianxiaozhi）官方托管的 MCP，一个中文区块链资讯网站：提供八个只读工具，涵盖公开资讯、热点事件时间线、每日简报、参考文章和链上工具教程。通过 Streamable HTTP 匿名访问，无需账号或 API 密钥。内容为中文，部分由模型辅助整理，不构成投资建议。由仅署名为「王校长」的个人运营（未标明法律实体、地址或管辖地）；没有公开代码仓库。",
+  "alphai-mcp": "AlphAI 官方托管的 MCP，由 ARDOR 0608 OOD（保加利亚）运营：财经新闻按 1-10 分评定相关度，附带分类和按股票代码的影响分析，另有内部人交易（SEC Form 4）、财报、日历和宏观数据。22 个工具，除仅管理你自己提醒订阅的提醒类工具外，均为只读。GitHub 仓库仅包含文档和 server.json；服务器为托管，可通过 OAuth 登录或免费 API 密钥接入。免费层（每分钟 20 次、每天 100 次请求）仅限个人非商业用途。"
  },
  "faq": {
   "title": "常见问题",
