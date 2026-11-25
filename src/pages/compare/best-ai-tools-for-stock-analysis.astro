@@ -3,13 +3,15 @@ import BestCompare from "../../components/BestCompare.astro";
 import TradingView from "../../components/TradingView.astro";
 import { STOCK, STOCK_FETCH, requireTools, paidFrom, capNoteKey, prettyDate, RUN_DATE, RUN_TOTAL, RUN_VERIFIED, PRICING_CHECKED } from "../../lib/bestPages";
 import { useT } from "../../i18n";
+import { affUrl } from "../../lib/aff";
 const { t } = useT("en");
+const eodhdDocs = affUrl("https://eodhd.com/financial-apis/mcp-server-for-financial-data-by-eodhd")!;
 const list = requireTools(STOCK.toolIds);
 const run = prettyDate(RUN_DATE);
 const priced = prettyDate(PRICING_CHECKED);
 const typeLabel: Record<string, string> = { mcp: "MCP", api: "API", skill: "Skill" };
 ---
-<BestCompare page={STOCK} list={list} affiliateDisclosure>
+<BestCompare page={STOCK} list={list} affiliateDisclosure affiliateVendors="TradingView and EODHD">
   <p>A general-purpose assistant does not know today’s price or yesterday’s filing unless a tool fetches it. This page compares <b>verified market-data and research tools</b> from our {run} check — official vendors first, then community options. It is not a ranking of “best stock picker.”</p>
   <p>We used only tools marked <b>Verified</b> in that run from our directory of {RUN_TOTAL} listings ({RUN_VERIFIED} verified). Full results are on the <a href="/verification/">verification page</a>.</p>
   <blockquote>
@@ -58,7 +60,7 @@ const typeLabel: Record<string, string> = { mcp: "MCP", api: "API", skill: "Skil
   <p><b><a href="/tools/alpha-vantage-mcp/">Alpha Vantage MCP</a></b> is the official hosted server at <code>https://mcp.alphavantage.co/mcp</code>. Premium plans are listed as $49.99–$249.99/mo. See also the <a href="/tools/alpha-vantage-api/">Alpha Vantage API</a>.</p>
   <p><b><a href="/tools/fmp-mcp/">Financial Modeling Prep MCP (official)</a></b> counts MCP calls against your FMP plan (Starter $29/mo, or $19/mo billed annually). The <a href="/tools/fmp-api/">FMP API</a> is the REST side. The <a href="/tools/fmp-mcp-community/">community FMP MCP</a> wraps 250+ FMP tools locally with your own key.</p>
   <p><b><a href="/tools/finnhub-mcp/">Finnhub MCP (official)</a></b> is hosted at <code>https://mcp.finnhub.io/mcp</code> with OAuth and no separate MCP fee. Fundamental-1 is listed at $50/mo per market; other plan prices are marked not verified in our directory. See the <a href="/tools/finnhub-api/">Finnhub API</a>.</p>
-  <p><b><a href="/tools/eodhd-mcp/">EODHD MCP Server (official)</a></b> offers 70+ read-only tools with an API key or OAuth (<code>https://mcp.eodhd.com/v2/mcp</code>). Paid plans start at $19.99/mo. Also official: <a href="/tools/eodhd-api/">EODHD APIs</a> and <a href="/tools/eodhd-claude-skills/">EODHD Claude Skills</a>.</p>
+  <p><b><a href="/tools/eodhd-mcp/">EODHD MCP Server (official)</a></b> offers 70+ read-only tools with an API key or OAuth (<code>https://mcp.eodhd.com/v2/mcp</code>). Paid plans start at $19.99/mo. Also official: <a href="/tools/eodhd-api/">EODHD APIs</a> and <a href="/tools/eodhd-claude-skills/">EODHD Claude Skills</a>. Vendor page: <a href={eodhdDocs} target="_blank" rel="sponsored noopener">EODHD APIs</a> <span class="partner-tag">{t("partner.label")}</span>.</p>
   <p><b><a href="/tools/massive-mcp/">Massive MCP</a></b> is official (formerly Polygon.io). The free Basic plan is end-of-day only. Paid plans start at $29/mo for individual, non-professional use. The <a href="/tools/massive-api/">Massive API</a> adds REST, WebSockets and flat files.</p>
   <p><b><a href="/tools/tradingview-official-mcp/">TradingView MCP (official)</a></b> is a public beta. It uses OAuth 2.1 with your TradingView login, is not in free or trial plans, and is listed at about 100 requests/min per user. Data is delayed in the beta. The server does not place orders or run Pine Script.</p>
   <p>Want to look at the chart behind a number your assistant pulled?</p>
