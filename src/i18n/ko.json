@@ -94,6 +94,10 @@
   "unreachable": [
    "접근 불가",
    "저장소 또는 웹사이트에 접근할 수 없습니다."
+  ],
+  "high_risk": [
+   "고위험",
+   "투명성을 위해 등재되며 권장되지 않습니다. 고위험 항목(밈코인 / 자체 토큰 / 카피 트레이딩)은 Verified 배지 대상이 아닙니다."
   ]
  },
  "cat": {
@@ -608,20 +612,20 @@
   "lava-mcp": "Lava(熔岩)의 공식 호스티드 MCP 및 REST API. A주와 콘셉트 보드의 뉴스 열기 데이터를 읽기 전용으로 제공하며, 구조화된 요약과 익명화된 기관 ID를 포함합니다. 주문을 넣지 않습니다.",
   "dchub-mcp": "DC Hub의 공식 호스티드 MCP. 300개 이상 시장의 일일 Data Center Power Index 점수, 전력망, 연계 대기열, 광섬유, 용량 등 데이터센터 및 에너지 정보를 제공합니다. 주로 리서치와 입지 선정용이며 인프라를 운영하지 않습니다.",
   "siebly-agent-skills": "Siebly의 오픈소스 JavaScript 및 TypeScript SDK를 위한 에이전트 스킬. Binance, Bybit, OKX, Gate, Bitget, KuCoin, Coinbase, Kraken, HTX, Hyperliquid 거래소 API를 다룹니다. 사용자가 API 키를 제공하면 실제 주문을 넣을 수 있으며, 라이브 모드를 명시적으로 선택할 때까지 기본값은 드라이런입니다.",
-  "stock-bloc": "Stock Bloc의 공식 MCP 및 HTTP API. SEC 공시 차이(10-K/10-Q), 13F 보유, 점수, 시장 리서치를 AI 에이전트에 제공합니다. tools/list는 무료로 설명되며, 데이터 호출은 Base의 USDC(x402)로 요청당 결제됩니다.",
+  "stock-bloc": "Stock Bloc의 공식 MCP 및 HTTP API. SEC 공시 차이(10-K/10-Q), 13F 보유, 점수, 시장 리서치를 AI 에이전트에 제공합니다. tools/list는 무료로 설명되며, 데이터 호출은 Base의 USDC(x402)로 요청당 결제됩니다. 운영자는 확인되지 않습니다(서비스는 stockbloc.ai.studio에서 호스팅됩니다).",
   "quantral-mcp": "Quantral의 공식 호스티드 MCP. 주식 심리 및 시그널 점수와 의회·내부자 거래 데이터를 Claude, ChatGPT 및 다른 MCP 클라이언트에 읽기 전용으로 제공합니다. 주문을 넣거나 자금을 이동하지 않습니다.",
   "tickerlayer-mcp": "TickerLayer의 공식 호스티드 MCP, REST 및 WebSocket 시장 데이터 API. 주식, 외환, 암호화폐, 지수, ETF, 원자재를 다룹니다. 거래소 원천이 아닌 참고용 데이터이며 AI 에이전트용입니다. MCP 클라이언트에도 같은 요금제가 적용되며 별도의 MCP 수수료는 없습니다.",
   "waveleta-mcp": "Waveleta의 공식 읽기 전용 MCP 및 선불 Developer API. 600개 이상 시장의 암호화폐 시세와 FX, 원자재, 미국 주식 이력을 제공합니다. MCP에는 매매 도구가 없으며 주문을 넣거나 변경·취소할 수 없습니다.",
   "liquidmap-mcp": "LiquidMap의 공식 호스티드 MCP. 여러 거래소의 읽기 전용 암호화폐 주문흐름 도구(히트맵, 풋프린트, CVD, 펀딩, 미결제약정)를 제공합니다. 사용자 거래소 계정에 연결하거나 주문을 넣지 않습니다.",
   "tradytics-mcp": "Tradytics의 공식 호스티드 MCP 및 REST API. 주식 시세와 바, 옵션 플로, 다크풀 체결, 기업 리서치, 공시, 스크리너, 예측 시장을 제공합니다. 계정 도구는 로그인한 사용자의 포트폴리오, 워치리스트, 백테스트만 읽습니다.",
   "financemcp-unbidden": "공식 출처 금융 데이터를 위한 공식 호스티드 MCP. SEC EDGAR XBRL, 미국 노동통계국, 미국 재무부 Fiscal Data를 제공합니다.",
-  "bharatstock-mcp": "인도 주식 시장(NSE 및 BSE) 데이터용 공식 MCP 및 REST API. 시세, 재무제표, 펀더멘털, 기업 행동, 펀드 보유 등을 제공합니다. 읽기 전용 도구 약 31개. MCP 서버는 Developer 및 Pro 요금제 기능입니다.",
+  "bharatstock-mcp": "인도 주식 시장(NSE 및 BSE) 데이터용 공식 MCP 및 REST API. 시세, 재무제표, 펀더멘털, 기업 행동, 펀드 보유 등을 제공합니다. 읽기 전용 도구 약 31개. MCP 서버는 Developer, Business 및 Pro 요금제 기능입니다.",
   "china-a-share-stock-mcp": "무료 공개 Tencent 및 Sina 소스를 사용하는 중국 A주 실시간 시세와 주요 지수용 커뮤니티 MCP 서버. 호스티드 Streamable HTTP 엔드포인트를 쓰거나 직접 호스팅할 수 있습니다. API 키 없음. MIT.",
   "bullion-trading-mcp": "뉴욕 귀금속 딜러 Bullion Trading LLC의 공식 공개 MCP. 현물가, 카탈로그 가격, 프리미엄, 매입가, 매장 정책을 제공합니다. 도구는 읽기 전용이며 웹사이트 장바구니 링크를 줄 수 있지만 주문을 넣을 수는 없습니다.",
   "trading-checkup-aikit": "Trading Checkup의 공식 AIKIT MCP. 거래소와 브로커의 출처 있고 날짜가 적힌 사실(심볼 규칙, 수수료, 속도 제한)과 매매 봇 코드의 흔한 실수를 검사합니다. 정보만 제공하며 시그널이나 주문을 넣지 않습니다. 베타이며 구매는 아직 열려 있지 않습니다.",
   "aperiodic-mcp": "Aperiodic의 공식 API 및 MCP. Binance, OKX, Hyperliquid의 암호화폐 및 RWA 퍼페추얼(주식, 금, 원유, FX)에 대한 시점별 주문흐름, 유동성, 펀딩 지표를 AI 에이전트용으로 제공합니다.",
   "ocarrat-mcp": "Ocarrat Trading Statistics의 공식 MCP. 트레이더 본인의 저널(전략, 주간 보고서, 성과 분석)에 OAuth로 접근합니다. 무료 읽기 전용 등급이 있습니다. 주문을 넣지 않습니다.",
-  "copy-top": "copy.top(Polycool LLC)의 공식 호스티드 MCP이며 copytop-signals 에이전트 스킬도 이 항목에 포함됩니다. API 키 없이 쓰는 읽기 전용 도구 11개로, fomo, pump.fun, Hyperliquid 트레이더의 실시간 거래, 시그널, 알림을 다룹니다. 제품 약관에는 수수료, 바이백, 소각, 초대 보상이 있는 $COPY 토큰도 설명되어 있습니다. 공개 GitHub 저장소는 라이선스가 없는 문서 초안입니다."
+  "copy-top": "copy.top(Polycool LLC)의 공식 호스티드 MCP이며 copytop-signals 에이전트 스킬도 이 항목에 포함됩니다. API 키 없이 쓰는 읽기 전용 도구로, fomo, pump.fun, Hyperliquid 트레이더의 실시간 거래, 시그널, 알림을 다룹니다. 제품 약관에는 수수료, 바이백, 소각, 초대 보상이 있는 $COPY 토큰도 설명되어 있습니다. 공개 GitHub 저장소는 라이선스가 없는 문서 초안입니다."
  },
  "faq": {
   "title": "자주 묻는 질문",

@@ -14,7 +14,7 @@
       "model": "freemium",
       "free_tier": "25 requests/day",
       "paid_from": "$49.99/mo",
-      "details": "Premium plans $49.99\u2013$249.99/mo (75\u20131,200 req/min).",
+      "details": "Premium plans $49.99–$249.99/mo (75–1,200 req/min).",
       "source": "https://www.alphavantage.co/premium/",
       "checked": "2026-10-29"
     },
@@ -230,7 +230,7 @@
       "model": "freemium",
       "free_tier": "8 credits/min, 800/day",
       "paid_from": "$29/mo",
-      "details": "Grow $29\u201379, Pro $99\u2013229, Ultra $329\u2013999 per month.",
+      "details": "Grow $29–79, Pro $99–229, Ultra $329–999 per month.",
       "source": "https://twelvedata.com/pricing",
       "checked": "2026-10-29"
     },
@@ -610,7 +610,7 @@
       "model": "freemium",
       "free_tier": "25 requests/day",
       "paid_from": "$49.99/mo",
-      "details": "Premium plans $49.99\u2013$249.99/mo (75\u20131,200 req/min).",
+      "details": "Premium plans $49.99–$249.99/mo (75–1,200 req/min).",
       "source": "https://www.alphavantage.co/premium/",
       "checked": "2026-10-29"
     },
@@ -3244,7 +3244,7 @@
         }
       ],
       "issues": [
-        "Repository transfer confirmed (2026-11-20): OpenBB-finance/OpenBB \u2192 openbq-org/OpenBB. Source: https://openbb.co/blog/openbb-belongs-to-everyone/. Stored link not updated."
+        "Repository transfer confirmed (2026-11-20): OpenBB-finance/OpenBB → openbq-org/OpenBB. Source: https://openbb.co/blog/openbb-belongs-to-everyone/. Stored link not updated."
       ],
       "github": {
         "reachable": true,
@@ -4775,8 +4775,8 @@
     "pricing": {
       "model": "usage-based",
       "free_tier": "No monthly fee",
-      "paid_from": "5% + 50\u00a2 per checkout transaction",
-      "details": "No separate MCP fee found; Paddle charges 5% + 50\u00a2 per checkout transaction (custom pricing available).",
+      "paid_from": "5% + 50¢ per checkout transaction",
+      "details": "No separate MCP fee found; Paddle charges 5% + 50¢ per checkout transaction (custom pricing available).",
       "source": "https://www.paddle.com/pricing",
       "checked": "2026-10-29"
     },
@@ -6117,7 +6117,7 @@
     "name": "Lava MCP",
     "type": "mcp",
     "category": "market-data",
-    "description": "Official hosted MCP and REST API for Lava (\u7194\u5ca9): read-only A-share stock and concept-board news-heat data and structured summaries, with anonymized institutional IDs. Does not place trades.",
+    "description": "Official hosted MCP and REST API for Lava (熔岩): read-only A-share stock and concept-board news-heat data and structured summaries, with anonymized institutional IDs. Does not place trades.",
     "repo": "https://github.com/dustinliang666-blip/lava-mcp",
     "homepage": "https://lava.ai-dolphin.com",
     "docs": "https://lava.ai-dolphin.com/subscribe/docs",
@@ -6125,9 +6125,9 @@
     "official": true,
     "pricing": {
       "model": "usage-based",
-      "free_tier": "\u00a5100 opening voucher",
-      "paid_from": "about \u00a55 / 1,000 calls",
-      "details": "Hosted endpoint requires a Lava API key or OAuth. Opening a data account includes a \u00a5100 voucher; about 1,000 calls cost \u00a55, as stated on the vendor subscribe page.",
+      "free_tier": "¥100 opening voucher",
+      "paid_from": "about ¥5 / 1,000 calls",
+      "details": "Hosted endpoint requires a Lava API key or OAuth. Opening a data account includes a ¥100 voucher; about 1,000 calls cost ¥5, as stated on the vendor subscribe page.",
       "source": "https://lava.ai-dolphin.com/subscribe",
       "checked": "2026-11-18"
     },
@@ -6167,7 +6167,7 @@
       "github": {
         "reachable": true,
         "final_url": "https://github.com/dustinliang666-blip/lava-mcp",
-        "stars": 101,
+        "stars": 62,
         "archived": false,
         "license": "MIT",
         "last_commit": "2026-11-07T09:51:48Z"
@@ -6371,7 +6371,7 @@
     "name": "Stock Bloc",
     "type": "mcp",
     "category": "research-filings",
-    "description": "Official MCP and HTTP API for Stock Bloc: SEC filing diffs (10-K/10-Q), 13F holdings, scores and market research for AI agents. tools/list is described as free; data calls are paid per request in USDC on Base (x402).",
+    "description": "Official MCP and HTTP API for Stock Bloc: SEC filing diffs (10-K/10-Q), 13F holdings, scores and market research for AI agents. tools/list is described as free; data calls are paid per request in USDC on Base (x402). The operator is not identified (the service is hosted at stockbloc.ai.studio).",
     "repo": null,
     "homepage": "https://stockbloc.ai.studio",
     "docs": "https://stockbloc.ai.studio/llms.txt",
@@ -6381,7 +6381,7 @@
       "model": "usage",
       "free_tier": "tools/list described as free; public web terminal unmetered",
       "paid_from": "$0.01 / call",
-      "details": "Pay-per-call in USDC on Base (x402): $0.01 for quotes, $0.05\u2013$0.10 for 13F, filing diffs and scores, $0.35 for an earnings pack, as stated in the vendor's machine-readable docs.",
+      "details": "Pay-per-call in USDC on Base (x402): $0.01 for quotes, $0.05–$0.10 for 13F, filing diffs and scores, $0.35 for an earnings pack, as stated in the vendor's machine-readable docs.",
       "source": "https://stockbloc.ai.studio/llms.txt",
       "checked": "2026-11-18"
     },
@@ -6518,9 +6518,9 @@
       "model": "freemium",
       "free_tier": "3,000 REST calls / 30 days (crypto, forex and US stocks); no card",
       "paid_from": "$49/mo",
-      "details": "Free: 3,000 calls every 30 days, 10 requests/second, no WebSocket. Individual starts at $49/month for crypto, commodities and indices (forex and ETFs $59; US stocks $99), with yearly billing 20% lower. Business and per-request USDC (x402) options are also listed. No extra MCP fee.",
+      "details": "Free: 3,000 REST calls every 30 days (crypto, forex and US stocks), 10 requests/second, no WebSocket. Individual starts at $49/month per feed. Business starts at $449/month per feed. Per-request USDC (x402) options are also listed. No extra MCP fee.",
       "source": "https://tickerlayer.com/pricing",
-      "checked": "2026-11-18"
+      "checked": "2026-11-25"
     },
     "remote_mcp_url": "https://mcp.tickerlayer.com/mcp",
     "verification": {
@@ -6585,9 +6585,9 @@
     "official": true,
     "pricing": {
       "model": "usage-based",
-      "free_tier": "\u20ac2 free starter credit (about 1,000 calls)",
-      "paid_from": "\u20ac0.002 / call",
-      "details": "Billed like the Developer API: \u20ac2 free credit, then \u20ac0.002 per successful call from a prepaid balance; top-ups from \u20ac20. Connecting and listing tools is free. This listing covers only the MCP/API, not the Waveleta app or its optional Trading add-on.",
+      "free_tier": "€2 free starter credit (about 1,000 calls)",
+      "paid_from": "€0.002 / call",
+      "details": "Billed like the Developer API: €2 free credit, then €0.002 per successful call from a prepaid balance; top-ups from €20. Connecting and listing tools is free. This listing covers only the MCP/API, not the Waveleta app or its optional Trading add-on.",
       "source": "https://waveleta.com/developer/mcp",
       "checked": "2026-11-18"
     },
@@ -6653,9 +6653,9 @@
     "official": true,
     "pricing": {
       "model": "paid",
-      "free_tier": "\u20ac1 for 3 days",
-      "paid_from": "\u20ac10/mo",
-      "details": "A 3-day trial for \u20ac1, then \u20ac10/month (VAT included), cancel anytime, as stated by the vendor. OAuth; six read-only tools.",
+      "free_tier": "€1 for 3 days",
+      "paid_from": "€10/mo",
+      "details": "A 3-day trial for €1, then €10/month (VAT included), cancel anytime, as stated by the vendor. OAuth; six read-only tools.",
       "source": "https://liquidmap.io/en/crypto-mcp-server",
       "checked": "2026-11-18"
     },
@@ -6723,9 +6723,9 @@
       "model": "freemium",
       "free_tier": "5 calls/min and 50/day",
       "paid_from": null,
-      "details": "Start for free. Every dataset is available on every plan. Free: 5 calls/min and 50/day. Plus: 50/min and 5,000/day. Pro: 300/min and 50,000/day. All API keys and MCP connections share one account allowance. Any endpoint can also be called without a key at $0.004/call in USDC on Base (x402). Plus and Pro list prices were not stated on the docs pages checked.",
+      "details": "Start for free. Every dataset is available on every plan. Free: 5 calls/min and 50/day. Plus: 10/min and 1,000/day. Pro: 300/min and 50,000/day. All API keys and MCP connections share one account allowance. Any endpoint can also be called without a key at $0.004/call in USDC on Base (x402). Plus and Pro list prices were not stated on the docs pages checked.",
       "source": "https://tradytics.com/docs/rate-limits",
-      "checked": "2026-11-18"
+      "checked": "2026-11-25"
     },
     "remote_mcp_url": "https://tradytics.com/mcp",
     "verification": {
@@ -6850,7 +6850,7 @@
     "name": "BharatStock MCP",
     "type": "mcp",
     "category": "market-data",
-    "description": "Official MCP and REST API for Indian stock-market data (NSE and BSE): quotes, financials, fundamentals, corporate actions, mutual-fund holdings and more. About 31 read-only tools. The MCP server is a Developer and Pro feature.",
+    "description": "Official MCP and REST API for Indian stock-market data (NSE and BSE): quotes, financials, fundamentals, corporate actions, mutual-fund holdings and more. About 31 read-only tools. The MCP server is a Developer, Business and Pro feature.",
     "repo": null,
     "homepage": "https://bharatstockapi.com/",
     "docs": "https://bharatstockapi.com/mcp",
@@ -6858,11 +6858,11 @@
     "official": true,
     "pricing": {
       "model": "freemium",
-      "free_tier": "\u20b90/mo, 60 requests/day, about one year of history",
-      "paid_from": "\u20b9500/mo",
-      "details": "Every plan can call every REST endpoint. Free: \u20b90, 60 requests/day. Starter: \u20b9500/mo, 1,000/day. Growth: \u20b9700/mo, 5,000/day. Developer: \u20b91,000/mo, 10,000/day. Pro: \u20b95,000/mo, 40,000/day. Paid plans unlock the full archive (11+ years). MCP requires a Developer or Pro key. Prices are before applicable tax (GST).",
+      "free_tier": "₹0/mo, 60 requests/day, about one year of history",
+      "paid_from": "₹500/mo",
+      "details": "Every plan can call every REST endpoint. Free: ₹0, 60 requests/day. Starter: ₹500/mo, 1,000/day. Growth: ₹800/mo, 5,000/day. Developer: ₹1,500/mo, 8,000/day. Business: ₹3,000/mo, 15,000/day. Pro: ₹5,000/mo, 30,000/day. Paid plans unlock the full archive (11+ years). MCP requires a Developer, Business or Pro key. Prices are before applicable tax (GST).",
       "source": "https://bharatstockapi.com/#pricing",
-      "checked": "2026-11-18"
+      "checked": "2026-11-25"
     },
     "remote_mcp_url": "https://bharatstockapi.com/v1/mcp",
     "verification": {
@@ -7055,11 +7055,11 @@
     "official": true,
     "pricing": {
       "model": "free",
-      "free_tier": "Beta; purchasing is not open yet",
+      "free_tier": "Beta; the vendor says buying is not open yet",
       "paid_from": null,
-      "details": "The vendor states that AIKIT is in beta and that buying is not open yet. Tools are metered in credits on the docs page; no paid plan is for sale at the time of this check.",
+      "details": "The vendor states that AIKIT is in beta and that buying is not open yet. Paid plans are also listed as sold on RapidAPI (PRO US$9, ULTRA US$29, MEGA US$99). The free beta key on the vendor page (25 credits, no sign-up, one per network) remains available for trying it out. Tools are metered in credits.",
       "source": "https://tradingcheckup.com/aikit/",
-      "checked": "2026-11-18"
+      "checked": "2026-11-25"
     },
     "remote_mcp_url": "https://api.tradingcheckup.com/aikit/mcp",
     "verification": {
@@ -7123,11 +7123,11 @@
     "official": true,
     "pricing": {
       "model": "freemium",
-      "free_tier": "Every 2025 metric on BTC, ETH, SOL and 10 RWA perps; 1,000 requests/day; no card",
+      "free_tier": "Every metric for Q3 2026 on BTC, ETH, SOL and 10 RWA perps; 1,000 requests/day; no card",
       "paid_from": "$199/mo",
-      "details": "Free: personal licence, 2025 history on BTC, ETH, SOL and 10 RWA perps, 1,000 requests/day, no card. Pro: $199/month plus VAT, for independent researchers backtesting order flow (more history and markets). Yearly billing is also offered.",
+      "details": "Free: personal licence, a limited history window (currently every metric for Q3 2026) on BTC, ETH, SOL and 10 RWA perps in hourly to daily bars, 1,000 requests/day, no card. Pro starts at $199/month plus VAT, for independent researchers backtesting order flow (more history and markets). Yearly billing is also offered.",
       "source": "https://aperiodic.io/pricing",
-      "checked": "2026-11-18"
+      "checked": "2026-11-25"
     },
     "remote_mcp_url": "https://aperiodic.io/mcp",
     "verification": {
@@ -7183,7 +7183,7 @@
     "name": "Ocarrat Trading Statistics MCP",
     "type": "mcp",
     "category": "quant-backtesting",
-    "description": "Official MCP for Ocarrat Trading Statistics: OAuth access to a trader's own journal \u2014 strategies, weekly reports and performance analytics. A free read-only tier is available. Does not place trades.",
+    "description": "Official MCP for Ocarrat Trading Statistics: OAuth access to a trader's own journal — strategies, weekly reports and performance analytics. A free read-only tier is available. Does not place trades.",
     "repo": null,
     "homepage": "https://trading-statistic-reporting.ocarrat.com/",
     "docs": "https://trading-statistic-reporting.ocarrat.com/agents",
@@ -7252,7 +7252,7 @@
     "name": "copy.top",
     "type": "mcp",
     "category": "high-risk-crypto",
-    "description": "Official hosted MCP from copy.top (Polycool LLC), also covered by the copytop-signals agent skill: 11 read-only tools, no API key, for live trades, signals and alerts from traders on fomo, pump.fun and Hyperliquid. The product terms also describe a $COPY token with fees, buybacks, burns and invite rewards. The public GitHub repos are documentation stubs and do not include a license.",
+    "description": "Official hosted MCP from copy.top (Polycool LLC), also covered by the copytop-signals agent skill: read-only tools, no API key, for live trades, signals and alerts from traders on fomo, pump.fun and Hyperliquid. The product terms also describe a $COPY token with fees, buybacks, burns and invite rewards. The public GitHub repos are documentation stubs and do not include a license.",
     "repo": "https://github.com/copydottop/mcp",
     "homepage": "https://copy.top/",
     "docs": "https://github.com/copydottop/mcp",

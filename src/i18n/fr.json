@@ -94,6 +94,10 @@
   "unreachable": [
    "Inaccessible",
    "Impossible d'accéder au dépôt ou au site."
+  ],
+  "high_risk": [
+   "Risque élevé",
+   "Listé pour la transparence et non recommandé. Les fiches à haut risque (memecoins / jeton propre / copy-trading) ne sont pas éligibles au badge Verified."
   ]
  },
  "cat": {
@@ -608,20 +612,20 @@
   "lava-mcp": "MCP et API REST officiels hébergés de Lava (熔岩) : données en lecture seule sur la chaleur d'actualité des actions A et des thématiques, avec résumés structurés et identifiants institutionnels anonymisés. Ne passe aucun ordre.",
   "dchub-mcp": "MCP hébergé officiel de DC Hub : intelligence sur les data centers et l'énergie, avec des scores quotidiens du Data Center Power Index pour plus de 300 marchés, le réseau, les files d'interconnexion, la fibre et les capacités. Données de recherche et de siting, surtout en lecture ; n'exploite aucune infrastructure.",
   "siebly-agent-skills": "Skills d'agent pour les SDK open source JavaScript et TypeScript de Siebly destinés aux API de plateformes crypto (Binance, Bybit, OKX, Gate, Bitget, KuCoin, Coinbase, Kraken, HTX et Hyperliquid). Peuvent passer des ordres en conditions réelles si l'utilisateur fournit des clés API ; le mode dry-run est utilisé par défaut jusqu'à sélection explicite du mode live.",
-  "stock-bloc": "MCP et API HTTP officiels de Stock Bloc : diffs de dépôts SEC (10-K/10-Q), positions 13F, scores et recherche de marché pour agents IA. tools/list est indiqué comme gratuit ; les appels de données sont payés à la requête en USDC sur Base (x402).",
+  "stock-bloc": "MCP et API HTTP officiels de Stock Bloc : diffs de dépôts SEC (10-K/10-Q), positions 13F, scores et recherche de marché pour agents IA. tools/list est indiqué comme gratuit ; les appels de données sont payés à la requête en USDC sur Base (x402). L'opérateur n'est pas identifié (le service est hébergé sur stockbloc.ai.studio).",
   "quantral-mcp": "MCP hébergé officiel de Quantral : scores de sentiment et de signaux actions en lecture seule, ainsi que les transactions du Congrès et des initiés, pour Claude, ChatGPT et d'autres clients MCP. Ne passe pas d'ordres et ne déplace pas de fonds.",
   "tickerlayer-mcp": "MCP, REST et WebSocket officiels hébergés de TickerLayer pour les données de marché actions, forex, crypto, indices, ETF et matières premières. Données indicatives, non issues d'une bourse, pour agents IA. Les mêmes forfaits s'appliquent dans les clients MCP, sans frais MCP supplémentaires.",
   "waveleta-mcp": "MCP officiel en lecture seule et API développeur prépayée de Waveleta pour les données de marché (tickers crypto sur plus de 600 marchés, plus l'historique FX, matières premières et actions US). Le MCP n'a pas d'outils de trading et ne peut ni passer, ni modifier, ni annuler d'ordres.",
   "liquidmap-mcp": "MCP hébergé officiel de LiquidMap : outils d'order flow crypto en lecture seule (heatmap, footprint, CVD, funding et open interest) provenant de plusieurs plateformes. Ne se connecte pas au compte d'exchange de l'utilisateur et ne passe aucun ordre.",
   "tradytics-mcp": "MCP et API REST officiels hébergés de Tradytics : cotations et barres d'actions, flux d'options, prints de dark pool, recherche d'entreprises, dépôts, screneurs et marchés prédictifs. Les outils de compte ne lisent que le portefeuille, les listes et les backtests de l'utilisateur connecté.",
   "financemcp-unbidden": "MCP hébergé officiel pour des données financières de sources officielles : SEC EDGAR XBRL, le Bureau of Labor Statistics des États-Unis et les Treasury Fiscal Data.",
-  "bharatstock-mcp": "MCP et API REST officiels pour les données de marché indiennes (NSE et BSE) : cotations, états financiers, fondamentaux, opérations sur titres, portefeuilles de fonds et plus. Environ 31 outils en lecture seule. Le serveur MCP est une fonction des forfaits Developer et Pro.",
+  "bharatstock-mcp": "MCP et API REST officiels pour les données de marché indiennes (NSE et BSE) : cotations, états financiers, fondamentaux, opérations sur titres, portefeuilles de fonds et plus. Environ 31 outils en lecture seule. Le serveur MCP est une fonction des forfaits Developer, Business et Pro.",
   "china-a-share-stock-mcp": "Serveur MCP communautaire pour les cotations en temps réel des actions A chinoises et des grands indices, à partir des sources publiques gratuites de Tencent et Sina. Un endpoint Streamable HTTP hébergé est disponible, ou vous pouvez l'auto-héberger. Pas de clé API. MIT.",
   "bullion-trading-mcp": "MCP public officiel de Bullion Trading LLC, négociant en métaux précieux à New York : cours spot, prix du catalogue, primes, tarifs de rachat et politiques du magasin. Les outils sont en lecture seule ; il peut remettre au client un lien vers un panier sur le site, mais ne peut pas passer de commande.",
   "trading-checkup-aikit": "MCP officiel AIKIT de Trading Checkup : faits sourcés et datés sur les plateformes et courtiers (règles de symboles, frais, limites de débit) et un vérificateur d'erreurs courantes dans le code des robots de trading. Information uniquement ; pas de signaux ni d'ordres. Bêta ; l'achat n'est pas encore ouvert.",
   "aperiodic-mcp": "API et MCP officiels d'Aperiodic : métriques ponctuelles d'order flow, de liquidité et de funding pour les perpétuels crypto et RWA (actions, or, pétrole, changes) sur Binance, OKX et Hyperliquid, conçus pour les agents IA.",
   "ocarrat-mcp": "MCP officiel d'Ocarrat Trading Statistics : accès OAuth au journal de trading de l'utilisateur (stratégies, rapports hebdomadaires et analyses de performance). Un palier gratuit en lecture seule est disponible. Ne passe aucun ordre.",
-  "copy-top": "MCP hébergé officiel de copy.top (Polycool LLC), également couvert par la skill d'agent copytop-signals : 11 outils en lecture seule, sans clé API, pour les transactions en direct, signaux et alertes de traders sur fomo, pump.fun et Hyperliquid. Les conditions du produit décrivent aussi un jeton $COPY avec des frais, rachats, brûlis et récompenses d'invitation. Les dépôts GitHub publics sont des ébauches de documentation sans licence."
+  "copy-top": "MCP hébergé officiel de copy.top (Polycool LLC), également couvert par la skill d'agent copytop-signals : outils en lecture seule, sans clé API, pour les transactions en direct, signaux et alertes de traders sur fomo, pump.fun et Hyperliquid. Les conditions du produit décrivent aussi un jeton $COPY avec des frais, rachats, brûlis et récompenses d'invitation. Les dépôts GitHub publics sont des ébauches de documentation sans licence."
  },
  "faq": {
   "title": "Questions fréquentes",

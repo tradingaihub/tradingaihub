@@ -1,5 +1,12 @@
-import { tools } from "../lib/data";
+import { tools, publicStatus } from "../lib/data";
 import { untagUrl } from "../lib/aff";
 // Public data export: EODHD vendor URLs are exported plain (no via=); the site's own links carry the affiliate param.
 const plain = (u?: string) => untagUrl(u, "eodhd");
-export const GET = () => new Response(JSON.stringify(tools.map(({ id, name, type, category, description, repo, homepage, pricing, license, verification }) => ({ id, name, type, category, description, repo, homepage: plain(homepage), pricing: pricing ? { ...pricing, source: plain(pricing.source) } : pricing, license, status: verification.status, checked_at: verification.checked_at }))), { headers: { "content-type": "application/json" } });
+export const GET = () => new Response(JSON.stringify(tools.map((t) => ({
+  id: t.id, name: t.name, type: t.type, category: t.category, description: t.description,
+  repo: t.repo, homepage: plain(t.homepage),
+  pricing: t.pricing ? { ...t.pricing, source: plain(t.pricing.source) } : t.pricing,
+  license: t.license, status: publicStatus(t),
+  risk_tier: t.risk_tier === "high" ? "high" : "standard",
+  checked_at: t.verification.checked_at,
+}))), { headers: { "content-type": "application/json" } });
