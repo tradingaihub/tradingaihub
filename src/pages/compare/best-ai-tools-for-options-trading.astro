@@ -5,7 +5,9 @@ import {
   requireTools, paidFrom, capNoteKey, prettyDate, RUN_DATE, RUN_TOTAL, RUN_VERIFIED, PRICING_CHECKED,
 } from "../../lib/bestPages";
 import { useT } from "../../i18n";
+import { affUrl } from "../../lib/aff";
 const { t } = useT("en");
+const eodhdDocs = affUrl("https://eodhd.com/financial-apis/mcp-server-for-financial-data-by-eodhd")!;
 const list = requireTools(OPTIONS.toolIds);
 const byId = Object.fromEntries(list.map((x) => [x.id, x]));
 const dataRows = OPTIONS_DATA_IDS.map((id) => byId[id]).filter(Boolean);
@@ -15,7 +17,7 @@ const run = prettyDate(RUN_DATE);
 const priced = prettyDate(PRICING_CHECKED);
 const typeLabel: Record<string, string> = { mcp: "MCP", api: "API", skill: "Skill" };
 ---
-<BestCompare page={OPTIONS} list={list}>
+<BestCompare page={OPTIONS} list={list} affiliateDisclosure affiliateVendors="EODHD">
   <p>Options are where a general-purpose assistant is weakest. A chain, an implied-volatility figure, or a set of Greeks is not something the model already knows; a tool has to fetch it. Placing an order is a separate, higher-risk step. This page splits <b>data-only tools</b> from <b>broker-connected tools</b>, and it puts the broker tools second, with a stronger warning.</p>
   <p>We used only tools marked <b>Verified</b> in our {run} check from the directory of {RUN_TOTAL} listings ({RUN_VERIFIED} verified), and only those whose listings actually cover listed options — chains, options market data, Greeks, or options order placement. Full results are on the <a href="/verification/">verification page</a>. This is not a ranking of “best options strategy,” and it is not a broker recommendation.</p>
   <blockquote>
@@ -90,7 +92,7 @@ const typeLabel: Record<string, string> = { mcp: "MCP", api: "API", skill: "Skil
 
   <h2 class="sec" id="data-without-orders">Data without placing an order</h2>
   <p><b><a href="/tools/massive-mcp/">Massive MCP</a></b> is official (formerly Polygon.io). The free Basic plan is end-of-day only. Paid plans start at $29/mo for individual, non-professional use (Starter $29, Developer $79, Advanced $199/mo for real-time, per the vendor wording we stored). The <b><a href="/tools/massive-api/">Massive API</a></b> is the official REST, WebSockets and flat-file side, including tick-level US options, on the same plan wording.</p>
-  <p><b><a href="/tools/eodhd-mcp/">EODHD MCP Server (official)</a></b> offers 70+ read-only tools, including options and macro, with an API key or OAuth (<code>https://mcp.eodhd.com/v2/mcp</code>). There is no separate MCP fee; data access follows your EODHD plan, paid from $19.99/mo. See also <a href="/tools/eodhd-api/">EODHD APIs</a>.</p>
+  <p><b><a href="/tools/eodhd-mcp/">EODHD MCP Server (official)</a></b> offers 70+ read-only tools, including options and macro, with an API key or OAuth (<code>https://mcp.eodhd.com/v2/mcp</code>). There is no separate MCP fee; data access follows your EODHD plan, paid from $19.99/mo. See also <a href="/tools/eodhd-api/">EODHD APIs</a>. Vendor page: <a href={eodhdDocs} target="_blank" rel="sponsored noopener">EODHD APIs</a> <span class="partner-tag">{t("partner.label")}</span>.</p>
   <p><b><a href="/tools/alpaca-market-data-api/">Alpaca Market Data API</a></b> is official market data only. The paid starting price in our directory is $99/mo (Algo Trader Plus: all US exchanges real-time, OPRA options). This row does not place trades.</p>
   <p><b><a href="/tools/schwab-mcp/">Schwab MCP (community)</a></b> is a verified, unofficial MIT server for the Charles Schwab Trader API. It is free to self-host and is read-only by default. It requires a Schwab brokerage account and a Schwab Developer Portal app key. Do not treat the default setup as an execution bot.</p>
 

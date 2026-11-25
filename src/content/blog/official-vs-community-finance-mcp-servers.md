@@ -81,7 +81,7 @@ FMP is a second example. The official hosted server exposes 27 dataset tools. A 
 
 ### 6. Auth model and data source
 
-Official hosted servers increasingly use OAuth. Finnhub, TradingView (OAuth 2.1, no API keys) and Robinhood's agent endpoint (OAuth with PKCE) all do, and EODHD accepts either an API key or OAuth. Community servers usually take a raw API key.
+Official hosted servers increasingly use OAuth. Finnhub, TradingView (OAuth 2.1, no API keys) and Robinhood's agent endpoint (OAuth with PKCE) all do, and [EODHD](https://eodhd.com/financial-apis/mcp-server-for-financial-data-by-eodhd) accepts either an API key or OAuth. Community servers usually take a raw API key.
 
 Also ask where the data comes from. A community server built on a vendor's official SDK (the community YNAB server is one, with an optional read-only mode) is a very different risk from one that scrapes an undocumented endpoint.
 
