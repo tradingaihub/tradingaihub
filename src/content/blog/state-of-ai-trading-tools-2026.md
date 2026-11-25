@@ -1,6 +1,6 @@
 ---
 title: "State of AI Trading Tools 2026: Security & Verification"
-description: "At the Nov 23 check, 83 of 106 tools were Verified. Detailed 11 Nov snapshot of 106 tools: 14 repos idle a year, 25 can trade or move funds, 9 packages don't link back."
+description: "At the Nov 23 check, 83 of 106 tools were Verified. Nov 11 snapshot: 14 repos idle a year, 25 can trade or move funds, 9 packages don't link back."
 date: 2026-11-19
 tags: [verification, security, mcp, supply-chain, data-report]
 draft: false

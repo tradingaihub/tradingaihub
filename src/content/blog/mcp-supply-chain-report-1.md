@@ -15,7 +15,7 @@ The figures in this report come from our [latest verification](/verification/) p
 
 ## Current list: packages we couldn't link back to the listed repo
 
-This is the full set shown on the verification page for the November 23 check. A mismatch is not an accusation. It can be a fork, a rename, a separate wrapper, missing metadata, or a name that already belonged to another project.
+This is the full set shown on the verification page as of November 25, 2026. A mismatch is not an accusation. It can be a fork, a rename, a separate wrapper, missing metadata, or a name that already belonged to another project.
 
 | Tool | Registry | Package name | Listed repo | Maintenance status |
 |---|---|---|---|---|
@@ -39,4 +39,4 @@ We do not check who controls the registry account, the published files, or insta
 
 Before running `npx` or `pip install` from a README, compare the package's repository link with the repo you read. If the metadata has no repository link, or points somewhere else, install from the repository's own instructions. See also the [latest verification](/verification/), the [weekly leaderboard](/weekly/), and our [method article](/blog/we-re-check-104-finance-ai-tools-every-week/). We plan to publish this report monthly.
 
-*Data sources: the TradingAIHub public dataset ([tools.json](/tools.json), [API export](/api/v1/tools.json)) and the [latest verification](/verification/) page for the weekly check dated November 23, 2026. Directory data is offered under CC BY 4.0 with attribution to TradingAIHub. Not financial advice.*
+*Data sources: the TradingAIHub public dataset ([tools.json](/tools.json), [API export](/api/v1/tools.json)) and the [latest verification](/verification/) page as of November 25, 2026. Directory data is offered under CC BY 4.0 with attribution to TradingAIHub. Not financial advice.*
