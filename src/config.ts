@@ -22,4 +22,6 @@ export const AFFILIATES = {
   // cdn.promotekit.com/promotekit.js (/, /pricing, /lp/eodhd-mcp-server) plus the two docs paths
   // EODHD asked to tag: /financial-apis/ and the official MCP docs page.
   eodhd: { id: "tradingaihub", param: "via", hosts: ["eodhd.com", "www.eodhd.com"], exact: true, paths: ["/", "/pricing", "/lp/eodhd-mcp-server", "/financial-apis/", "/financial-apis/mcp-server-for-financial-data-by-eodhd"], home: "https://eodhd.com/" },
+  // TrendSpider (FirstPromoter, ?_go=). exact: only trendspider.com / www.trendspider.com are tagged, every path (deep links kept).
+  trendspider: { id: "tradingaihub", param: "_go", hosts: ["trendspider.com", "www.trendspider.com"], exact: true, home: "https://trendspider.com/" },
 };
