@@ -100,7 +100,7 @@ const at = useA11yT(lang);
     <div><b>{t("footer.legal")}</b><br/><a href={p("/disclaimer/")}>{t("footer.nia")}</a><br/><a href={p("/privacy/")}>{t("footer.privacy")}</a><br/><a href={p("/cookies/")}>{t("footer.cookies")}</a><br/><a href={p("/terms/")}>{t("footer.terms")}</a><br/><a href={p("/about/")}>{t("footer.about")}</a><br/><a href={p("/accessibility/")}>{at("w.statement")}</a><br/><a href={p("/advertise/")}>{t("footer.advertise")}</a></div>
     <div><b>{t("footer.api")}</b><br/><a href="/developers/" hreflang={lang === "en" ? undefined : "en"}>{t("footer.apiDocs")}</a><br/><a href="/api/openapi.json">OpenAPI</a> · <a href="/llms.txt">llms.txt</a></div>
   </div>
-  <p class="disclaimer">{t("footer.short")} <a href={p("/disclaimer/")}>{t("footer.fullDisclaimer")}</a></p>
+  <p class="disclaimer"><Fragment set:html={t("footer.disclaimer", { site: SITE.name })} /> <a href={p("/disclaimer/")}>{t("footer.fullDisclaimer")}</a></p>
   <FeaturedOn lang={lang} />
 </div></footer>
 <A11yWidget lang={lang} />
