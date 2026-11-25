@@ -363,7 +363,8 @@
   "fullReport": "ver el informe completo",
   "money": "Cómo ganamos dinero",
   "moneyP": "Los listados son gratuitos. Actualmente solo ganamos con enlaces de afiliado (de socios) divulgados a TradingView y EODHD. No ofrecemos espacios patrocinados. Los enlaces de afiliado nunca afectan al estado de verificación.",
-  "contact": "Contacto"
+  "contact": "Contacto",
+  "discussions": "¿Tienes alguna pregunta o idea? Únete a nosotros en <a href=\"https://github.com/tradingaihub/community/discussions\" dir=\"ltr\">GitHub Discussions</a>."
  },
  "disc": {
   "title": "Aviso legal: no es asesoramiento de inversión",
