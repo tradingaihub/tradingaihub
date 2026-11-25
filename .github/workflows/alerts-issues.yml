@@ -55,16 +55,30 @@ jobs:
       - name: Notify new awesome-list issues and PRs
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
           [ -n "$NTFY_TOPIC" ] || { echo "NTFY_TOPIC missing"; exit 1; }
+          [ -n "$GITHUB_TOKEN" ] || { echo "GITHUB_TOKEN missing"; exit 1; }
           # 20-minute lookback for a ~15-minute schedule, so a late runner does not miss an item.
           since=$(date -u -d '20 minutes ago' +'%Y-%m-%dT%H:%M:%SZ')
-          curl -fsS --max-time 30 --retry 2 \
+          # Authenticate so this uses the 5,000/hour Actions limit, not the
+          # unauthenticated 60/hour per-IP limit. GitHub-hosted runners share
+          # IPs, so the unauthenticated poll intermittently got HTTP 403.
+          # awesome-finance-ai-tools is public, so GITHUB_TOKEN needs no extra
+          # scopes (workflow permissions stay empty). Do not echo the token.
+          code=$(curl -sS --max-time 30 --retry 2 -o items.json -w '%{http_code}' \
             -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer $GITHUB_TOKEN" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
             -H "User-Agent: tradingaihub-alerts" \
-            "https://api.github.com/repos/tradingaihub/awesome-finance-ai-tools/issues?state=all&sort=created&direction=desc&per_page=50" \
-            -o items.json
+            "https://api.github.com/repos/tradingaihub/awesome-finance-ai-tools/issues?state=all&sort=created&direction=desc&per_page=50")
+          if [ "$code" != 200 ]; then
+            echo "GitHub issues API HTTP $code"
+            head -c 500 items.json || true
+            echo
+            exit 1
+          fi
           jq -c --arg since "$since" '.[] | select(.created_at >= $since)' items.json > new.jsonl || true
           [ -s new.jsonl ] || { echo "no new awesome items"; exit 0; }
           while IFS= read -r row; do
