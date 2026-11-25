@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks. Questions and open-ended ideas may fit better in [Discussions](https://github.com/tradingaihub/tradingaihub/discussions).
+        Thanks. Questions and open-ended ideas may fit better in [Discussions](https://github.com/tradingaihub/community/discussions).
         GitHub is **public** — do not paste API keys or private data.
   - type: dropdown
     id: kind
