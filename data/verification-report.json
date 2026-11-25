@@ -1,16 +1,15 @@
 {
   "checked_at": "2026-11-23T05:52:54.305218+00:00",
-  "total": 128,
+  "total": 133,
   "by_status": {
-    "verified": 104,
+    "verified": 110,
     "warning": 1,
     "stale": 12,
     "aging": 5,
     "archived": 3,
-    "unconfirmed": 2,
-    "high_risk": 1
+    "unconfirmed": 2
   },
-  "with_package": 29,
+  "with_package": 30,
   "manual_checks": [
     {
       "id": "openbb",
