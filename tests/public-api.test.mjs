@@ -73,6 +73,33 @@ test("/tools: invalid parameters are 400 JSON with the allowed values", async ()
   assert.equal((await call("/api/v1/tools?limit=100")).res.status, 200);
 });
 
+test("/tools: legacy status values are aliases of the public statuses", async () => {
+  const canon = await call("/api/v1/tools?status=not_verified");
+  assert.equal(canon.res.status, 200);
+  const slugs = canon.body.tools.map((t) => t.slug);
+  assert.deepEqual(slugs, ["yfinance-mcp"]);
+  for (const alias of ["aging", "stale", "archived", "unreachable"]) {
+    const r = await call(`/api/v1/tools?status=${alias}`);
+    assert.equal(r.res.status, 200, alias);
+    assert.deepEqual(r.body.tools.map((t) => t.slug), slugs, alias);
+    for (const t of r.body.tools) {
+      assert.equal(t.status, "not_verified", alias);
+      assert.equal(t.status_label, "Not currently verified", alias);
+    }
+  }
+  const review = await call("/api/v1/tools?status=under_review");
+  assert.equal(review.res.status, 200);
+  for (const alias of ["unconfirmed", "warning", "link_check_pending"]) {
+    const r = await call(`/api/v1/tools?status=${alias}`);
+    assert.equal(r.res.status, 200, alias);
+    assert.deepEqual(r.body.tools.map((t) => t.slug), review.body.tools.map((t) => t.slug), alias);
+    for (const t of r.body.tools) assert.equal(t.status, "under_review", alias);
+  }
+  const bad = await call("/api/v1/tools?status=bogus");
+  assert.equal(bad.res.status, 400);
+  assert.equal(bad.body.error.parameter, "status");
+});
+
 test("/tools/{slug} and JSON 404s", async () => {
   let r = await call("/api/v1/tools/ccxt-mcp");
   assert.equal(r.res.status, 200); assert.equal(r.body.tool.name, "CCXT MCP");

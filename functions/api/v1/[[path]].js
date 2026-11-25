@@ -1,7 +1,7 @@
 // Public read-only API v1 router: /api/v1, /api/v1/tools, /api/v1/tools/{slug}, /api/v1/search, /api/v1/categories,
 // and the static dumps /api/v1/tools.json + /api/v1/categories.json (served from ASSETS so they get CORS, cache and the
 // rate limit too). Scoped to /api/v1/* on purpose: /api/subscribe keeps its own handler and headers.
-import { CORS, json, error, methodGate, rateLimit, tooMany, loadData, allowed, filterTools, searchTools, LIMITS, SITE, DATA_LICENSE as LIC, CODE_LICENSE } from "../../_lib/api.js";
+import { CORS, json, error, methodGate, rateLimit, tooMany, loadData, allowed, filterTools, searchTools, resolveStatusFilter, LIMITS, SITE, DATA_LICENSE as LIC, CODE_LICENSE } from "../../_lib/api.js";
 
 const intParam = (sp, name, def, min, max) => {
   const raw = sp.get(name);
@@ -49,6 +49,12 @@ export async function onRequest({ request, env, params }) {
     for (const k of ["category", "type", "language", "status"]) {
       const v = sp.get(k);
       if (v == null || v === "") continue;
+      if (k === "status") {
+        const r = resolveStatusFilter(v);
+        if (r.err) return bad(`Unknown ${k} "${v.slice(0, 60)}".`, { parameter: k, allowed: al[k] });
+        f[k] = r.v;
+        continue;
+      }
       if (!al[k].includes(v)) return bad(`Unknown ${k} "${v.slice(0, 60)}".`, { parameter: k, allowed: al[k] });
       f[k] = v;
     }
