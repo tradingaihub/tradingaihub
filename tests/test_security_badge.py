@@ -77,11 +77,15 @@ class SecurityBadgeData(unittest.TestCase):
         self.assertEqual(str(self.public.get("rules_version")), "6")
 
     def test_api_status_values_unchanged(self):
-        # Display copy changed; the API still exposes status=unconfirmed; status_label is now "Link check pending".
+        # Public API exposes only the three public statuses and their labels.
         src = (ROOT / "src" / "lib" / "data.ts").read_text()
-        self.assertIn('unconfirmed: { label: "Link check pending", tone: "warn"', src)
+        self.assertIn('verified: { label: "Verified", tone: "good"', src)
+        self.assertIn('under_review: { label: "Under review", tone: "muted"', src)
+        self.assertIn('not_verified: { label: "Not currently verified", tone: "warn"', src)
+        for old in ("unconfirmed", "aging", "stale", "archived", "warning", "unreachable", "high_risk"):
+            self.assertNotIn(f"{old}: {{ label:", src)
         api = (ROOT / "src" / "lib" / "publicApi.ts").read_text()
-        self.assertIn("status_label: STATUS[v.status]?.label ?? v.status", api)
+        self.assertIn("status_label: STATUS[publicStatus(t)]?.label ?? publicStatus(t)", api)
 
 
 class SecurityBadgeDist(unittest.TestCase):
@@ -144,21 +148,18 @@ class SecurityBadgeDist(unittest.TestCase):
         self.assertRegex(page, r'title="[^"]*2026-11-10[^"]*bce7a11[^"]*\b6\b')
         self.assertIn("2026-11-10", page)
 
-        # Display-only: unconfirmed chips are muted, have no "!", and do not use the warning tone.
-        # API status_label is "Link check pending" (checked in the public-api dump test).
+        # Only the three public statuses are shown. "Under review" is a calm muted chip with no "!".
         status_src = (ROOT / "src" / "components" / "Status.astro").read_text()
-        self.assertIn('status === "unconfirmed" ? "muted"', status_src)
-        unconfirmed = [t["id"] for t in _load(TOOLS) if (t.get("verification") or {}).get("status") == "unconfirmed"]
-        for tid in unconfirmed:
+        self.assertIn("const tone = s.tone;", status_src)
+        under_review = [t["id"] for t in _load(TOOLS) if (t.get("verification") or {}).get("status") == "under_review"]
+        self.assertEqual(len(under_review), 3)
+        for tid in under_review:
             html = (self.dist / "tools" / tid / "index.html").read_text()
-            self.assertRegex(html, r'class="badge muted"', f"{tid} missing muted chip")
-            self.assertNotRegex(html, r'class="badge warn"[^>]*>!\s', f"{tid} still has a warning bang chip")
-            self.assertIn("Link check pending", html)
-            self.assertNotRegex(html, r">!\s*Link check pending")
-        # These three were the last unconfirmed listings; they are now verified.
+            self.assertRegex(html, r'class="badge muted"[^>]*>Under review')
+            self.assertNotRegex(html, r">!\s*Under review")
+            self.assertNotIn("Link check pending", html)
         for tid in ("firefly-iii-api", "openbb", "mercury-mcp"):
             html = (self.dist / "tools" / tid / "index.html").read_text()
-            self.assertNotIn("Link check pending", html, tid)
             self.assertIn("✓ Verified", html, f"{tid} missing Verified chip")
 
         # Directory cards: a concerns tool must not carry a shield on listing pages

@@ -13,7 +13,6 @@ const lang = Astro.params.lang ?? "en"; const { t, p, desc } = useT(lang);
 const week = changelog[0];
 const board = tools.filter((x) => isVerified(x) && starsOf(x) != null).sort((a, b) => starsOf(b) - starsOf(a)).slice(0, 20);
 const fresh = tools.filter((x) => lastCommit(x) && !isHighRisk(x)).sort((a, b) => lastCommit(b)!.localeCompare(lastCommit(a)!)).slice(0, 10);
-const needsLove = tools.filter((x) => ["stale", "archived", "unreachable"].includes(x.verification.status));
 const official = tools.filter((x) => x.official).length;
 const pageUrl = `${SITE.url}${p("/weekly/")}`;
 const title = t("weekly.title", { date: week.date });
@@ -40,9 +39,6 @@ const ld = [datasetLd({ url: pageUrl, lang }), breadcrumbLd([
   <tbody>{board.map((x, i) => <tr><td>{i + 1}</td><td><a href={p(`/tools/${x.id}/`)}>{x.name}</a></td><td>{t(`type.${x.type}`)}</td><td>{t(`cat.${x.category}`)[1]}</td><td>★ {fmtStars(starsOf(x))}</td><td class="ltr" dir="ltr">{lastCommit(x)}</td></tr>)}</tbody></table></div>
   <h2 class="sec">{t("weekly.shipped")}</h2>
   <ul>{fresh.map((x) => <li><a href={p(`/tools/${x.id}/`)}>{x.name}</a> — {t("weekly.lastCommit", { date: lastCommit(x) })}</li>)}</ul>
-  <h2 class="sec">{t("weekly.love", { n: needsLove.length })}</h2>
-  <p class="note">{t("weekly.loveNote")}</p>
-  <ul>{needsLove.map((x) => <li><a href={p(`/tools/${x.id}/`)}>{x.name}</a> <Status status={x.verification.status} lang={lang} /></li>)}</ul>
   <h2 class="sec">{t("weekly.archive")}</h2><ul>{changelog.map((w) => <li><span dir="ltr">{w.date}</span>: {t("weekly.changes", { n: w.changes.length })}</li>)}</ul>
   <Newsletter lang={lang} />
 </div>

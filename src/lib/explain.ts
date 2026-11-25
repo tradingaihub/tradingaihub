@@ -2,7 +2,7 @@
 // Values (dates, day counts, commit dates, prices) are HTML-escaped and wrapped in <bdi dir="ltr"> so they stay intact in
 // RTL locales; the locale strings (i18n "xp.*") may contain <bdi dir="ltr"> around Latin terms in he/ar only.
 import { useT } from "../i18n";
-import { securityOf, starsOf, fmtStars, lastCommit } from "./data";
+import { securityOf, starsOf, fmtStars, lastCommit, publicStatus } from "./data";
 
 export const XP_KEYS = ["type", "official", "status", "checked", "scan", "secnote", "pricing", "stars"] as const;
 export type XpKey = (typeof XP_KEYS)[number];
@@ -18,13 +18,9 @@ export function explain(tool: any, k: XpKey, lang = "en"): string | null {
     case "type": return t(`xp.type_${tool.type}`);
     case "official": return tool.official ? t("xp.official") : null;
     case "status": {
-      const st = ver.status; const commit = lastCommit(tool);
-      let s: string;
-      if (st === "verified") s = commit ? t("xp.verified", { checked, commit: v(commit) }) : t("xp.verifiedNoRepo", { checked });
-      else if (st === "aging" || st === "stale") s = t(`xp.${st}`, { checked, days: v(ver.last_commit_days ?? "?"), commit: v(commit ?? "?") });
-      else s = t(`xp.${st}`, { checked });
-      if (ver.manual_override && ver.manual_check?.date) s += " " + t("xp.manual", { date: v(ver.manual_check.date) });
-      return s;
+      const st = publicStatus(tool); const commit = lastCommit(tool);
+      if (st === "verified") return commit ? t("xp.verified", { checked, commit: v(commit) }) : t("xp.verifiedNoRepo", { checked });
+      return t(st === "under_review" ? "xp.underReview" : "xp.notVerified", { checked });
     }
     case "checked": return t("xp.checked");
     case "scan": { const sc = securityOf(tool); return sc ? t("xp.scan", { date: v(sc.date), commit: v(sc.scanner_commit.slice(0, 7)), rules: v(sc.rules_version) }) : null; }

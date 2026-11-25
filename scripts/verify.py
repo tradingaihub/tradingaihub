@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Weekly verifier for the directory.
-Reads data/seed.json (curated entries) and writes data/tools.json (seed + verification)
-and data/verification-report.{json,md}.
+Reads data/seed.json (curated entries) and writes the public data/tools.json and data/verification-report.json
+(public statuses and data fields only), plus the full internal record in $VERIFY_INTERNAL_DIR (default .internal/,
+gitignored): tools-detail.json and verification-report.md.
 Checks per entry: repo reachable (+renames/archived), last commit date, stars, license,
 package published on npm/PyPI (+latest version), homepage and docs links alive.
 Uses the GitHub REST API when GITHUB_TOKEN is set; otherwise scrapes public HTML/Atom
@@ -576,6 +577,7 @@ def verify(t):
                         v["issues"].append(t.get("install_note") or "Package currently unmaintained on the registry; install from source")
                 elif res:
                     v["issues"].append(f"{kind} name '{cand}' exists on the registry but does not link to this repo (not counted)")
+                    v.setdefault("registry_unlinked", []).append({"registry": kind, "name": cand})
             v["checks"].append({"check": "package published", "ok": bool(v.get("npm") or v.get("pypi")),
                                 "note": "no npm/PyPI package detected at repo root" if not (v.get("npm") or v.get("pypi")) else None})
     for key in ("homepage", "docs"):
@@ -756,39 +758,99 @@ def main():
         tools.append(t)
     if dry:
         dry_report(tools, current); return
-    json.dump(tools, open(tp, "w"), indent=2)
-    def public_status(t):
-        if t.get("risk_tier") == "high" or t.get("category") == "high-risk-crypto":
-            return "high_risk"
-        return t["verification"]["status"]
+    write_outputs(tools)
+    print(json.dumps({k: public_report(tools)[k] for k in ("total", "by_status", "with_package")}))
+
+# ---------------------------------------------------------------------------------------------------------------
+# Public vs internal output.
+# The public repo and site only carry: fixed fields, data fields and one of three public statuses
+# (verified / under_review / not_verified). Checker notes, issue text, HTTP codes, manual-check records and
+# curator notes stay internal: they are written to INTERNAL_DIR (gitignored, never committed or deployed).
+# ---------------------------------------------------------------------------------------------------------------
+PUBLIC_STATUS = {
+    "verified": "verified",
+    "unconfirmed": "under_review", "warning": "under_review",
+    "aging": "not_verified", "stale": "not_verified", "archived": "not_verified", "unreachable": "not_verified",
+    # already public (idempotent)
+    "under_review": "under_review", "not_verified": "not_verified",
+}
+PUBLIC_LABEL = {"verified": "Verified", "under_review": "Under review", "not_verified": "Not currently verified"}
+PUBLIC_ORDER = ("verified", "under_review", "not_verified")
+INTERNAL_DIR = os.environ.get("VERIFY_INTERNAL_DIR") or os.path.join(ROOT, ".internal")
+# Top-level seed fields that are curator notes, not public data.
+PRIVATE_TOOL_KEYS = ("install_note", "remote_mcp_url_note", "manual_check")
+PUBLIC_GITHUB_KEYS = ("reachable", "final_url", "stars", "archived", "license", "last_commit",
+                      "collection", "collection_stars", "subpath", "subpath_exists")
+PUBLIC_PKG_KEYS = ("name", "version", "published", "url", "links_back")
+PUBLIC_VER_KEYS = ("claude_marketplace", "root_skill_md")
+UNLINKED_RE = re.compile(r"^(npm|pypi) name '([^']+)' exists on the registry but does not link to this repo \(not counted\)$")
+
+def is_high_risk(t):
+    return t.get("risk_tier") == "high" or t.get("category") == "high-risk-crypto"
+
+def to_public(status):
+    """Internal checker status (or an already-public one) -> verified | under_review | not_verified."""
+    return PUBLIC_STATUS.get(status or "", "under_review")
+
+def public_status(t):
+    """High-risk listings are never verified; they carry no separate status (the site shows a risk banner)."""
+    if is_high_risk(t):
+        return "not_verified"
+    return to_public((t.get("verification") or {}).get("status"))
+
+def public_tool(t):
+    """One data/tools.json row: no issues, no check notes or HTTP codes, no manual-check records, no curator notes."""
+    out = {k: v for k, v in t.items() if k not in PRIVATE_TOOL_KEYS and k != "verification"}
+    v = t.get("verification") or {}
+    pv = {"checked_at": v.get("checked_at"), "status": public_status(t)}
+    g = v.get("github")
+    if g: pv["github"] = {k: g[k] for k in PUBLIC_GITHUB_KEYS if k in g}
+    for kind in ("npm", "pypi"):
+        if v.get(kind): pv[kind] = {k: v[kind][k] for k in PUBLIC_PKG_KEYS if k in v[kind]}
+    for k in PUBLIC_VER_KEYS:
+        if k in v: pv[k] = v[k]
+    pv["checks"] = [{"check": c.get("check"), "ok": bool(c.get("ok"))} for c in (v.get("checks") or [])]
+    # Fixed public note on /verification/: a registry package with this name exists but does not link to the repo.
+    unlinked = v.get("registry_unlinked")
+    if unlinked is None:  # records written before the structured field existed
+        unlinked = [{"registry": m.group(1), "name": m.group(2)} for m in (UNLINKED_RE.match(i) for i in (v.get("issues") or [])) if m]
+    if unlinked: pv["registry_unlinked"] = [{"registry": u["registry"], "name": u["name"]} for u in unlinked]
+    out["verification"] = pv
+    return out
+
+def public_report(tools):
+    """data/verification-report.json: run date, counts by public status, package count. Nothing else."""
+    from collections import Counter
     c = Counter(public_status(t) for t in tools)
-    def issue_row(t):
-        v = t["verification"]
-        row = {"id": t["id"], "status": v["status"], "issues": v["issues"]}
-        label = manual_check_label(v)
-        if label: row["manual"] = label
-        return row
-    rep = {"checked_at": NOW.isoformat(), "total": len(tools), "by_status": dict(c),
-           "with_package": sum(1 for t in tools if t["verification"].get("npm") or t["verification"].get("pypi")),
-           "manual_checks": [{"id": t["id"], "date": t["verification"]["manual_check"]["date"],
-                              "label": manual_check_label(t["verification"])}
-                             for t in tools if t["verification"].get("manual_override")],
-           "issues": [issue_row(t) for t in tools if t["verification"]["issues"] or t["verification"].get("manual_override")]}
-    json.dump(rep, open(os.path.join(ROOT, "data/verification-report.json"), "w"), indent=2)
-    lines = [f"# Verification report — {NOW:%Y-%m-%d %H:%M} UTC", "", f"Total entries: {len(tools)}", ""]
+    return {"checked_at": NOW.isoformat(), "total": len(tools),
+            "by_status": {k: c[k] for k in PUBLIC_ORDER if c.get(k)},
+            "with_package": sum(1 for t in tools if (t.get("verification") or {}).get("npm") or (t.get("verification") or {}).get("pypi"))}
+
+def write_internal(tools):
+    """Full checker record + markdown run log, for maintainers only. INTERNAL_DIR is outside the published tree."""
+    from collections import Counter
+    os.makedirs(INTERNAL_DIR, exist_ok=True)
+    json.dump(tools, open(os.path.join(INTERNAL_DIR, "tools-detail.json"), "w"), indent=2)
+    c = Counter(t["verification"]["status"] for t in tools)
+    lines = [f"# Verification report — {NOW:%Y-%m-%d %H:%M} UTC (internal)", "", f"Total entries: {len(tools)}", ""]
     lines += [f"- {k}: {n}" for k, n in c.most_common()]
-    if rep["manual_checks"]:
-        lines += ["", "Manual checks:"] + [f"- {x['id']}: {x['label']}" for x in rep["manual_checks"]]
-    lines += ["", f"Entries with a published npm/PyPI package: {rep['with_package']}", "", "| id | status | stars | last commit | license | package | issues |", "|---|---|---|---|---|---|---|"]
+    manual = [t for t in tools if t["verification"].get("manual_override")]
+    if manual:
+        lines += ["", "Manual checks:"] + [f"- {t['id']}: {manual_check_label(t['verification'])}" for t in manual]
+    lines += ["", "| id | internal status | public status | stars | last commit | license | package | issues |", "|---|---|---|---|---|---|---|---|"]
     for t in tools:
         v = t["verification"]; g = v.get("github") or {}; p = v.get("npm") or v.get("pypi")
-        issues = list(v["issues"])
+        issues = list(v.get("issues") or [])
         label = manual_check_label(v)
         if label: issues.append(label)
-        lines.append(f"| {t['id']} | {public_status(t)} | {g.get('stars','')} | {(g.get('last_commit') or '')[:10]} | {t['license']} | {(p['name']+'@'+p['version']) if p else ''} | {'; '.join(issues)} |")
-    open(os.path.join(ROOT, "data/verification-report.md"), "w").write("\n".join(lines) + "\n")
+        lines.append(f"| {t['id']} | {v['status']} | {public_status(t)} | {g.get('stars','')} | {(g.get('last_commit') or '')[:10]} | {t.get('license')} | {(p['name']+'@'+p['version']) if p else ''} | {'; '.join(issues)} |")
+    open(os.path.join(INTERNAL_DIR, "verification-report.md"), "w").write("\n".join(lines) + "\n")
+
+def write_outputs(tools):
+    write_internal(tools)
+    json.dump([public_tool(t) for t in tools], open(os.path.join(ROOT, "data/tools.json"), "w"), indent=2)
+    json.dump(public_report(tools), open(os.path.join(ROOT, "data/verification-report.json"), "w"), indent=2)
     write_history(tools)
-    print(json.dumps({k: rep[k] for k in ("total", "by_status", "with_package")}))
 
 LINK_KEYS = (("homepage", "homepage"), ("docs", "docs"), ("remote_mcp", "MCP endpoint"))
 
@@ -801,10 +863,10 @@ def diff_rows(tools, current):
     for t in tools:
         old = (current.get(t["id"]) or {}).get("verification", {})
         new = t["verification"]
-        if old.get("status") == new["status"]: continue
+        if to_public(old.get("status")) == public_status(t): continue
         why = [f"{lbl} {new[k]['url']} -> {new[k]['status']} ({link_ok(new[k])})" for k, lbl in LINK_KEYS
                if new.get(k) and link_ok(new[k]) != "ok"]
-        rows.append({"id": t["id"], "name": t["name"], "old": old.get("status", "(new)"), "new": new["status"], "why": why or new["issues"]})
+        rows.append({"id": t["id"], "name": t["name"], "old": to_public(old.get("status")) if old else "(new)", "new": public_status(t), "why": why or new["issues"]})
     return rows
 
 def dry_report(tools, current):
@@ -820,30 +882,42 @@ def dry_report(tools, current):
     out = os.environ.get("VERIFY_DRY_JSON")
     if out: json.dump(tools, open(out, "w"), indent=2)
 
+def change_lines(prev, snap):
+    """Public changelog entries between two snapshots ({id: {name, status, stars, version}}).
+    Status lines use only the three public labels and are skipped when the public label did not change."""
+    ch = []
+    if prev is None:
+        return [{"kind": "launch", "text": f"Directory published with {len(snap)} tools."}]
+    for i, s in snap.items():
+        p = prev.get(i)
+        if not p: ch.append({"kind": "new", "id": i, "text": f"New: {s['name']} added."}); continue
+        a, b = to_public(p.get("status")), to_public(s.get("status"))
+        if a != b: ch.append({"kind": "status", "id": i, "from": a, "to": b, "text": f"{s['name']}: {PUBLIC_LABEL[a]} → {PUBLIC_LABEL[b]}"})
+        if p.get("version") and s.get("version") and p["version"] != s["version"]: ch.append({"kind": "release", "id": i, "text": f"{s['name']} released {s['version']} (was {p['version']})"})
+        if p.get("stars") and s.get("stars") and s["stars"] - p["stars"] >= 25: ch.append({"kind": "stars", "id": i, "text": f"{s['name']} gained {s['stars'] - p['stars']} stars"})
+    for i in set(prev) - set(snap): ch.append({"kind": "removed", "id": i, "text": f"Removed: {prev[i]['name']}"})
+    return ch
+
+def public_counts(snap):
+    from collections import Counter
+    c = Counter(to_public(s.get("status")) for s in snap.values())
+    return {k: c[k] for k in PUBLIC_ORDER if c.get(k)}
+
 def write_history(tools):
-    """Snapshot this run and diff it against the previous snapshot -> data/changelog.json (feeds /weekly and /rss.xml)."""
+    """Snapshot this run (public statuses only) and diff it against the previous snapshot -> data/changelog.json
+    (feeds /weekly and /rss.xml)."""
     hd = os.path.join(ROOT, "data/history"); os.makedirs(hd, exist_ok=True)
     today = NOW.strftime("%Y-%m-%d")
-    snap = {t["id"]: {"name": t["name"], "status": t["verification"]["status"], "stars": None if t.get("repo_is_collection") else (t["verification"].get("github") or {}).get("stars"),
+    snap = {t["id"]: {"name": t["name"], "status": public_status(t), "stars": None if t.get("repo_is_collection") else (t["verification"].get("github") or {}).get("stars"),
                       "version": ((t["verification"].get("npm") or t["verification"].get("pypi")) or {}).get("version")} for t in tools}
     prev_files = sorted(f for f in os.listdir(hd) if f.endswith(".json") and f[:-5] < today)
     prev = json.load(open(os.path.join(hd, prev_files[-1]))) if prev_files else None
     json.dump(snap, open(os.path.join(hd, f"{today}.json"), "w"), indent=1)
-    ch = []
-    if prev is None:
-        ch.append({"kind": "launch", "text": f"First verification run: {len(snap)} tools checked."})
-    else:
-        for i, s in snap.items():
-            p = prev.get(i)
-            if not p: ch.append({"kind": "new", "id": i, "text": f"New: {s['name']} added."}); continue
-            if p["status"] != s["status"]: ch.append({"kind": "status", "id": i, "text": f"{s['name']}: {p['status']} → {s['status']}"})
-            if p.get("version") and s.get("version") and p["version"] != s["version"]: ch.append({"kind": "release", "id": i, "text": f"{s['name']} released {s['version']} (was {p['version']})"})
-            if p.get("stars") and s.get("stars") and s["stars"] - p["stars"] >= 25: ch.append({"kind": "stars", "id": i, "text": f"{s['name']} gained {s['stars'] - p['stars']} stars"})
-        for i in set(prev) - set(snap): ch.append({"kind": "removed", "id": i, "text": f"Removed: {prev[i]['name']}"})
+    ch = change_lines(prev, snap)
     cp = os.path.join(ROOT, "data/changelog.json")
     log = json.load(open(cp)) if os.path.exists(cp) else []
     log = [e for e in log if e["date"] != today]
-    log.insert(0, {"date": today, "counts": dict(__import__("collections").Counter(s["status"] for s in snap.values())), "changes": ch})
+    log.insert(0, {"date": today, "counts": public_counts(snap), "changes": ch})
     json.dump(log, open(cp, "w"), indent=2)
 
 if __name__ == "__main__": main()

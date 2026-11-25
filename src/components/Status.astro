@@ -1,12 +1,13 @@
 ---
-import { STATUS } from "../lib/data";
+import { STATUS, toPublic } from "../lib/data";
 import { useT } from "../i18n";
 // xp: "card" | "page" -> explained badge (src/lib/explain.ts)
-const { status, lang = "en", xp, id = "xp-status" } = Astro.props; const { t } = useT(lang);
-const s = STATUS[status] || { label: status, tone: "warn", help: "" };
+const { status: raw, lang = "en", xp, id = "xp-status" } = Astro.props; const { t } = useT(lang);
+const status = toPublic(raw);
+const s = STATUS[status];
 const tr = t(`status.${status}`); const label = Array.isArray(tr) ? tr[0] : s.label; const help = Array.isArray(tr) ? tr[1] : s.help;
-// Display only: "unconfirmed" stays the API/status value, but the chip is a calm muted label with no "!".
-const tone = status === "unconfirmed" ? "muted" : s.tone;
+// Only the three public statuses are ever shown; "Under review" is a calm muted chip with no "!".
+const tone = s.tone;
 const mark = tone === "good" ? "✓ " : tone === "muted" ? "" : "! ";
 ---
 {xp ? <button type="button" class={`badge ${tone}`} data-xp-toggle data-xp="status" aria-expanded="false" aria-controls={id} aria-describedby={id}>{mark}{label}</button>

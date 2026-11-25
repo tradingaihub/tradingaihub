@@ -2,7 +2,7 @@
 
 > A curated, **automatically re-verified** list of MCP servers, agent skills and APIs for finance and trading. Mirror of [TradingAIHub](https://tradingaihub.com) — status checked weekly (last: 2026-11-23).
 
-Legend: ✅ verified · 🟡 aging (6–12 months without commits) · 🔴 stale (12+ months) · 🗄️ archived · ⚠️ high risk (not recommended; not eligible for verified). 🟡 also marks entries whose link failed or could not be confirmed. ⭐ = GitHub stars. Not investment advice.
+Legend: ✅ Verified · 🟡 Under review · ⚪ Not currently verified · ⚠️ high risk (not recommended; not eligible for verified). ⭐ = GitHub stars. Not investment advice.
 
 Questions, tool suggestions or security concerns? Join the discussion: [tradingaihub/community/discussions](https://github.com/tradingaihub/community/discussions)
 
@@ -42,7 +42,7 @@ Data is CC BY 4.0; attribution is "TradingAIHub, https://tradingaihub.com". Not 
 
 ## Market data APIs & MCPs
 
-- 🔴 [Financial Datasets MCP](https://github.com/financial-datasets/mcp-server) *(official)* — Income statements, balance sheets, cash flows and stock prices from Financial Datasets. ⭐ 2,330 · [details](https://tradingaihub.com/tools/financial-datasets-mcp/)
+- ⚪ [Financial Datasets MCP](https://github.com/financial-datasets/mcp-server) *(official)* — Income statements, balance sheets, cash flows and stock prices from Financial Datasets. ⭐ 2,330 · [details](https://tradingaihub.com/tools/financial-datasets-mcp/)
 - ✅ [Maverick MCP](https://github.com/wshobson/maverick-mcp) — Stock analysis MCP server with technical analysis, screening and portfolio tools. ⭐ 736 · [details](https://tradingaihub.com/tools/maverick-mcp/)
 - ✅ [Massive MCP](https://github.com/massive-com/mcp_massive) *(official)* — Official MCP server for Massive stocks, options, forex and crypto data. ⭐ 405 · [details](https://tradingaihub.com/tools/massive-mcp/)
 - ✅ [investor-agent](https://github.com/ferdousbhai/investor-agent) — MCP server providing market data, sentiment and fundamentals for building an investor agent. ⭐ 350 · [details](https://tradingaihub.com/tools/investor-agent/)
@@ -54,7 +54,7 @@ Data is CC BY 4.0; attribution is "TradingAIHub, https://tradingaihub.com". Not 
 - ✅ [Yahoo Finance MCP](https://github.com/maxscheijen/mcp-yahoo-finance) — Community MCP server for Yahoo Finance quotes and history (unofficial data source). ⭐ 29 · [details](https://tradingaihub.com/tools/yahoo-finance-mcp/)
 - ✅ [EODHD MCP Server (official)](https://github.com/EodHistoricalData/EODHD-MCP-Server) *(official)* — EODHD's official MCP server: 70+ read-only tools for prices, fundamentals, news, technicals, options and macro; API key or OAuth. ⭐ 26 · [details](https://tradingaihub.com/tools/eodhd-mcp/)
 - ✅ [HK Finance MCP](https://github.com/hkopenai/hk-finance-mcp-server) — Hong Kong finance and stock market data via MCP. ⭐ 13 · [details](https://tradingaihub.com/tools/hk-finance-mcp/)
-- 🔴 [Stock Market MCP (Finnhub)](https://github.com/sverze/stock-market-mcp-server) — Community MCP server serving stock market data via the Finnhub API. ⭐ 7 · [details](https://tradingaihub.com/tools/finnhub-mcp-community/)
+- ⚪ [Stock Market MCP (Finnhub)](https://github.com/sverze/stock-market-mcp-server) — Community MCP server serving stock market data via the Finnhub API. ⭐ 7 · [details](https://tradingaihub.com/tools/finnhub-mcp-community/)
 - ✅ [AlphAI MCP](https://github.com/makeev/alphai-mcp) *(official)* — Official hosted MCP from AlphAI, operated by ARDOR 0608 OOD (Bulgaria): financial news scored 1-10 for relevance, with categories and per-ticker impact, plus SEC Form 4 insider trades, earnings, calendar and macro reads. 22 tools, all read-only except the alert tools, which only manage your own alert subscriptions. The GitHub repo holds docs and server.json only; the server is hosted and is reached with an OAuth sign-in or a free API key. The free tier (20 requests/min, 100/day) is for personal, non-commercial use. ⭐ 3 · [details](https://tradingaihub.com/tools/alphai-mcp/)
 - ✅ [Alpha Vantage API](https://www.alphavantage.co/) *(official)* — Stocks, forex, crypto, fundamentals and 50+ technical indicators over a simple REST API. · [details](https://tradingaihub.com/tools/alpha-vantage-api/)
 - ✅ [Massive (formerly Polygon.io) API](https://massive.com/) *(official)* — Tick-level US stocks, options, indices, forex and crypto over REST, WebSockets and flat files. · [details](https://tradingaihub.com/tools/massive-api/)
@@ -77,35 +77,35 @@ Data is CC BY 4.0; attribution is "TradingAIHub, https://tradingaihub.com". Not 
 ## Trading & broker MCPs
 
 - ✅ [Alpaca MCP Server](https://github.com/alpacahq/alpaca-mcp-server) *(official)* — Official Alpaca MCP: trade stocks, ETFs, options and crypto; query positions and market data. ⭐ 1,110 · [details](https://tradingaihub.com/tools/alpaca-mcp/)
-- 🟡 [MetaTrader 5 MCP](https://github.com/ariadng/metatrader-mcp-server) — Trade via the MetaTrader 5 terminal from AI agents. ⭐ 860 · [details](https://tradingaihub.com/tools/metatrader-mcp/)
+- ⚪ [MetaTrader 5 MCP](https://github.com/ariadng/metatrader-mcp-server) — Trade via the MetaTrader 5 terminal from AI agents. ⭐ 860 · [details](https://tradingaihub.com/tools/metatrader-mcp/)
 - ✅ [Kraken CLI (MCP + skills)](https://github.com/krakenfx/kraken-cli) *(official)* — Official Kraken CLI with a built-in MCP server and 59 agent skills: crypto, xStocks, forex and futures, plus keyless paper trading. ⭐ 816 · [details](https://tradingaihub.com/tools/kraken-cli/)
 - ✅ [Alpaca Skills](https://github.com/alpacahq/alpaca-skills) *(official)* — Official Alpaca agent skills for the Trading and Broker APIs: backtests, orders, account onboarding, money movement and events. ⭐ 172 · [details](https://tradingaihub.com/tools/alpaca-skills/)
 - ✅ [tasty-agent (tastytrade)](https://github.com/ferdousbhai/tasty-agent) — Community MCP server for tastytrade: portfolio, market data, options Greeks and order execution. ⭐ 90 · [details](https://tradingaihub.com/tools/tasty-agent/)
 - 🟡 [Longbridge Skills](https://github.com/longbridge/skills) *(official)* — Official Longbridge agent skills: quotes, technicals, derivatives, fundamentals, portfolio and watchlist across HK, US, A-share and SG markets. ⭐ 73 · [details](https://tradingaihub.com/tools/longbridge-skills/)
 - ✅ [Schwab MCP (community)](https://github.com/jkoelker/schwab-mcp) — Community MCP server for the Charles Schwab Trader API: accounts, quotes, options chains; read-only by default, trades need Discord/Signal approval. ⭐ 72 · [details](https://tradingaihub.com/tools/schwab-mcp/)
 - ✅ [Webull OpenAPI MCP](https://github.com/webull-inc/webull-openapi-mcp) *(official)* — Official Webull OpenAPI MCP: multi-region market data and orders for stocks, options, futures and crypto, with a UAT sandbox. ⭐ 31 · [details](https://tradingaihub.com/tools/webull-openapi-mcp/)
-- 🔴 [Paper Invest MCP](https://github.com/paperinvest/mcp-server) — Paper trading MCP: practice strategies without real money. ⭐ 24 · [details](https://tradingaihub.com/tools/paper-mcp/)
+- ⚪ [Paper Invest MCP](https://github.com/paperinvest/mcp-server) — Paper trading MCP: practice strategies without real money. ⭐ 24 · [details](https://tradingaihub.com/tools/paper-mcp/)
 - ✅ [Siebly Agent Skills](https://github.com/sieblyio/agent-skills) — Agent skills for Siebly's open-source JavaScript and TypeScript SDKs for cryptocurrency exchange APIs (Binance, Bybit, OKX, Gate, Bitget, KuCoin, Coinbase, Kraken, HTX and Hyperliquid). Can place live exchange orders if the user supplies API keys; defaults to dry-run until live mode is explicitly selected. ⭐ 2 · [details](https://tradingaihub.com/tools/siebly-agent-skills/)
 - ✅ [Interactive Brokers MCP (hosted)](https://www.interactivebrokers.com/en/trading/ai-integrations.php) *(official)* — IBKR hosted MCP endpoint for portfolio data, monitoring and authorized trade actions. · [details](https://tradingaihub.com/tools/ibkr-mcp/)
 - ✅ [Robinhood Trading MCP (official)](https://robinhood.com/us/en/support/articles/onboarding-an-external-agent/) *(official)* — Robinhood's hosted MCP for external agents: read your accounts and trade stocks, options and crypto in a dedicated agent account. · [details](https://tradingaihub.com/tools/robinhood-trading-mcp/)
 
 ## Crypto & DeFi
 
-- 🟡 [Solana Agent Kit](https://github.com/sendaifun/solana-agent-kit) — Toolkit connecting AI agents to Solana protocols, with MCP adapter. ⭐ 1,774 · [details](https://tradingaihub.com/tools/solana-agent-kit/)
+- ⚪ [Solana Agent Kit](https://github.com/sendaifun/solana-agent-kit) — Toolkit connecting AI agents to Solana protocols, with MCP adapter. ⭐ 1,774 · [details](https://tradingaihub.com/tools/solana-agent-kit/)
 - ✅ [Coinbase AgentKit](https://github.com/coinbase/agentkit) *(official)* — Coinbase toolkit for wallet operations and onchain actions by AI agents, with MCP support. ⭐ 1,362 · [details](https://tradingaihub.com/tools/coinbase-agentkit/)
-- 🗄️ [Base MCP](https://github.com/base/base-mcp-legacy) *(official)* — Onchain tools for the Base network. ⭐ 352 · [details](https://tradingaihub.com/tools/base-mcp/)
-- 🟡 [Crypto Indicators MCP](https://github.com/kukapay/crypto-indicators-mcp) — Technical analysis indicators for crypto assets. ⭐ 131 · [details](https://tradingaihub.com/tools/crypto-indicators-mcp/)
+- ⚪ [Base MCP](https://github.com/base/base-mcp-legacy) *(official)* — Onchain tools for the Base network. ⭐ 352 · [details](https://tradingaihub.com/tools/base-mcp/)
+- ⚪ [Crypto Indicators MCP](https://github.com/kukapay/crypto-indicators-mcp) — Technical analysis indicators for crypto assets. ⭐ 131 · [details](https://tradingaihub.com/tools/crypto-indicators-mcp/)
 - ✅ [Coinbase Agentic Wallet Skills](https://github.com/coinbase/agentic-wallet-skills) *(official)* — Official Coinbase skills for agent wallets: balances, send USDC, swap tokens, onramp funds and pay x402 APIs on Base, Polygon and Solana. ⭐ 128 · [details](https://tradingaihub.com/tools/coinbase-agentic-wallet-skills/)
 - ✅ [DexPaprika MCP](https://github.com/coinpaprika/dexpaprika-mcp) *(official)* — DEX analytics across 20+ blockchains from CoinPaprika. ⭐ 120 · [details](https://tradingaihub.com/tools/dexpaprika-mcp/)
-- 🔴 [Binance MCP (community)](https://github.com/TermiX-official/binance-mcp) — Portfolio, trading and token conversion on Binance (requires API key). ⭐ 97 · [details](https://tradingaihub.com/tools/binance-mcp/)
-- 🔴 [CoinCap MCP](https://github.com/QuantGeekDev/coincap-mcp) — Crypto market data from the CoinCap API. ⭐ 93 · [details](https://tradingaihub.com/tools/coincap-mcp/)
-- 🔴 [CCXT MCP](https://github.com/Nayshins/mcp-server-ccxt) — Market data from 20+ crypto exchanges via the CCXT library. ⭐ 83 · [details](https://tradingaihub.com/tools/ccxt-mcp/)
-- 🟡 [Bankless Onchain MCP](https://github.com/Bankless/onchain-mcp) *(official)* — Query onchain data and ERC-20 token information. ⭐ 78 · [details](https://tradingaihub.com/tools/bankless-onchain-mcp/)
-- 🔴 [Bitcoin & Lightning MCP](https://github.com/AbdelStark/bitcoin-mcp) — Bitcoin and Lightning Network tools for agents. ⭐ 77 · [details](https://tradingaihub.com/tools/bitcoin-mcp/)
-- 🔴 [Crypto Liquidations MCP](https://github.com/kukapay/crypto-liquidations-mcp) — Streams real-time liquidation events. ⭐ 8 · [details](https://tradingaihub.com/tools/crypto-liquidations-mcp/)
+- ⚪ [Binance MCP (community)](https://github.com/TermiX-official/binance-mcp) — Portfolio, trading and token conversion on Binance (requires API key). ⭐ 97 · [details](https://tradingaihub.com/tools/binance-mcp/)
+- ⚪ [CoinCap MCP](https://github.com/QuantGeekDev/coincap-mcp) — Crypto market data from the CoinCap API. ⭐ 93 · [details](https://tradingaihub.com/tools/coincap-mcp/)
+- ⚪ [CCXT MCP](https://github.com/Nayshins/mcp-server-ccxt) — Market data from 20+ crypto exchanges via the CCXT library. ⭐ 83 · [details](https://tradingaihub.com/tools/ccxt-mcp/)
+- ⚪ [Bankless Onchain MCP](https://github.com/Bankless/onchain-mcp) *(official)* — Query onchain data and ERC-20 token information. ⭐ 78 · [details](https://tradingaihub.com/tools/bankless-onchain-mcp/)
+- ⚪ [Bitcoin & Lightning MCP](https://github.com/AbdelStark/bitcoin-mcp) — Bitcoin and Lightning Network tools for agents. ⭐ 77 · [details](https://tradingaihub.com/tools/bitcoin-mcp/)
+- ⚪ [Crypto Liquidations MCP](https://github.com/kukapay/crypto-liquidations-mcp) — Streams real-time liquidation events. ⭐ 8 · [details](https://tradingaihub.com/tools/crypto-liquidations-mcp/)
 - ✅ [Bitget Agent MCP](https://github.com/Bitget-AI/agent-mcp) *(official)* — Official Bitget spot and futures trading MCP (89 operations per listing). ⭐ 2 · [details](https://tradingaihub.com/tools/bitget-agent-mcp/)
 - ✅ [StalkChain Data MCP](https://github.com/StalkChain/fomo-mcp-api) *(official)* — Official hosted MCP from StalkChain for Solana wallet activity, token holders, tracked-trader flows and Hyperliquid market data. Read-only research data plus settings for your StalkChain email alerts. OAuth sign-in; no exchange credentials and, per the vendor, no order placement on this endpoint. The vendor's general /mcp endpoint also offers agent-wallet buy/sell/order tools; this listing links the scoped /mcp/directory endpoint, a connector for partner directories (research data plus email-alert settings), as requested by StalkChain. The MCP Registry record com.stalkchain/data points to the general /mcp surface. ⭐ 2 · [details](https://tradingaihub.com/tools/stalkchain-data-mcp/)
-- 🟡 [DexScreener Trending MCP](https://github.com/kukapay/dexscreener-trending-mcp) — Trending tokens from DexScreener. ⭐ 1 · [details](https://tradingaihub.com/tools/dexscreener-trending-mcp/)
+- ⚪ [DexScreener Trending MCP](https://github.com/kukapay/dexscreener-trending-mcp) — Trending tokens from DexScreener. ⭐ 1 · [details](https://tradingaihub.com/tools/dexscreener-trending-mcp/)
 - ✅ [CoinGecko API](https://www.coingecko.com/en/api) *(official)* — Crypto prices, market caps, exchanges and on-chain DEX data. · [details](https://tradingaihub.com/tools/coingecko-api/)
 - ✅ [CoinBoss API](https://www.coinboss.com) *(official)* — Official REST API for aggregated crypto derivatives and market data: liquidations, open interest, funding rates, long/short ratios and ETF flows. Market data only; currently free. · [details](https://tradingaihub.com/tools/coinboss-api/)
 - ✅ [CoinGecko MCP](https://docs.coingecko.com/ai-integration/mcp-server) *(official)* — Official CoinGecko MCP server; public keyless endpoint plus a Pro endpoint. · [details](https://tradingaihub.com/tools/coingecko-mcp/)
@@ -121,7 +121,7 @@ Data is CC BY 4.0; attribution is "TradingAIHub, https://tradingaihub.com". Not 
 - ✅ [Xero MCP Server](https://github.com/XeroAPI/xero-mcp-server) *(official)* — Official Xero MCP: contacts, chart of accounts, invoices and more. ⭐ 397 · [details](https://tradingaihub.com/tools/xero-mcp/)
 - ✅ [Norman Finance MCP](https://github.com/norman-finance/norman-mcp-server) *(official)* — Accounting, invoicing and tax filing workflows for Norman Finance users. ⭐ 65 · [details](https://tradingaihub.com/tools/norman-finance-mcp/)
 - ✅ [LedgerSkills](https://github.com/Kimonarrow/ledgerskills) — Claude skills for audit, tax, FP&A and accounting: reconciliation, month-end close, journal-entry testing. ⭐ 2 · [details](https://tradingaihub.com/tools/ledgerskills/)
-- 🔴 [Invoice Organizer skill](https://github.com/ComposioHQ/awesome-claude-skills/tree/master/invoice-organizer) — Claude skill that extracts, renames and sorts invoices and receipts for tax prep. · [details](https://tradingaihub.com/tools/invoice-organizer-skill/)
+- ⚪ [Invoice Organizer skill](https://github.com/ComposioHQ/awesome-claude-skills/tree/master/invoice-organizer) — Claude skill that extracts, renames and sorts invoices and receipts for tax prep. · [details](https://tradingaihub.com/tools/invoice-organizer-skill/)
 - ✅ [NetSuite AI Connector (MCP)](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/article_3200541651.html) *(official)* — Oracle NetSuite's MCP service plus the MCP Standard Tools SuiteApp: records, reports, saved searches and SuiteQL within your role's permissions. · [details](https://tradingaihub.com/tools/netsuite-ai-connector/)
 - ✅ [Zoho Books MCP (official)](https://www.zoho.com/us/books/help/mcp/zoho-books-mcp.html) *(official)* — Official Zoho Books MCP via Zoho MCP: invoices, expenses, bank reconciliation, contacts and reports from any MCP client. · [details](https://tradingaihub.com/tools/zoho-books-mcp/)
 - ✅ [Avalara AvaTax MCP](https://developer.avalara.com/mcp-servers/) *(official)* — Avalara's official AvaTax MCP server: sales-tax calculation, transactions, nexus, tax codes and address validation via OAuth. · [details](https://tradingaihub.com/tools/avalara-avatax-mcp/)
@@ -135,7 +135,7 @@ Data is CC BY 4.0; attribution is "TradingAIHub, https://tradingaihub.com". Not 
 - ✅ [Square MCP Server](https://github.com/square/square-mcp-server) *(official)* — Official Square (Block) MCP server (beta) exposing Square APIs: payments, orders, catalog, customers, inventory and more. ⭐ 109 · [details](https://tradingaihub.com/tools/square-mcp/)
 - ✅ [Paddle MCP Server](https://github.com/PaddleHQ/paddle-mcp-server) *(official)* — Official Paddle Billing MCP server: products, prices, customers, subscriptions, transactions and reports; sandbox supported. ⭐ 50 · [details](https://tradingaihub.com/tools/paddle-mcp/)
 - ✅ [Qonto MCP](https://github.com/qonto/qonto-mcp-server) *(official)* — Official MCP server for Qonto business banking. ⭐ 42 · [details](https://tradingaihub.com/tools/qonto-mcp/)
-- 🗄️ [Ramp MCP](https://github.com/ramp-public/ramp_mcp) *(official)* — Official Ramp MCP for spend and expense data. ⭐ 35 · [details](https://tradingaihub.com/tools/ramp-mcp/)
+- ⚪ [Ramp MCP](https://github.com/ramp-public/ramp_mcp) *(official)* — Official Ramp MCP for spend and expense data. ⭐ 35 · [details](https://tradingaihub.com/tools/ramp-mcp/)
 - ✅ [Adyen MCP Server](https://github.com/Adyen/adyen-mcp) *(official)* — Official Adyen MCP server for payment links, checkout sessions, payments, refunds and merchant account management. ⭐ 27 · [details](https://tradingaihub.com/tools/adyen-mcp/)
 - ✅ [Mercury MCP (official)](https://docs.mercury.com/docs/what-is-mercury-mcp) *(official)* — Mercury's hosted MCP server (beta): balances, transactions, cards and recipients; payment and transfer requests need approval in Mercury. · [details](https://tradingaihub.com/tools/mercury-mcp/)
 
@@ -147,7 +147,7 @@ Data is CC BY 4.0; attribution is "TradingAIHub, https://tradingaihub.com". Not 
 - ✅ [Lunch Money MCP](https://github.com/akutishevsky/lunchmoney-mcp) — MCP server for Lunch Money budgeting data. ⭐ 115 · [details](https://tradingaihub.com/tools/lunchmoney-mcp/)
 - ✅ [Actual Budget MCP](https://github.com/henfrydls/actual-budget-mcp) — MCP server for the open-source Actual Budget app. ⭐ 21 · [details](https://tradingaihub.com/tools/actual-budget-mcp/)
 - ✅ [OptionsAhoy MCP](https://github.com/AlvisoOculus/optionsahoy-mcp) — Equity-compensation tax optimizer for ISO, NSO, RSU and QSBS scenarios. ⭐ 6 · [details](https://tradingaihub.com/tools/optionsahoy-mcp/)
-- 🔴 [Monarch Money MCP](https://github.com/carsol/monarch-mcp-server) — Community MCP server for Monarch Money accounts, transactions and budgets. ⭐ 4 · [details](https://tradingaihub.com/tools/monarch-mcp/)
+- ⚪ [Monarch Money MCP](https://github.com/carsol/monarch-mcp-server) — Community MCP server for Monarch Money accounts, transactions and budgets. ⭐ 4 · [details](https://tradingaihub.com/tools/monarch-mcp/)
 - ✅ [YNAB API](https://api.ynab.com/) *(official)* — Official REST API for YNAB budgets, accounts, categories, payees and transactions; personal access token or OAuth. · [details](https://tradingaihub.com/tools/ynab-api/)
 
 ## Research & SEC filings
@@ -155,7 +155,7 @@ Data is CC BY 4.0; attribution is "TradingAIHub, https://tradingaihub.com". Not 
 - ✅ [OpenBB Platform (MCP)](https://github.com/OpenBB-finance/OpenBB) *(official)* — Open-source investment research platform with an MCP server. ⭐ 75,652 · [details](https://tradingaihub.com/tools/openbb/)
 - ✅ [Claude Equity Research](https://github.com/quant-sentiment-ai/claude-equity-research) — Claude Code plugin producing equity research reports with fundamental and technical analysis. ⭐ 765 · [details](https://tradingaihub.com/tools/claude-equity-research/)
 - ✅ [SEC EDGAR MCP](https://github.com/stefanoamorelli/sec-edgar-mcp) — Open-source MCP for SEC filings, XBRL financial statements and Form 3/4/5 insider data. ⭐ 389 · [details](https://tradingaihub.com/tools/sec-edgar-mcp/)
-- 🔴 [Claude Investor](https://github.com/martinxu9/claude-investor) — Investment analysis agent using price data, balance sheets, sentiment and analyst ratings. ⭐ 34 · [details](https://tradingaihub.com/tools/claude-investor/)
+- ⚪ [Claude Investor](https://github.com/martinxu9/claude-investor) — Investment analysis agent using price data, balance sheets, sentiment and analyst ratings. ⭐ 34 · [details](https://tradingaihub.com/tools/claude-investor/)
 - ✅ [Valyu MCP](https://github.com/valyuAI/valyu-mcp) *(official)* — Financial deep-research search platform for agents. ⭐ 19 · [details](https://tradingaihub.com/tools/valyu-mcp/)
 - ✅ [FinBrain MCP](https://github.com/ahmetsbilgin/finbrain-mcp) — Alternative data (sentiment, predictions, insider) from FinBrain. ⭐ 9 · [details](https://tradingaihub.com/tools/finbrain-mcp/)
 - ✅ [Equibles stock-market MCP](https://github.com/daniel3303/stock-market-mcp-server) — SEC filings, XBRL, 13F, insider and congressional trades. ⭐ 7 · [details](https://tradingaihub.com/tools/equibles/)
@@ -174,12 +174,12 @@ Data is CC BY 4.0; attribution is "TradingAIHub, https://tradingaihub.com". Not 
 - ✅ [TradingView MCP (community, unofficial)](https://github.com/atilaahmettaner/tradingview-mcp) — Unofficial community MCP (not affiliated with TradingView): screeners, multi-timeframe technical analysis and backtests for crypto, stocks, forex and futures. ⭐ 5,328 · [details](https://tradingaihub.com/tools/tradingview-mcp/)
 - ✅ [FinLab AI](https://github.com/koreal6803/finlab-ai) — Quant strategy generation and Taiwan stock market analysis with FinLab and Claude. ⭐ 427 · [details](https://tradingaihub.com/tools/finlab-ai/)
 - ✅ [Trading Skills for options traders (community)](https://github.com/staskh/trading_skills) — Community Claude skills for options traders: scanners, Greeks, spreads, PMCC screens, correlations and IBKR portfolio reports. ⭐ 417 · [details](https://tradingaihub.com/tools/options-trading-skills/)
-- 🗄️ [MCP Trader](https://github.com/wshobson/mcp-trader) — Trading MCP server with technical analysis and backtesting support. ⭐ 274 · [details](https://tradingaihub.com/tools/mcp-trader/)
+- ⚪ [MCP Trader](https://github.com/wshobson/mcp-trader) — Trading MCP server with technical analysis and backtesting support. ⭐ 274 · [details](https://tradingaihub.com/tools/mcp-trader/)
 - ✅ [Superior Trade skills](https://github.com/Superior-Trade/superior-skills) *(official)* — Agent skills for strategy authoring, backtesting and deployment on Superior Trade. ⭐ 234 · [details](https://tradingaihub.com/tools/superior-skills/)
 - ✅ [QuantConnect MCP](https://github.com/QuantConnect/mcp-server) *(official)* — Official QuantConnect MCP for algorithmic trading research, backtests and deployment. ⭐ 80 · [details](https://tradingaihub.com/tools/quantconnect-mcp/)
 - ✅ [VARRD](https://github.com/varrdinc/varrd) — Trading research: event studies, backtesting, multiple-testing correction and OOS validation. ⭐ 25 · [details](https://tradingaihub.com/tools/varrd/)
 - ✅ [Chart Library MCP](https://github.com/grahammccain/chart-library-mcp) — Historical chart-pattern search across a large pattern library. ⭐ 23 · [details](https://tradingaihub.com/tools/chart-library-mcp/)
-- 🔴 [Claude Code Trading Terminal](https://github.com/degentic-tools/claude-code-trading-terminal) — Agent-native trading terminal with sub-agents for trades, positions and risk. ⭐ 22 · [details](https://tradingaihub.com/tools/claude-code-trading-terminal/)
+- ⚪ [Claude Code Trading Terminal](https://github.com/degentic-tools/claude-code-trading-terminal) — Agent-native trading terminal with sub-agents for trades, positions and risk. ⭐ 22 · [details](https://tradingaihub.com/tools/claude-code-trading-terminal/)
 - ✅ [HPSILab Quant Finance MCP](https://github.com/haiyunsky/hpsilab-quant-finance-mcp) *(official)* — Official hosted MCP, REST API and Python SDK from HPSILab for US stock and options research: implied-volatility structure, options pressure, a 10-trading-day Monte Carlo range, pre-trade risk checks, backtests and a research report. Connect at https://hpsilab.com/mcp with OAuth or a Bearer API key. Research and educational use only; it does not place live broker orders. The open-source MCP package is MIT; the analytics run on the hosted service. Independently operated by Haiyun Hu (Tokyo, Japan). ⭐ 2 · [details](https://tradingaihub.com/tools/hpsilab-mcp/)
 - ✅ [Pineify MCP](https://github.com/pineifyapp/pineify-mcp) *(official)* — Trading-code (Pine Script) validation and market intelligence. ⭐ 1 · [details](https://tradingaihub.com/tools/pineify-mcp/)
 - ✅ [Trading Checkup AIKIT](https://tradingcheckup.com/aikit/) *(official)* — Official AIKIT MCP from Trading Checkup: sourced, dated exchange and broker facts (symbol rules, fees, rate limits) and a checker for common mistakes in trading-bot code. Information only; it does not give signals or place orders. Beta; purchasing is not open yet. · [details](https://tradingaihub.com/tools/trading-checkup-aikit/)
@@ -205,7 +205,7 @@ Data is CC BY 4.0; attribution is "TradingAIHub, https://tradingaihub.com". Not 
 
 ## Contributing
 
-Submit a tool for free at https://tradingaihub.com/submit/ or open a PR. Entries are re-checked weekly; stale ones are flagged, not silently kept.
+Submit a tool for free at https://tradingaihub.com/submit/ or open a PR. Entries are re-checked weekly; listings that no longer meet the criteria are marked Not currently verified, not silently kept.
 
 ## License
 

@@ -87,6 +87,24 @@ export const _resetDataCache = () => { cache = null; };
 
 // ---- Query helpers (shared by REST and MCP so both give identical answers)
 export const FILTER_KEYS = ["category", "type", "language", "status"];
+/** Quiet aliases for pre-change ?status= values. Responses still use only the three public statuses. */
+export const STATUS_ALIAS = {
+  verified: "verified",
+  under_review: "under_review",
+  not_verified: "not_verified",
+  unconfirmed: "under_review",
+  warning: "under_review",
+  link_check_pending: "under_review",
+  aging: "not_verified",
+  stale: "not_verified",
+  archived: "not_verified",
+  unreachable: "not_verified",
+};
+export function resolveStatusFilter(v) {
+  if (v == null || v === "") return { v: undefined };
+  const mapped = STATUS_ALIAS[String(v).toLowerCase()];
+  return mapped ? { v: mapped } : { err: true };
+}
 export function allowed(data) {
   const t = data.dump.tools;
   const uniq = (f) => [...new Set(t.flatMap(f))].filter(Boolean).sort();

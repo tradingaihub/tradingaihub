@@ -27,6 +27,6 @@ const ld = [datasetLd({ url: pageUrl, lang }), breadcrumbLd([
   <p class="meta">{statusSummary.map(([k, n]) => <span><Status status={k} lang={lang} /> {n}</span>)}</p>
   <p class="meta" set:html={t("ver.awesomeList", { url: SITE.githubAwesomeRepo })} />
   <div class="tablewrap"><table><thead><tr><th>{t("th.tool")}</th><th>{t("th.status")}</th><th>{t("th.stars")}</th><th>{t("th.lastCommit")}</th><th>{t("th.issues")}</th></tr></thead>
-  <tbody>{tools.map((x) => <tr><td><a href={p(`/tools/${x.id}/`)}><TitleText text={x.name} bdi /></a></td><td><Status status={publicStatus(x)} lang={lang} /></td><td>{fmtStars(starsOf(x))}</td><td class="ltr" dir="ltr">{lastCommit(x) ?? "—"}</td><td class="note ltr" dir="ltr">{x.verification.issues.join("; ")}</td></tr>)}</tbody></table></div>
+  <tbody>{tools.map((x) => <tr><td><a href={p(`/tools/${x.id}/`)}><TitleText text={x.name} bdi /></a></td><td><Status status={publicStatus(x)} lang={lang} /></td><td>{fmtStars(starsOf(x))}</td><td class="ltr" dir="ltr">{lastCommit(x) ?? "—"}</td><td class="note">{(x.verification.registry_unlinked || []).map((u: any) => t("ver.registryUnlinked", { registry: u.registry, name: u.name })).join("; ")}</td></tr>)}</tbody></table></div>
 </div>
 </Base>

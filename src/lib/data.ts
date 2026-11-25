@@ -3,8 +3,17 @@ import raw from "../../data/tools.json";
 import report from "../../data/verification-report.json";
 import scanRaw from "../../data/security-scan.json";
 import { affUrl, untagUrl } from "./aff";
+/** Memecoin / own-token / copy-trading listings. Never eligible for the Verified badge or rankings. */
+export const isHighRisk = (t: any) => t?.risk_tier === "high" || t?.category === "high-risk-crypto";
+/** The only three public statuses. Internal checker states never reach a page, badge, feed or export. */
+const PUBLIC_OF: Record<string, string> = {
+  verified: "verified", under_review: "under_review", not_verified: "not_verified",
+  unconfirmed: "under_review", warning: "under_review",
+  aging: "not_verified", stale: "not_verified", archived: "not_verified", unreachable: "not_verified",
+};
+export const toPublic = (s: any): string => PUBLIC_OF[String(s ?? "")] ?? "under_review";
 // Every outbound URL in the data goes through affUrl, so any TradingView link automatically carries the affiliate ID.
-export const tools: any[] = (raw as any[]).map((t) => ({ ...t, homepage: affUrl(t.homepage), docs: affUrl(t.docs), source_url: affUrl(t.source_url), pricing: t.pricing ? { ...t.pricing, source: affUrl(t.pricing.source) } : t.pricing }));
+export const tools: any[] = (raw as any[]).map((t) => ({ ...t, verification: { ...(t.verification || {}), status: (isHighRisk(t) ? "not_verified" : toPublic(t.verification?.status)) }, homepage: affUrl(t.homepage), docs: affUrl(t.docs), source_url: affUrl(t.source_url), pricing: t.pricing ? { ...t.pricing, source: affUrl(t.pricing.source) } : t.pricing }));
 export const verificationReport: any = report;
 // Public security-scan data: clean tools only (no findings, no non-clean statuses).
 export const securityScan: any = scanRaw;
@@ -38,23 +47,16 @@ export const CATEGORIES = [
   { slug: "high-risk-crypto", name: "High-risk crypto", short: "High-risk crypto", icon: "⚠️", blurb: "Memecoins, own-token and copy-trading tools. Listed for transparency; not recommended by TradingAIHub." },
 ];
 export const catBySlug = Object.fromEntries(CATEGORIES.map((c) => [c.slug, c]));
-/** Memecoin / own-token / copy-trading listings. Never eligible for the Verified badge or rankings. */
-export const isHighRisk = (t: any) => t?.risk_tier === "high" || t?.category === "high-risk-crypto";
 /** Verified for badges, counts, rankings and best-of pages. High-risk tools are never verified. */
-export const isVerified = (t: any) => !isHighRisk(t) && t?.verification?.status === "verified";
-/** Public status shown on /verification/, /tools.json, the API, MCP brief, llms-full and the awesome list. High-risk tools are always "high_risk" ("High risk"), never "verified". */
-export const publicStatus = (t: any) => (isHighRisk(t) ? "high_risk" : (t?.verification?.status ?? "unconfirmed"));
+export const isVerified = (t: any) => !isHighRisk(t) && toPublic(t?.verification?.status) === "verified";
+/** Public status shown on /verification/, /tools.json, the API, MCP brief, llms-full and the awesome list. High-risk tools are "not_verified" (the site shows the risk banner, not a status badge). */
+export const publicStatus = (t: any) => (isHighRisk(t) ? "not_verified" : toPublic(t?.verification?.status));
 export const TYPE_LABEL: Record<string, string> = { mcp: "MCP server", skill: "Agent skill", api: "API" };
 
 export const STATUS: Record<string, { label: string; tone: string; help: string }> = {
   verified: { label: "Verified", tone: "good", help: "Reachable, links alive, and (for repos) a commit in the last 180 days." },
-  aging: { label: "Aging", tone: "warn", help: "Reachable, but no commits in 180–365 days." },
-  stale: { label: "Stale", tone: "bad", help: "Reachable, but no commits in over a year. Test before relying on it." },
-  archived: { label: "Archived", tone: "bad", help: "The repository is archived by its owner." },
-  warning: { label: "Check links", tone: "warn", help: "A homepage, docs or endpoint link failed in the last check." },
-  unconfirmed: { label: "Link check pending", tone: "warn", help: "Reachable, but a homepage, docs or endpoint link refused our checker (sign-in required, bot block or rate limit), so it could not be fully confirmed. Not counted as verified." },
-  unreachable: { label: "Unreachable", tone: "bad", help: "The repository or homepage could not be reached." },
-  high_risk: { label: "High risk", tone: "bad", help: "Listed for transparency and not recommended. High-risk listings (memecoins / own token / copy-trading) are not eligible for the Verified badge." },
+  under_review: { label: "Under review", tone: "muted", help: "This listing is under review and is not counted as verified." },
+  not_verified: { label: "Not currently verified", tone: "warn", help: "This listing did not meet the verification criteria in the latest check. Test it before relying on it." },
 };
 export const pkgOf = (t: any) => t.install_from_source ? null : (t.verification?.npm || t.verification?.pypi || null);
 // Stars of a shared list / monorepo (repo_is_collection) belong to the whole collection, not to one entry,
