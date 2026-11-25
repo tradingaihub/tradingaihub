@@ -79,13 +79,13 @@
  },
  "finnhub-mcp-community": {
   "name": "Stock Market MCP (Finnhub)",
-  "status": "stale",
+  "status": "not_verified",
   "stars": 7,
   "version": null
  },
  "financial-datasets-mcp": {
   "name": "Financial Datasets MCP",
-  "status": "stale",
+  "status": "not_verified",
   "stars": 2315,
   "version": null
  },
@@ -163,13 +163,13 @@
  },
  "metatrader-mcp": {
   "name": "MetaTrader 5 MCP",
-  "status": "aging",
+  "status": "not_verified",
   "stars": 844,
   "version": "0.5.1"
  },
  "paper-mcp": {
   "name": "Paper Invest MCP",
-  "status": "stale",
+  "status": "not_verified",
   "stars": 24,
   "version": "1.0.4"
  },
@@ -181,13 +181,13 @@
  },
  "ccxt-mcp": {
   "name": "CCXT MCP",
-  "status": "stale",
+  "status": "not_verified",
   "stars": 82,
   "version": null
  },
  "crypto-indicators-mcp": {
   "name": "Crypto Indicators MCP",
-  "status": "aging",
+  "status": "not_verified",
   "stars": 131,
   "version": "1.0.1"
  },
@@ -199,7 +199,7 @@
  },
  "binance-mcp": {
   "name": "Binance MCP (community)",
-  "status": "stale",
+  "status": "not_verified",
   "stars": 97,
   "version": null
  },
@@ -217,7 +217,7 @@
  },
  "crypto-liquidations-mcp": {
   "name": "Crypto Liquidations MCP",
-  "status": "stale",
+  "status": "not_verified",
   "stars": 8,
   "version": null
  },
@@ -229,19 +229,19 @@
  },
  "coincap-mcp": {
   "name": "CoinCap MCP",
-  "status": "stale",
+  "status": "not_verified",
   "stars": 92,
   "version": "0.9.3"
  },
  "dexscreener-trending-mcp": {
   "name": "DexScreener Trending MCP",
-  "status": "aging",
+  "status": "not_verified",
   "stars": 1,
   "version": null
  },
  "base-mcp": {
   "name": "Base MCP",
-  "status": "archived",
+  "status": "not_verified",
   "stars": 351,
   "version": null
  },
@@ -253,7 +253,7 @@
  },
  "bitcoin-mcp": {
   "name": "Bitcoin & Lightning MCP",
-  "status": "stale",
+  "status": "not_verified",
   "stars": 77,
   "version": null
  },
@@ -295,7 +295,7 @@
  },
  "invoice-organizer-skill": {
   "name": "Invoice Organizer skill",
-  "status": "stale",
+  "status": "not_verified",
   "stars": null,
   "version": null
  },
@@ -313,7 +313,7 @@
  },
  "ramp-mcp": {
   "name": "Ramp MCP",
-  "status": "archived",
+  "status": "not_verified",
   "stars": 34,
   "version": null
  },
@@ -325,13 +325,13 @@
  },
  "monarch-mcp": {
   "name": "Monarch Money MCP",
-  "status": "stale",
+  "status": "not_verified",
   "stars": 4,
   "version": null
  },
  "actual-budget-mcp": {
   "name": "Actual Budget MCP",
-  "status": "aging",
+  "status": "not_verified",
   "stars": 2,
   "version": null
  },
@@ -349,7 +349,7 @@
  },
  "openbb": {
   "name": "OpenBB Platform (MCP)",
-  "status": "unconfirmed",
+  "status": "under_review",
   "stars": 75010,
   "version": null
  },
@@ -373,7 +373,7 @@
  },
  "valyu-mcp": {
   "name": "Valyu MCP",
-  "status": "stale",
+  "status": "not_verified",
   "stars": 19,
   "version": null
  },
@@ -391,7 +391,7 @@
  },
  "claude-investor": {
   "name": "Claude Investor",
-  "status": "stale",
+  "status": "not_verified",
   "stars": 34,
   "version": null
  },
@@ -403,7 +403,7 @@
  },
  "mcp-trader": {
   "name": "MCP Trader",
-  "status": "archived",
+  "status": "not_verified",
   "stars": 273,
   "version": null
  },
@@ -439,7 +439,7 @@
  },
  "claude-code-trading-terminal": {
   "name": "Claude Code Trading Terminal",
-  "status": "stale",
+  "status": "not_verified",
   "stars": 21,
   "version": "2.1.5"
  },
@@ -511,7 +511,7 @@
  },
  "mercury-mcp": {
   "name": "Mercury MCP (official)",
-  "status": "unconfirmed",
+  "status": "under_review",
   "stars": null,
   "version": null
  },
@@ -547,7 +547,7 @@
  },
  "firefly-iii-api": {
   "name": "Firefly III API",
-  "status": "unconfirmed",
+  "status": "under_review",
   "stars": 25057,
   "version": null
  },

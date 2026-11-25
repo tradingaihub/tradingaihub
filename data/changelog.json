@@ -3,11 +3,8 @@
     "date": "2026-11-23",
     "counts": {
       "verified": 83,
-      "warning": 1,
-      "stale": 12,
-      "aging": 5,
-      "archived": 3,
-      "unconfirmed": 2
+      "under_review": 3,
+      "not_verified": 20
     },
     "changes": [
       {
@@ -28,7 +25,9 @@
       {
         "kind": "status",
         "id": "razorpay-mcp",
-        "text": "Razorpay MCP Server: warning \u2192 verified"
+        "from": "under_review",
+        "to": "verified",
+        "text": "Razorpay MCP Server: Under review → Verified"
       },
       {
         "kind": "release",
@@ -38,7 +37,9 @@
       {
         "kind": "status",
         "id": "firefly-iii-api",
-        "text": "Firefly III API: unconfirmed \u2192 verified"
+        "from": "under_review",
+        "to": "verified",
+        "text": "Firefly III API: Under review → Verified"
       },
       {
         "kind": "stars",
@@ -56,17 +57,16 @@
     "date": "2026-11-18",
     "counts": {
       "verified": 81,
-      "warning": 2,
-      "stale": 12,
-      "aging": 5,
-      "archived": 3,
-      "unconfirmed": 3
+      "under_review": 5,
+      "not_verified": 20
     },
     "changes": [
       {
         "kind": "status",
         "id": "fred-api",
-        "text": "FRED API (St. Louis Fed): verified \u2192 warning"
+        "from": "verified",
+        "to": "under_review",
+        "text": "FRED API (St. Louis Fed): Verified → Under review"
       },
       {
         "kind": "stars",
@@ -86,7 +86,9 @@
       {
         "kind": "status",
         "id": "solana-agent-kit",
-        "text": "Solana Agent Kit: verified \u2192 aging"
+        "from": "verified",
+        "to": "not_verified",
+        "text": "Solana Agent Kit: Verified → Not currently verified"
       },
       {
         "kind": "stars",
@@ -121,7 +123,9 @@
       {
         "kind": "status",
         "id": "razorpay-mcp",
-        "text": "Razorpay MCP Server: verified \u2192 warning"
+        "from": "verified",
+        "to": "under_review",
+        "text": "Razorpay MCP Server: Verified → Under review"
       },
       {
         "kind": "release",
@@ -131,7 +135,9 @@
       {
         "kind": "status",
         "id": "firefly-iii-api",
-        "text": "Firefly III API: verified \u2192 unconfirmed"
+        "from": "verified",
+        "to": "under_review",
+        "text": "Firefly III API: Verified → Under review"
       },
       {
         "kind": "stars",
@@ -146,7 +152,9 @@
       {
         "kind": "status",
         "id": "bls-api",
-        "text": "BLS Public Data API: verified \u2192 unconfirmed"
+        "from": "verified",
+        "to": "under_review",
+        "text": "BLS Public Data API: Verified → Under review"
       },
       {
         "kind": "stars",
@@ -161,7 +169,9 @@
       {
         "kind": "status",
         "id": "longbridge-skills",
-        "text": "Longbridge Skills: verified \u2192 unconfirmed"
+        "from": "verified",
+        "to": "under_review",
+        "text": "Longbridge Skills: Verified → Under review"
       }
     ]
   },
@@ -169,9 +179,7 @@
     "date": "2026-11-11",
     "counts": {
       "verified": 87,
-      "stale": 12,
-      "aging": 4,
-      "archived": 3
+      "not_verified": 19
     },
     "changes": [
       {
@@ -182,7 +190,9 @@
       {
         "kind": "status",
         "id": "openbb",
-        "text": "OpenBB Platform (MCP): unconfirmed \u2192 verified"
+        "from": "under_review",
+        "to": "verified",
+        "text": "OpenBB Platform (MCP): Under review → Verified"
       },
       {
         "kind": "stars",
@@ -192,12 +202,16 @@
       {
         "kind": "status",
         "id": "mercury-mcp",
-        "text": "Mercury MCP (official): unconfirmed \u2192 verified"
+        "from": "under_review",
+        "to": "verified",
+        "text": "Mercury MCP (official): Under review → Verified"
       },
       {
         "kind": "status",
         "id": "firefly-iii-api",
-        "text": "Firefly III API: unconfirmed \u2192 verified"
+        "from": "under_review",
+        "to": "verified",
+        "text": "Firefly III API: Under review → Verified"
       },
       {
         "kind": "stars",
@@ -215,16 +229,16 @@
     "date": "2026-11-10",
     "counts": {
       "verified": 82,
-      "stale": 12,
-      "aging": 4,
-      "archived": 3,
-      "unconfirmed": 3
+      "under_review": 3,
+      "not_verified": 19
     },
     "changes": [
       {
         "kind": "status",
         "id": "actual-budget-mcp",
-        "text": "Actual Budget MCP: aging \u2192 verified"
+        "from": "not_verified",
+        "to": "verified",
+        "text": "Actual Budget MCP: Not currently verified → Verified"
       }
     ]
   },
@@ -232,10 +246,8 @@
     "date": "2026-11-09",
     "counts": {
       "verified": 81,
-      "stale": 12,
-      "aging": 5,
-      "archived": 3,
-      "unconfirmed": 3
+      "under_review": 3,
+      "not_verified": 20
     },
     "changes": [
       {
@@ -261,7 +273,9 @@
       {
         "kind": "status",
         "id": "bankless-onchain-mcp",
-        "text": "Bankless Onchain MCP: verified \u2192 aging"
+        "from": "verified",
+        "to": "not_verified",
+        "text": "Bankless Onchain MCP: Verified → Not currently verified"
       },
       {
         "kind": "stars",
@@ -281,7 +295,9 @@
       {
         "kind": "status",
         "id": "valyu-mcp",
-        "text": "Valyu MCP: stale \u2192 verified"
+        "from": "not_verified",
+        "to": "verified",
+        "text": "Valyu MCP: Not currently verified → Verified"
       },
       {
         "kind": "stars",
@@ -309,10 +325,8 @@
     "date": "2026-11-02",
     "counts": {
       "verified": 81,
-      "stale": 13,
-      "aging": 4,
-      "archived": 3,
-      "unconfirmed": 3
+      "under_review": 3,
+      "not_verified": 20
     },
     "changes": [
       {
@@ -353,7 +367,9 @@
       {
         "kind": "status",
         "id": "firefly-iii-api",
-        "text": "Firefly III API: verified \u2192 unconfirmed"
+        "from": "verified",
+        "to": "under_review",
+        "text": "Firefly III API: Verified → Under review"
       },
       {
         "kind": "stars",
@@ -366,15 +382,13 @@
     "date": "2026-10-29",
     "counts": {
       "verified": 82,
-      "stale": 13,
-      "aging": 4,
-      "archived": 3,
-      "unconfirmed": 2
+      "under_review": 2,
+      "not_verified": 20
     },
     "changes": [
       {
         "kind": "launch",
-        "text": "First verification run: 104 tools checked."
+        "text": "Directory published with 104 tools."
       }
     ]
   }

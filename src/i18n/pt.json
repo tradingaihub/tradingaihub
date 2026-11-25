@@ -71,33 +71,13 @@
    "Verificado",
    "Acessível, links ativos e (para repositórios) um commit nos últimos 180 dias."
   ],
-  "aging": [
-   "Envelhecendo",
-   "Acessível, mas sem commits há 180–365 dias."
+  "under_review": [
+   "Em análise",
+   "Esta listagem está em análise e não conta como verificada."
   ],
-  "stale": [
-   "Sem manutenção",
-   "Acessível, mas sem commits há mais de um ano. Teste antes de confiar."
-  ],
-  "archived": [
-   "Arquivado",
-   "O repositório foi arquivado pelo dono."
-  ],
-  "warning": [
-   "Verificar links",
-   "Um link do site, da documentação ou do endpoint falhou na última verificação."
-  ],
-  "unconfirmed": [
-   "Verificação de ligação pendente",
-   "Acessível, mas um link do site, da documentação ou do endpoint recusou nosso verificador (login obrigatório, bloqueio de bots ou limite de requisições), então não foi possível confirmá-lo totalmente. Não conta como verificado."
-  ],
-  "unreachable": [
-   "Inacessível",
-   "Não foi possível acessar o repositório ou o site."
-  ],
-  "high_risk": [
-   "Alto risco",
-   "Listado por transparência e não recomendado. As listagens de alto risco (memecoins / token próprio / copy-trading) não são elegíveis ao selo Verified."
+  "not_verified": [
+   "Não verificado no momento",
+   "Esta listagem não atendeu aos critérios de verificação na última checagem. Teste antes de confiar nela."
   ]
  },
  "cat": {
@@ -258,7 +238,7 @@
  "compare": {
   "title": "Comparativos",
   "desc": "Comparativos lado a lado de servidores MCP, skills e APIs de dados para finanças e trading.",
-  "dataNote": "Dados da nossa verificação automática de {date}; preços conforme publicados por cada fornecedor.",
+  "dataNote": "Última verificação: {date}; preços conforme publicados por cada fornecedor.",
   "order": "A ordem é por estrelas no GitHub, não uma recomendação. Não é recomendação de investimento.",
   "pricingPage": "página de preços",
   "hosted": "URL hospedada",
@@ -279,7 +259,7 @@
   "paidFrom": "Pago a partir de",
   "plans": "Planos (publicados)",
   "source": "Fonte",
-  "issues": "Problemas",
+  "issues": "Observações",
   "category": "Categoria"
  },
  "tool": {
@@ -297,8 +277,6 @@
   "checked": "verificado em {date}",
   "pricesChange": "Preços mudam: confirme sempre na página do fornecedor antes de comprar.",
   "verification": "Verificação",
-  "autoCheck": "Verificação automática em {date}.",
-  "manualCheck": "Verificação manual em {date}.",
   "repository": "Repositório",
   "homepage": "Site",
   "docs": "Documentação",
@@ -388,7 +366,8 @@
   "title": "Última verificação",
   "desc": "Resultados da verificação automática semanal de cada ferramenta de IA para finanças e trading listada.",
   "h1": "Verificação — {date}",
-  "awesomeList": "As mesmas ferramentas também estão na nossa <a href=\"{url}\">lista Awesome no <bdi dir=\"ltr\">GitHub</bdi></a>."
+  "awesomeList": "As mesmas ferramentas também estão na nossa <a href=\"{url}\">lista Awesome no <bdi dir=\"ltr\">GitHub</bdi></a>.",
+  "registryUnlinked": "O nome '{name}' existe no {registry}, mas não aponta para este repositório (não contado)"
  },
  "submit": {
   "title": "Enviar uma ferramenta",
@@ -434,20 +413,18 @@
   "p2": "O id da sua ferramenta está na URL da página dela, ou pegue o trecho pronto na própria página. Ainda não está listada?",
   "submitFree": "Envie grátis",
   "states": "Estados do selo",
-  "statesP": "Verde = verificado esta semana · Âmbar = envelhecendo / verificar links · Vermelho = sem manutenção, arquivado ou inacessível."
+  "statesP": "Verde = Verificado · Cinza = Em análise · Âmbar = Não verificado no momento."
  },
  "weekly": {
   "title": "Estado das ferramentas de IA para finanças — semana de {date}",
   "desc": "Ranking semanal e registro de mudanças de {n} servidores MCP, skills e APIs para finanças e trading.",
-  "lead": "Toda semana nosso verificador revisa novamente cada listagem. Este é o placar. Livre para compartilhar e citar (um link é bem-vindo).",
+  "lead": "Nosso verificador revisa regularmente cada listagem. Este é o placar. Livre para compartilhar e citar (um link é bem-vindo).",
   "share": "Estado das ferramentas de IA para finanças e trading — {date}: {v}/{n} passam na verificação",
   "officialTools": "Ferramentas oficiais de fornecedores",
   "changed": "O que mudou esta semana",
   "board": "Ranking: ferramentas verificadas com mais estrelas",
   "shipped": "Publicadas mais recentemente",
   "lastCommit": "último commit {date}",
-  "love": "Precisam de atenção dos mantenedores ({n})",
-  "loveNote": "Sem manutenção = sem commits há 12+ meses. Mantenedores: publiquem uma atualização e o selo fica verde na próxima semana.",
   "archive": "Arquivo",
   "changes": "{n} mudanças",
   "changesNote": "As entradas de mudanças são geradas automaticamente em inglês."
@@ -714,14 +691,9 @@
   "official": "Oficial: publicado pelo fornecedor do produto ao qual se conecta, não por terceiros.",
   "verified": "Verificado: acessível e com links funcionando na verificação de {checked}; último commit {commit}, dentro do limite de 180 dias.",
   "verifiedNoRepo": "Verificado: acessível e com links funcionando na verificação de {checked}.",
-  "aging": "Envelhecendo: o último commit foi há {days} dias ({commit}). De 181 a 365 dias sem commit conta como envelhecendo. Verificado em {checked}.",
-  "stale": "Sem manutenção: o último commit foi há {days} dias ({commit}). Mais de 365 dias sem commit conta como sem manutenção; teste antes de confiar nele. Verificado em {checked}.",
-  "archived": "Arquivado: o dono arquivou o repositório, então ele não recebe mais atualizações. Verificado em {checked}.",
-  "warning": "Verificar links: um link da página inicial, da documentação ou de um endpoint falhou na verificação de {checked}.",
-  "unconfirmed": "Verificação pendente: acessível, mas um link recusou nosso verificador (login, bloqueio de bots ou limite de requisições) em {checked}, então não conta como verificado.",
-  "unreachable": "Inacessível: não foi possível acessar o repositório ou a página inicial na verificação de {checked}.",
-  "manual": "Verificado manualmente em {date}.",
-  "checked": "Última verificação: data da última verificação automática do repositório e dos links da ferramenta. Todo o diretório é verificado de novo toda semana.",
+  "underReview": "Em análise: não conta como verificada na verificação de {checked}.",
+  "notVerified": "Não verificado no momento: não atendeu aos critérios de verificação na verificação de {checked}.",
+  "checked": "Última verificação: data da última verificação do repositório e dos links da ferramenta. Todo o diretório é verificado de novo toda semana.",
   "scan": "Verificação de segurança: nenhum problema em {date} (análise estática de código e dependências, scanner {commit}, regras {rules}). Não é uma garantia.",
   "pricing": "Preço conforme a página do fornecedor: plano gratuito {free}; pago a partir de {paid}. Verificado em {date}.",
   "pricingNoDate": "Preço conforme o fornecedor: plano gratuito {free}; pago a partir de {paid}.",

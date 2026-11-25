@@ -71,33 +71,13 @@
    "Geprüft",
    "Erreichbar, Links funktionieren und (bei Repos) ein Commit in den letzten 180 Tagen."
   ],
-  "aging": [
-   "Alternd",
-   "Erreichbar, aber seit 180–365 Tagen kein Commit."
+  "under_review": [
+   "In Prüfung",
+   "Dieser Eintrag ist in Prüfung und zählt noch nicht als geprüft."
   ],
-  "stale": [
-   "Veraltet",
-   "Erreichbar, aber seit über einem Jahr kein Commit. Vor dem Einsatz testen."
-  ],
-  "archived": [
-   "Archiviert",
-   "Das Repository wurde vom Eigentümer archiviert."
-  ],
-  "warning": [
-   "Links prüfen",
-   "Ein Website-, Doku- oder Endpoint-Link ist bei der letzten Prüfung fehlgeschlagen."
-  ],
-  "unconfirmed": [
-   "Linkprüfung ausstehend",
-   "Erreichbar, aber ein Link zu Website, Doku oder Endpunkt hat unseren Prüfer abgewiesen (Anmeldung nötig, Bot-Sperre oder Ratenlimit), daher nicht vollständig bestätigt. Zählt nicht als verifiziert."
-  ],
-  "unreachable": [
-   "Nicht erreichbar",
-   "Repository oder Website konnten nicht erreicht werden."
-  ],
-  "high_risk": [
-   "Hohes Risiko",
-   "Nur zur Transparenz aufgeführt und nicht empfohlen. Hochrisiko-Einträge (Memecoins / eigener Token / Copy-Trading) sind nicht für das Verified-Abzeichen berechtigt."
+  "not_verified": [
+   "Derzeit nicht geprüft",
+   "Dieser Eintrag hat bei der letzten Prüfung die Kriterien nicht erfüllt. Vor der Nutzung selbst testen."
   ]
  },
  "cat": {
@@ -258,7 +238,7 @@
  "compare": {
   "title": "Vergleiche",
   "desc": "Direkte Vergleiche von MCP-Servern, Skills und Daten-APIs für Finanzen und Trading.",
-  "dataNote": "Daten aus unserer automatischen Prüfung vom {date}; Preise wie vom jeweiligen Anbieter veröffentlicht.",
+  "dataNote": "Zuletzt geprüft: {date}; Preise wie vom jeweiligen Anbieter veröffentlicht.",
   "order": "Die Reihenfolge richtet sich nach GitHub-Sternen und ist keine Empfehlung. Keine Anlageberatung.",
   "pricingPage": "Preisseite",
   "hosted": "Gehostete URL",
@@ -279,7 +259,7 @@
   "paidFrom": "Bezahlt ab",
   "plans": "Tarife (veröffentlicht)",
   "source": "Quelle",
-  "issues": "Probleme",
+  "issues": "Hinweise",
   "category": "Kategorie"
  },
  "tool": {
@@ -297,8 +277,6 @@
   "checked": "geprüft am {date}",
   "pricesChange": "Preise ändern sich – vor dem Kauf immer auf der Seite des Anbieters bestätigen.",
   "verification": "Prüfung",
-  "autoCheck": "Automatische Prüfung am {date}.",
-  "manualCheck": "Manuelle Prüfung am {date}.",
   "repository": "Repository",
   "homepage": "Website",
   "docs": "Dokumentation",
@@ -388,7 +366,8 @@
   "title": "Letzte Prüfung",
   "desc": "Ergebnisse der wöchentlichen automatischen Prüfung jedes gelisteten KI-Tools für Finanzen und Trading.",
   "h1": "Prüfung — {date}",
-  "awesomeList": "Dieselben Tools stehen auch in unserer <a href=\"{url}\">Awesome-Liste auf <bdi dir=\"ltr\">GitHub</bdi></a>."
+  "awesomeList": "Dieselben Tools stehen auch in unserer <a href=\"{url}\">Awesome-Liste auf <bdi dir=\"ltr\">GitHub</bdi></a>.",
+  "registryUnlinked": "Der {registry}-Name '{name}' existiert in der Registry, verweist aber nicht auf dieses Repo (nicht gezählt)"
  },
  "submit": {
   "title": "Tool einreichen",
@@ -434,20 +413,18 @@
   "p2": "Die ID Ihres Tools steht in der URL seiner Seite, oder Sie kopieren das fertige Snippet direkt dort. Noch nicht gelistet?",
   "submitFree": "Kostenlos einreichen",
   "states": "Badge-Zustände",
-  "statesP": "Grün = diese Woche geprüft · Bernstein = alternd / Links prüfen · Rot = veraltet, archiviert oder nicht erreichbar."
+  "statesP": "Grün = Geprüft · Grau = In Prüfung · Bernstein = Derzeit nicht geprüft."
  },
  "weekly": {
   "title": "State of AI Finance Tools — Woche vom {date}",
   "desc": "Wöchentliches Ranking und Änderungsprotokoll für {n} MCP-Server, Skills und APIs für Finanzen und Trading.",
-  "lead": "Jede Woche prüft unser Prüfer jeden Eintrag erneut. Das ist die Anzeigetafel. Frei zum Teilen und Zitieren (ein Link wird geschätzt).",
+  "lead": "Unser Prüfer prüft regelmäßig jeden Eintrag erneut. Das ist die Anzeigetafel. Frei zum Teilen und Zitieren (ein Link wird geschätzt).",
   "share": "State of AI Finance & Trading Tools — {date}: {v}/{n} bestehen die Prüfung",
   "officialTools": "Offizielle Anbieter-Tools",
   "changed": "Was sich diese Woche geändert hat",
   "board": "Ranking: geprüfte Tools mit den meisten Sternen",
   "shipped": "Zuletzt veröffentlicht",
   "lastCommit": "letzter Commit {date}",
-  "love": "Brauchen Aufmerksamkeit der Maintainer ({n})",
-  "loveNote": "Veraltet = seit 12+ Monaten kein Commit. Maintainer: Veröffentlichen Sie ein Update, und Ihr Badge wird nächste Woche grün.",
   "archive": "Archiv",
   "changes": "{n} Änderungen",
   "changesNote": "Änderungseinträge werden automatisch auf Englisch erzeugt."
@@ -714,14 +691,9 @@
   "official": "Offiziell: vom Anbieter des angebundenen Produkts veröffentlicht, nicht von Dritten.",
   "verified": "Verifiziert: erreichbar und Links funktionieren in der Prüfung vom {checked}; letzter Commit {commit}, innerhalb der 180-Tage-Grenze.",
   "verifiedNoRepo": "Verifiziert: erreichbar und Links funktionieren in der Prüfung vom {checked}.",
-  "aging": "Alternd: Der letzte Commit war vor {days} Tagen ({commit}). 181 bis 365 Tage ohne Commit gelten als alternd. Geprüft am {checked}.",
-  "stale": "Veraltet: Der letzte Commit war vor {days} Tagen ({commit}). Mehr als 365 Tage ohne Commit gelten als veraltet, also vor dem Einsatz testen. Geprüft am {checked}.",
-  "archived": "Archiviert: Der Inhaber hat das Repository archiviert, es erhält keine Updates mehr. Geprüft am {checked}.",
-  "warning": "Links prüfen: Ein Homepage-, Doku- oder Endpoint-Link ist in der Prüfung vom {checked} fehlgeschlagen.",
-  "unconfirmed": "Linkprüfung ausstehend: erreichbar, aber ein Link hat unseren Checker am {checked} abgewiesen (Anmeldung, Bot-Sperre oder Rate-Limit), daher nicht als verifiziert gezählt.",
-  "unreachable": "Nicht erreichbar: Repository oder Homepage waren in der Prüfung vom {checked} nicht erreichbar.",
-  "manual": "Manuell geprüft am {date}.",
-  "checked": "Zuletzt geprüft: Datum der letzten automatischen Prüfung von Repository und Links dieses Tools. Jeder Eintrag wird wöchentlich neu geprüft.",
+  "underReview": "In Prüfung: zählt bei der Prüfung vom {checked} nicht als geprüft.",
+  "notVerified": "Derzeit nicht geprüft: hat bei der Prüfung vom {checked} die Kriterien nicht erfüllt.",
+  "checked": "Zuletzt geprüft: Datum der letzten Prüfung von Repository und Links dieses Tools. Jeder Eintrag wird wöchentlich neu geprüft.",
   "scan": "Sicherheitsscan: keine Probleme am {date} (statische Code- und Abhängigkeitsprüfung, Scanner {commit}, Regeln {rules}). Keine Garantie.",
   "pricing": "Preise laut Anbieterseite: kostenlose Stufe {free}; kostenpflichtig ab {paid}. Geprüft am {date}.",
   "pricingNoDate": "Preise laut Anbieter: kostenlose Stufe {free}; kostenpflichtig ab {paid}.",

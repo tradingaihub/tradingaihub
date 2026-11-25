@@ -71,33 +71,13 @@
    "Doğrulandı",
    "Erişilebilir, bağlantılar çalışıyor ve (depolar için) son 180 gün içinde commit var."
   ],
-  "aging": [
-   "Yavaşladı",
-   "Erişilebilir, ancak 180–365 gündür commit yok."
+  "under_review": [
+   "İncelemede",
+   "Bu kayıt incelemede ve doğrulanmış sayılmaz."
   ],
-  "stale": [
-   "Bakımsız",
-   "Erişilebilir, ancak bir yıldan uzun süredir commit yok. Kullanmadan önce test edin."
-  ],
-  "archived": [
-   "Arşivlendi",
-   "Depo, sahibi tarafından arşivlendi."
-  ],
-  "warning": [
-   "Bağlantı kontrol edilmeli",
-   "Son kontrolde web sitesi, doküman veya uç nokta bağlantısı başarısız oldu."
-  ],
-  "unconfirmed": [
-   "Bağlantı kontrolü bekleniyor",
-   "Erişilebilir, ancak bir ana sayfa, doküman veya uç nokta bağlantısı denetleyicimizi reddetti (giriş gerekli, bot engeli veya hız sınırı), bu yüzden tam olarak doğrulanamadı. Doğrulanmış sayılmaz."
-  ],
-  "unreachable": [
-   "Erişilemiyor",
-   "Depoya veya web sitesine ulaşılamadı."
-  ],
-  "high_risk": [
-   "Yüksek risk",
-   "Şeffaflık için listelenir ve önerilmez. Yüksek riskli kayıtlar (memecoin / kendi token'ı / kopya işlem) Verified rozetine uygun değildir."
+  "not_verified": [
+   "Şu anda doğrulanmadı",
+   "Bu kayıt son kontrolde doğrulama ölçütlerini karşılamadı. Güvenmeden önce test edin."
   ]
  },
  "cat": {
@@ -258,7 +238,7 @@
  "compare": {
   "title": "Karşılaştırmalar",
   "desc": "Finans ve trading MCP sunucuları, becerileri ve veri API'lerinin yan yana karşılaştırmaları.",
-  "dataNote": "Veriler {date} tarihli otomatik kontrolümüzden; fiyatlar sağlayıcıların yayımladığı şekilde.",
+  "dataNote": "Son kontrol: {date}; fiyatlar sağlayıcıların yayımladığı şekilde.",
   "order": "Sıralama GitHub yıldızlarına göredir, öneri değildir. Yatırım tavsiyesi değildir.",
   "pricingPage": "fiyat sayfası",
   "hosted": "barındırılan URL",
@@ -279,7 +259,7 @@
   "paidFrom": "Ücretli, başlangıç",
   "plans": "Planlar (yayımlanan)",
   "source": "Kaynak",
-  "issues": "Sorunlar",
+  "issues": "Notlar",
   "category": "Kategori"
  },
  "tool": {
@@ -297,8 +277,6 @@
   "checked": "{date} tarihinde kontrol edildi",
   "pricesChange": "Fiyatlar değişir — satın almadan önce her zaman sağlayıcının sayfasından teyit edin.",
   "verification": "Doğrulama",
-  "autoCheck": "{date} tarihli otomatik kontrol.",
-  "manualCheck": "{date} tarihli manuel kontrol.",
   "repository": "Depo",
   "homepage": "Ana sayfa",
   "docs": "Dokümanlar",
@@ -388,7 +366,8 @@
   "title": "Son doğrulama çalıştırması",
   "desc": "Listelenen her finans ve trading yapay zekâ aracının haftalık otomatik doğrulama sonuçları.",
   "h1": "Doğrulama — {date}",
-  "awesomeList": "Aynı araçlar <a href=\"{url}\"><bdi dir=\"ltr\">GitHub</bdi> Awesome listemizde</a> de yer alır."
+  "awesomeList": "Aynı araçlar <a href=\"{url}\"><bdi dir=\"ltr\">GitHub</bdi> Awesome listemizde</a> de yer alır.",
+  "registryUnlinked": "'{name}' adı {registry} üzerinde var, ancak bu depoya bağlantı vermiyor (sayılmaz)"
  },
  "submit": {
   "title": "Araç ekle",
@@ -434,20 +413,18 @@
   "p2": "Araç kimliği, araç sayfanızın URL'sindedir; ya da hazır kodu araç sayfasından kopyalayın. Henüz listede değil misiniz?",
   "submitFree": "Ücretsiz ekleyin",
   "states": "Rozet durumları",
-  "statesP": "yeşil = bu hafta doğrulandı · sarı = yavaşladı / bağlantı kontrol edilmeli · kırmızı = bakımsız, arşivlendi veya erişilemiyor."
+  "statesP": "Yeşil = Doğrulandı · Gri = İncelemede · Kehribar = Şu anda doğrulanmadı."
  },
  "weekly": {
   "title": "Finans yapay zekâ araçlarının durumu — {date} haftası",
   "desc": "{n} finans ve trading MCP sunucusu, beceri ve API için haftalık sıralama ve değişiklik günlüğü.",
-  "lead": "Denetleyicimiz her hafta her listelemeyi yeniden kontrol eder. İşte karne. Serbestçe paylaşabilir ve alıntılayabilirsiniz (bağlantı verirseniz seviniriz).",
+  "lead": "Denetleyicimiz her listelemeyi düzenli olarak yeniden kontrol eder. İşte karne. Serbestçe paylaşabilir ve alıntılayabilirsiniz (bağlantı verirseniz seviniriz).",
   "share": "Finans ve trading yapay zekâ araçlarının durumu — {date}: {v}/{n} doğrulandı",
   "officialTools": "resmî sağlayıcı araçları",
   "changed": "Bu hafta ne değişti",
   "board": "Sıralama: en çok yıldızlı doğrulanmış araçlar",
   "shipped": "Son yayınlananlar",
   "lastCommit": "son commit {date}",
-  "love": "Bakımcı ilgisi bekleyenler ({n})",
-  "loveNote": "Bakımsız = 12+ aydır commit yok. Bakımcılar: bir güncelleme yayınlayın, rozet gelecek hafta yeşile döner.",
   "archive": "Arşiv",
   "changes": "{n} değişiklik",
   "changesNote": "Değişiklik kayıtları otomatik olarak İngilizce oluşturulur."
@@ -714,14 +691,9 @@
   "official": "Resmî: üçüncü bir taraf değil, bağlandığı ürünün sağlayıcısı tarafından yayımlandı.",
   "verified": "Doğrulandı: {checked} kontrolünde erişilebilir ve bağlantılar çalışıyordu; son commit {commit}, 180 günlük sınırın içinde.",
   "verifiedNoRepo": "Doğrulandı: {checked} kontrolünde erişilebilir ve bağlantılar çalışıyordu.",
-  "aging": "Eskiyor: son commit {days} gün önceydi ({commit}). 181 ile 365 gün arası commit olmaması eskiyor sayılır. Kontrol {checked}.",
-  "stale": "Bakımsız: son commit {days} gün önceydi ({commit}). 365 günden uzun süre commit olmaması bakımsız sayılır; güvenmeden önce test edin. Kontrol {checked}.",
-  "archived": "Arşivlendi: sahibi depoyu arşivledi, artık güncelleme almıyor. Kontrol {checked}.",
-  "warning": "Bağlantıları kontrol edin: {checked} kontrolünde ana sayfa, doküman veya uç nokta bağlantısı başarısız oldu.",
-  "unconfirmed": "Bağlantı kontrolü bekliyor: erişilebilir, ancak {checked} tarihinde bir bağlantı denetleyicimizi reddetti (oturum açma, bot engeli veya hız sınırı), bu yüzden doğrulanmış sayılmıyor.",
-  "unreachable": "Erişilemiyor: {checked} kontrolünde depoya veya ana sayfaya ulaşılamadı.",
-  "manual": "{date} tarihinde elle kontrol edildi.",
-  "checked": "Son kontrol: aracın deposunun ve bağlantılarının en son otomatik kontrol tarihi. Tüm kayıtlar her hafta yeniden kontrol edilir.",
+  "underReview": "İncelemede: {checked} kontrolü itibarıyla doğrulanmış sayılmaz.",
+  "notVerified": "Şu anda doğrulanmadı: {checked} kontrolünde doğrulama ölçütlerini karşılamadı.",
+  "checked": "Son kontrol: aracın deposunun ve bağlantılarının en son kontrol tarihi. Tüm kayıtlar her hafta yeniden kontrol edilir.",
   "scan": "Güvenlik taraması: {date} tarihinde sorun bulunmadı (kod ve bağımlılıkların statik kontrolü, tarayıcı {commit}, kurallar {rules}). Bu bir garanti değildir.",
   "pricing": "Sağlayıcı sayfasındaki fiyat: ücretsiz katman {free}; ücretli {paid} başlangıçlı. Kontrol {date}.",
   "pricingNoDate": "Sağlayıcının belirttiği fiyat: ücretsiz katman {free}; ücretli {paid} başlangıçlı.",

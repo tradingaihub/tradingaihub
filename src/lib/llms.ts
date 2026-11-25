@@ -18,7 +18,7 @@ export const GUIDES: { slug: string; title: string; summary: string }[] = [];
 
 const u = (path: string) => `${SITE.url}${path}`;
 const md = (s: string) => String(s ?? "").replace(/\s+/g, " ").replace(/([\[\]])/g, "\\$1").trim();
-const order: Record<string, number> = { verified: 0, aging: 1, warning: 2, high_risk: 2, stale: 3, archived: 4, unreachable: 5 };
+const order: Record<string, number> = { verified: 0, under_review: 1, not_verified: 2 };
 export const toolsIn = (slug: string) => tools.filter((x) => x.category === slug).sort((a, b) => (order[publicStatus(a)] ?? 9) - (order[publicStatus(b)] ?? 9) || byStars(a, b));
 const checked = () => String(verificationReport.checked_at || "").slice(0, 10);
 const langs = () => LOCALES.map((l) => `${l.name} (${l.code === "en" ? "/" : `/${l.code}/`})`).join(", ");

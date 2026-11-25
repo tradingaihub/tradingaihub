@@ -72,33 +72,13 @@
    "Verified",
    "Reachable, links alive, and (for repos) a commit in the last 180 days."
   ],
-  "aging": [
-   "Aging",
-   "Reachable, but no commits in 180–365 days."
+  "under_review": [
+   "Under review",
+   "This listing is under review and is not counted as verified."
   ],
-  "stale": [
-   "Stale",
-   "Reachable, but no commits in over a year. Test before relying on it."
-  ],
-  "archived": [
-   "Archived",
-   "The repository is archived by its owner."
-  ],
-  "warning": [
-   "Check links",
-   "A homepage, docs or endpoint link failed in the last check."
-  ],
-  "unconfirmed": [
-   "Link check pending",
-   "Reachable, but a homepage, docs or endpoint link refused our checker (sign-in required, bot block or rate limit), so it could not be fully confirmed. Not counted as verified."
-  ],
-  "unreachable": [
-   "Unreachable",
-   "The repository or homepage could not be reached."
-  ],
-  "high_risk": [
-   "High risk",
-   "Listed for transparency and not recommended. High-risk listings (memecoins / own token / copy-trading) are not eligible for the Verified badge."
+  "not_verified": [
+   "Not currently verified",
+   "This listing did not meet the verification criteria in the latest check. Test it before relying on it."
   ]
  },
  "cat": {
@@ -259,7 +239,7 @@
  "compare": {
   "title": "Comparisons",
   "desc": "Side-by-side comparisons of finance and trading MCP servers, skills and data APIs.",
-  "dataNote": "Data from our automated check on {date}; prices as published by each vendor.",
+  "dataNote": "Last checked {date}; prices as published by each vendor.",
   "order": "Ordering is by GitHub stars, not a recommendation. Not investment advice.",
   "pricingPage": "pricing page",
   "hosted": "Hosted URL",
@@ -280,7 +260,7 @@
   "paidFrom": "Paid from",
   "plans": "Plans (published)",
   "source": "Source",
-  "issues": "Issues",
+  "issues": "Notes",
   "category": "Category"
  },
  "tool": {
@@ -298,8 +278,6 @@
   "checked": "checked {date}",
   "pricesChange": "Prices change — always confirm on the vendor's page before buying.",
   "verification": "Verification",
-  "autoCheck": "Automated check on {date}.",
-  "manualCheck": "Manually checked on {date}.",
   "repository": "Repository",
   "homepage": "Homepage",
   "docs": "Docs",
@@ -389,7 +367,8 @@
   "title": "Latest verification run",
   "desc": "Results of the weekly automated verification of every listed finance and trading AI tool.",
   "h1": "Verification run — {date}",
-  "awesomeList": "The same tools are also listed in our <a href=\"{url}\">Awesome list on <bdi dir=\"ltr\">GitHub</bdi></a>."
+  "awesomeList": "The same tools are also listed in our <a href=\"{url}\">Awesome list on <bdi dir=\"ltr\">GitHub</bdi></a>.",
+  "registryUnlinked": "{registry} name '{name}' exists on the registry but does not link to this repo (not counted)"
  },
  "submit": {
   "title": "Submit a tool",
@@ -435,20 +414,18 @@
   "p2": "Find your tool's id in its page URL, or the ready-made snippet on its page. Not listed yet?",
   "submitFree": "Submit it free",
   "states": "Badge states",
-  "statesP": "Green = verified this week · Amber = aging / check links · Red = stale, archived or unreachable."
+  "statesP": "Green = Verified · Grey = Under review · Amber = Not currently verified."
  },
  "weekly": {
   "title": "State of finance AI tools — week of {date}",
   "desc": "Weekly leaderboard and changelog of {n} MCP servers, skills and APIs for finance and trading.",
-  "lead": "Every week our verifier re-checks every listing. Here's the scoreboard. Free to share and cite (link back appreciated).",
+  "lead": "Our verifier regularly re-checks every listing. Here's the scoreboard. Free to share and cite (link back appreciated).",
   "share": "State of finance & trading AI tools — {date}: {v}/{n} pass verification",
   "officialTools": "Official vendor tools",
   "changed": "What changed this week",
   "board": "Leaderboard: most-starred verified tools",
   "shipped": "Most recently shipped",
   "lastCommit": "last commit {date}",
-  "love": "Needs maintainer love ({n})",
-  "loveNote": "Stale = no commits for 12+ months. Maintainers: push an update and your badge turns green next week.",
   "archive": "Archive",
   "changes": "{n} changes",
   "changesNote": "Change entries are generated automatically in English."
@@ -715,14 +692,9 @@
   "official": "Official: published by the vendor of the product it connects to, not by a third party.",
   "verified": "Verified: reachable and links working in the check on {checked}; last commit {commit}, within the 180-day limit.",
   "verifiedNoRepo": "Verified: reachable and links working in the check on {checked}.",
-  "aging": "Aging: the last commit was {days} days ago ({commit}). 181 to 365 days without a commit counts as aging. Checked {checked}.",
-  "stale": "Stale: the last commit was {days} days ago ({commit}). More than 365 days without a commit counts as stale, so test it before relying on it. Checked {checked}.",
-  "archived": "Archived: the owner has archived the repository, so it gets no more updates. Checked {checked}.",
-  "warning": "Check links: a homepage, docs or endpoint link failed in the check on {checked}.",
-  "unconfirmed": "Link check pending: reachable, but a link refused our checker (sign-in, bot block or rate limit) on {checked}, so it isn't counted as verified.",
-  "unreachable": "Unreachable: the repository or homepage couldn't be reached in the check on {checked}.",
-  "manual": "Manually checked on {date}.",
-  "checked": "Last checked: the date of the latest automated check of this tool's repository and links. Every listing is re-checked weekly.",
+  "underReview": "Under review: not counted as verified as of the check on {checked}.",
+  "notVerified": "Not currently verified: did not meet the verification criteria in the check on {checked}.",
+  "checked": "Last checked: the date of the latest check of this tool's repository and links. Every listing is re-checked weekly.",
   "scan": "Security scan: no issues found on {date} (static code and dependency check, scanner {commit}, rules {rules}). Not a guarantee.",
   "pricing": "Pricing as listed on the vendor's page: free tier {free}; paid from {paid}. Checked {date}.",
   "pricingNoDate": "Pricing as listed by the vendor: free tier {free}; paid from {paid}.",
