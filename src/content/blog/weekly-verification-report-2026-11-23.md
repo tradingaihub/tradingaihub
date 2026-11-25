@@ -28,7 +28,7 @@ The 11 November snapshot, which showed 87 Verified of 106, remains useful contex
 | Check links | 0 | 1 | 2 | 1 |
 | **Total** | **106** | **106** | **106** | **106** |
 
-The November 16 totals in that table are the same unpublished run-log figures we already reported. They are not in the repository and cannot be reproduced from a history file. The November 23 published rows are on the [latest verification](/verification/) page.
+The November 16 totals in that table are the same unpublished run-log figures we already reported. They are not in the repository and cannot be reproduced from a history file. The November 23 published rows were the ones shown on the [verification](/verification/) page in that run.
 
 From our [verification method](/about/): **Verified** means the repository is reachable, its links respond, and (for repos) it had a commit in the last 180 days. **Aging** is 180 to 365 days without a commit; **Stale** is more than a year. **Link check pending** means we could not confirm a homepage or docs link — often because the server answered but refused the checker (HTTP 403). **Check links** means a homepage, docs or endpoint link failed in the check.
 
