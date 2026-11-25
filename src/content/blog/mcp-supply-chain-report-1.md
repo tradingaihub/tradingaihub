@@ -9,7 +9,7 @@ tools: [base-mcp, binance-mcp, bitcoin-mcp, ccxt-mcp, financial-datasets-mcp, fi
 
 This is our first monthly MCP supply-chain report. Each week we check whether the npm or PyPI package named in a listed repository actually links back to that repository. Installing with `npx` or `pip` pulls whatever is published under that name, which is not always the code in the repository you just read.
 
-The figures in this report come from our [latest verification](/verification/) page and the public API export at [/api/v1/tools.json](/api/v1/tools.json) (CC BY 4.0). There, **30 listings** have a counted package that links back to the listed repo, and **9 listings** have a package name on npm or PyPI that we couldn't link back to the listed repo. In the November 11, 2026 published check of 106 tools, the counts were 29 and 9.
+The figures in this report come from our [latest verification](/verification/) page and the public API export at [/api/v1/tools.json](https://tradingaihub.com/api/v1/tools.json) (CC BY 4.0). There, **30 listings** have a counted package that links back to the listed repo, and **9 listings** have a package name on npm or PyPI that we couldn't link back to the listed repo. In the November 11, 2026 published check of 106 tools, the counts were 29 and 9.
 
 “Links back” means the package named in the repository exists on npm or PyPI and the registry metadata contains the listed `owner/repo`. Only those packages are counted. A mismatch, or a missing package, never changes a tool's maintenance status on the [verification](/verification/) page.
 
@@ -39,4 +39,4 @@ We do not check who controls the registry account, the published files, or insta
 
 Before running `npx` or `pip install` from a README, compare the package's repository link with the repo you read. If the metadata has no repository link, or points somewhere else, install from the repository's own instructions. See also the [latest verification](/verification/), the [weekly leaderboard](/weekly/), and our [method article](/blog/we-re-check-104-finance-ai-tools-every-week/). We plan to publish this report monthly.
 
-*Data sources: the TradingAIHub public dataset ([tools.json](/tools.json), [API export](/api/v1/tools.json)) and the [latest verification](/verification/) page as of November 25, 2026. Directory data is offered under CC BY 4.0 with attribution to TradingAIHub. Not financial advice.*
+*Data sources: the TradingAIHub public dataset ([tools.json](/tools.json), [API export](https://tradingaihub.com/api/v1/tools.json)) and the [latest verification](/verification/) page as of November 25, 2026. Directory data is offered under CC BY 4.0 with attribution to TradingAIHub. Not financial advice.*
