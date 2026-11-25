@@ -2,7 +2,7 @@
 title: "Weekly Verification Report, November 23, 2026: Firefly III API and Razorpay MCP Return to Verified"
 description: "Nov 23 re-check: 83 of 106 tools verified, up 2 from the Nov 18 published run. Firefly III API and Razorpay MCP came back. The Nov 16 run never went live."
 date: 2026-11-25
-draft: true
+draft: false
 tags: [verification, mcp, weekly-report]
 tools: [firefly-iii-api, razorpay-mcp, fred-api, bls-api, longbridge-skills, solana-agent-kit, ynab-mcp, openbb]
 ---
