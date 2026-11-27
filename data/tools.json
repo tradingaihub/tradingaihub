@@ -21,7 +21,7 @@
     "remote_mcp_url": null,
     "license": "Proprietary / ToS",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "checks": [
         {
@@ -57,7 +57,7 @@
     "remote_mcp_url": null,
     "license": "Proprietary / ToS",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "checks": [
         {
@@ -93,7 +93,7 @@
     "remote_mcp_url": null,
     "license": "Proprietary / ToS",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "checks": [
         {
@@ -129,7 +129,7 @@
     "remote_mcp_url": null,
     "license": "Proprietary / ToS",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "checks": [
         {
@@ -165,7 +165,7 @@
     "remote_mcp_url": null,
     "license": "Proprietary / ToS",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "checks": [
         {
@@ -201,7 +201,7 @@
     "remote_mcp_url": null,
     "license": "Proprietary / ToS",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "checks": [
         {
@@ -237,7 +237,7 @@
     "remote_mcp_url": null,
     "license": "Proprietary / ToS",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "checks": [
         {
@@ -273,7 +273,7 @@
     "remote_mcp_url": null,
     "license": "Proprietary / ToS",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "checks": [
         {
@@ -309,7 +309,7 @@
     "remote_mcp_url": null,
     "license": "Proprietary / ToS",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "checks": [
         {
@@ -345,7 +345,7 @@
     "remote_mcp_url": null,
     "license": "Proprietary / ToS",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "under_review",
       "checks": [
         {
@@ -381,7 +381,7 @@
     "remote_mcp_url": null,
     "license": "Proprietary / ToS",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "checks": [
         {
@@ -417,7 +417,7 @@
     "remote_mcp_url": "https://mcp.alphavantage.co/mcp",
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
@@ -465,7 +465,7 @@
     "remote_mcp_url": null,
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
@@ -509,7 +509,7 @@
     "remote_mcp_url": null,
     "license": "Apache-2.0",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
@@ -560,7 +560,7 @@
     "remote_mcp_url": null,
     "license": "unknown",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "not_verified",
       "github": {
         "reachable": true,
@@ -604,12 +604,12 @@
     "remote_mcp_url": null,
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "not_verified",
       "github": {
         "reachable": true,
         "final_url": "https://github.com/financial-datasets/mcp-server",
-        "stars": 2331,
+        "stars": 2330,
         "archived": false,
         "license": "MIT",
         "last_commit": "2025-06-05T19:50:38Z"
@@ -654,7 +654,7 @@
     "remote_mcp_url": null,
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
@@ -705,7 +705,7 @@
     "remote_mcp_url": "https://mcp.api.coingecko.com/mcp",
     "license": "Proprietary / ToS",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "checks": [
         {
@@ -745,7 +745,7 @@
     "remote_mcp_url": null,
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
@@ -753,7 +753,7 @@
         "stars": 52,
         "archived": false,
         "license": "MIT",
-        "last_commit": "2026-10-22T13:32:34Z"
+        "last_commit": "2026-11-26T12:23:00Z"
       },
       "claude_marketplace": true,
       "root_skill_md": false,
@@ -791,7 +791,7 @@
     "remote_mcp_url": null,
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
@@ -835,7 +835,7 @@
     "remote_mcp_url": null,
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
@@ -879,7 +879,7 @@
     "remote_mcp_url": null,
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
@@ -930,7 +930,7 @@
     "remote_mcp_url": null,
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
@@ -981,7 +981,7 @@
     "remote_mcp_url": null,
     "license": "AGPL-3.0",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
@@ -1032,7 +1032,7 @@
     "remote_mcp_url": null,
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
@@ -1086,12 +1086,12 @@
     ],
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
         "final_url": "https://github.com/alpacahq/alpaca-mcp-server",
-        "stars": 1115,
+        "stars": 1117,
         "archived": false,
         "license": "MIT",
         "last_commit": "2026-11-24T14:51:51Z"
@@ -1140,7 +1140,7 @@
     ],
     "license": "Proprietary / ToS",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "checks": [
         {
@@ -1183,7 +1183,7 @@
     ],
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
@@ -1237,12 +1237,12 @@
     ],
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "not_verified",
       "github": {
         "reachable": true,
         "final_url": "https://github.com/ariadng/metatrader-mcp-server",
-        "stars": 859,
+        "stars": 861,
         "archived": false,
         "license": "MIT",
         "last_commit": "2026-03-28T18:39:29Z"
@@ -1288,7 +1288,7 @@
     "remote_mcp_url": null,
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "not_verified",
       "github": {
         "reachable": true,
@@ -1339,7 +1339,7 @@
     "remote_mcp_url": null,
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
@@ -1390,7 +1390,7 @@
     "remote_mcp_url": null,
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "not_verified",
       "github": {
         "reachable": true,
@@ -1440,7 +1440,7 @@
     "remote_mcp_url": null,
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "not_verified",
       "github": {
         "reachable": true,
@@ -1491,12 +1491,12 @@
     "remote_mcp_url": null,
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
         "final_url": "https://github.com/atilaahmettaner/tradingview-mcp",
-        "stars": 5338,
+        "stars": 5344,
         "archived": false,
         "license": "MIT",
         "last_commit": "2026-11-20T19:05:01Z"
@@ -1545,7 +1545,7 @@
     ],
     "license": "unknown",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "not_verified",
       "github": {
         "reachable": true,
@@ -1599,12 +1599,12 @@
     ],
     "license": "Apache-2.0",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
         "final_url": "https://github.com/coinbase/agentkit",
-        "stars": 1364,
+        "stars": 1365,
         "archived": false,
         "license": "Apache-2.0",
         "last_commit": "2026-11-25T16:02:39Z"
@@ -1643,7 +1643,7 @@
     "remote_mcp_url": null,
     "license": "unknown",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "not_verified",
       "github": {
         "reachable": true,
@@ -1694,7 +1694,7 @@
     "remote_mcp_url": null,
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "not_verified",
       "github": {
         "reachable": true,
@@ -1742,7 +1742,7 @@
     ],
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
@@ -1793,7 +1793,7 @@
     "remote_mcp_url": null,
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "not_verified",
       "github": {
         "reachable": true,
@@ -1844,7 +1844,7 @@
     "remote_mcp_url": null,
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "not_verified",
       "github": {
         "reachable": true,
@@ -1889,12 +1889,12 @@
     "deprecated": true,
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "not_verified",
       "github": {
         "reachable": true,
         "final_url": "https://github.com/base/base-mcp-legacy",
-        "stars": 352,
+        "stars": 353,
         "archived": true,
         "license": "MIT",
         "last_commit": "2026-05-13T20:07:50Z"
@@ -1951,12 +1951,12 @@
     ],
     "license": "Apache-2.0",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "not_verified",
       "github": {
         "reachable": true,
         "final_url": "https://github.com/sendaifun/solana-agent-kit",
-        "stars": 1775,
+        "stars": 1776,
         "archived": false,
         "license": "Apache-2.0",
         "last_commit": "2026-05-14T18:46:54Z"
@@ -1999,7 +1999,7 @@
     ],
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "not_verified",
       "github": {
         "reachable": true,
@@ -2046,15 +2046,15 @@
     ],
     "license": "Apache-2.0",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
         "final_url": "https://github.com/x402-foundation/x402",
-        "stars": 6830,
+        "stars": 6834,
         "archived": false,
         "license": "Apache-2.0",
-        "last_commit": "2026-11-25T18:33:53Z"
+        "last_commit": "2026-11-26T18:54:37Z"
       },
       "checks": [
         {
@@ -2090,7 +2090,7 @@
     "remote_mcp_url": null,
     "license": "Apache-2.0",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
@@ -2134,7 +2134,7 @@
     "remote_mcp_url": null,
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
@@ -2185,7 +2185,7 @@
     "remote_mcp_url": null,
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
@@ -2193,7 +2193,7 @@
         "stars": 65,
         "archived": false,
         "license": "MIT",
-        "last_commit": "2026-11-23T23:24:54Z"
+        "last_commit": "2026-11-26T12:09:59Z"
       },
       "checks": [
         {
@@ -2229,7 +2229,7 @@
     "remote_mcp_url": null,
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
@@ -2275,12 +2275,12 @@
     "remote_mcp_url": null,
     "license": "Apache-2.0",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
         "final_url": "https://github.com/anthropics/financial-services",
-        "stars": 41521,
+        "stars": 41545,
         "archived": false,
         "license": "Apache-2.0",
         "last_commit": "2026-11-12T19:13:59Z"
@@ -2322,7 +2322,7 @@
     "remote_mcp_url": null,
     "license": "unknown",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "not_verified",
       "github": {
         "reachable": true,
@@ -2332,7 +2332,7 @@
         "license": null,
         "last_commit": "2025-10-17T09:09:35Z",
         "collection": true,
-        "collection_stars": 80329,
+        "collection_stars": 80400,
         "subpath": "invoice-organizer",
         "subpath_exists": true
       },
@@ -2375,12 +2375,12 @@
     ],
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
         "final_url": "https://github.com/stripe/ai",
-        "stars": 2093,
+        "stars": 2099,
         "archived": false,
         "license": "MIT",
         "last_commit": "2026-11-25T02:41:45Z"
@@ -2427,7 +2427,7 @@
     "remote_mcp_url": null,
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
@@ -2471,7 +2471,7 @@
     "remote_mcp_url": null,
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "not_verified",
       "github": {
         "reachable": true,
@@ -2521,7 +2521,7 @@
     "remote_mcp_url": null,
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
@@ -2572,7 +2572,7 @@
     "remote_mcp_url": null,
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "not_verified",
       "github": {
         "reachable": true,
@@ -2616,7 +2616,7 @@
     "remote_mcp_url": null,
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
@@ -2671,7 +2671,7 @@
     "remote_mcp_url": null,
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
@@ -2722,7 +2722,7 @@
     "remote_mcp_url": null,
     "license": "AGPL-3.0",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
@@ -2774,12 +2774,12 @@
     "remote_mcp_url": null,
     "license": "Apache-2.0",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
         "final_url": "https://github.com/openbq-org/OpenBB",
-        "stars": 75748,
+        "stars": 75781,
         "archived": false,
         "license": "Apache-2.0",
         "last_commit": "2026-11-25T23:26:06Z"
@@ -2818,7 +2818,7 @@
     "remote_mcp_url": null,
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
@@ -2862,7 +2862,7 @@
     "remote_mcp_url": null,
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
@@ -2913,7 +2913,7 @@
     "remote_mcp_url": null,
     "license": "MIT-0",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
@@ -2921,7 +2921,7 @@
         "stars": 1,
         "archived": false,
         "license": "MIT-0",
-        "last_commit": "2026-10-16T16:16:46Z"
+        "last_commit": "2026-11-26T17:00:35Z"
       },
       "claude_marketplace": false,
       "root_skill_md": false,
@@ -2959,7 +2959,7 @@
     "remote_mcp_url": null,
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
@@ -3003,7 +3003,7 @@
     "remote_mcp_url": null,
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
@@ -3053,15 +3053,15 @@
     "remote_mcp_url": null,
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
         "final_url": "https://github.com/quant-sentiment-ai/claude-equity-research",
-        "stars": 765,
+        "stars": 766,
         "archived": false,
         "license": "MIT",
-        "last_commit": "2026-11-25T14:30:30Z"
+        "last_commit": "2026-11-26T13:58:19Z"
       },
       "claude_marketplace": true,
       "root_skill_md": false,
@@ -3099,12 +3099,12 @@
     "remote_mcp_url": null,
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "not_verified",
       "github": {
         "reachable": true,
         "final_url": "https://github.com/martinxu9/claude-investor",
-        "stars": 34,
+        "stars": 35,
         "archived": false,
         "license": "MIT",
         "last_commit": "2024-03-28T01:26:10Z"
@@ -3145,7 +3145,7 @@
     "remote_mcp_url": null,
     "license": "Apache-2.0",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
@@ -3189,7 +3189,7 @@
     "remote_mcp_url": null,
     "license": "unknown",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "not_verified",
       "github": {
         "reachable": true,
@@ -3233,12 +3233,12 @@
     "remote_mcp_url": null,
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
         "final_url": "https://github.com/varrdinc/varrd",
-        "stars": 25,
+        "stars": 26,
         "archived": false,
         "license": "MIT",
         "last_commit": "2026-11-13T20:57:04Z"
@@ -3284,7 +3284,7 @@
     "remote_mcp_url": null,
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
@@ -3335,7 +3335,7 @@
     "remote_mcp_url": null,
     "license": "unknown",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
@@ -3343,7 +3343,7 @@
         "stars": 427,
         "archived": false,
         "license": null,
-        "last_commit": "2026-11-17T15:18:06Z"
+        "last_commit": "2026-11-27T02:41:49Z"
       },
       "claude_marketplace": true,
       "root_skill_md": false,
@@ -3381,15 +3381,15 @@
     "remote_mcp_url": null,
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
         "final_url": "https://github.com/tradermonty/claude-trading-skills",
-        "stars": 8476,
+        "stars": 8620,
         "archived": false,
         "license": "MIT",
-        "last_commit": "2026-11-25T17:55:12Z"
+        "last_commit": "2026-11-27T01:42:33Z"
       },
       "claude_marketplace": false,
       "root_skill_md": false,
@@ -3431,12 +3431,12 @@
     ],
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
         "final_url": "https://github.com/Superior-Trade/superior-skills",
-        "stars": 234,
+        "stars": 235,
         "archived": false,
         "license": "MIT",
         "last_commit": "2026-09-10T03:54:44Z"
@@ -3483,7 +3483,7 @@
     },
     "license": "unknown",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "not_verified",
       "github": {
         "reachable": true,
@@ -3536,7 +3536,7 @@
     "remote_mcp_url": null,
     "license": "unknown",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
@@ -3580,7 +3580,7 @@
     "remote_mcp_url": "https://mcp.tradingview.com/mcp",
     "license": "Proprietary / ToS",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "checks": [
         {
@@ -3623,7 +3623,7 @@
     ],
     "license": "Proprietary / ToS",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "checks": [
         {
@@ -3663,7 +3663,7 @@
     "remote_mcp_url": "https://financialmodelingprep.com/mcp?apikey=YOUR_FMP_API_KEY",
     "license": "Proprietary / ToS",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "checks": [
         {
@@ -3703,7 +3703,7 @@
     "remote_mcp_url": "https://mcp.eodhd.com/v2/mcp",
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
@@ -3711,7 +3711,7 @@
         "stars": 27,
         "archived": false,
         "license": "MIT",
-        "last_commit": "2026-11-24T16:01:24Z"
+        "last_commit": "2026-11-26T18:23:24Z"
       },
       "checks": [
         {
@@ -3759,7 +3759,7 @@
     "remote_mcp_url": "https://mcp.finnhub.io/mcp",
     "license": "Proprietary / ToS",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "checks": [
         {
@@ -3802,7 +3802,7 @@
     ],
     "license": "Apache-2.0",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
@@ -3861,12 +3861,12 @@
     ],
     "license": "Apache-2.0",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
         "final_url": "https://github.com/square/square-mcp-server",
-        "stars": 110,
+        "stars": 111,
         "archived": false,
         "license": "Apache-2.0",
         "last_commit": "2026-10-14T12:10:16Z"
@@ -3926,7 +3926,7 @@
     ],
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
@@ -3977,7 +3977,7 @@
     ],
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
@@ -4032,7 +4032,7 @@
     ],
     "license": "Apache-2.0",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
@@ -4090,7 +4090,7 @@
     ],
     "license": "Proprietary / ToS",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "checks": [
         {
@@ -4130,7 +4130,7 @@
     "remote_mcp_url": null,
     "license": "Proprietary / ToS",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "checks": [
         {
@@ -4166,7 +4166,7 @@
     "remote_mcp_url": null,
     "license": "Proprietary / ToS",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "checks": [
         {
@@ -4202,7 +4202,7 @@
     "remote_mcp_url": "https://mcp.avalara.com/avatax",
     "license": "Proprietary / ToS",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "checks": [
         {
@@ -4242,7 +4242,7 @@
     "remote_mcp_url": null,
     "license": "Proprietary / ToS",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "checks": [
         {
@@ -4278,15 +4278,15 @@
     "remote_mcp_url": null,
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
         "final_url": "https://github.com/calebl/ynab-mcp-server",
-        "stars": 171,
+        "stars": 170,
         "archived": false,
         "license": "MIT",
-        "last_commit": "2026-11-25T02:56:26Z"
+        "last_commit": "2026-11-26T21:15:02Z"
       },
       "npm": {
         "name": "ynab-mcp-server",
@@ -4329,15 +4329,15 @@
     "remote_mcp_url": null,
     "license": "AGPL-3.0",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
         "final_url": "https://github.com/firefly-iii/firefly-iii",
-        "stars": 25344,
+        "stars": 25348,
         "archived": false,
         "license": "AGPL-3.0",
-        "last_commit": "2026-11-25T04:55:48Z"
+        "last_commit": "2026-11-26T21:01:17Z"
       },
       "checks": [
         {
@@ -4381,15 +4381,15 @@
     "remote_mcp_url": null,
     "license": "AGPL-3.0",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
         "final_url": "https://github.com/we-promise/sure",
-        "stars": 17955,
+        "stars": 18111,
         "archived": false,
         "license": "AGPL-3.0",
-        "last_commit": "2026-11-26T03:46:15Z"
+        "last_commit": "2026-11-27T01:33:40Z"
       },
       "checks": [
         {
@@ -4439,7 +4439,7 @@
     "remote_mcp_url": null,
     "license": "Proprietary / ToS",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "under_review",
       "checks": [
         {
@@ -4475,7 +4475,7 @@
     "remote_mcp_url": null,
     "license": "Proprietary / ToS",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "checks": [
         {
@@ -4511,7 +4511,7 @@
     "remote_mcp_url": null,
     "license": "Proprietary / ToS",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "checks": [
         {
@@ -4547,7 +4547,7 @@
     "remote_mcp_url": null,
     "license": "Proprietary / ToS",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "checks": [
         {
@@ -4583,12 +4583,12 @@
     "remote_mcp_url": "https://mcp.frankfurter.dev/",
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
         "final_url": "https://github.com/lineofflight/frankfurter",
-        "stars": 2142,
+        "stars": 2144,
         "archived": false,
         "license": "MIT",
         "last_commit": "2026-11-25T06:50:17Z"
@@ -4642,12 +4642,12 @@
     ],
     "license": "Apache-2.0",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
         "final_url": "https://github.com/webull-inc/webull-openapi-mcp",
-        "stars": 32,
+        "stars": 33,
         "archived": false,
         "license": "Apache-2.0",
         "last_commit": "2026-11-23T11:32:40Z"
@@ -4700,12 +4700,12 @@
     ],
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
         "final_url": "https://github.com/krakenfx/kraken-cli",
-        "stars": 819,
+        "stars": 820,
         "archived": false,
         "license": "MIT",
         "last_commit": "2026-10-29T10:32:10Z"
@@ -4747,7 +4747,7 @@
     ],
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
@@ -4795,12 +4795,12 @@
     ],
     "license": "Apache-2.0",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
         "final_url": "https://github.com/alpacahq/alpaca-skills",
-        "stars": 173,
+        "stars": 174,
         "archived": false,
         "license": "Apache-2.0",
         "last_commit": "2026-11-24T15:40:50Z"
@@ -4841,7 +4841,7 @@
     "remote_mcp_url": null,
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "under_review",
       "github": {
         "reachable": true,
@@ -4849,7 +4849,7 @@
         "stars": 75,
         "archived": false,
         "license": "MIT",
-        "last_commit": "2026-11-25T12:05:10Z"
+        "last_commit": "2026-11-26T08:50:46Z"
       },
       "claude_marketplace": true,
       "root_skill_md": false,
@@ -4895,7 +4895,7 @@
     ],
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
@@ -4944,12 +4944,12 @@
     ],
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
         "final_url": "https://github.com/staskh/trading_skills",
-        "stars": 419,
+        "stars": 420,
         "archived": false,
         "license": "MIT",
         "last_commit": "2026-11-17T16:02:16Z"
@@ -4996,7 +4996,7 @@
     "remote_mcp_url": "https://www.fairvalue-calculator.com/mcp",
     "license": "Other (see repo)",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
@@ -5052,12 +5052,12 @@
     "remote_mcp_url": "https://lava.ai-dolphin.com/subscribe/v1/mcp",
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
         "final_url": "https://github.com/dustinliang666-blip/lava-mcp",
-        "stars": 62,
+        "stars": 64,
         "archived": false,
         "license": "MIT",
         "last_commit": "2026-11-07T09:51:48Z"
@@ -5108,7 +5108,7 @@
     "remote_mcp_url": "https://dchub.cloud/mcp",
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
@@ -5116,12 +5116,12 @@
         "stars": 3,
         "archived": false,
         "license": "MIT",
-        "last_commit": "2026-11-26T01:03:14Z"
+        "last_commit": "2026-11-27T03:47:06Z"
       },
       "npm": {
         "name": "dchub-mcp-server",
-        "version": "2.12.63",
-        "published": "2026-11-23T08:11:37.548Z",
+        "version": "2.12.64",
+        "published": "2026-11-26T21:20:31.441Z",
         "url": "https://www.npmjs.com/package/dchub-mcp-server",
         "links_back": true
       },
@@ -5174,7 +5174,7 @@
     ],
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
@@ -5228,7 +5228,7 @@
     "remote_mcp_url": "https://stockbloc.ai.studio/api/mcp/rpc",
     "license": "Proprietary / ToS",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "checks": [
         {
@@ -5268,7 +5268,7 @@
     "remote_mcp_url": "https://app.quantral.com/api/mcp",
     "license": "Proprietary / ToS",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "checks": [
         {
@@ -5308,7 +5308,7 @@
     "remote_mcp_url": "https://mcp.tickerlayer.com/mcp",
     "license": "Proprietary / ToS",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "checks": [
         {
@@ -5348,7 +5348,7 @@
     "remote_mcp_url": "https://api.waveleta.com/mcp",
     "license": "Proprietary / ToS",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "checks": [
         {
@@ -5388,7 +5388,7 @@
     "remote_mcp_url": "https://liquidmap.io/mcp",
     "license": "Proprietary / ToS",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "checks": [
         {
@@ -5428,7 +5428,7 @@
     "remote_mcp_url": "https://tradytics.com/mcp",
     "license": "Proprietary / ToS",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "checks": [
         {
@@ -5468,7 +5468,7 @@
     "remote_mcp_url": "https://financemcp.unbidden.ai/mcp",
     "license": "Proprietary / ToS",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "checks": [
         {
@@ -5508,7 +5508,7 @@
     "remote_mcp_url": "https://bharatstockapi.com/v1/mcp",
     "license": "Proprietary / ToS",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "checks": [
         {
@@ -5548,7 +5548,7 @@
     "remote_mcp_url": "https://mcp.pianam.cn/stock-mcp/mcp",
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
@@ -5596,7 +5596,7 @@
     "remote_mcp_url": "https://mcp.bulliontradingllc.com/mcp",
     "license": "Proprietary / ToS",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "checks": [
         {
@@ -5636,7 +5636,7 @@
     "remote_mcp_url": "https://api.tradingcheckup.com/aikit/mcp",
     "license": "Proprietary / ToS",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "checks": [
         {
@@ -5676,7 +5676,7 @@
     "remote_mcp_url": "https://aperiodic.io/mcp",
     "license": "Proprietary / ToS",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "checks": [
         {
@@ -5716,7 +5716,7 @@
     "remote_mcp_url": "https://jenhcscubhbklxxpattl.supabase.co/functions/v1/mcp-readonly",
     "license": "Proprietary / ToS",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "checks": [
         {
@@ -5757,7 +5757,7 @@
     "risk_tier": "high",
     "license": "unknown",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "not_verified",
       "github": {
         "reachable": true,
@@ -5809,7 +5809,7 @@
     "remote_mcp_url": "https://data.stalkchain.com/mcp/directory",
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
@@ -5865,7 +5865,7 @@
     "remote_mcp_url": "https://api.ptdata.io/mcp",
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
@@ -5921,7 +5921,7 @@
     "remote_mcp_url": "https://lianxiaozhi.com/api/mcp",
     "license": "Proprietary / ToS",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "checks": [
         {
@@ -5961,7 +5961,7 @@
     "remote_mcp_url": "https://mcp.alphai.io/mcp",
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
@@ -6017,7 +6017,7 @@
     "remote_mcp_url": "https://hpsilab.com/mcp",
     "license": "MIT",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
@@ -6080,7 +6080,7 @@
     "remote_mcp_url": "https://valuedge.app/mcp",
     "license": "unknown",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "github": {
         "reachable": true,
@@ -6136,7 +6136,7 @@
     "remote_mcp_url": "https://lastvesper.com/api/mcp/public",
     "license": "Proprietary / ToS",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "checks": [
         {
@@ -6176,7 +6176,7 @@
     "remote_mcp_url": null,
     "license": "Proprietary / ToS",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "checks": [
         {
@@ -6212,7 +6212,7 @@
     "remote_mcp_url": null,
     "license": "Proprietary / ToS",
     "verification": {
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "status": "verified",
       "checks": [
         {
