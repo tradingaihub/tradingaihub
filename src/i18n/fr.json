@@ -468,6 +468,9 @@
   ],
   "contact": "Contact :"
  },
+ "installLead": {
+  "hpsilab-mcp": "Un compte gratuit vérifié reçoit 100 Credits d’essai pendant 14 jours."
+ },
  "partner": {
   "label": "Partenaire",
   "homeTitle": "Les graphiques et screeners qu'utilisent la plupart des traders",

@@ -604,6 +604,9 @@
   "clometrix-api": "Official Clometrix API, operated by Panopedia Pte. Ltd. (Singapore): an economic-release calendar (US and abroad) as JSON, with how far Bitcoin moved in the 15 minutes after each release since 2021, compared with a normal 15-minute stretch. A free account and API key are required (60 requests a minute and 1,000 a day). The data reports what prices did after past releases; it is not investment advice. Terms allow reuse with credit and a link, but not resale as a feed.",
   "bitpont-api": "Official Bitpont public market-data API (HTTPS/JSON, OpenAPI 3.1), operated by LIMIT SRL (Romania), for onchain market discovery: listed public reads need no API key or account, subject to documented per-IP and shared quotas. This listing covers those public market reads only. The vendor also offers a remote MCP and wallet-authorized trading workflows (prepare, sign and submit); those are outside this listing, and the API does not automatically sign transactions."
  },
+ "installLead": {
+  "hpsilab-mcp": "A verified free account gets 100 trial Credits for 14 days."
+ },
  "partner": {
   "label": "Partner",
   "homeTitle": "Charting & screeners most traders use",

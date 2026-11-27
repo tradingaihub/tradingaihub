@@ -6010,9 +6010,13 @@
       "model": "freemium",
       "free_tier": "100 trial Credits for 14 days after email verification; x402 pay-per-call also available without an account",
       "paid_from": "$19/mo",
-      "details": "A new free account gets 100 trial Credits for 14 days after email verification. Web Trader is $5/month (website only, no MCP/API Credits). Trader/Developer is $19/month with 2,000 Credits and an API key for the SDK and MCP. A limited-time $9.90/month promo advertised as Unlimited Credits is offered through 1 February 2027. Agents can also pay per call with x402 (USDC on Base). Research only; no live broker orders.",
+      "details": "A new free account gets 100 trial Credits for 14 days after email verification. Web Trader is $5/month (website only, no MCP/API Credits). Trader/Developer is $19/month with 2,000 Credits and an API key for the SDK and MCP. Pro is $99/month with 15,000 Credits. Agents can also pay per call with x402 (USDC on Base). Research only; no live broker orders.",
       "source": "https://hpsilab.com/pricing",
-      "checked": "2026-11-25"
+      "checked": "2026-11-27"
+    },
+    "install_lead": {
+      "text": "A verified free account gets 100 trial Credits for 14 days.",
+      "url": "https://hpsilab.com/connect"
     },
     "remote_mcp_url": "https://hpsilab.com/mcp",
     "license": "MIT",
