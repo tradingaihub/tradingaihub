@@ -468,6 +468,9 @@
   ],
   "contact": "İletişim:"
  },
+ "installLead": {
+  "hpsilab-mcp": "Doğrulanmış ücretsiz bir hesap 14 gün boyunca 100 deneme Credits alır."
+ },
  "partner": {
   "label": "Ortak",
   "homeTitle": "Trader'ların çoğunun kullandığı grafikler ve tarayıcılar",

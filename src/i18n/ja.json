@@ -468,6 +468,9 @@
   ],
   "contact": "お問い合わせ："
  },
+ "installLead": {
+  "hpsilab-mcp": "確認済みの無料アカウントには、14日間有効な100トライアルCreditsが付与されます。"
+ },
  "partner": {
   "label": "パートナー",
   "homeTitle": "多くのトレーダーが使うチャートとスクリーナー",

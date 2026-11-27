@@ -32,9 +32,11 @@ export function useT(code: string = DEFAULT) {
   };
   /** Tool description: translated if available, otherwise the English one from data/tools.json (new tools fall back automatically). */
   const desc = (tool: any) => d.desc?.[tool.id] || tool.description;
+  /** Optional short line above Install: translated if available, otherwise the English text from data/tools.json. */
+  const installLead = (tool: any) => tool.install_lead ? (d.installLead?.[tool.id] || tool.install_lead.text) : null;
   /** Locale-prefixed internal path. */
   const p = (path: string) => (code === DEFAULT ? path : `/${code}${path === "/" ? "/" : path}`);
-  return { t, desc, p, code, dir: localeOf(code).dir };
+  return { t, desc, installLead, p, code, dir: localeOf(code).dir };
 }
 /** Strip a locale prefix from a pathname → the English (root) path. */
 export const basePath = (pathname: string) => { const m = pathname.match(/^\/([a-z]{2})(\/.*|$)/); return m && CODES.includes(m[1]) && m[1] !== DEFAULT ? (m[2] || "/") : pathname; };
