@@ -1,6 +1,6 @@
 # Awesome Finance & Trading AI Tools [![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![MCP Registry](https://img.shields.io/badge/MCP_Registry-com.tradingaihub%2Fdirectory-555)](https://registry.modelcontextprotocol.io/v0/servers?search=tradingaihub) [![Public API](https://img.shields.io/badge/API-public%20%7C%20no%20key-15803d)](https://tradingaihub.com/developers/) [![License: CC BY 4.0](https://img.shields.io/badge/license-CC%20BY%204.0-lightgrey)](https://creativecommons.org/licenses/by/4.0/) [![GitHub stars](https://img.shields.io/github/stars/tradingaihub/awesome-finance-ai-tools?style=social)](https://github.com/tradingaihub/awesome-finance-ai-tools)
 
-> A curated, **automatically re-verified** list of MCP servers, agent skills and APIs for finance and trading. Mirror of [TradingAIHub](https://tradingaihub.com) — status checked weekly (last: 2026-11-27).
+> A curated, **automatically re-verified** list of MCP servers, agent skills and APIs for finance and trading. Mirror of [TradingAIHub](https://tradingaihub.com) — status checked weekly (last: 2026-11-28).
 
 Legend: ✅ Verified · 🟡 Under review · ⚪ Not currently verified · ⚠️ high risk (not recommended; not eligible for verified). ⭐ = GitHub stars. Not investment advice.
 
@@ -42,14 +42,14 @@ Data is CC BY 4.0; attribution is "TradingAIHub, https://tradingaihub.com". Not 
 
 ## Market data APIs & MCPs
 
-- ⚪ [Financial Datasets MCP](https://github.com/financial-datasets/mcp-server) *(official)* — Income statements, balance sheets, cash flows and stock prices from Financial Datasets. ⭐ 2,330 · [details](https://tradingaihub.com/tools/financial-datasets-mcp/)
+- ⚪ [Financial Datasets MCP](https://github.com/financial-datasets/mcp-server) *(official)* — Income statements, balance sheets, cash flows and stock prices from Financial Datasets. ⭐ 2,331 · [details](https://tradingaihub.com/tools/financial-datasets-mcp/)
 - ✅ [Maverick MCP](https://github.com/wshobson/maverick-mcp) — Stock analysis MCP server with technical analysis, screening and portfolio tools. ⭐ 737 · [details](https://tradingaihub.com/tools/maverick-mcp/)
 - ✅ [Massive MCP](https://github.com/massive-com/mcp_massive) *(official)* — Official MCP server for Massive stocks, options, forex and crypto data. ⭐ 405 · [details](https://tradingaihub.com/tools/massive-mcp/)
 - ✅ [investor-agent](https://github.com/ferdousbhai/investor-agent) — MCP server providing market data, sentiment and fundamentals for building an investor agent. ⭐ 350 · [details](https://tradingaihub.com/tools/investor-agent/)
 - ✅ [Alpha Vantage MCP](https://github.com/alphavantage/alpha_vantage_mcp) *(official)* — Official MCP server exposing Alpha Vantage stocks, forex, crypto and indicators to AI agents. ⭐ 229 · [details](https://tradingaihub.com/tools/alpha-vantage-mcp/)
 - ✅ [Financial Modeling Prep MCP (community)](https://github.com/imbenrabi/Financial-Modeling-Prep-MCP-Server) — Community MCP server wrapping 250+ FMP tools for fundamentals and market insights. ⭐ 149 · [details](https://tradingaihub.com/tools/fmp-mcp-community/)
 - ✅ [KOSPI/KOSDAQ MCP](https://github.com/dragon1086/kospi-kosdaq-stock-server) — Korean stock market (KOSPI/KOSDAQ) data via MCP. ⭐ 75 · [details](https://tradingaihub.com/tools/kospi-kosdaq-mcp/)
-- ✅ [Lava MCP](https://github.com/dustinliang666-blip/lava-mcp) *(official)* — Official hosted MCP and REST API for Lava (熔岩): read-only A-share stock and concept-board news-heat data and structured summaries, with anonymized institutional IDs. Does not place trades. ⭐ 64 · [details](https://tradingaihub.com/tools/lava-mcp/)
+- ✅ [Lava MCP](https://github.com/dustinliang666-blip/lava-mcp) *(official)* — Official hosted MCP and REST API for Lava (熔岩): read-only A-share stock and concept-board news-heat data and structured summaries, with anonymized institutional IDs. Does not place trades. ⭐ 65 · [details](https://tradingaihub.com/tools/lava-mcp/)
 - ✅ [EODHD Claude Skills](https://github.com/EodHistoricalData/eodhd-claude-skills) *(official)* — Official Claude Code plugin/skills for EODHD: market overview, screener, company briefs, earnings monitor. ⭐ 52 · [details](https://tradingaihub.com/tools/eodhd-claude-skills/)
 - ✅ [Yahoo Finance MCP](https://github.com/maxscheijen/mcp-yahoo-finance) — Community MCP server for Yahoo Finance quotes and history (unofficial data source). ⭐ 30 · [details](https://tradingaihub.com/tools/yahoo-finance-mcp/)
 - ✅ [EODHD MCP Server (official)](https://github.com/EodHistoricalData/EODHD-MCP-Server) *(official)* — EODHD's official MCP server: 70+ read-only tools for prices, fundamentals, news, technicals, options and macro; API key or OAuth. ⭐ 27 · [details](https://tradingaihub.com/tools/eodhd-mcp/)
@@ -76,7 +76,7 @@ Data is CC BY 4.0; attribution is "TradingAIHub, https://tradingaihub.com". Not 
 
 ## Trading & broker MCPs
 
-- ✅ [Alpaca MCP Server](https://github.com/alpacahq/alpaca-mcp-server) *(official)* — Official Alpaca MCP: trade stocks, ETFs, options and crypto; query positions and market data. ⭐ 1,117 · [details](https://tradingaihub.com/tools/alpaca-mcp/)
+- ✅ [Alpaca MCP Server](https://github.com/alpacahq/alpaca-mcp-server) *(official)* — Official Alpaca MCP: trade stocks, ETFs, options and crypto; query positions and market data. ⭐ 1,119 · [details](https://tradingaihub.com/tools/alpaca-mcp/)
 - ⚪ [MetaTrader 5 MCP](https://github.com/ariadng/metatrader-mcp-server) — Trade via the MetaTrader 5 terminal from AI agents. ⭐ 861 · [details](https://tradingaihub.com/tools/metatrader-mcp/)
 - ✅ [Kraken CLI (MCP + skills)](https://github.com/krakenfx/kraken-cli) *(official)* — Official Kraken CLI with a built-in MCP server and 59 agent skills: crypto, xStocks, forex and futures, plus keyless paper trading. ⭐ 820 · [details](https://tradingaihub.com/tools/kraken-cli/)
 - ✅ [Alpaca Skills](https://github.com/alpacahq/alpaca-skills) *(official)* — Official Alpaca agent skills for the Trading and Broker APIs: backtests, orders, account onboarding, money movement and events. ⭐ 174 · [details](https://tradingaihub.com/tools/alpaca-skills/)
@@ -91,8 +91,8 @@ Data is CC BY 4.0; attribution is "TradingAIHub, https://tradingaihub.com". Not 
 
 ## Crypto & DeFi
 
-- ⚪ [Solana Agent Kit](https://github.com/sendaifun/solana-agent-kit) — Toolkit connecting AI agents to Solana protocols, with MCP adapter. ⭐ 1,776 · [details](https://tradingaihub.com/tools/solana-agent-kit/)
-- ✅ [Coinbase AgentKit](https://github.com/coinbase/agentkit) *(official)* — Coinbase toolkit for wallet operations and onchain actions by AI agents, with MCP support. ⭐ 1,365 · [details](https://tradingaihub.com/tools/coinbase-agentkit/)
+- ⚪ [Solana Agent Kit](https://github.com/sendaifun/solana-agent-kit) — Toolkit connecting AI agents to Solana protocols, with MCP adapter. ⭐ 1,774 · [details](https://tradingaihub.com/tools/solana-agent-kit/)
+- ✅ [Coinbase AgentKit](https://github.com/coinbase/agentkit) *(official)* — Coinbase toolkit for wallet operations and onchain actions by AI agents, with MCP support. ⭐ 1,364 · [details](https://tradingaihub.com/tools/coinbase-agentkit/)
 - ⚪ [Base MCP](https://github.com/base/base-mcp-legacy) *(official)* — Onchain tools for the Base network. ⭐ 353 · [details](https://tradingaihub.com/tools/base-mcp/)
 - ⚪ [Crypto Indicators MCP](https://github.com/kukapay/crypto-indicators-mcp) — Technical analysis indicators for crypto assets. ⭐ 131 · [details](https://tradingaihub.com/tools/crypto-indicators-mcp/)
 - ✅ [Coinbase Agentic Wallet Skills](https://github.com/coinbase/agentic-wallet-skills) *(official)* — Official Coinbase skills for agent wallets: balances, send USDC, swap tokens, onramp funds and pay x402 APIs on Base, Polygon and Solana. ⭐ 128 · [details](https://tradingaihub.com/tools/coinbase-agentic-wallet-skills/)
@@ -116,10 +116,10 @@ Data is CC BY 4.0; attribution is "TradingAIHub, https://tradingaihub.com". Not 
 
 ## Accounting & bookkeeping
 
-- ✅ [Anthropic Financial Services Plugins](https://github.com/anthropics/financial-services) *(official)* — Anthropic's finance plugins/skills: Excel model auditing, 3-statement models, DCF/LBO, GL reconciliation. ⭐ 41,545 · [details](https://tradingaihub.com/tools/anthropic-financial-services/)
-- ✅ [QuickBooks Online MCP](https://github.com/intuit/quickbooks-online-mcp-server) *(official)* — Official Intuit MCP server exposing QuickBooks Online entities and reports. ⭐ 461 · [details](https://tradingaihub.com/tools/quickbooks-mcp/)
+- ✅ [Anthropic Financial Services Plugins](https://github.com/anthropics/financial-services) *(official)* — Anthropic's finance plugins/skills: Excel model auditing, 3-statement models, DCF/LBO, GL reconciliation. ⭐ 41,562 · [details](https://tradingaihub.com/tools/anthropic-financial-services/)
+- ✅ [QuickBooks Online MCP](https://github.com/intuit/quickbooks-online-mcp-server) *(official)* — Official Intuit MCP server exposing QuickBooks Online entities and reports. ⭐ 462 · [details](https://tradingaihub.com/tools/quickbooks-mcp/)
 - ✅ [Xero MCP Server](https://github.com/XeroAPI/xero-mcp-server) *(official)* — Official Xero MCP: contacts, chart of accounts, invoices and more. ⭐ 397 · [details](https://tradingaihub.com/tools/xero-mcp/)
-- ✅ [Norman Finance MCP](https://github.com/norman-finance/norman-mcp-server) *(official)* — Accounting, invoicing and tax filing workflows for Norman Finance users. ⭐ 65 · [details](https://tradingaihub.com/tools/norman-finance-mcp/)
+- ✅ [Norman Finance MCP](https://github.com/norman-finance/norman-mcp-server) *(official)* — Accounting, invoicing and tax filing workflows for Norman Finance users. ⭐ 66 · [details](https://tradingaihub.com/tools/norman-finance-mcp/)
 - ✅ [LedgerSkills](https://github.com/Kimonarrow/ledgerskills) — Claude skills for audit, tax, FP&A and accounting: reconciliation, month-end close, journal-entry testing. ⭐ 2 · [details](https://tradingaihub.com/tools/ledgerskills/)
 - ⚪ [Invoice Organizer skill](https://github.com/ComposioHQ/awesome-claude-skills/tree/master/invoice-organizer) — Claude skill that extracts, renames and sorts invoices and receipts for tax prep. · [details](https://tradingaihub.com/tools/invoice-organizer-skill/)
 - ✅ [NetSuite AI Connector (MCP)](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/article_3200541651.html) *(official)* — Oracle NetSuite's MCP service plus the MCP Standard Tools SuiteApp: records, reports, saved searches and SuiteQL within your role's permissions. · [details](https://tradingaihub.com/tools/netsuite-ai-connector/)
@@ -128,10 +128,10 @@ Data is CC BY 4.0; attribution is "TradingAIHub, https://tradingaihub.com". Not 
 
 ## Payments & business banking
 
-- ✅ [x402 (x402 Foundation)](https://github.com/x402-foundation/x402) *(official)* — Open protocol for HTTP-native stablecoin payments by agents. ⭐ 6,834 · [details](https://tradingaihub.com/tools/x402/)
-- ✅ [Stripe Agent Toolkit & MCP](https://github.com/stripe/ai) *(official)* — Stripe's official agent toolkit and hosted MCP for payments, customers and billing. ⭐ 2,099 · [details](https://tradingaihub.com/tools/stripe-ai/)
+- ✅ [x402 (x402 Foundation)](https://github.com/x402-foundation/x402) *(official)* — Open protocol for HTTP-native stablecoin payments by agents. ⭐ 6,838 · [details](https://tradingaihub.com/tools/x402/)
+- ✅ [Stripe Agent Toolkit & MCP](https://github.com/stripe/ai) *(official)* — Stripe's official agent toolkit and hosted MCP for payments, customers and billing. ⭐ 2,101 · [details](https://tradingaihub.com/tools/stripe-ai/)
 - ✅ [Razorpay MCP Server](https://github.com/razorpay/razorpay-mcp-server) *(official)* — Official Razorpay MCP server for payments, orders, refunds, payment links, QR codes, settlements and payouts; hosted or local. ⭐ 233 · [details](https://tradingaihub.com/tools/razorpay-mcp/)
-- ✅ [PayPal MCP Server](https://github.com/paypal/agent-toolkit) *(official)* — Official PayPal MCP server and agent toolkit: invoices, orders, payments, refunds, subscriptions and disputes; sandbox supported. ⭐ 199 · [details](https://tradingaihub.com/tools/paypal-mcp/)
+- ✅ [PayPal MCP Server](https://github.com/paypal/agent-toolkit) *(official)* — Official PayPal MCP server and agent toolkit: invoices, orders, payments, refunds, subscriptions and disputes; sandbox supported. ⭐ 200 · [details](https://tradingaihub.com/tools/paypal-mcp/)
 - ✅ [Square MCP Server](https://github.com/square/square-mcp-server) *(official)* — Official Square (Block) MCP server (beta) exposing Square APIs: payments, orders, catalog, customers, inventory and more. ⭐ 111 · [details](https://tradingaihub.com/tools/square-mcp/)
 - ✅ [Paddle MCP Server](https://github.com/PaddleHQ/paddle-mcp-server) *(official)* — Official Paddle Billing MCP server: products, prices, customers, subscriptions, transactions and reports; sandbox supported. ⭐ 50 · [details](https://tradingaihub.com/tools/paddle-mcp/)
 - ✅ [Qonto MCP](https://github.com/qonto/qonto-mcp-server) *(official)* — Official MCP server for Qonto business banking. ⭐ 42 · [details](https://tradingaihub.com/tools/qonto-mcp/)
@@ -141,8 +141,8 @@ Data is CC BY 4.0; attribution is "TradingAIHub, https://tradingaihub.com". Not 
 
 ## Personal finance & budgeting
 
-- ✅ [Firefly III API](https://github.com/firefly-iii/firefly-iii) *(official)* — REST API of Firefly III, the self-hosted open-source personal finance manager: accounts, transactions, budgets and rules. ⭐ 25,348 · [details](https://tradingaihub.com/tools/firefly-iii-api/)
-- ✅ [Sure](https://github.com/we-promise/sure) — Self-hosted personal finance app (community-maintained fork of Maybe Finance by we-promise): accounts, transactions, budgets and net worth, with a first-party MCP server and REST API. ⭐ 18,111 · [details](https://tradingaihub.com/tools/sure/)
+- ✅ [Firefly III API](https://github.com/firefly-iii/firefly-iii) *(official)* — REST API of Firefly III, the self-hosted open-source personal finance manager: accounts, transactions, budgets and rules. ⭐ 25,356 · [details](https://tradingaihub.com/tools/firefly-iii-api/)
+- ✅ [Sure](https://github.com/we-promise/sure) — Self-hosted personal finance app (community-maintained fork of Maybe Finance by we-promise): accounts, transactions, budgets and net worth, with a first-party MCP server and REST API. ⭐ 18,233 · [details](https://tradingaihub.com/tools/sure/)
 - ✅ [YNAB MCP Server (community)](https://github.com/calebl/ynab-mcp-server) — Community MCP server for YNAB built on the official SDK: budgets, transactions and approvals, with an optional read-only mode. ⭐ 170 · [details](https://tradingaihub.com/tools/ynab-mcp/)
 - ✅ [Lunch Money MCP](https://github.com/akutishevsky/lunchmoney-mcp) — MCP server for Lunch Money budgeting data. ⭐ 115 · [details](https://tradingaihub.com/tools/lunchmoney-mcp/)
 - ✅ [Actual Budget MCP](https://github.com/henfrydls/actual-budget-mcp) — MCP server for the open-source Actual Budget app. ⭐ 21 · [details](https://tradingaihub.com/tools/actual-budget-mcp/)
@@ -152,8 +152,8 @@ Data is CC BY 4.0; attribution is "TradingAIHub, https://tradingaihub.com". Not 
 
 ## Research & SEC filings
 
-- ✅ [OpenBB Platform (MCP)](https://github.com/OpenBB-finance/OpenBB) *(official)* — Open-source investment research platform with an MCP server. ⭐ 75,781 · [details](https://tradingaihub.com/tools/openbb/)
-- ✅ [Claude Equity Research](https://github.com/quant-sentiment-ai/claude-equity-research) — Claude Code plugin producing equity research reports with fundamental and technical analysis. ⭐ 766 · [details](https://tradingaihub.com/tools/claude-equity-research/)
+- ✅ [OpenBB Platform (MCP)](https://github.com/OpenBB-finance/OpenBB) *(official)* — Open-source investment research platform with an MCP server. ⭐ 75,804 · [details](https://tradingaihub.com/tools/openbb/)
+- ✅ [Claude Equity Research](https://github.com/quant-sentiment-ai/claude-equity-research) — Claude Code plugin producing equity research reports with fundamental and technical analysis. ⭐ 767 · [details](https://tradingaihub.com/tools/claude-equity-research/)
 - ✅ [SEC EDGAR MCP](https://github.com/stefanoamorelli/sec-edgar-mcp) — Open-source MCP for SEC filings, XBRL financial statements and Form 3/4/5 insider data. ⭐ 389 · [details](https://tradingaihub.com/tools/sec-edgar-mcp/)
 - ⚪ [Claude Investor](https://github.com/martinxu9/claude-investor) — Investment analysis agent using price data, balance sheets, sentiment and analyst ratings. ⭐ 35 · [details](https://tradingaihub.com/tools/claude-investor/)
 - ✅ [Valyu MCP](https://github.com/valyuAI/valyu-mcp) *(official)* — Financial deep-research search platform for agents. ⭐ 19 · [details](https://tradingaihub.com/tools/valyu-mcp/)
@@ -170,15 +170,15 @@ Data is CC BY 4.0; attribution is "TradingAIHub, https://tradingaihub.com". Not 
 
 ## Quant & backtesting
 
-- ✅ [Claude Trading Skills](https://github.com/tradermonty/claude-trading-skills) — Claude Code skills for trading analysis, e.g. IBD-style relative strength rating. ⭐ 8,620 · [details](https://tradingaihub.com/tools/claude-trading-skills/)
-- ✅ [TradingView MCP (community, unofficial)](https://github.com/atilaahmettaner/tradingview-mcp) — Unofficial community MCP (not affiliated with TradingView): screeners, multi-timeframe technical analysis and backtests for crypto, stocks, forex and futures. ⭐ 5,344 · [details](https://tradingaihub.com/tools/tradingview-mcp/)
+- ✅ [Claude Trading Skills](https://github.com/tradermonty/claude-trading-skills) — Claude Code skills for trading analysis, e.g. IBD-style relative strength rating. ⭐ 8,746 · [details](https://tradingaihub.com/tools/claude-trading-skills/)
+- ✅ [TradingView MCP (community, unofficial)](https://github.com/atilaahmettaner/tradingview-mcp) — Unofficial community MCP (not affiliated with TradingView): screeners, multi-timeframe technical analysis and backtests for crypto, stocks, forex and futures. ⭐ 5,345 · [details](https://tradingaihub.com/tools/tradingview-mcp/)
 - ✅ [FinLab AI](https://github.com/koreal6803/finlab-ai) — Quant strategy generation and Taiwan stock market analysis with FinLab and Claude. ⭐ 427 · [details](https://tradingaihub.com/tools/finlab-ai/)
-- ✅ [Trading Skills for options traders (community)](https://github.com/staskh/trading_skills) — Community Claude skills for options traders: scanners, Greeks, spreads, PMCC screens, correlations and IBKR portfolio reports. ⭐ 420 · [details](https://tradingaihub.com/tools/options-trading-skills/)
+- ✅ [Trading Skills for options traders (community)](https://github.com/staskh/trading_skills) — Community Claude skills for options traders: scanners, Greeks, spreads, PMCC screens, correlations and IBKR portfolio reports. ⭐ 422 · [details](https://tradingaihub.com/tools/options-trading-skills/)
 - ⚪ [MCP Trader](https://github.com/wshobson/mcp-trader) — Trading MCP server with technical analysis and backtesting support. ⭐ 274 · [details](https://tradingaihub.com/tools/mcp-trader/)
 - ✅ [Superior Trade skills](https://github.com/Superior-Trade/superior-skills) *(official)* — Agent skills for strategy authoring, backtesting and deployment on Superior Trade. ⭐ 235 · [details](https://tradingaihub.com/tools/superior-skills/)
 - ✅ [QuantConnect MCP](https://github.com/QuantConnect/mcp-server) *(official)* — Official QuantConnect MCP for algorithmic trading research, backtests and deployment. ⭐ 81 · [details](https://tradingaihub.com/tools/quantconnect-mcp/)
 - ✅ [VARRD](https://github.com/varrdinc/varrd) — Trading research: event studies, backtesting, multiple-testing correction and OOS validation. ⭐ 26 · [details](https://tradingaihub.com/tools/varrd/)
-- ✅ [Chart Library MCP](https://github.com/grahammccain/chart-library-mcp) — Historical chart-pattern search across a large pattern library. ⭐ 23 · [details](https://tradingaihub.com/tools/chart-library-mcp/)
+- ✅ [Chart Library MCP](https://github.com/grahammccain/chart-library-mcp) — Historical chart-pattern search across a large pattern library. ⭐ 24 · [details](https://tradingaihub.com/tools/chart-library-mcp/)
 - ⚪ [Claude Code Trading Terminal](https://github.com/degentic-tools/claude-code-trading-terminal) — Agent-native trading terminal with sub-agents for trades, positions and risk. ⭐ 22 · [details](https://tradingaihub.com/tools/claude-code-trading-terminal/)
 - ✅ [HPSILab Quant Finance MCP](https://github.com/haiyunsky/hpsilab-quant-finance-mcp) *(official)* — Official hosted MCP, REST API and Python SDK from HPSILab for US stock and options research: implied-volatility structure, options pressure, a 10-trading-day Monte Carlo range, pre-trade risk checks, backtests and a research report. Connect at https://hpsilab.com/mcp with OAuth or a Bearer API key. Research and educational use only; it does not place live broker orders. The open-source MCP package is MIT; the analytics run on the hosted service. Independently operated by Haiyun Hu (Tokyo, Japan). ⭐ 2 · [details](https://tradingaihub.com/tools/hpsilab-mcp/)
 - ✅ [Pineify MCP](https://github.com/pineifyapp/pineify-mcp) *(official)* — Trading-code (Pine Script) validation and market intelligence. ⭐ 1 · [details](https://tradingaihub.com/tools/pineify-mcp/)
@@ -188,7 +188,7 @@ Data is CC BY 4.0; attribution is "TradingAIHub, https://tradingaihub.com". Not 
 
 ## Macro & economics
 
-- ✅ [Frankfurter (FX rates API + MCP)](https://github.com/lineofflight/frankfurter) *(official)* — Free open-source exchange-rate API with central-bank reference rates back to 1948, plus an official hosted MCP endpoint. ⭐ 2,144 · [details](https://tradingaihub.com/tools/frankfurter/)
+- ✅ [Frankfurter (FX rates API + MCP)](https://github.com/lineofflight/frankfurter) *(official)* — Free open-source exchange-rate API with central-bank reference rates back to 1948, plus an official hosted MCP endpoint. ⭐ 2,145 · [details](https://tradingaihub.com/tools/frankfurter/)
 - ✅ [FRED MCP](https://github.com/stefanoamorelli/fred-mcp-server) — MCP server for Federal Reserve Economic Data (FRED) series search and retrieval. ⭐ 135 · [details](https://tradingaihub.com/tools/fred-mcp/)
 - ✅ [DC Hub MCP](https://github.com/azmartone67/dchub-mcp-server) *(official)* — Official hosted MCP for DC Hub: data-center and energy intelligence, including daily Data Center Power Index scores for 300+ markets, grid, interconnection queues, fiber and capacity. Read-mostly research and siting data; it does not operate infrastructure. ⭐ 3 · [details](https://tradingaihub.com/tools/dchub-mcp/)
 - 🟡 [FRED API (St. Louis Fed)](https://fred.stlouisfed.org/docs/api/fred/) *(official)* — Hundreds of thousands of US and international economic time series from the Federal Reserve Bank of St. Louis. · [details](https://tradingaihub.com/tools/fred-api/)
